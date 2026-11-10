@@ -1,0 +1,73 @@
+{
+  "slug": "daud-melawan-goliat",
+  "title": "Daud Melawan Goliat",
+  "reference": "1 Samuel 17",
+  "scenes": [
+    {
+      "text": "Seorang raksasa menantang satu bangsa. Yang berani menjawab, hanya seorang anak gembala.",
+      "bg": "dusk", "terrain": "valley", "camera": "push", "sun_x": 0.3,
+      "headline": [{"text": "DAUD", "style": "big"}, {"text": "melawan", "style": "small"}, {"text": "GOLIAT", "style": "accent"}, {"text": "1 SAMUEL 17", "style": "ref"}],
+      "elements": [{"type": "giant", "x": 0.66, "size": 1.25, "props": ["spear", "shield"], "facing": -1}, {"type": "person", "x": 0.18, "size": 0.75, "props": ["staff"]}]
+    },
+    {
+      "text": "Di Lembah Tarbantin, pasukan Filistin dan Israel berkemah di dua bukit yang saling berhadapan.",
+      "bg": "dusk", "terrain": "mountains", "camera": "pan_right",
+      "elements": [{"type": "tent", "x": 0.12, "size": 0.45, "dy": -60}, {"type": "tent", "x": 0.24, "size": 0.35, "dy": -70}, {"type": "tent", "x": 0.78, "size": 0.45, "dy": -60}, {"type": "tent", "x": 0.9, "size": 0.35, "dy": -70}]
+    },
+    {
+      "text": "Selama empat puluh hari, pagi dan petang, Goliat dari Gat maju ke tengah lembah.",
+      "bg": "dusk", "terrain": "mountains", "camera": "pull",
+      "elements": [{"type": "giant", "x": 0.72, "size": 1.0, "props": ["spear"], "facing": -1}, {"type": "person", "x": 0.15, "size": 0.5}, {"type": "person", "x": 0.22, "size": 0.5}]
+    },
+    {
+      "text": "Tingginya hampir tiga meter. Ia berteriak: \"Pilih satu orang untuk melawan aku!\" Tak seorang pun berani.",
+      "bg": "dusk", "terrain": "mountains", "camera": "push",
+      "elements": [{"type": "giant", "x": 0.5, "size": 1.2, "pose": "arms_up", "props": ["spear"]}]
+    },
+    {
+      "text": "Lalu datanglah Daud, gembala muda yang mengantar bekal untuk kakak-kakaknya.",
+      "bg": "golden", "terrain": "plain", "camera": "pan_left",
+      "elements": [{"type": "person", "x": 0.45, "size": 0.9, "props": ["staff", "basket"]}, {"type": "sheep", "x": 0.2, "size": 0.8}, {"type": "sheep", "x": 0.3, "size": 0.7}, {"type": "sheep", "x": 0.72, "size": 0.8}]
+    },
+    {
+      "text": "Ia berkata kepada Raja Saul: \"Hambamu ini akan melawan dia.\"",
+      "bg": "golden", "terrain": "plain", "camera": "push",
+      "elements": [{"type": "person", "x": 0.32, "size": 0.85, "props": ["staff"]}, {"type": "person", "x": 0.68, "size": 1.05, "props": ["crown", "spear"], "facing": -1}, {"type": "tent", "x": 0.88, "size": 0.9}]
+    },
+    {
+      "text": "Daud menolak baju perang raja. Ia hanya membawa tongkat, umban, dan lima batu licin dari sungai.",
+      "bg": "sea", "terrain": "sea", "camera": "pull",
+      "elements": [{"type": "person", "x": 0.5, "size": 0.9, "pose": "kneel", "props": ["staff"]}, {"type": "stone", "x": 0.3, "y": 0.73, "size": 1}, {"type": "stone", "x": 0.4, "y": 0.74, "size": 1}, {"type": "stone", "x": 0.6, "y": 0.74, "size": 1}, {"type": "stone", "x": 0.7, "y": 0.73, "size": 1}, {"type": "stone", "x": 0.8, "y": 0.74, "size": 1}]
+    },
+    {
+      "text": "\"Kau datang dengan pedang dan tombak, tetapi aku datang dalam nama TUHAN semesta alam.\"",
+      "bg": "dusk", "terrain": "valley", "camera": "push",
+      "elements": [{"type": "giant", "x": 0.68, "size": 1.2, "props": ["spear", "shield"], "facing": -1}, {"type": "person", "x": 0.2, "size": 0.7, "props": ["staff"]}]
+    },
+    {
+      "text": "Daud mengayunkan umbannya. Batu itu melesat dan menancap di dahi Goliat,",
+      "bg": "dusk", "terrain": "plain", "camera": "push",
+      "elements": [{"type": "person", "x": 0.5, "size": 1.5, "pose": "sling", "props": ["sling"]}]
+    },
+    {
+      "text": "dan raksasa itu jatuh tersungkur ke tanah.",
+      "bg": "dusk", "terrain": "plain", "camera": "pull",
+      "elements": [{"type": "fallen_giant", "x": 0.6, "size": 1.0}, {"type": "person", "x": 0.18, "size": 0.7, "props": ["staff"]}]
+    },
+    {
+      "text": "Pertempuran adalah milik TUHAN.",
+      "bg": "golden", "terrain": "hill", "rays": true, "camera": "push",
+      "elements": [{"type": "person", "x": 0.5, "size": 0.75, "dy": -250, "pose": "arms_up"}]
+    },
+    {
+      "text": "Kamu tidak melawan sendirian. Raksasa apa yang sedang kamu hadapi hari ini? Tulis di kolom komentar.",
+      "subtitle": "Raksasa apa yang sedang kamu hadapi hari ini? Tulis di kolom komentar.",
+      "bg": "golden", "terrain": "hill", "rays": true, "camera": "pull",
+      "headline": [{"text": "Kamu tidak melawan sendirian.", "style": "statement"}, {"text": "1 Samuel 17:47", "style": "ref"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.75, "dy": -250, "pose": "arms_up"}]
+    }
+  ],
+  "caption": "Seorang raksasa menantang satu bangsa… dan yang berani menjawab hanyalah seorang anak gembala. 🪨⚔️\n\n\"Kau datang dengan pedang dan tombak, tetapi aku datang dalam nama TUHAN semesta alam.\" (1 Samuel 17:45)\n\nKamu tidak melawan sendirian. Raksasa apa yang sedang kamu hadapi hari ini? Tulis di kolom komentar 👇\n\n#DaudDanGoliat #KisahAlkitab #RenunganHarian #1Samuel17 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Daud Melawan Goliat: Kamu Tidak Melawan Sendirian #shorts",
+  "youtube_tags": ["Daud dan Goliat", "Kisah Alkitab", "Renungan", "1 Samuel 17", "Kristen"]
+}

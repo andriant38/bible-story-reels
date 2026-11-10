@@ -1,0 +1,279 @@
+{
+  "slug": "nuh-dan-bahtera",
+  "title": "Nuh dan Bahtera",
+  "reference": "Kejadian 6–9",
+  "scenes": [
+    {
+      "text": "Seluruh dunia menertawakannya. Tapi ia tetap membangun, karena Tuhan yang berfirman.",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "push",
+      "headline": [
+        {
+          "text": "NUH",
+          "style": "big"
+        },
+        {
+          "text": "dan",
+          "style": "small"
+        },
+        {
+          "text": "BAHTERA",
+          "style": "accent"
+        },
+        {
+          "text": "KEJADIAN 6–9",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.58,
+          "size": 0.75
+        },
+        {
+          "type": "person",
+          "x": 0.16,
+          "size": 0.75,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Bumi telah rusak di hadapan Allah, penuh dengan kekerasan.",
+      "bg": "storm",
+      "terrain": "mountains",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "city",
+          "x": 0.5,
+          "size": 0.8
+        }
+      ]
+    },
+    {
+      "text": "Tetapi Nuh mendapat kasih karunia di mata TUHAN. Ia orang benar, dan hidup bergaul dengan Allah.",
+      "bg": "dawn",
+      "terrain": "hill",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.8,
+          "dy": -250,
+          "pose": "pray",
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Allah berfirman: \"Buatlah bagimu sebuah bahtera dari kayu gofir.\"",
+      "bg": "golden",
+      "terrain": "plain",
+      "rays": true,
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.95,
+          "pose": "arms_up",
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hari demi hari, Nuh membangun, tepat seperti yang diperintahkan Allah kepadanya.",
+      "bg": "desert",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.55,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.14,
+          "size": 0.65,
+          "props": [
+            "staff"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.86,
+          "size": 0.6,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Lalu datanglah binatang-binatang, berpasang-pasangan, masuk ke dalam bahtera.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.68,
+          "size": 0.7
+        },
+        {
+          "type": "lion",
+          "x": 0.18,
+          "size": 0.7
+        },
+        {
+          "type": "lion",
+          "x": 0.33,
+          "size": 0.6
+        },
+        {
+          "type": "sheep",
+          "x": 0.42,
+          "size": 0.9
+        },
+        {
+          "type": "sheep",
+          "x": 0.5,
+          "size": 0.8
+        },
+        {
+          "type": "dove",
+          "x": 0.3,
+          "y": 0.45,
+          "size": 0.7
+        }
+      ]
+    },
+    {
+      "text": "Lalu TUHAN menutup pintu bahtera itu di belakang mereka.",
+      "bg": "storm",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.5,
+          "size": 0.95
+        }
+      ]
+    },
+    {
+      "text": "Hujan turun empat puluh hari empat puluh malam. Air menutupi gunung-gunung yang tinggi.",
+      "bg": "storm",
+      "terrain": "sea",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.5,
+          "size": 0.7,
+          "dy": -40
+        }
+      ]
+    },
+    {
+      "text": "Tetapi Allah mengingat Nuh. Air pun surut, dan bahtera itu kandas di pegunungan Ararat.",
+      "bg": "dawn",
+      "terrain": "mountains",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.5,
+          "size": 0.6,
+          "dy": -120
+        }
+      ]
+    },
+    {
+      "text": "Seekor burung merpati kembali, membawa sehelai daun zaitun.",
+      "bg": "dawn",
+      "terrain": "sea",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "dove",
+          "x": 0.5,
+          "y": 0.42,
+          "size": 1.6
+        },
+        {
+          "type": "ark",
+          "x": 0.75,
+          "size": 0.45,
+          "dy": -40
+        }
+      ]
+    },
+    {
+      "text": "Allah menaruh busur-Nya di awan, tanda perjanjian kasih-Nya yang setia.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": false,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "pose": "arms_up",
+          "props": [
+            "beard"
+          ]
+        }
+      ],
+      "rainbow": true
+    },
+    {
+      "text": "Taat walau belum melihat. Apa yang sedang Tuhan minta untuk kamu bangun hari ini? Tulis di kolom komentar.",
+      "subtitle": "Apa yang sedang Tuhan minta untuk kamu bangun hari ini? Tulis di kolom komentar.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "pull",
+      "headline": [
+        {
+          "text": "Taat walau belum melihat.",
+          "style": "statement"
+        },
+        {
+          "text": "Ibrani 11:7",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "ark",
+          "x": 0.5,
+          "size": 0.45,
+          "dy": -250
+        }
+      ]
+    }
+  ],
+  "caption": "Seluruh dunia menertawakannya… tapi Nuh tetap membangun, karena Tuhan yang berfirman. 🚢🌈\n\n\"Karena iman, maka Nuh … dengan taat mempersiapkan bahtera untuk menyelamatkan keluarganya.\" (Ibrani 11:7)\n\nApa yang sedang Tuhan minta untuk kamu bangun hari ini? Tulis di kolom komentar 👇\n\n#NuhDanBahtera #KisahAlkitab #RenunganHarian #Kejadian6 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Nuh dan Bahtera: Taat Walau Belum Melihat #shorts",
+  "youtube_tags": [
+    "Nuh dan Bahtera",
+    "Kisah Alkitab",
+    "Renungan",
+    "Kejadian 6",
+    "Kristen"
+  ]
+}
