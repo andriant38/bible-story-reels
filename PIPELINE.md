@@ -76,9 +76,10 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
   - `model_id` = `eleven_v4`
   - `generations_count` = 1
   - the shared `flow_id`
-  - `prompt` = the scene's `text`
+  - `prompt` = that scene's line from `python3 engine/tts_text.py stories/<slug>.json`, **not** the raw `text`. This applies the owner's pronunciation rules: "Allah" is sent as "Alah" so the voice uses the Indonesian pronunciation, not the Arabic one. Subtitles and captions keep "Allah". To add a rule, edit `PRONUNCIATION` in that file.
 - **Run the scenes one at a time.** The free ElevenLabs plan allows only one generation at a time, and parallel calls fail with "Free generations are busy". Start a scene, poll `creative_get_flow_run_status` until it completes, download its file, and only then start the next scene.
 - Keep a list of `scene number → session_id → content_url`, so no scene is generated twice.
+- **If "busy" keeps coming back**, wait about 90 seconds. Then send **all the remaining scenes in one call**: their TTS lines joined with a blank line between them. Split the result with `python3 engine/split_audio.py combo.mp3 work/<slug> <scene numbers…> --story stories/<slug>.json`, and check that the printed cut times look sensible.
 - Never re-run a scene that actually started: that charges again. If a scene **did not start** (for example "busy"), start that one scene again once.
 - Download each `content_url` in scene order:
 
