@@ -408,9 +408,10 @@ def render_background(scene, seed=0, scale=1.12):
         if t in ("person", "giant"):
             person(d, x, gy, s * (2.3 if t == "giant" else 1), col, el.get("pose", "stand"), el.get("props", []),
                    el.get("facing", 1), giant=(t == "giant"))
-        elif t == "fallen_giant":
+        elif t in ("fallen_giant", "lying"):
             sub = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-            person(ImageDraw.Draw(sub), w / 2, h / 2 + 300 * s, s * 2.0, col, giant=True)
+            giant = t == "fallen_giant"
+            person(ImageDraw.Draw(sub), w / 2, h / 2 + 300 * s, s * (2.0 if giant else 1.0), col, giant=giant)
             sub = sub.rotate(-88 * el.get("facing", 1), center=(w / 2, h / 2), expand=False)
             bb = sub.getbbox()
             if bb:

@@ -1,0 +1,327 @@
+{
+  "slug": "yesus-meredakan-badai",
+  "title": "Yesus Meredakan Badai",
+  "reference": "Markus 4:35–41",
+  "scenes": [
+    {
+      "text": "Badai mengamuk. Perahu hampir tenggelam. Tetapi Yesus… sedang tidur.",
+      "bg": "storm",
+      "terrain": "sea",
+      "camera": "push",
+      "headline": [
+        {
+          "text": "YESUS",
+          "style": "big"
+        },
+        {
+          "text": "meredakan",
+          "style": "small"
+        },
+        {
+          "text": "BADAI",
+          "style": "accent"
+        },
+        {
+          "text": "MARKUS 4:35–41",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 0.85,
+          "dy": -20
+        }
+      ]
+    },
+    {
+      "text": "Pada hari itu, waktu hari sudah petang, Yesus berkata kepada murid-murid-Nya: \"Marilah kita bertolak ke seberang.\"",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 1.0,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.58,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 0.75
+        },
+        {
+          "type": "person",
+          "x": 0.82,
+          "size": 0.8
+        }
+      ]
+    },
+    {
+      "text": "Mereka pun berlayar menyeberangi danau Galilea.",
+      "bg": "golden",
+      "terrain": "sea",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -20
+        },
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 0.45,
+          "dy": -70
+        },
+        {
+          "type": "person",
+          "x": 0.46,
+          "size": 0.45,
+          "dy": -70
+        }
+      ]
+    },
+    {
+      "text": "Lalu mengamuklah taufan yang sangat dahsyat, dan ombak menyembur masuk ke dalam perahu.",
+      "bg": "storm",
+      "terrain": "sea",
+      "clouds": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.45,
+          "size": 0.9,
+          "dy": 10
+        },
+        {
+          "type": "person",
+          "x": 0.33,
+          "size": 0.5,
+          "dy": -55,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.43,
+          "size": 0.5,
+          "dy": -55,
+          "pose": "arms_up"
+        }
+      ]
+    },
+    {
+      "text": "Perahu itu mulai penuh dengan air.",
+      "bg": "storm",
+      "terrain": "sea",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.55,
+          "size": 0.9,
+          "dy": 45
+        }
+      ]
+    },
+    {
+      "text": "Tetapi Yesus sedang tidur di buritan, di sebuah tilam.",
+      "bg": "night",
+      "terrain": "sea",
+      "camera": "push",
+      "sun": false,
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 1.1,
+          "dy": -20
+        },
+        {
+          "type": "lying",
+          "x": 0.36,
+          "size": 0.75,
+          "dy": -95
+        }
+      ]
+    },
+    {
+      "text": "Murid-murid membangunkan Dia: \"Guru, Engkau tidak perduli kalau kita binasa?\"",
+      "bg": "storm",
+      "terrain": "sea",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 1.0,
+          "dy": -10
+        },
+        {
+          "type": "person",
+          "x": 0.33,
+          "size": 0.6,
+          "dy": -75,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.43,
+          "size": 0.6,
+          "dy": -75,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Yesus bangun, menghardik angin itu dan berkata kepada danau: \"Diam! Tenanglah!\"",
+      "bg": "storm",
+      "terrain": "sea",
+      "rays": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 1.0,
+          "dy": -10
+        },
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.8,
+          "dy": -75,
+          "pose": "arms_up"
+        }
+      ]
+    },
+    {
+      "text": "Lalu angin itu reda, dan danau menjadi teduh sekali.",
+      "bg": "dawn",
+      "terrain": "sea",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -20
+        },
+        {
+          "type": "dove",
+          "x": 0.7,
+          "y": 0.35,
+          "size": 0.6
+        }
+      ]
+    },
+    {
+      "text": "Kata-Nya kepada mereka: \"Mengapa kamu begitu takut? Mengapa kamu tidak percaya?\"",
+      "bg": "golden",
+      "terrain": "sea",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 1.0,
+          "dy": -10
+        },
+        {
+          "type": "person",
+          "x": 0.34,
+          "size": 0.75,
+          "dy": -75,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.44,
+          "size": 0.6,
+          "dy": -75
+        }
+      ]
+    },
+    {
+      "text": "Mereka bertanya seorang kepada yang lain: \"Siapa gerangan orang ini, sehingga angin dan danau pun taat kepada-Nya?\"",
+      "bg": "dawn",
+      "terrain": "sea",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 0.8,
+          "dy": -20
+        },
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 0.5,
+          "dy": -60
+        },
+        {
+          "type": "person",
+          "x": 0.46,
+          "size": 0.5,
+          "dy": -60,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Yesus ada di perahumu. Badai apa yang sedang kamu hadapi hari ini? Tulis di kolom komentar.",
+      "subtitle": "Badai apa yang sedang kamu hadapi hari ini? Tulis di kolom komentar.",
+      "bg": "golden",
+      "terrain": "sea",
+      "rays": true,
+      "camera": "pull",
+      "headline": [
+        {
+          "text": "Yesus ada di perahumu.",
+          "style": "statement"
+        },
+        {
+          "text": "Markus 4:39",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 0.6,
+          "dy": -20
+        },
+        {
+          "type": "person",
+          "x": 0.44,
+          "size": 0.45,
+          "dy": -65,
+          "pose": "arms_up"
+        }
+      ]
+    }
+  ],
+  "caption": "Badai mengamuk, perahu hampir tenggelam… tetapi Yesus sedang tidur. 🌊⛵\n\n\"Diam! Tenanglah!\" Lalu angin itu reda dan danau menjadi teduh sekali. (Markus 4:39)\n\nYesus ada di perahumu. Badai apa yang sedang kamu hadapi hari ini? Tulis di kolom komentar 👇\n\n#YesusMeredakanBadai #KisahAlkitab #RenunganHarian #Markus4 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Yesus Meredakan Badai: Dia Ada di Perahumu #shorts",
+  "youtube_tags": [
+    "Yesus meredakan badai",
+    "Kisah Alkitab",
+    "Renungan",
+    "Markus 4",
+    "Kristen"
+  ]
+}
