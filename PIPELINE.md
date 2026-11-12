@@ -58,7 +58,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 - **`headline` styles:** `big`, `accent` (orange), `small`, `ref`, `statement` (for the closing reflection). Use a headline on the **first** and the **last** scene only.
 - **Element types:**
   - `person` and `giant` take `pose`, `props` and `facing`.
-  - `fallen_giant`, `lying` (a sleeping or lying person), `sheep`, `tent`, `palm`, `tree`, `boat`, `ark`, `cross`, `tomb`, `city`, `tower`, `fire` (coloured), `bush`, `well`, `manger` and `lion` stand on the ground.
+  - `fallen_giant`, `lying` (a sleeping or lying person), `sheep`, `tent`, `palm`, `tree`, `boat`, `ark`, `cross`, `tomb` (`"open": false` for sealed), `city`, `tower`, `fire` (coloured), `bush`, `well`, `manger` and `lion` stand on the ground.
   - `fish`, `dove`, `star` and `stone` float; give them `"y"` from 0 to 1.
 - **Poses:** `stand`, `arms_up`, `praise`, `pray`, `point`, `sling`, `kneel`.
 - **Props:** `staff`, `spear`, `sword`, `shield`, `crown`, `sling`, `tablets`, `basket`, `child`, `beard`.

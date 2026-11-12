@@ -272,9 +272,11 @@ def cross(d, x, gy, s, col):
 def tomb(d, x, gy, s, col, open_=True):
     d.pieslice([x - 220 * s, gy - 300 * s, x + 220 * s, gy + 140 * s], 180, 360, fill=col)
     d.rectangle([x - 220 * s, gy - 80 * s, x + 220 * s, gy], fill=col)
-    d.ellipse([x - 80 * s, gy - 170 * s, x + 80 * s, gy + 20 * s], fill=(0, 0, 0, 255) if not open_ else (255, 236, 190, 255))
     if open_:
+        d.ellipse([x - 80 * s, gy - 170 * s, x + 80 * s, gy + 20 * s], fill=(255, 236, 190, 255))
         d.ellipse([x + 110 * s, gy - 170 * s, x + 270 * s, gy], fill=col)
+    else:  # sealed with a stone
+        d.ellipse([x - 95 * s, gy - 185 * s, x + 95 * s, gy + 5 * s], fill=lerp(col, (120, 120, 140, 255), 0.35))
 
 
 def city(d, x, gy, s, col):
@@ -420,6 +422,8 @@ def render_background(scene, seed=0, scale=1.12):
                 fig.alpha_composite(piece, (int(x - piece.width / 2), int(gy - piece.height - 12)))
         elif t == "lion":
             lion(d, x, gy, s, col, el.get("facing", 1))
+        elif t == "tomb":
+            tomb(d, x, gy, s, col, open_=el.get("open", True))
         elif t in ELEMENTS:
             ELEMENTS[t](d, x, gy, s, col)
         elif t in AIR:

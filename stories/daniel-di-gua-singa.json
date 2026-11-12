@@ -1,0 +1,334 @@
+{
+  "slug": "daniel-di-gua-singa",
+  "title": "Daniel di Gua Singa",
+  "reference": "Daniel 6",
+  "scenes": [
+    {
+      "text": "Berhenti berdoa, atau dilemparkan ke gua singa. Daniel tetap berlutut.",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "push",
+      "sun": false,
+      "headline": [
+        {
+          "text": "DANIEL",
+          "style": "big"
+        },
+        {
+          "text": "di",
+          "style": "small"
+        },
+        {
+          "text": "GUA SINGA",
+          "style": "accent"
+        },
+        {
+          "text": "DANIEL 6",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.75,
+          "pose": "kneel",
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "lion",
+          "x": 0.72,
+          "size": 0.85,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Daniel melayani Raja Darius dengan setia, dan raja berniat mengangkatnya atas seluruh kerajaan.",
+      "bg": "golden",
+      "terrain": "valley",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.68,
+          "size": 1.05,
+          "props": [
+            "crown"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Para pejabat lain menjadi iri. Mereka mencari-cari kesalahannya, tetapi tidak menemukan apa pun.",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.2,
+          "size": 0.8,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.32,
+          "size": 0.75
+        },
+        {
+          "type": "person",
+          "x": 0.75,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Maka mereka membujuk raja membuat larangan: selama tiga puluh hari, tak seorang pun boleh berdoa, kecuali kepada raja.",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.15,
+          "props": [
+            "crown"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.22,
+          "size": 0.75,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.8,
+          "size": 0.75,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Tetapi Daniel pulang, membuka jendela ke arah Yerusalem, lalu berlutut dan berdoa tiga kali sehari, seperti biasa.",
+      "bg": "dawn",
+      "terrain": "hill",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85,
+          "dy": -250,
+          "pose": "kneel",
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Ia tertangkap. Dengan sedih, raja memerintahkan agar Daniel dilemparkan ke dalam gua singa.",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "push",
+      "sun": false,
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 1.0,
+          "props": [
+            "crown"
+          ],
+          "facing": -1
+        },
+        {
+          "type": "person",
+          "x": 0.15,
+          "size": 0.85,
+          "props": [
+            "spear"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Kata raja kepadanya: \"Allahmu yang kausembah dengan tekun, Dialah kiranya yang melepaskan engkau!\"",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "pull",
+      "sun": false,
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.58,
+          "size": 1.05,
+          "props": [
+            "crown"
+          ],
+          "pose": "point",
+          "facing": -1
+        },
+        {
+          "type": "person",
+          "x": 0.32,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Gua itu ditutup dengan batu, dan semalaman raja tidak dapat tidur.",
+      "bg": "night",
+      "terrain": "hill",
+      "camera": "push",
+      "sun": false,
+      "elements": [
+        {
+          "type": "tomb",
+          "x": 0.5,
+          "size": 0.9,
+          "dy": -150,
+          "open": false
+        },
+        {
+          "type": "lion",
+          "x": 0.8,
+          "size": 0.5,
+          "dy": -40,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Pagi-pagi benar, raja bergegas ke gua itu dan berseru memanggil Daniel.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.68,
+          "size": 1.0,
+          "props": [
+            "crown"
+          ],
+          "pose": "arms_up",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Daniel menjawab: \"Allahku telah mengutus malaikat-Nya untuk mengatupkan mulut singa-singa itu.\"",
+      "bg": "golden",
+      "terrain": "plain",
+      "rays": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.9,
+          "pose": "praise",
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "lion",
+          "x": 0.2,
+          "size": 0.75
+        },
+        {
+          "type": "lion",
+          "x": 0.8,
+          "size": 0.7,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Daniel keluar tanpa luka sedikit pun, karena ia percaya kepada Allahnya.",
+      "bg": "golden",
+      "terrain": "hill",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.8,
+          "dy": -250,
+          "pose": "arms_up",
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Tetap setia, apa pun risikonya. Di bagian mana kamu sedang diuji untuk tetap setia? Tulis di kolom komentar.",
+      "subtitle": "Di bagian mana kamu sedang diuji untuk tetap setia? Tulis di kolom komentar.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "pull",
+      "headline": [
+        {
+          "text": "Tetap setia, apa pun risikonya.",
+          "style": "statement"
+        },
+        {
+          "text": "Daniel 6:24",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "pose": "kneel"
+        }
+      ]
+    }
+  ],
+  "caption": "Berhenti berdoa, atau dilemparkan ke gua singa. Daniel memilih tetap berlutut. 🦁🙏\n\n\"Daniel tidak didapati luka apa-apa, karena ia percaya kepada Allahnya.\" (Daniel 6:24)\n\nDi bagian mana kamu sedang diuji untuk tetap setia? Tulis di kolom komentar 👇\n\n#DanielDiGuaSinga #KisahAlkitab #RenunganHarian #Daniel6 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Daniel di Gua Singa: Tetap Setia, Apa pun Risikonya #shorts",
+  "youtube_tags": [
+    "Daniel di gua singa",
+    "Kisah Alkitab",
+    "Renungan",
+    "Daniel 6",
+    "Kristen"
+  ]
+}

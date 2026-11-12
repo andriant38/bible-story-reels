@@ -10,7 +10,7 @@ import sys
 
 # word -> spelling that makes the voice pronounce it the Indonesian way
 PRONUNCIATION = {
-    r"\bAllah\b": "Alah",  # owner's choice: Indonesian pronunciation, not Arabic
+    r"\bAllah": "Alah",  # also Allahku, Allahmu, Allahnya  # owner's choice: Indonesian pronunciation, not Arabic
 }
 
 
