@@ -83,7 +83,9 @@ def text_overlay(scene, path):
     if head:
         styles = {"big": ("ExtraBold", 132, (255, 255, 255)), "accent": ("ExtraBold", 132, (245, 163, 107)),
                   "small": ("Medium", 46, (255, 255, 255)), "ref": ("SemiBold", 34, (255, 255, 255)),
-                  "statement": ("ExtraBold", 76, (255, 255, 255))}
+                  "statement": ("ExtraBold", 76, (255, 255, 255)),
+                  "hook": ("ExtraBold", 92, (255, 255, 255)), "hook_accent": ("ExtraBold", 92, (245, 163, 107)),
+                  "label": ("Bold", 40, (245, 163, 107)), "point": ("Bold", 58, (255, 255, 255))}
         y = scene.get("headline_y", 230)
         layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)

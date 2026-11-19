@@ -20,13 +20,23 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 
 - Pick a well-known Bible story that is not in `posted.json`. Vary it: alternate Old and New Testament, and mix stories, parables and miracles. Ideas: Nuh & bahtera, Abraham & Ishak, Yusuf dijual saudaranya, Musa & semak menyala, Laut Teberau terbelah, Tembok Yerikho, Gideon & 300 orang, Simson, Rut & Naomi, Samuel dipanggil Tuhan, Elia & nabi Baal, Daniel di gua singa, Sadrakh Mesakh Abednego, Yunus & ikan besar, Ester, Kelahiran Yesus, Yesus meredakan badai, Yesus memberi makan 5000 orang, Petrus berjalan di atas air, Zakheus, Anak yang hilang, Orang Samaria yang baik hati, Lazarus dibangkitkan, Perjamuan terakhir, Penyaliban, Kebangkitan, Saulus bertobat, and so on.
 - Language: **Indonesian**. Stay faithful to the Bible text; use wording close to the Terjemahan Baru (TB) for any quoted verse. Do not add details that are not in the Bible.
-- Length: **10–13 scenes**, total narration **150–190 words** (about 60–80 seconds).
-- Structure (same arc as the Daud vs Goliat video):
-  1. A strong hook plus the title card (`headline`).
-  2. The story, scene by scene, as short narrative sentences.
-  3. The climax.
-  4. One short truth line, e.g. "Pertempuran adalah milik TUHAN."
-  5. The closing scene: a short reflection headline with its verse reference, then a question to the viewer plus "Tulis di kolom komentar."
+- Length: **12–14 scenes**, total narration **170–210 words** (about 70–90 seconds).
+- Structure. The owner wants every video to have **a strong hook** and **real understanding for the viewer**:
+  1. **HOOK, scene 1 (3–5 s, no title yet).** One or two short sentences that stop the scroll. Use one of these patterns, and vary them from day to day:
+     - a shocking contrast ("Seluruh dunia menertawakannya. Tapi ia tetap membangun.")
+     - a direct question to the viewer ("Pernah merasa doamu tidak dijawab?")
+     - a surprising fact ("Raja paling bijak di dunia… berakhir menyembah berhala.")
+     - "what would you do" ("Kalau kamu harus memilih: berhenti berdoa, atau dilempar ke gua singa?")
+     Put the hook ON SCREEN as big text: a `headline` with style `hook` (and `hook_accent` for the key word), `headline_y` about 420. Its `subtitle` can be a short line. Never start with "Pada suatu hari" or with the title.
+  2. **TITLE, scene 2.** The title card (`big`, `small`, `accent`, `ref`) on the first story beat.
+  3. **The story**, scene by scene, as short narrative sentences that build tension.
+  4. **The climax.**
+  5. **UNDERSTANDING, 2–3 scenes.** This is what the viewer takes home. Each scene gets a `headline` that starts with a `label` (orange, e.g. "MAKNANYA", "KONTEKSNYA", "UNTUK HIDUPMU") and continues with a `point` (one short line):
+     - **Context or meaning:** explain something the viewer may not know, for example why it mattered then, what a word means, or the cultural background. Keep it accurate to the Bible; do not invent history.
+     - **The lesson:** the one truth of this story, said plainly.
+     - **Application:** one concrete thing to do today ("Hari ini, coba…"), something practical, not preachy.
+  6. **The closing scene:** the key verse (`statement` plus `ref`), then a specific question to the viewer plus "Tulis di kolom komentar."
+  - Speak directly to the viewer with "kamu". Keep every sentence short enough to read in one breath.
 - Write it to `stories/<slug>.json` using the format below. **Copy `stories/daud-melawan-goliat.json` as the model.**
 
 ### Story JSON format
@@ -49,13 +59,18 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
       "elements": [ {"type": "person", "x": 0.3, "size": 1.0, "pose": "stand", "props": ["staff"], "facing": 1} ]
     }
   ],
-  "caption": "Post caption, ends with a question + 6–9 hashtags",
+  "caption": "Starts with the hook line, then 1–2 lines of the lesson, then the question + 6–9 hashtags",
   "youtube_title": "Max 90 chars, ends with #shorts",
   "youtube_tags": ["...", "..."]
 }
 ```
 
-- **`headline` styles:** `big`, `accent` (orange), `small`, `ref`, `statement` (for the closing reflection). Use a headline on the **first** and the **last** scene only.
+- **`headline` styles:**
+  - `hook` and `hook_accent` for scene 1.
+  - `big`, `accent` (orange), `small` and `ref` for the title card.
+  - `label` (an orange section tag) plus `point` for the understanding scenes.
+  - `statement` plus `ref` for the closing verse.
+  - Use headlines only on the hook, title, understanding and closing scenes.
 - **Element types:**
   - `person` and `giant` take `pose`, `props` and `facing`.
   - `fallen_giant`, `lying` (a sleeping or lying person), `sheep`, `tent`, `palm`, `tree`, `boat`, `ark`, `cross`, `tomb` (`"open": false` for sealed), `city`, `tower`, `fire` (coloured), `bush`, `well`, `manger` and `lion` stand on the ground.
