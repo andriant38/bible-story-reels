@@ -170,7 +170,7 @@ function truck(s, big) {
     g.add(w); wheels.push(w);
   }
   const fy = R * 1.15;
-  g.add(box(L * 0.9, R * 0.5, Wd * 0.45, dk, 0, fy, 0));
+  const chassis = box(L * 0.9, R * 0.5, Wd * 0.45, dk, 0, fy, 0); g.add(chassis);
   // front deck + cab
   if (big) {
     g.add(box(2.6, 2.4, Wd - 0.6, yel, L * 0.36, fy + 1.4, 0));
@@ -194,6 +194,21 @@ function truck(s, big) {
   if (big) bed.add(box(2.6, 0.25, bw, bedM, bl + 1.2, bh * 1.25, 0)); // canopy over cab
   let load = null;
   if (s.loaded) { load = mesh(new THREE.ConeGeometry(Math.min(bl, bw) * 0.55, bh * 0.9, 9), mat(s.load_color ?? 0x8b4a2b, { flat: true, rough: 1 })); load.scale.set(bl / bw, 1, 1); load.position.set(bl / 2, bh * 0.75, 0); bed.add(load); }
+  // parts for the 'assemble' animation: start scattered on the ground, then get lifted into place
+  const cabParts = g.children.filter((c) => c !== chassis && c !== bed && !wheels.includes(c));
+  const home = new Map(); [...wheels, ...cabParts, bed].forEach((o) => home.set(o, o.position.clone()));
+  const scatter = (o) => {
+    if (wheels.includes(o)) { const h = home.get(o); return new V3(h.x * 1.3, R, Math.sign(h.z) * (Wd * 1.5 + Math.abs(h.z))); }
+    if (o === bed) return new V3(-L * 0.75, R * 0.3 - fy, -Wd * 1.7);
+    const h = home.get(o); return new V3(h.x + L * 0.75, h.y - fy, h.z - Wd * 0.4);
+  };
+  const assemble = (p) => {
+    const seq = [[wheels, 0, 0.4], [cabParts, 0.35, 0.65], [[bed], 0.6, 0.95]];
+    for (const [list, a, b] of seq) for (const o of list) {
+      const q = easeIO((p - a) / (b - a)); const h = home.get(o);
+      o.position.lerpVectors(scatter(o), h, q); o.position.y += Math.sin(Math.PI * q) * (list === wheels ? 2 : 6);
+    }
+  };
   const from = new V3(...(s.pos || [0, 0, 0])); const to = s.to ? new V3(...s.to) : null;
   if (to) g.rotation.y = Math.atan2(-(to.z - from.z), to.x - from.x);
   return {
@@ -202,7 +217,8 @@ function truck(s, big) {
         const q = s.ease === false ? p : easeIO(p); g.position.lerpVectors(from, to, q);
         const dist = from.distanceTo(to) * q; for (const w of wheels) w.rotation.z = -dist / R;
       }
-      if (s.anim === 'dump') { const q = smooth(p / 0.6) - smooth((p - 0.8) / 0.2); bed.rotation.z = -q * 0.85 * (1); if (load) load.visible = p < 0.55; }
+      if (s.anim === 'assemble') assemble(p);
+      if (s.anim === 'dump') { const q = smooth(p / 0.6) - smooth((p - 0.8) / 0.2); bed.rotation.z = q * 0.85; if (load) load.visible = p < 0.55; }
     },
   };
 }

@@ -84,7 +84,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 |---|---|---|
 | `worker` | `hat` (colour), `color` | `walk`, `wave` |
 | `excavator` | `scale` (2–2.5 = mining excavator), `swing`, `period` | `dig`, `load` |
-| `haul_truck` (mine truck, 7.7 m tall) / `dump_truck` | `to` (target position: it drives there), `loaded`, `load_color`, `ease` | `dump` |
+| `haul_truck` (mine truck, 7.7 m tall) / `dump_truck` | `to` (target position: it drives there), `loaded`, `load_color`, `ease` | `dump`, `assemble` (wheels → cabin → bed fitted together) |
 | `car`, `house` | `color`; house `h` | – |
 | `tower_crane` | `height`, `height_to`, `jib`, `load` (`beam`/`bucket`/`panel`), `slew`, `swing`, `trolley_from/to`, `drop_from/to` | `swing`, `climb`, `idle` |
 | `building` | `floors`, `floor_h`, `w`, `d`, `facade` | `build` (columns → slab → glass) |

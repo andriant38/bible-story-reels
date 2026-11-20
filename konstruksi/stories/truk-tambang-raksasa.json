@@ -646,15 +646,15 @@
         "move": "orbit",
         "target": [
           0,
-          4,
+          3,
           0
         ],
-        "dist": 32,
-        "height": 8,
-        "angle": -30,
-        "sweep": 25
+        "dist": 42,
+        "height": 16,
+        "angle": -35,
+        "sweep": 30
       },
-      "shadow_size": 40,
+      "shadow_size": 50,
       "objects": [
         {
           "type": "haul_truck",
@@ -664,21 +664,51 @@
             0
           ],
           "rot": 0,
-          "loaded": true,
-          "anim": "dump",
-          "load_color": 9127979
+          "anim": "assemble",
+          "progress": [
+            0,
+            1
+          ],
+          "end": 0.92
         },
         {
-          "type": "ore_pile",
+          "type": "worker",
           "pos": [
-            -14,
+            6,
             0,
+            9
+          ],
+          "rot": 120
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -8,
+            0,
+            10
+          ],
+          "rot": 60,
+          "hat": 16777215
+        },
+        {
+          "type": "worker",
+          "pos": [
+            12,
+            0,
+            -6
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            12,
             0
           ],
-          "radius": 7,
-          "h": 5,
-          "anim": "grow",
-          "color": 9127979
+          "text": "DIRAKIT DI LOKASI",
+          "size": 2.0,
+          "show_at": 0.0
         }
       ]
     },
