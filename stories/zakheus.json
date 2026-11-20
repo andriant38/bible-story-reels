@@ -1,0 +1,399 @@
+{
+  "slug": "zakheus",
+  "title": "Zakheus",
+  "reference": "Lukas 19:1–10",
+  "scenes": [
+    {
+      "text": "Orang yang paling dibenci di kota itu… justru dicari oleh Yesus.",
+      "subtitle": "Orang yang paling dibenci di kota itu… justru dicari oleh Yesus.",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "push",
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Paling dibenci…",
+          "style": "hook"
+        },
+        {
+          "text": "justru dicari Yesus.",
+          "style": "hook_accent"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.7
+        },
+        {
+          "type": "person",
+          "x": 0.15,
+          "size": 0.75,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.85,
+          "size": 0.75,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Di Yerikho, ada seorang kepala pemungut cukai yang kaya. Namanya Zakheus.",
+      "bg": "golden",
+      "terrain": "desert",
+      "camera": "pan_right",
+      "headline": [
+        {
+          "text": "ZAKHEUS",
+          "style": "accent"
+        },
+        {
+          "text": "dan pohon ara",
+          "style": "small"
+        },
+        {
+          "text": "LUKAS 19:1–10",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "palm",
+          "x": 0.15,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 0.65,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "palm",
+          "x": 0.85,
+          "size": 0.75
+        }
+      ]
+    },
+    {
+      "text": "Pemungut cukai bekerja untuk penjajah Romawi, dan sering memeras bangsanya sendiri. Semua orang membencinya.",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "city",
+          "x": 0.5,
+          "size": 0.7,
+          "dy": -260
+        },
+        {
+          "type": "person",
+          "x": 0.2,
+          "size": 0.85,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.33,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.72,
+          "size": 0.62,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Suatu hari, Yesus lewat di kota itu. Zakheus ingin melihat-Nya, tetapi badannya pendek, dan orang banyak menghalanginya.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.22,
+          "size": 0.95
+        },
+        {
+          "type": "person",
+          "x": 0.33,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.44,
+          "size": 0.95
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.78,
+          "size": 0.6,
+          "pose": "arms_up",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Maka ia berlari mendahului orang banyak, lalu memanjat pohon ara.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.5,
+          "size": 1.3
+        },
+        {
+          "type": "person",
+          "x": 0.52,
+          "size": 0.42,
+          "dy": -480,
+          "pose": "arms_up"
+        }
+      ]
+    },
+    {
+      "text": "Ketika Yesus sampai di tempat itu, Ia berhenti… dan melihat ke atas.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.68,
+          "size": 1.2
+        },
+        {
+          "type": "person",
+          "x": 0.69,
+          "size": 0.4,
+          "dy": -445
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 1.0,
+          "pose": "point",
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "text": "\"Zakheus, segeralah turun, sebab hari ini Aku harus menumpang di rumahmu.\"",
+      "bg": "golden",
+      "terrain": "plain",
+      "rays": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 1.0,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.65,
+          "pose": "praise",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Orang banyak bersungut-sungut: \"Ia menumpang di rumah orang berdosa!\"",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.18,
+          "size": 0.85,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.8,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.75,
+          "size": 0.95,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Tetapi Zakheus berdiri dan berkata: \"Tuhan, setengah dari milikku akan kuberikan kepada orang miskin. Dan jika ada yang kuperas, akan kukembalikan empat kali lipat.\"",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "pose": "arms_up"
+        }
+      ]
+    },
+    {
+      "text": "Taurat biasanya menuntut ganti rugi ditambah seperlima. Zakheus memberi jauh lebih banyak, karena hatinya sudah berubah.",
+      "bg": "dawn",
+      "terrain": "desert",
+      "camera": "pull",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Ia memberi jauh melebihi tuntutan Taurat.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.7,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.65,
+          "size": 0.85,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Yesus tidak menunggu Zakheus berubah lebih dulu. Kasih-Nya datang lebih dulu, dan kasih itulah yang mengubahnya.",
+      "bg": "golden",
+      "terrain": "plain",
+      "rays": true,
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "MAKNANYA",
+          "style": "label"
+        },
+        {
+          "text": "Kasih Yesus datang lebih dulu.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.95
+        },
+        {
+          "type": "person",
+          "x": 0.58,
+          "size": 0.7,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Hari ini, sapalah satu orang yang sering dijauhi. Mungkin ia sedang menunggu seseorang yang mau peduli.",
+      "bg": "dawn",
+      "terrain": "hill",
+      "camera": "pull",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "UNTUK HIDUPMU",
+          "style": "label"
+        },
+        {
+          "text": "Sapa orang yang sering dijauhi.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.7,
+          "dy": -250
+        },
+        {
+          "type": "person",
+          "x": 0.56,
+          "size": 0.7,
+          "dy": -250,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Anak Manusia datang untuk mencari dan menyelamatkan yang hilang. Siapa yang selama ini kamu anggap tidak layak dikasihi? Tulis di kolom komentar.",
+      "subtitle": "Siapa yang selama ini kamu anggap tidak layak dikasihi? Tulis di kolom komentar.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "push",
+      "headline": [
+        {
+          "text": "Ia datang mencari yang hilang.",
+          "style": "statement"
+        },
+        {
+          "text": "Lukas 19:10",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "pose": "arms_up"
+        }
+      ]
+    }
+  ],
+  "caption": "Orang yang paling dibenci di kota itu… justru dicari oleh Yesus. 🌳\n\nYesus tidak menunggu Zakheus berubah lebih dulu. Kasih-Nya datang lebih dulu, dan kasih itulah yang mengubah hidupnya.\n\n\"Anak Manusia datang untuk mencari dan menyelamatkan yang hilang.\" (Lukas 19:10)\n\nSiapa yang selama ini kamu anggap tidak layak dikasihi? Tulis di kolom komentar 👇\n\n#Zakheus #KisahAlkitab #RenunganHarian #Lukas19 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Zakheus: Kasih Yesus Datang Lebih Dulu #shorts",
+  "youtube_tags": [
+    "Zakheus",
+    "Kisah Alkitab",
+    "Renungan",
+    "Lukas 19",
+    "Kristen"
+  ]
+}

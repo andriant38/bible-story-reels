@@ -20,7 +20,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 
 - Pick a well-known Bible story that is not in `posted.json`. Vary it: alternate Old and New Testament, and mix stories, parables and miracles. Ideas: Nuh & bahtera, Abraham & Ishak, Yusuf dijual saudaranya, Musa & semak menyala, Laut Teberau terbelah, Tembok Yerikho, Gideon & 300 orang, Simson, Rut & Naomi, Samuel dipanggil Tuhan, Elia & nabi Baal, Daniel di gua singa, Sadrakh Mesakh Abednego, Yunus & ikan besar, Ester, Kelahiran Yesus, Yesus meredakan badai, Yesus memberi makan 5000 orang, Petrus berjalan di atas air, Zakheus, Anak yang hilang, Orang Samaria yang baik hati, Lazarus dibangkitkan, Perjamuan terakhir, Penyaliban, Kebangkitan, Saulus bertobat, and so on.
 - Language: **Indonesian**. Stay faithful to the Bible text; use wording close to the Terjemahan Baru (TB) for any quoted verse. Do not add details that are not in the Bible.
-- Length: **12–14 scenes**, total narration **170–210 words** (about 70–90 seconds).
+- Length: **12–14 scenes**, total narration **160–190 words** (keep the final video UNDER 90 seconds, because Facebook Reels may reject longer videos).
 - Structure. The owner wants every video to have **a strong hook** and **real understanding for the viewer**:
   1. **HOOK, scene 1 (3–5 s, no title yet).** One or two short sentences that stop the scroll. Use one of these patterns, and vary them from day to day:
      - a shocking contrast ("Seluruh dunia menertawakannya. Tapi ia tetap membangun.")
