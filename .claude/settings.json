@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Metricool_Social_Media_Management__createScheduledPost",
+      "mcp__Metricool_Social_Media_Management__getScheduledPosts",
+      "mcp__Metricool_Social_Media_Management__getBestTimeToPostByNetwork",
+      "mcp__Metricool_Social_Media_Management__getBrandSettings",
+      "mcp__ElevenLabs__creative_generate_speech",
+      "mcp__ElevenLabs__creative_create_flow",
+      "mcp__ElevenLabs__creative_get_flow_run_status"
+    ]
+  }
+}
