@@ -1,0 +1,1099 @@
+{
+  "slug": "berapa-rit-dump-truck-per-jam",
+  "title": "Berapa Rit Dump Truck dalam 1 Jam?",
+  "topic": "konstruksi",
+  "scenes": [
+    {
+      "text": "Satu dump truk, satu jam. Berapa rit yang bisa ia kejar?",
+      "headline": [
+        {
+          "text": "BERAPA RIT",
+          "style": "hook"
+        },
+        {
+          "text": "DALAM 1 JAM?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 260,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "flyby",
+        "follow": "t",
+        "target": [
+          0,
+          3.5,
+          0
+        ],
+        "dist": 14,
+        "height": 0.5,
+        "angle": 30,
+        "sweep": 25
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "id": "t",
+          "type": "dump_truck",
+          "pos": [
+            -20,
+            0,
+            -2
+          ],
+          "to": [
+            20,
+            0,
+            -2
+          ],
+          "loaded": true,
+          "ease": false
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -40
+          ],
+          "area": [
+            200,
+            40
+          ],
+          "count": 40
+        }
+      ]
+    },
+    {
+      "text": "Jawabannya bukan soal ngebut, tapi soal waktu siklus. Kita hitung pakai contoh.",
+      "headline": [
+        {
+          "text": "WAKTU",
+          "style": "big"
+        },
+        {
+          "text": "SIKLUS",
+          "style": "accent"
+        },
+        {
+          "text": "kunci hitungan rit",
+          "style": "small"
+        }
+      ],
+      "headline_y": 200,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          4,
+          -2
+        ],
+        "dist": 24,
+        "height": 6,
+        "angle": 50,
+        "sweep": 40
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        }
+      ]
+    },
+    {
+      "text": "Tahap pertama, dimuat. Ekskavator mengisi bak, kira-kira tiga menit.",
+      "headline": [
+        {
+          "text": "1. MUAT",
+          "style": "label"
+        },
+        {
+          "text": "± 3 menit",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          4,
+          -3
+        ],
+        "dist": 20,
+        "height": 7,
+        "angle": 110,
+        "sweep": 15
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 6
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill",
+          "progress": [
+            0.3,
+            1
+          ]
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -5,
+            0,
+            -9
+          ],
+          "rot": -40
+        }
+      ]
+    },
+    {
+      "text": "Kedua, jalan bermuatan. Jaraknya dua kilometer, kecepatan dua puluh kilometer per jam. Butuh enam menit.",
+      "headline": [
+        {
+          "text": "2. ANGKUT",
+          "style": "label"
+        },
+        {
+          "text": "2 km ÷ 20 km/jam = 6 menit",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "follow": "t",
+        "target": [
+          0,
+          4,
+          0
+        ],
+        "dist": 20,
+        "height": 5,
+        "angle": 20,
+        "sweep": 40
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "id": "t",
+          "type": "dump_truck",
+          "pos": [
+            -25,
+            0,
+            -2
+          ],
+          "to": [
+            25,
+            0,
+            -2
+          ],
+          "loaded": true,
+          "ease": false
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            200,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            40
+          ],
+          "area": [
+            200,
+            30
+          ],
+          "count": 20,
+          "seed": 4
+        }
+      ]
+    },
+    {
+      "text": "Ketiga, menumpahkan muatan. Sekitar satu menit.",
+      "headline": [
+        {
+          "text": "3. BUANG",
+          "style": "label"
+        },
+        {
+          "text": "± 1 menit",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -2,
+          3,
+          0
+        ],
+        "dist": 19,
+        "height": 4,
+        "angle": -40,
+        "sweep": 25
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "dump_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "dump",
+          "load_color": 9134915
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -6.5,
+            0,
+            0
+          ],
+          "radius": 3.5,
+          "h": 2.4,
+          "anim": "grow",
+          "start": 0.35,
+          "color": 9134915
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -9,
+            0,
+            9
+          ],
+          "radius": 5,
+          "h": 3.2,
+          "color": 9134915,
+          "seed": 8
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -4,
+            0,
+            7
+          ],
+          "anim": "wave"
+        }
+      ]
+    },
+    {
+      "text": "Keempat, kembali kosong. Lebih ringan, jadi lebih cepat. Tiga puluh kilometer per jam, cukup empat menit.",
+      "headline": [
+        {
+          "text": "4. KEMBALI",
+          "style": "label"
+        },
+        {
+          "text": "2 km ÷ 30 km/jam = 4 menit",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "follow": "t",
+        "target": [
+          0,
+          4,
+          0
+        ],
+        "dist": 20,
+        "height": 6,
+        "angle": 160,
+        "sweep": -40
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "id": "t",
+          "type": "dump_truck",
+          "pos": [
+            35,
+            0,
+            2
+          ],
+          "to": [
+            -35,
+            0,
+            2
+          ],
+          "ease": false
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            200,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            40
+          ],
+          "area": [
+            200,
+            30
+          ],
+          "count": 20,
+          "seed": 4
+        }
+      ]
+    },
+    {
+      "text": "Kelima, antre dan ambil posisi di depan ekskavator. Kira-kira satu menit.",
+      "headline": [
+        {
+          "text": "5. ANTRE & POSISI",
+          "style": "label"
+        },
+        {
+          "text": "± 1 menit",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          -10,
+          3,
+          -5
+        ],
+        "dist": 34,
+        "height": 13,
+        "angle": 100,
+        "sweep": 12
+      },
+      "shadow_size": 35,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 6
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill",
+          "progress": [
+            0.2,
+            0.9
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -14,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "color": 15291946
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -26,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "color": 3045803
+        },
+        {
+          "type": "zone",
+          "pos": [
+            -20,
+            0,
+            -5.4
+          ],
+          "w": 22,
+          "d": 5,
+          "color": 16762880
+        },
+        {
+          "type": "label",
+          "pos": [
+            -20,
+            6,
+            -5.4
+          ],
+          "text": "ANTRE",
+          "size": 2
+        }
+      ]
+    },
+    {
+      "text": "Totalnya, satu siklus butuh lima belas menit.",
+      "headline": [
+        {
+          "text": "3 + 6 + 1 + 4 + 1",
+          "style": "point"
+        },
+        {
+          "text": "15",
+          "style": "stat"
+        },
+        {
+          "text": "MENIT PER RIT",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          -4,
+          0
+        ],
+        "dist": 70,
+        "height": 55,
+        "angle": 30,
+        "sweep": 35
+      },
+      "shadow_size": 70,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -30,
+            0,
+            -2
+          ],
+          "to": [
+            10,
+            0,
+            -2
+          ],
+          "loaded": true,
+          "ease": false
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            30,
+            0,
+            2
+          ],
+          "to": [
+            -10,
+            0,
+            2
+          ],
+          "ease": false,
+          "color": 15291946
+        },
+        {
+          "type": "excavator",
+          "pos": [
+            -45,
+            0,
+            -14
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -45
+          ],
+          "area": [
+            220,
+            40
+          ],
+          "count": 40
+        }
+      ]
+    },
+    {
+      "text": "Enam puluh menit dibagi lima belas. Hasilnya, empat rit per jam.",
+      "headline": [
+        {
+          "text": "60 ÷ 15 =",
+          "style": "point"
+        },
+        {
+          "text": "4 RIT",
+          "style": "stat"
+        },
+        {
+          "text": "PER JAM",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "pull",
+        "target": [
+          4,
+          2,
+          0
+        ],
+        "dist": 50,
+        "height": 20,
+        "angle": 62,
+        "sweep": 8
+      },
+      "shadow_size": 45,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -24,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -8,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            8,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            24,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "label",
+          "pos": [
+            -24,
+            6,
+            0
+          ],
+          "text": "1",
+          "size": 3,
+          "show_at": 0.1
+        },
+        {
+          "type": "label",
+          "pos": [
+            -8,
+            6,
+            0
+          ],
+          "text": "2",
+          "size": 3,
+          "show_at": 0.25
+        },
+        {
+          "type": "label",
+          "pos": [
+            8,
+            6,
+            0
+          ],
+          "text": "3",
+          "size": 3,
+          "show_at": 0.4
+        },
+        {
+          "type": "label",
+          "pos": [
+            24,
+            6,
+            0
+          ],
+          "text": "4",
+          "size": 3,
+          "show_at": 0.55
+        }
+      ]
+    },
+    {
+      "text": "Tapi di lapangan jarang mulus. Ada istirahat, pengecekan, dan jalan rusak. Biasanya dihitung efektif lima puluh menit per jam, jadi realistisnya sekitar tiga rit lebih.",
+      "headline": [
+        {
+          "text": "REALITANYA",
+          "style": "label"
+        },
+        {
+          "text": "Efektif ±50 menit/jam → ±3,3 rit",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          6,
+          2,
+          0
+        ],
+        "dist": 32,
+        "height": 11,
+        "angle": 78,
+        "sweep": 10
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            0,
+            0,
+            -2
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "worker",
+          "pos": [
+            5,
+            0,
+            2
+          ],
+          "rot": 160
+        },
+        {
+          "type": "worker",
+          "pos": [
+            6.5,
+            0,
+            3
+          ],
+          "rot": 200,
+          "hat": 16777215
+        },
+        {
+          "type": "zone",
+          "pos": [
+            13,
+            0,
+            0
+          ],
+          "w": 8,
+          "d": 10,
+          "anim": "pulse"
+        },
+        {
+          "type": "label",
+          "pos": [
+            13,
+            4,
+            0
+          ],
+          "text": "JALAN RUSAK",
+          "size": 1.6,
+          "color": "#ff5a4a"
+        }
+      ]
+    },
+    {
+      "text": "Hitungan ini juga menentukan jumlah truk. Ekskavator mengisi satu truk tiga menit, siklus truk lima belas menit. Jadi butuh lima truk, supaya ekskavator tidak menganggur.",
+      "headline": [
+        {
+          "text": "BUTUH BERAPA TRUK?",
+          "style": "label"
+        },
+        {
+          "text": "15 ÷ 3 = 5 truk",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -20,
+          0,
+          -8
+        ],
+        "dist": 72,
+        "height": 48,
+        "angle": 60,
+        "sweep": 20
+      },
+      "shadow_size": 70,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "length": 300,
+          "w": 10
+        },
+        {
+          "type": "excavator",
+          "pos": [
+            -40,
+            0,
+            -12
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -38.9,
+            0,
+            -17.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill",
+          "progress": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -52,
+            0,
+            -17.4
+          ],
+          "rot": 0,
+          "color": 15291946
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -20,
+            0,
+            -2
+          ],
+          "to": [
+            15,
+            0,
+            -2
+          ],
+          "loaded": true,
+          "ease": false
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            5,
+            0,
+            -2
+          ],
+          "to": [
+            40,
+            0,
+            -2
+          ],
+          "loaded": true,
+          "ease": false,
+          "color": 3045803
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            30,
+            0,
+            2
+          ],
+          "to": [
+            -5,
+            0,
+            2
+          ],
+          "ease": false,
+          "color": 15291946
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -36,
+            0,
+            -4
+          ],
+          "radius": 6,
+          "h": 4,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -50
+          ],
+          "area": [
+            240,
+            40
+          ],
+          "count": 45
+        }
+      ]
+    },
+    {
+      "text": "Di proyekmu, satu dump truk biasanya dapat berapa rit per jam? Tulis di kolom komentar.",
+      "headline": [
+        {
+          "text": "PROYEKMU DAPAT BERAPA RIT?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 230,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          4,
+          0
+        ],
+        "dist": 20,
+        "height": 3,
+        "angle": 130,
+        "sweep": 35
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "dump_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "worker",
+          "pos": [
+            4,
+            0,
+            4
+          ],
+          "anim": "wave"
+        }
+      ]
+    }
+  ],
+  "caption": "Satu dump truk, satu jam: berapa rit? 🚚\n\nRumusnya: rit/jam = 60 ÷ waktu siklus.\nContoh: muat 3 + angkut 6 + buang 1 + kembali 4 + antre 1 = 15 menit → 4 rit/jam.\nRealitanya efektif ±50 menit/jam → ±3,3 rit.\n\nBonus: siklus 15 menit ÷ waktu muat 3 menit = butuh 5 truk biar ekskavator nggak nganggur.\n\nDi proyekmu dapat berapa rit per jam? Tulis di komentar 👇\n\n#dumptruck #ritase #alatBerat #konstruksi #tambang #proyek #operatorAlatBerat #faktaunik #animasi3D",
+  "youtube_title": "Berapa Rit Dump Truck dalam 1 Jam? Ini Cara Hitungnya #shorts",
+  "youtube_tags": [
+    "dump truck",
+    "ritase",
+    "rit per jam",
+    "waktu siklus",
+    "alat berat",
+    "konstruksi",
+    "tambang",
+    "animasi 3d"
+  ]
+}

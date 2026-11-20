@@ -218,6 +218,7 @@ function truck(s, big) {
         const dist = from.distanceTo(to) * q; for (const w of wheels) w.rotation.z = -dist / R;
       }
       if (s.anim === 'assemble') assemble(p);
+      if (s.anim === 'fill' && load) { const k = Math.max(smooth(p), 0.02); load.scale.set((bl / bw) * k, k, k); load.position.y = bh * (0.3 + 0.45 * k); }
       if (s.anim === 'dump') { const q = smooth(p / 0.6) - smooth((p - 0.8) / 0.2); bed.rotation.z = q * 0.85; if (load) load.visible = p < 0.55; }
     },
   };
@@ -575,7 +576,7 @@ F.zone = (s) => {
   // translucent warning area on the ground (blind spot, danger zone)
   const g = new THREE.Group(); const w = s.w ?? 10, d = s.d ?? 8;
   const m = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshBasicMaterial({ color: s.color ?? 0xff3b2f, transparent: true, opacity: 0.45, depthWrite: false }));
-  m.rotation.x = -Math.PI / 2; m.position.y = 0.06; g.add(m);
+  m.rotation.x = -Math.PI / 2; m.position.y = 0.14; g.add(m);
   return { group: g, update(p, t) { m.material.opacity = (s.anim === 'pulse' ? 0.3 + 0.2 * Math.sin(t * 5) : 0.45) * smooth(p / 0.15); } };
 };
 
