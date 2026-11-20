@@ -1,0 +1,809 @@
+{
+  "slug": "truk-tambang-raksasa",
+  "title": "Truk Tambang Raksasa",
+  "topic": "tambang",
+  "scenes": [
+    {
+      "text": "Ban truk ini lebih tinggi dari dua orang dewasa.",
+      "headline": [
+        {
+          "text": "BANNYA LEBIH TINGGI",
+          "style": "hook"
+        },
+        {
+          "text": "DARI KAMU",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 260,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          4.6,
+          3.6,
+          3.6
+        ],
+        "dist": 15,
+        "height": -1.2,
+        "angle": 18,
+        "sweep": 10
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "worker",
+          "pos": [
+            6.6,
+            0,
+            5.4
+          ],
+          "rot": 30,
+          "anim": "wave"
+        },
+        {
+          "type": "dimension",
+          "pos": [
+            2.3,
+            0,
+            4.8
+          ],
+          "h": 3.9,
+          "label": "4 m",
+          "anim": "grow",
+          "label_size": 0.55
+        }
+      ]
+    },
+    {
+      "text": "Inilah truk tambang raksasa. Dan ukurannya bukan untuk pamer.",
+      "headline": [
+        {
+          "text": "TRUK",
+          "style": "big"
+        },
+        {
+          "text": "TAMBANG",
+          "style": "accent"
+        },
+        {
+          "text": "RAKSASA",
+          "style": "big"
+        }
+      ],
+      "headline_y": 200,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          7,
+          0
+        ],
+        "dist": 34,
+        "height": 1,
+        "angle": 40,
+        "sweep": 50
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "worker",
+          "pos": [
+            9,
+            0,
+            2
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            8,
+            0,
+            -3
+          ],
+          "hat": 16777215
+        }
+      ]
+    },
+    {
+      "text": "Tingginya hampir delapan meter. Setara rumah dua lantai.",
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "pull",
+        "target": [
+          -2,
+          4.5,
+          0
+        ],
+        "dist": 36,
+        "height": 3,
+        "angle": 10,
+        "sweep": 8
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            2,
+            0,
+            0
+          ],
+          "rot": 180
+        },
+        {
+          "type": "house",
+          "pos": [
+            -13,
+            0,
+            0
+          ],
+          "h": 6.4
+        },
+        {
+          "type": "dimension",
+          "pos": [
+            -5.5,
+            0,
+            5
+          ],
+          "h": 7.7,
+          "label": "7,7 m",
+          "anim": "grow",
+          "label_size": 1.6
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -6,
+            0,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Sekali angkut, ia membawa sekitar tiga ratus enam puluh ton batuan.",
+      "headline": [
+        {
+          "text": "360",
+          "style": "stat"
+        },
+        {
+          "text": "TON SEKALI ANGKUT",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 200,
+      "world": "pit",
+      "time": "day",
+      "strata": "laterite",
+      "pit": {
+        "benches": 5,
+        "bench_h": 12,
+        "berm": 26,
+        "face": 7,
+        "floor_r": 60
+      },
+      "camera": {
+        "move": "orbit",
+        "target": [
+          2,
+          -53,
+          -44
+        ],
+        "dist": 36,
+        "height": 12,
+        "angle": 40,
+        "sweep": 30
+      },
+      "shadow_size": 60,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            -4,
+            -60,
+            -50
+          ],
+          "rot": 180,
+          "scale": 2.4,
+          "anim": "load",
+          "swing": 95,
+          "period": 8
+        },
+        {
+          "type": "haul_truck",
+          "pos": [
+            6,
+            -60,
+            -38
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -22,
+            -60,
+            -50
+          ],
+          "radius": 12,
+          "h": 9,
+          "color": 9127979
+        }
+      ]
+    },
+    {
+      "text": "Itu kira-kira seberat dua ratus empat puluh mobil.",
+      "headline": [
+        {
+          "text": "= 240 MOBIL",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 300,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "rise",
+        "target": [
+          0,
+          2,
+          8
+        ],
+        "dist": 40,
+        "height": 30,
+        "height_from": 6,
+        "angle": 25,
+        "sweep": 10
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            0,
+            -4
+          ],
+          "rot": 0,
+          "loaded": true
+        },
+        {
+          "type": "car",
+          "pos": [
+            -12,
+            0,
+            10
+          ]
+        },
+        {
+          "type": "car",
+          "pos": [
+            -6,
+            0,
+            10
+          ],
+          "color": 13775914
+        },
+        {
+          "type": "car",
+          "pos": [
+            0,
+            0,
+            10
+          ],
+          "color": 3045803
+        },
+        {
+          "type": "car",
+          "pos": [
+            6,
+            0,
+            10
+          ],
+          "color": 15790320
+        },
+        {
+          "type": "car",
+          "pos": [
+            12,
+            0,
+            10
+          ],
+          "color": 2763306
+        },
+        {
+          "type": "car",
+          "pos": [
+            -12,
+            0,
+            15
+          ],
+          "color": 3045803
+        },
+        {
+          "type": "car",
+          "pos": [
+            -6,
+            0,
+            15
+          ]
+        },
+        {
+          "type": "car",
+          "pos": [
+            0,
+            0,
+            15
+          ],
+          "color": 13775914
+        },
+        {
+          "type": "car",
+          "pos": [
+            6,
+            0,
+            15
+          ],
+          "color": 2763306
+        },
+        {
+          "type": "car",
+          "pos": [
+            12,
+            0,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mesinnya sekitar empat ribu tenaga kuda. Tangki solarnya hampir tujuh ribu liter.",
+      "headline": [
+        {
+          "text": "4.000",
+          "style": "stat"
+        },
+        {
+          "text": "TENAGA KUDA",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 200,
+      "world": "pit",
+      "time": "golden",
+      "strata": "laterite",
+      "pit": {
+        "benches": 5,
+        "bench_h": 12,
+        "berm": 26,
+        "face": 7,
+        "floor_r": 60
+      },
+      "camera": {
+        "move": "flyby",
+        "follow": "t1",
+        "target": [
+          0,
+          5,
+          0
+        ],
+        "dist": 38,
+        "height": 9,
+        "angle": 60,
+        "sweep": 25
+      },
+      "shadow_size": 60,
+      "objects": [
+        {
+          "id": "t1",
+          "type": "haul_truck",
+          "pos": [
+            -40,
+            -36,
+            112
+          ],
+          "to": [
+            30,
+            -36,
+            115
+          ],
+          "loaded": true,
+          "ease": false
+        }
+      ]
+    },
+    {
+      "text": "Tapi ada bahaya besar. Dari kursi sopir, mobil kecil di depannya bisa tidak terlihat sama sekali.",
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          9,
+          0,
+          0
+        ],
+        "dist": 36,
+        "height": 30,
+        "angle": 25,
+        "sweep": 10
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "zone",
+          "pos": [
+            13,
+            0,
+            0
+          ],
+          "w": 12,
+          "d": 11,
+          "anim": "pulse"
+        },
+        {
+          "type": "car",
+          "pos": [
+            12,
+            0,
+            -1
+          ],
+          "rot": 90,
+          "color": 15790320
+        },
+        {
+          "type": "label",
+          "pos": [
+            13,
+            7.5,
+            0
+          ],
+          "text": "TITIK BUTA",
+          "size": 2.2,
+          "color": "#ff5a4a",
+          "show_at": 0.3
+        }
+      ]
+    },
+    {
+      "text": "Karena itu, kendaraan kecil di tambang wajib memasang tiang bendera tinggi, supaya terlihat dari kabin.",
+      "world": "pit",
+      "time": "day",
+      "strata": "laterite",
+      "pit": {
+        "benches": 5,
+        "bench_h": 12,
+        "berm": 26,
+        "face": 7,
+        "floor_r": 60
+      },
+      "camera": {
+        "move": "orbit",
+        "follow": "c1",
+        "target": [
+          -3,
+          2.5,
+          0
+        ],
+        "dist": 17,
+        "height": 6,
+        "angle": 200,
+        "sweep": 30
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "id": "c1",
+          "type": "car",
+          "pos": [
+            10,
+            -36,
+            -112
+          ],
+          "rot": 0
+        },
+        {
+          "type": "flag",
+          "pos": [
+            8.6,
+            -36,
+            -112
+          ]
+        },
+        {
+          "type": "haul_truck",
+          "pos": [
+            -12,
+            -36,
+            -113
+          ],
+          "rot": 0
+        }
+      ]
+    },
+    {
+      "text": "Kenapa harus sebesar itu? Satu sopir bisa memindahkan muatan berlipat, jadi biaya per ton jauh lebih murah.",
+      "headline": [
+        {
+          "text": "KENAPA SEBESAR ITU?",
+          "style": "label"
+        },
+        {
+          "text": "1 sopir, muatan berlipat = biaya per ton lebih murah",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "pit",
+      "time": "day",
+      "strata": "laterite",
+      "pit": {
+        "benches": 5,
+        "bench_h": 12,
+        "berm": 26,
+        "face": 7,
+        "floor_r": 60,
+        "water": false
+      },
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          -30,
+          0
+        ],
+        "dist": 210,
+        "height": 120,
+        "angle": 10,
+        "sweep": 30
+      },
+      "shadow_size": 200,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": "pit:1:20",
+          "to": "pit:1:70",
+          "loaded": true,
+          "ease": false
+        },
+        {
+          "type": "haul_truck",
+          "pos": "pit:2:160",
+          "to": "pit:2:120",
+          "ease": false
+        },
+        {
+          "type": "haul_truck",
+          "pos": "pit:3:250",
+          "to": "pit:3:290",
+          "loaded": true,
+          "ease": false
+        },
+        {
+          "type": "excavator",
+          "pos": "pit:floor:300",
+          "scale": 2.4,
+          "anim": "dig"
+        },
+        {
+          "type": "haul_truck",
+          "pos": "pit:floor:330",
+          "rot": 60
+        }
+      ]
+    },
+    {
+      "text": "Faktanya, truk ini terlalu besar untuk jalan raya. Ia dikirim terpisah-pisah, lalu dirakit di lokasi tambang.",
+      "headline": [
+        {
+          "text": "FAKTA",
+          "style": "label"
+        },
+        {
+          "text": "Dikirim terpisah, dirakit di lokasi tambang",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          4,
+          0
+        ],
+        "dist": 32,
+        "height": 8,
+        "angle": -30,
+        "sweep": 25
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "dump",
+          "load_color": 9127979
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -14,
+            0,
+            0
+          ],
+          "radius": 7,
+          "h": 5,
+          "anim": "grow",
+          "color": 9127979
+        }
+      ]
+    },
+    {
+      "text": "Dan truk tambang terbesar di dunia bisa mengangkut empat ratus lima puluh ton sekali jalan.",
+      "headline": [
+        {
+          "text": "YANG TERBESAR",
+          "style": "label"
+        },
+        {
+          "text": "450",
+          "style": "stat"
+        },
+        {
+          "text": "TON SEKALI JALAN",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 200,
+      "world": "pit",
+      "time": "golden",
+      "strata": "laterite",
+      "pit": {
+        "benches": 5,
+        "bench_h": 12,
+        "berm": 26,
+        "face": 7,
+        "floor_r": 60
+      },
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          -53,
+          -10
+        ],
+        "dist": 34,
+        "height": 4,
+        "angle": 30,
+        "sweep": 10
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            -60,
+            -10
+          ],
+          "rot": 20,
+          "scale": 1.15,
+          "loaded": true
+        },
+        {
+          "type": "worker",
+          "pos": [
+            9,
+            -60,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Kalau kamu ditawari jadi sopirnya, berani? Tulis di kolom komentar.",
+      "headline": [
+        {
+          "text": "BERANI JADI SOPIRNYA?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 240,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          6,
+          0
+        ],
+        "dist": 30,
+        "height": 2,
+        "angle": 140,
+        "sweep": 30
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "haul_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -3,
+            0,
+            6.5
+          ],
+          "anim": "wave"
+        }
+      ]
+    }
+  ],
+  "caption": "Ban truk ini lebih tinggi dari dua orang dewasa. 🚛\n\nTruk tambang kelas ultra: tinggi hampir 8 meter, muat ±360 ton sekali angkut, mesin ±4.000 tenaga kuda. Ukurannya bukan buat gaya, tapi supaya biaya per ton jauh lebih murah.\n\nKalau ditawari jadi sopirnya, berani? Tulis di komentar 👇\n\n#tambang #trukTambang #alatBerat #mining #konstruksi #faktaunik #3danimation #edukasi",
+  "youtube_title": "Ban Truk Ini Lebih Tinggi dari Kamu! Truk Tambang Raksasa 360 Ton #shorts",
+  "youtube_tags": [
+    "truk tambang",
+    "haul truck",
+    "alat berat",
+    "tambang",
+    "mining",
+    "konstruksi",
+    "animasi 3d",
+    "fakta unik"
+  ]
+}
