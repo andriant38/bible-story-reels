@@ -18,7 +18,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 
 ## 1. Choose a story and write the script
 
-- Pick a well-known Bible story that is not in `posted.json`. Vary it: alternate Old and New Testament, and mix stories, parables and miracles. Ideas: Nuh & bahtera, Abraham & Ishak, Yusuf dijual saudaranya, Musa & semak menyala, Laut Teberau terbelah, Tembok Yerikho, Gideon & 300 orang, Simson, Rut & Naomi, Samuel dipanggil Tuhan, Elia & nabi Baal, Daniel di gua singa, Sadrakh Mesakh Abednego, Yunus & ikan besar, Ester, Kelahiran Yesus, Yesus meredakan badai, Yesus memberi makan 5000 orang, Petrus berjalan di atas air, Zakheus, Anak yang hilang, Orang Samaria yang baik hati, Lazarus dibangkitkan, Perjamuan terakhir, Penyaliban, Kebangkitan, Saulus bertobat, and so on.
+- **Take the first title in `queue.json`** and remove it from the queue in the same commit. The *new* first title is tomorrow's story; tease it in the closing scene. If the queue has fewer than 5 titles left, append new ones that are not in `posted.json`. (Otherwise) pick a well-known Bible story that is not in `posted.json`. Vary it: alternate Old and New Testament, and mix stories, parables and miracles. Ideas: Nuh & bahtera, Abraham & Ishak, Yusuf dijual saudaranya, Musa & semak menyala, Laut Teberau terbelah, Tembok Yerikho, Gideon & 300 orang, Simson, Rut & Naomi, Samuel dipanggil Tuhan, Elia & nabi Baal, Daniel di gua singa, Sadrakh Mesakh Abednego, Yunus & ikan besar, Ester, Kelahiran Yesus, Yesus meredakan badai, Yesus memberi makan 5000 orang, Petrus berjalan di atas air, Zakheus, Anak yang hilang, Orang Samaria yang baik hati, Lazarus dibangkitkan, Perjamuan terakhir, Penyaliban, Kebangkitan, Saulus bertobat, and so on.
 - Language: **Indonesian**. Stay faithful to the Bible text; use wording close to the Terjemahan Baru (TB) for any quoted verse. Do not add details that are not in the Bible.
 - Length: **12–14 scenes**, total narration **160–190 words** (keep the final video UNDER 90 seconds, because Facebook Reels may reject longer videos).
 - Structure. The owner wants every video to have **a strong hook** and **real understanding for the viewer**:
@@ -36,6 +36,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
      - **The lesson:** the one truth of this story, said plainly.
      - **Application:** one concrete thing to do today ("Hari ini, coba…"), something practical, not preachy.
   6. **The closing scene:** the key verse (`statement` plus `ref`), then a specific question to the viewer plus "Tulis di kolom komentar."
+  7. **Follow teaser, the last line of the closing narration.** Example: "Besok: kisah Petrus berjalan di atas air. Follow, supaya tidak ketinggalan." Use the next title in `queue.json`. Followers are the main monetization requirement, so never skip this.
   - Speak directly to the viewer with "kamu". Keep every sentence short enough to read in one breath.
 - Write it to `stories/<slug>.json` using the format below. **Copy `stories/daud-melawan-goliat.json` as the model.**
 
@@ -142,6 +143,7 @@ The public URL is `https://raw.githubusercontent.com/andriant38/bible-story-reel
   - `text` = caption
   - `facebookData` = `{"type":"REEL","title":<title>}`
   - `instagramData` = `{"type":"REEL","showReelOnFeed":true,"isAiGenerated":true}`
+  - `firstCommentText` = "🙏 Kisah Alkitab baru setiap hari pukul 19.00 WIB. Follow supaya tidak ketinggalan! Besok: <next title>". This is a pinned-style follow call-to-action.
   - `tiktokData` = `{"privacyOption":"PUBLIC_TO_EVERYONE","title":<title>,"isAigc":true}`
   - `youtubeData` = `{"title":<youtube_title>,"type":"short","privacy":"public","tags":<youtube_tags>,"category":"NONPROFITS_ACTIVISM","madeForKids":false,"isAiGeneratedContent":true}`
 - If Metricool rejects the media, wait 1 minute (raw.githubusercontent caches) and try once more. If it fails again, report it. Do not keep retrying.
@@ -149,3 +151,12 @@ The public URL is `https://raw.githubusercontent.com/andriant38/bible-story-reel
 ## 6. Report
 
 End with a short message in Indonesian: the story title, the scheduled time (WIB), the Metricool `plannerUrl`, and the credits used. If any step failed, say exactly which one.
+
+## Growth rules (owner's goal: monetize all 4 accounts)
+
+- **Originality** matters for YouTube Partner Program, Facebook and TikTok Creator Rewards, because templated or "repetitive" AI content can be rejected:
+  - Every video must have its own script, its own understanding scenes and varied visuals: different `bg`, `terrain`, cameras and elements from the previous 3 videos.
+  - Never reuse a hook pattern two days in a row.
+- **Retention:** the hook must land in the first 2 seconds, and no scene may run longer than about 9 seconds.
+- **Length:** 61–89 seconds. Over 60 seconds counts for TikTok Creator Rewards; under 90 seconds keeps it safe for Facebook Reels.
+- **Series identity:** every caption ends with the same line before the hashtags: "📖 Kisah Alkitab harian. Follow untuk kisah berikutnya." Keep 6–9 hashtags, always including #KisahAlkitab #RenunganHarian #KristenIndonesia.
