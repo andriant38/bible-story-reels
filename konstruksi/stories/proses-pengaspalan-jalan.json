@@ -1,0 +1,1415 @@
+{
+  "slug": "proses-pengaspalan-jalan",
+  "title": "Proses Pengaspalan Jalan dari Awal sampai Selesai",
+  "topic": "konstruksi",
+  "scenes": [
+    {
+      "text": "Aspal cuma lapisan paling atas. Yang bikin jalan kuat justru yang tidak kelihatan.",
+      "headline": [
+        {
+          "text": "ASPAL CUMA",
+          "style": "hook"
+        },
+        {
+          "text": "KULITNYA",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 250,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          -40,
+          3.2,
+          -0.8
+        ],
+        "dist": 23,
+        "height": 3,
+        "angle": -72,
+        "sweep": 8
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime",
+            "acbc",
+            "acwc",
+            "marking"
+          ],
+          "tags": true,
+          "tag_size": 0.5,
+          "ey": 3,
+          "pos": [
+            0,
+            1.8,
+            0
+          ]
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Begini proses jalan aspal dibangun, dari tanah sampai siap dilewati.",
+      "headline": [
+        {
+          "text": "PROSES",
+          "style": "big"
+        },
+        {
+          "text": "PENGASPALAN",
+          "style": "accent"
+        },
+        {
+          "text": "JALAN",
+          "style": "big"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "dist": 40,
+        "height": 16,
+        "angle": 60,
+        "sweep": 30
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime",
+            "acbc",
+            "acwc",
+            "marking"
+          ]
+        },
+        {
+          "type": "car",
+          "pos": [
+            -30,
+            0.95,
+            -1.7
+          ],
+          "to": [
+            30,
+            0.95,
+            -1.7
+          ],
+          "progress": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "car",
+          "pos": [
+            25,
+            0.95,
+            1.7
+          ],
+          "to": [
+            -25,
+            0.95,
+            1.7
+          ],
+          "rot": 180,
+          "color": 13775914
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Pertama, tanah dasar dibentuk dan dipadatkan. Kalau dasarnya lembek, jalan cepat bergelombang.",
+      "headline": [
+        {
+          "text": "1. TANAH DASAR",
+          "style": "label"
+        },
+        {
+          "text": "dibentuk & dipadatkan",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 24,
+        "height": 9,
+        "angle": 55,
+        "sweep": 25
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub"
+          ]
+        },
+        {
+          "type": "grader",
+          "pos": [
+            -14,
+            0,
+            -1.5
+          ],
+          "to": [
+            14,
+            0,
+            -1.5
+          ],
+          "progress": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "roller",
+          "kind": "vibro",
+          "pos": [
+            8,
+            0,
+            1.8
+          ],
+          "to": [
+            -4,
+            0,
+            1.8
+          ],
+          "anim": "shuttle",
+          "period": 7
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Lalu lapis pondasi bawah. Batu pecah dihampar, disiram air, lalu digilas sampai padat.",
+      "headline": [
+        {
+          "text": "2. PONDASI BAWAH (LPB)",
+          "style": "label"
+        },
+        {
+          "text": "batu pecah dihampar & dipadatkan",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 26,
+        "height": 10,
+        "angle": 65,
+        "sweep": 20
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub"
+          ],
+          "build": "lpb",
+          "progress": [
+            0.35,
+            0.75
+          ]
+        },
+        {
+          "type": "grader",
+          "pos": [
+            -12,
+            0.35,
+            0
+          ],
+          "to": [
+            20,
+            0.35,
+            0
+          ],
+          "progress": [
+            0,
+            1
+          ],
+          "start": 0,
+          "end": 1
+        },
+        {
+          "type": "sprayer",
+          "pos": [
+            -20,
+            0.35,
+            1.6
+          ],
+          "to": [
+            4,
+            0.35,
+            1.6
+          ],
+          "color": 3045803,
+          "spray_color": 10475775,
+          "cab": 15790320
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            28,
+            0,
+            5
+          ],
+          "rot": 180,
+          "loaded": true,
+          "load_color": 9406837
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Di atasnya, lapis pondasi atas. Agregatnya lebih halus dan lebih rapat.",
+      "headline": [
+        {
+          "text": "3. PONDASI ATAS (LPA)",
+          "style": "label"
+        },
+        {
+          "text": "agregat lebih halus & rapat",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 22,
+        "height": 8,
+        "angle": 70,
+        "sweep": 10
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb"
+          ],
+          "build": "lpa",
+          "progress": [
+            0.3,
+            0.7
+          ]
+        },
+        {
+          "type": "roller",
+          "kind": "vibro",
+          "pos": [
+            -26,
+            0.65,
+            0
+          ],
+          "to": [
+            -12,
+            0.65,
+            0
+          ],
+          "anim": "shuttle",
+          "period": 6
+        },
+        {
+          "type": "grader",
+          "pos": [
+            -8,
+            0.35,
+            0
+          ],
+          "to": [
+            16,
+            0.35,
+            0
+          ]
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Sebelum diaspal, permukaannya disemprot aspal cair. Namanya lapis resap pengikat, atau prime coat.",
+      "headline": [
+        {
+          "text": "4. PRIME COAT",
+          "style": "label"
+        },
+        {
+          "text": "lapis resap pengikat",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1.5,
+          0
+        ],
+        "dist": 18,
+        "height": 6,
+        "angle": 50,
+        "sweep": 25,
+        "follow": "sp"
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa"
+          ],
+          "build": "prime",
+          "progress": [
+            0.25,
+            0.65
+          ]
+        },
+        {
+          "id": "sp",
+          "type": "sprayer",
+          "pos": [
+            -16.7,
+            0.67,
+            0
+          ],
+          "to": [
+            15.3,
+            0.67,
+            0
+          ]
+        },
+        {
+          "type": "cones",
+          "pos": [
+            -30,
+            0,
+            4.6
+          ],
+          "count": 16,
+          "spacing": 4
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Sementara itu, campuran aspal dimasak di pabrik pencampur aspal, pada suhu sekitar seratus lima puluh derajat.",
+      "headline": [
+        {
+          "text": "ASPHALT MIXING PLANT",
+          "style": "label"
+        },
+        {
+          "text": "±150°C",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -2,
+          7,
+          -4
+        ],
+        "dist": 62,
+        "height": 20,
+        "angle": 30,
+        "sweep": 30
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "type": "amp",
+          "pos": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            16,
+            0,
+            -1
+          ],
+          "rot": 0,
+          "loaded": true,
+          "load_color": 2500134,
+          "steam": true
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -24,
+            0,
+            12
+          ],
+          "radius": 5,
+          "h": 4,
+          "color": 9406837
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -12,
+            0,
+            12
+          ],
+          "radius": 5,
+          "h": 4,
+          "color": 11645590,
+          "seed": 5
+        }
+      ]
+    },
+    {
+      "text": "Truk membawanya ke lokasi, ditutup terpal supaya panasnya tidak cepat hilang.",
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "flyby",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 16,
+        "height": 4,
+        "angle": 35,
+        "sweep": 25,
+        "follow": "t"
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            0,
+            0,
+            -12
+          ],
+          "length": 300,
+          "w": 9
+        },
+        {
+          "id": "t",
+          "type": "dump_truck",
+          "pos": [
+            -25,
+            0,
+            -13.5
+          ],
+          "to": [
+            25,
+            0,
+            -13.5
+          ],
+          "loaded": true,
+          "tarp": true,
+          "steam": true,
+          "ease": false
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Di lokasi, asphalt finisher menghampar aspal dengan tebal yang rata.",
+      "headline": [
+        {
+          "text": "5. PENGHAMPARAN",
+          "style": "label"
+        },
+        {
+          "text": "asphalt finisher",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          2,
+          0
+        ],
+        "dist": 20,
+        "height": 8,
+        "angle": 40,
+        "sweep": 25,
+        "follow": "pv"
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime"
+          ],
+          "build": "acbc",
+          "progress": [
+            0.3,
+            0.55
+          ]
+        },
+        {
+          "id": "pv",
+          "type": "paver",
+          "pos": [
+            -13.7,
+            0.67,
+            0
+          ],
+          "to": [
+            6.3,
+            0.67,
+            0
+          ],
+          "progress": [
+            0.3,
+            0.55
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -6.2,
+            0.67,
+            0
+          ],
+          "to": [
+            13.8,
+            0.67,
+            0
+          ],
+          "progress": [
+            0.3,
+            0.55
+          ],
+          "loaded": true,
+          "load_color": 2500134,
+          "steam": true,
+          "ease": false
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -17,
+            0.83,
+            4.2
+          ],
+          "rot": 90
+        },
+        {
+          "type": "cones",
+          "pos": [
+            -30,
+            0,
+            4.6
+          ],
+          "count": 16,
+          "spacing": 4
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Lalu langsung digilas selagi panas. Roller roda besi dulu, kemudian roller roda karet yang meremas aspal sampai rapat.",
+      "headline": [
+        {
+          "text": "6. PEMADATAN",
+          "style": "label"
+        },
+        {
+          "text": "roda besi → roda karet",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -6,
+          1,
+          0
+        ],
+        "dist": 26,
+        "height": 10,
+        "angle": 70,
+        "sweep": 20
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime"
+          ],
+          "build": "acbc",
+          "progress": [
+            0.55,
+            0.75
+          ]
+        },
+        {
+          "type": "paver",
+          "pos": [
+            6.3,
+            0.67,
+            0
+          ],
+          "to": [
+            22.3,
+            0.67,
+            0
+          ],
+          "progress": [
+            0.55,
+            0.75
+          ]
+        },
+        {
+          "type": "roller",
+          "kind": "tandem",
+          "pos": [
+            -2,
+            0.83,
+            -1.6
+          ],
+          "to": [
+            8,
+            0.83,
+            -1.6
+          ],
+          "anim": "shuttle",
+          "period": 5
+        },
+        {
+          "type": "roller",
+          "kind": "pneumatic",
+          "pos": [
+            -22,
+            0.83,
+            1.4
+          ],
+          "to": [
+            -8,
+            0.83,
+            1.4
+          ],
+          "anim": "shuttle",
+          "period": 7,
+          "phase": 2
+        },
+        {
+          "type": "cones",
+          "pos": [
+            -30,
+            0,
+            4.6
+          ],
+          "count": 16,
+          "spacing": 4
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Lapisan ini disebut A C, B C, tebalnya minimal enam sentimeter. Di atasnya dihampar lagi lapis aus, A C, W C, minimal empat sentimeter.",
+      "subtitle": "Lapisan ini disebut AC-BC, tebalnya minimal 6 cm. Di atasnya dihampar lagi lapis aus, AC-WC, minimal 4 cm.",
+      "headline": [
+        {
+          "text": "LAPIS ASPAL",
+          "style": "label"
+        },
+        {
+          "text": "AC-BC ≥ 6 cm · AC-WC ≥ 4 cm",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          -40,
+          3.2,
+          -0.8
+        ],
+        "dist": 23,
+        "height": 3.5,
+        "angle": -68,
+        "sweep": 8
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime",
+            "acbc"
+          ],
+          "build": "acwc",
+          "progress": [
+            0.6,
+            1
+          ],
+          "tags": true,
+          "tag_size": 0.5,
+          "ey": 3,
+          "pos": [
+            0,
+            1.8,
+            0
+          ]
+        },
+        {
+          "type": "paver",
+          "pos": [
+            -2.7,
+            4.29,
+            0
+          ],
+          "to": [
+            37.3,
+            4.29,
+            0
+          ],
+          "progress": [
+            0.6,
+            1
+          ]
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Terakhir, marka jalan dicat, dan jalan siap dilewati.",
+      "headline": [
+        {
+          "text": "7. MARKA & DIBUKA",
+          "style": "label"
+        },
+        {
+          "text": "siap dilewati",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "rise",
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "dist": 38,
+        "height": 22,
+        "angle": 65,
+        "sweep": 20,
+        "height_from": 4
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime",
+            "acbc",
+            "acwc"
+          ],
+          "build": "marking",
+          "progress": [
+            0,
+            1
+          ],
+          "end": 0.55
+        },
+        {
+          "type": "car",
+          "pos": [
+            -40,
+            0.95,
+            -1.7
+          ],
+          "to": [
+            40,
+            0.95,
+            -1.7
+          ],
+          "start": 0.5
+        },
+        {
+          "type": "car",
+          "pos": [
+            40,
+            0.95,
+            1.7
+          ],
+          "to": [
+            -40,
+            0.95,
+            1.7
+          ],
+          "rot": 180,
+          "color": 3045803,
+          "start": 0.6
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Jadi kalau jalan cepat rusak, sering kali masalahnya bukan di aspal, tapi di lapisan bawah yang lemah dan air yang meresap.",
+      "headline": [
+        {
+          "text": "KENAPA CEPAT RUSAK?",
+          "style": "label"
+        },
+        {
+          "text": "lapisan bawah lemah + air meresap",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "dusk",
+      "camera": {
+        "move": "push",
+        "target": [
+          -40,
+          3.2,
+          -0.8
+        ],
+        "dist": 23,
+        "height": 3,
+        "angle": -72,
+        "sweep": 8
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime",
+            "acbc",
+            "acwc",
+            "marking"
+          ],
+          "tags": true,
+          "tag_size": 0.5,
+          "ey": 3,
+          "pos": [
+            0,
+            1.8,
+            0
+          ]
+        },
+        {
+          "type": "label",
+          "pos": [
+            -40,
+            6.2,
+            0
+          ],
+          "text": "AIR MERESAP",
+          "size": 0.9,
+          "color": "#7cc4ff"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Di daerahmu, jalan mana yang paling cepat rusak? Tulis di kolom komentar.",
+      "headline": [
+        {
+          "text": "JALAN MANA YANG PALING CEPAT RUSAK?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 220,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 30,
+        "height": 6,
+        "angle": 70,
+        "sweep": 30
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "road_layers",
+          "layers": [
+            "sub",
+            "lpb",
+            "lpa",
+            "prime",
+            "acbc",
+            "acwc",
+            "marking"
+          ]
+        },
+        {
+          "type": "roller",
+          "kind": "tandem",
+          "pos": [
+            -6,
+            0.95,
+            -1.6
+          ],
+          "vibrate": false
+        },
+        {
+          "type": "paver",
+          "pos": [
+            6,
+            0.95,
+            0
+          ],
+          "anim": "idle"
+        },
+        {
+          "type": "worker",
+          "pos": [
+            2,
+            0.95,
+            3
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 35
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 25,
+          "seed": 9
+        }
+      ]
+    }
+  ],
+  "caption": "Aspal cuma kulitnya. Yang bikin jalan kuat justru yang nggak kelihatan 🛣️\n\nUrutan bikin jalan aspal:\n1️⃣ Tanah dasar dibentuk & dipadatkan\n2️⃣ Lapis pondasi bawah (LPB)\n3️⃣ Lapis pondasi atas (LPA)\n4️⃣ Prime coat (lapis resap pengikat)\n5️⃣ Aspal panas ±150°C dari AMP, dihampar asphalt finisher\n6️⃣ Dipadatkan: roller roda besi → roda karet\n7️⃣ AC-BC (min 6 cm) + AC-WC (min 4 cm), lalu marka\n\nJalan cepat rusak? Sering kali masalahnya di lapisan bawah & air yang meresap.\n\nDi daerahmu, jalan mana yang paling cepat rusak? Tulis di komentar 👇\n\n#pengaspalan #jalanraya #konstruksi #aspal #tekniksipil #proyekjalan #alatBerat #civilengineering #animasi3D #faktaunik",
+  "youtube_title": "Begini Cara Jalan Aspal Dibangun, dari Tanah sampai Jadi #shorts",
+  "youtube_tags": [
+    "pengaspalan",
+    "jalan aspal",
+    "proses pembuatan jalan",
+    "asphalt finisher",
+    "AC-WC",
+    "teknik sipil",
+    "konstruksi",
+    "animasi 3d"
+  ]
+}
