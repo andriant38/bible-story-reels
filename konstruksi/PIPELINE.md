@@ -4,7 +4,7 @@ One daily run makes **one new** Indonesian reel about construction or mining, as
 
 Tools needed: the ElevenLabs connector (`creative_*`), the Metricool connector, Bash with Node 22, ffmpeg, Python (Pillow) and the pre-installed Playwright Chromium, plus git push access to this repo.
 
-Everything for this channel lives in `konstruksi/`. Do not touch the Bible-reel files (`engine/`, `stories/`, `videos/`, `posted.json`) except to import `engine/split_audio.py`.
+Everything for this channel lives in `konstruksi/`. Do not touch the Bible-reel files (`engine/`, `stories/`, `videos/`, `posted.json`).
 
 ---
 
@@ -74,6 +74,8 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 
 **Framing in portrait.** The top area (y about 200–700 px) is for the headline and the bottom (about 1500–1780 px) is for the subtitles. When a scene has a headline, raise `target.y` slightly so the subject sits lower in the frame.
 
+**Road layers.** The top of each layer (with `ey` = 1) is: sub 0, lpb 0.35, lpa 0.65, prime 0.67, acbc 0.83, acwc 0.95. Put machines at that y on top of the layer they work on. The layer front is at `x = -40 + 80 * progress`. For a cross-section shot, raise the road (`pos` y = 1.8 with `ey` 3) and point the camera at the −x end face: `target` [-40, 3.2, -0.8], `angle` about -70, `dist` about 23.
+
 **Pit positions.** `"pit:<k>:<angle>"` puts an object on bench k (1 = top bench, k = benches−1 is the lowest). Use `"pit:floor:<angle>"` for the pit floor and `"pit:0:<angle>"` for the rim. The height of bench k is `-k*bench_h`.
 
 **`progress`.** It controls the animation across the scene: `[0.3, 0.6]` means going from 30% to 60% complete. Use it for continuity between scenes (e.g. a building at 0→0.4 in one scene, then 0.4→1 in the next). `start`/`end` limit the animation to part of the scene.
@@ -84,7 +86,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 |---|---|---|
 | `worker` | `hat` (colour), `color` | `walk`, `wave` |
 | `excavator` | `scale` (2–2.5 = mining excavator), `swing`, `period` | `dig`, `load` |
-| `haul_truck` (mine truck, 7.7 m tall) / `dump_truck` | `to` (target position: it drives there), `loaded`, `load_color`, `ease` | `dump`, `assemble` (wheels → cabin → bed fitted together) |
+| `haul_truck` (mine truck, 7.7 m tall) / `dump_truck` | `to` (target position: it drives there), `loaded`, `load_color`, `ease`, `tarp`, `steam` (hot asphalt) | `dump`, `assemble` (wheels → cabin → bed fitted together), `fill` (load grows in the bed) |
 | `car`, `house` | `color`; house `h` | – |
 | `tower_crane` | `height`, `height_to`, `jib`, `load` (`beam`/`bucket`/`panel`), `slew`, `swing`, `trolley_from/to`, `drop_from/to` | `swing`, `climb`, `idle` |
 | `building` | `floors`, `floor_h`, `w`, `d`, `facade` | `build` (columns → slab → glass) |
@@ -102,6 +104,13 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
 | `label` (3D text) | `text`, `size`, `color`, `show_at` | – |
 | `zone` (red danger area) | `w`, `d`, `color` | `pulse` |
 | `flag` (safety whip on mine vehicles) | `h` | – |
+| `road_layers` (road section along x, 80 m) | `layers` (finished: `sub`,`lpb`,`lpa`,`prime`,`acbc`,`acwc`,`marking`), `build` (layer being laid, its front advances with progress), `tags` (layer labels on the −x end face), `ey` (vertical exaggeration for cross-section shots, e.g. 3) | – |
+| `grader` (motor grader) | `to` | `shuttle` (back and forth with `period`) or drives to `to` |
+| `roller` | `kind`: `tandem` (steel drums, asphalt), `pneumatic` (rubber tyres), `vibro` (soil/aggregate); `to`, `period`, `phase`, `vibrate` | `shuttle`, `drive` |
+| `paver` (asphalt finisher) | `to`, `screed_w`; moves linearly, so give it the same `progress` as the `build` layer | – |
+| `sprayer` (prime-coat distributor / water tanker) | `to`, `color`, `spray_color`, `cab` | sprays while moving |
+| `amp` (asphalt mixing plant) | – | drum turns, smoke |
+| `cones` (traffic cones in a row along x) | `count`, `spacing` | – |
 | `trees`, `city` (background fill) | `count`, `area`, `clear` (empty radius), `max_h` | – |
 | `road` | `length`, `w` | – |
 
@@ -130,16 +139,15 @@ To look at a single scene at several moments, run `node konstruksi/engine/render
   - `generations_count` = 1
   - `prompt` = the scene's `text`
 - Write numbers out as words in `text` ("tiga ratus enam puluh ton"); the headline can use digits.
-- **The free plan allows only one generation at a time.** Generate scene 1 and wait until it is done. To save time, you may then send **all the remaining scenes in one call**, separated by blank lines, and split them:
+- **The free plan allows only one generation at a time.** Send **all scenes in one call**, separated by blank lines, then split them:
 
 ```bash
 mkdir -p work/k-<slug>
-curl -sS -o work/k-<slug>/01.mp3 "<content_url>"
-curl -sS -o work/k-<slug>/combo.mp3 "<content_url of the combined call>"
-python3 engine/split_audio.py work/k-<slug>/combo.mp3 work/k-<slug> 2 3 4 5 6 7 8 9 10 11 12 --story konstruksi/stories/<slug>.json
+curl -sS -o work/k-<slug>/combo.mp3 "<content_url>"
+python3 konstruksi/engine/split_audio.py work/k-<slug>/combo.mp3 work/k-<slug> --story konstruksi/stories/<slug>.json
 ```
 
-Check that the printed cut times make sense. Never re-run a generation that already started.
+The splitter prints each scene's duration next to its character count; the two should be roughly proportional (about 13–15 characters per second). If one scene is clearly too long and the next too short, list the pauses (`ffmpeg -i combo.mp3 -af silencedetect=n=-40dB:d=0.25 -f null -`), find the pause that really separates the two sentences, and cut those two clips again by hand with `ffmpeg -ss … -to …`. Check that the printed cut times make sense. Never re-run a generation that already started.
 
 ## 4. Render
 
