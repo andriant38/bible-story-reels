@@ -360,8 +360,35 @@ def stone(d, x, y, s, col):
     d.ellipse([x - 24 * s, y - 18 * s, x + 24 * s, y + 18 * s], fill=(235, 228, 215, 255))
 
 
+def ship(d, x, gy, s, col):
+    """Two-masted sailing ship (brigantine), hull sitting on the waterline."""
+    d.polygon([(x - 300 * s, gy - 95 * s), (x + 330 * s, gy - 95 * s), (x + 250 * s, gy), (x - 250 * s, gy)], fill=col)
+    d.polygon([(x + 330 * s, gy - 95 * s), (x + 470 * s, gy - 150 * s), (x + 330 * s, gy - 110 * s)], fill=col)  # bowsprit
+    for mx, mh in ((x - 110 * s, 520), (x + 140 * s, 560)):
+        d.line([(mx, gy - 95 * s), (mx, gy - mh * s)], fill=col, width=max(3, int(9 * s)))
+        for k, (top, bot, half) in enumerate(((0.9, 0.72, 105), (0.68, 0.48, 125), (0.45, 0.25, 140))):
+            yt, yb = gy - mh * s * top, gy - mh * s * bot
+            d.polygon([(mx - half * s * 0.9, yt), (mx + half * s * 0.9, yt), (mx + half * s, yb), (mx - half * s, yb)], fill=col)
+    d.polygon([(x - 120 * s, gy - 130 * s), (x - 290 * s, gy - 110 * s), (x - 120 * s, gy - 470 * s)], fill=col)  # gaff sail
+
+
+def rowboat(d, x, gy, s, col):
+    d.polygon([(x - 120 * s, gy - 45 * s), (x + 120 * s, gy - 45 * s), (x + 85 * s, gy), (x - 85 * s, gy)], fill=col)
+    d.line([(x - 60 * s, gy - 40 * s), (x - 150 * s, gy + 10 * s)], fill=col, width=max(2, int(6 * s)))
+    d.line([(x + 60 * s, gy - 40 * s), (x + 150 * s, gy + 10 * s)], fill=col, width=max(2, int(6 * s)))
+
+
+def barrel(d, x, gy, s, col):
+    d.rounded_rectangle([x - 45 * s, gy - 120 * s, x + 45 * s, gy], radius=int(22 * s), fill=col)
+    band = lerp(col, (150, 110, 70, 255), 0.35)
+    for f in (0.2, 0.8):
+        y = gy - 120 * s * f
+        d.line([(x - 44 * s, y), (x + 44 * s, y)], fill=band, width=max(2, int(6 * s)))
+
+
 ELEMENTS = dict(sheep=sheep, tent=tent, palm=palm, tree=tree, boat=boat, ark=ark, cross=cross, tomb=tomb,
-                city=city, tower=tower, fire=fire, bush=bush, well=well, manger=manger)
+                city=city, tower=tower, fire=fire, bush=bush, well=well, manger=manger,
+                ship=ship, rowboat=rowboat, barrel=barrel)
 AIR = dict(fish=fish, dove=dove, star=star, stone=stone)
 
 
