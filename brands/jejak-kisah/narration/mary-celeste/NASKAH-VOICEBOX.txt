@@ -1,8 +1,9 @@
 Narasi Mary Celeste untuk Voicebox
-Satu adegan = satu file. Adegan 01 sudah ada (01.mp3), jadi buat 02 s.d. 13.
-Simpan dengan nama 02.mp3, 03.mp3, dst. (.wav juga boleh, nanti saya ubah).
+Satu adegan = satu file, 01 s.d. 13. Buat juga 01 dengan Voicebox supaya suaranya sama di seluruh video.
+Simpan dengan nama 01.mp3, 02.mp3, dst. (.wav juga boleh, nanti saya ubah).
 Gaya: narator dokumenter pria, tenang, jelas, sedikit misterius.
 
+01.mp3  →  Sebuah kapal ditemukan berlayar sendirian di tengah Atlantik. Sepuluh orang di dalamnya… lenyap.
 02.mp3  →  Desember 1872. Awak kapal Dei Gratia melihat sebuah kapal bergerak aneh, tanpa siapa pun di kemudi.
 03.mp3  →  Namanya Mary Celeste. Sebulan sebelumnya, ia berangkat dari New York menuju Genoa, Italia.
 04.mp3  →  Di dalamnya ada Kapten Benjamin Briggs, istri dan putrinya yang baru dua tahun, serta tujuh awak.
