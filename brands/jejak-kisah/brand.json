@@ -1,0 +1,9 @@
+{
+  "accent": [242, 184, 92],
+  "sub_box": [14, 10, 8, 215],
+  "watermark": "Jejak Kisah",
+  "watermark_color": [242, 184, 92],
+  "music": "brands/jejak-kisah/ambient.m4a",
+  "music_volume": 0.22,
+  "voice_tempo": 1.08
+}
