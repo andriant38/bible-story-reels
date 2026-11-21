@@ -1,21 +1,25 @@
 {
   "slug": "mary-celeste",
-  "title": "Mary Celeste: Kapal Hantu 1872",
+  "title": "Mary Celeste",
   "reference": "Samudra Atlantik, 1872",
+  "sources": [
+    "Laporan sidang Pengadilan Vice-Admiralty Gibraltar, 1872–1873",
+    "Paul Begg, Mary Celeste: The Greatest Mystery of the Sea (2007)"
+  ],
   "scenes": [
     {
-      "text": "Tahun 1872, sebuah kapal ditemukan utuh di tengah samudra. Tapi sepuluh orang di dalamnya… lenyap.",
-      "bg": "night",
+      "text": "Sebuah kapal ditemukan berlayar sendirian di tengah Atlantik. Sepuluh orang di dalamnya… lenyap.",
+      "bg": "fog",
       "terrain": "sea",
       "camera": "push",
-      "headline_y": 380,
+      "headline_y": 420,
       "headline": [
         {
-          "text": "Kapalnya utuh…",
+          "text": "Kapalnya utuh.",
           "style": "hook"
         },
         {
-          "text": "orangnya lenyap.",
+          "text": "Awaknya lenyap.",
           "style": "hook_accent"
         }
       ],
@@ -23,17 +27,16 @@
         {
           "type": "ship",
           "x": 0.5,
-          "size": 0.8,
-          "dy": -20
+          "size": 0.55
         }
-      ],
-      "sun_x": 0.84
+      ]
     },
     {
-      "text": "Namanya Mary Celeste. Kapal dagang ini berangkat dari New York menuju Genoa, Italia.",
+      "text": "Desember 1872. Awak kapal Dei Gratia melihat sebuah kapal bergerak aneh, tanpa siapa pun di kemudi.",
       "bg": "dawn",
       "terrain": "sea",
       "camera": "pan_right",
+      "sun_x": 0.75,
       "headline": [
         {
           "text": "MARY",
@@ -44,41 +47,65 @@
           "style": "accent"
         },
         {
-          "text": "kapal hantu Samudra Atlantik",
+          "text": "kapal tanpa awak",
           "style": "small"
         },
         {
-          "text": "NOVEMBER 1872",
+          "text": "ATLANTIK, 1872",
           "style": "ref"
         }
       ],
       "elements": [
         {
           "type": "ship",
-          "x": 0.5,
-          "size": 0.75,
-          "dy": -20
+          "x": 0.3,
+          "size": 0.45
+        },
+        {
+          "type": "ship",
+          "x": 0.8,
+          "size": 0.6,
+          "dy": 40
         }
       ]
     },
     {
-      "text": "Di dalamnya ada Kapten Benjamin Briggs, istrinya, putri mereka yang baru dua tahun, dan tujuh awak kapal.",
+      "text": "Namanya Mary Celeste. Sebulan sebelumnya, ia berangkat dari New York menuju Genoa, Italia.",
+      "bg": "sepia",
+      "terrain": "sea",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "lighthouse",
+          "x": 0.18,
+          "size": 1.0,
+          "dy": -60
+        },
+        {
+          "type": "ship",
+          "x": 0.62,
+          "size": 0.75
+        }
+      ]
+    },
+    {
+      "text": "Di dalamnya ada Kapten Benjamin Briggs, istri dan putrinya yang baru dua tahun, serta tujuh awak.",
       "bg": "golden",
       "terrain": "plain",
-      "camera": "pull",
+      "camera": "push",
       "elements": [
         {
           "type": "person",
-          "x": 0.3,
-          "size": 1.0,
+          "x": 0.36,
+          "size": 1.05,
           "props": [
             "beard"
           ]
         },
         {
           "type": "person",
-          "x": 0.43,
-          "size": 0.9,
+          "x": 0.5,
+          "size": 0.95,
           "props": [
             "child"
           ],
@@ -86,174 +113,123 @@
         },
         {
           "type": "person",
-          "x": 0.6,
-          "size": 0.8
-        },
-        {
-          "type": "person",
-          "x": 0.7,
+          "x": 0.68,
           "size": 0.85
         },
         {
           "type": "person",
-          "x": 0.8,
-          "size": 0.8
-        }
-      ]
-    },
-    {
-      "text": "Empat minggu kemudian, awak kapal Dei Gratia melihatnya terombang-ambing di dekat Kepulauan Azores.",
-      "bg": "sea",
-      "terrain": "sea",
-      "camera": "pan_left",
-      "elements": [
-        {
-          "type": "ship",
-          "x": 0.28,
-          "size": 0.45,
-          "dy": -40
-        },
-        {
-          "type": "ship",
-          "x": 0.72,
-          "size": 0.7,
-          "dy": -10
-        }
-      ]
-    },
-    {
-      "text": "Mereka naik ke atas kapal itu. Dan tidak ada satu orang pun.",
-      "bg": "storm",
-      "terrain": "sea",
-      "camera": "push",
-      "elements": [
-        {
-          "type": "ship",
-          "x": 0.5,
-          "size": 1.0,
-          "dy": -10
+          "x": 0.79,
+          "size": 0.85
         },
         {
           "type": "person",
-          "x": 0.38,
-          "size": 0.45,
-          "dy": -90
-        }
-      ]
-    },
-    {
-      "text": "Makanan dan air untuk enam bulan masih ada. Barang-barang awak masih tertinggal.",
-      "bg": "dusk",
-      "terrain": "plain",
-      "camera": "static",
-      "elements": [
-        {
-          "type": "barrel",
-          "x": 0.3,
-          "size": 1.3
-        },
-        {
-          "type": "barrel",
-          "x": 0.42,
-          "size": 1.1
-        },
-        {
-          "type": "barrel",
-          "x": 0.6,
-          "size": 0.9
-        },
-        {
-          "type": "barrel",
-          "x": 0.72,
-          "size": 1.4
-        }
-      ]
-    },
-    {
-      "text": "Hanya satu yang hilang: sekoci penyelamat.",
-      "bg": "night",
-      "terrain": "sea",
-      "camera": "pull",
-      "stars": true,
-      "elements": [
-        {
-          "type": "ship",
-          "x": 0.6,
-          "size": 0.8,
-          "dy": -10
-        }
-      ]
-    },
-    {
-      "text": "Catatan terakhir di papan log ditulis sembilan hari sebelumnya, di dekat Pulau Santa Maria.",
-      "bg": "dawn",
-      "terrain": "mountains",
-      "camera": "pan_right",
-      "elements": [
-        {
-          "type": "ship",
-          "x": 0.5,
-          "size": 0.45,
-          "dy": 40
-        }
-      ]
-    },
-    {
-      "text": "Sekoci itu, dan sepuluh orang di dalamnya, tidak pernah ditemukan.",
-      "bg": "storm",
-      "terrain": "sea",
-      "camera": "push",
-      "elements": [
-        {
-          "type": "rowboat",
-          "x": 0.5,
-          "size": 1.0,
-          "dy": -20
-        },
-        {
-          "type": "person",
-          "x": 0.45,
-          "size": 0.4,
-          "dy": -60
-        },
-        {
-          "type": "person",
-          "x": 0.55,
-          "size": 0.4,
-          "dy": -60,
+          "x": 0.2,
+          "size": 0.85,
           "facing": -1
         }
       ]
     },
     {
-      "text": "Kamu mungkin pernah dengar ada teh yang masih hangat di meja. Itu mitos, dari cerita fiksi Arthur Conan Doyle.",
+      "text": "Saat para pelaut Dei Gratia naik ke kapal itu, mereka menemukan sesuatu yang ganjil.",
+      "bg": "fog",
+      "terrain": "sea",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "ship",
+          "x": 0.55,
+          "size": 0.85
+        },
+        {
+          "type": "boat",
+          "x": 0.2,
+          "size": 0.45,
+          "dy": 60
+        }
+      ]
+    },
+    {
+      "text": "Muatan alkohol hampir utuh. Makanan dan air cukup untuk enam bulan.",
+      "bg": "sepia",
+      "terrain": "sea",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "ship",
+          "x": 0.5,
+          "size": 0.95
+        }
+      ]
+    },
+    {
+      "text": "Barang pribadi masih tertinggal. Tapi sekoci dan alat navigasinya hilang.",
+      "bg": "storm",
+      "terrain": "sea",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "ship",
+          "x": 0.5,
+          "size": 0.8
+        }
+      ]
+    },
+    {
+      "text": "Catatan terakhir di log ditulis sembilan hari sebelumnya, dekat Kepulauan Azores. Setelah itu… kosong.",
       "bg": "night",
+      "terrain": "sea",
+      "camera": "push",
+      "sun_x": 0.3,
+      "elements": [
+        {
+          "type": "ship",
+          "x": 0.62,
+          "size": 0.6
+        }
+      ]
+    },
+    {
+      "text": "Kesepuluh orang itu tidak pernah ditemukan. Sampai hari ini.",
+      "bg": "fog",
+      "terrain": "sea",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.5,
+          "size": 0.5,
+          "dy": 80
+        }
+      ]
+    },
+    {
+      "text": "Ada yang bilang, sarapan masih hangat di meja. Itu tidak benar. Kisah itu dibesar-besarkan, antara lain lewat cerpen fiksi Arthur Conan Doyle.",
+      "subtitle": "Sarapan masih hangat di meja? Tidak benar. Kisah itu dibesar-besarkan, antara lain lewat cerpen fiksi Arthur Conan Doyle.",
+      "bg": "sepia",
       "terrain": "plain",
       "camera": "static",
       "headline_y": 300,
       "headline": [
         {
-          "text": "MITOS VS FAKTA",
+          "text": "MITOSNYA",
           "style": "label"
         },
         {
-          "text": "Teh hangat di meja? Itu fiksi.",
+          "text": "Sarapan masih hangat? Itu fiksi.",
           "style": "point"
         }
       ],
       "elements": [
         {
-          "type": "person",
+          "type": "house",
           "x": 0.5,
-          "size": 0.9,
-          "pose": "point"
+          "size": 0.9
         }
-      ],
-      "sun_x": 0.84
+      ]
     },
     {
-      "text": "Muatannya sekitar seribu tujuh ratus tong alkohol, dan sembilan tong ditemukan kosong. Mungkin kapten takut kapal meledak, lalu menyuruh semua turun ke sekoci.",
-      "bg": "dusk",
+      "text": "Teori terkuat: kapten mengira kapalnya akan tenggelam. Semua orang pindah ke sekoci… dan tak pernah kembali.",
+      "bg": "storm",
       "terrain": "sea",
       "camera": "pan_left",
       "headline_y": 300,
@@ -263,30 +239,30 @@
           "style": "label"
         },
         {
-          "text": "Takut ledakan, mereka turun ke sekoci.",
+          "text": "Mereka meninggalkan kapal yang aman.",
           "style": "point"
         }
       ],
       "elements": [
         {
-          "type": "ship",
-          "x": 0.62,
-          "size": 0.7,
-          "dy": -10
+          "type": "boat",
+          "x": 0.25,
+          "size": 0.45,
+          "dy": 70
         },
         {
-          "type": "rowboat",
-          "x": 0.25,
-          "size": 1.0,
-          "dy": -10
+          "type": "ship",
+          "x": 0.7,
+          "size": 0.55
         }
       ]
     },
     {
-      "text": "Kalau benar, mereka meninggalkan kapal yang sebenarnya aman. Kadang, panik lebih berbahaya daripada bahayanya sendiri.",
-      "bg": "golden",
+      "text": "Ironisnya, kapal itu tetap mengapung. Kadang, keputusan saat panik lebih berbahaya daripada badainya.",
+      "bg": "dawn",
       "terrain": "sea",
       "camera": "push",
+      "rays": true,
       "headline_y": 300,
       "headline": [
         {
@@ -294,7 +270,7 @@
           "style": "label"
         },
         {
-          "text": "Panik bisa lebih berbahaya dari bahayanya.",
+          "text": "Panik bisa lebih berbahaya dari badai.",
           "style": "point"
         }
       ],
@@ -302,25 +278,24 @@
         {
           "type": "ship",
           "x": 0.5,
-          "size": 0.85,
-          "dy": -10
+          "size": 0.7
         }
       ]
     },
     {
-      "text": "Menurutmu, apa yang sebenarnya terjadi? Tulis teorimu di kolom komentar. Besok: wanita yang selamat dari tiga kapal celaka. Follow, supaya tidak ketinggalan.",
+      "text": "Menurutmu, apa yang sebenarnya terjadi? Tulis di komentar. Berikutnya: letusan Tambora yang menghapus musim panas. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Menurutmu, apa yang sebenarnya terjadi? Tulis di komentar.",
       "bg": "night",
       "terrain": "sea",
       "camera": "pull",
-      "stars": true,
       "headline_y": 330,
       "headline": [
         {
-          "text": "Apa teorimu?",
+          "text": "Apa yang sebenarnya terjadi?",
           "style": "statement"
         },
         {
-          "text": "TULIS DI KOLOM KOMENTAR",
+          "text": "BERIKUTNYA: LETUSAN TAMBORA",
           "style": "ref"
         }
       ],
@@ -328,23 +303,20 @@
         {
           "type": "ship",
           "x": 0.5,
-          "size": 0.6,
-          "dy": -20
+          "size": 0.5
         }
       ],
-      "sun_x": 0.84
+      "sun_x": 0.8
     }
   ],
-  "caption": "Kapalnya utuh di tengah samudra… tapi 10 orang di dalamnya lenyap tanpa jejak. 🚢\n\nMary Celeste, 1872: makanan masih ada, barang-barang masih tertinggal, hanya sekoci yang hilang. Sampai hari ini tidak ada yang tahu pasti apa yang terjadi.\n\nMenurutmu apa yang sebenarnya terjadi? Tulis teorimu di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#MaryCeleste #KapalHantu #MisteriSejarah #KisahNyata #Sejarah #FaktaUnik #JejakKisah",
-  "youtube_title": "Kapal Ini Ditemukan Utuh, Tapi 10 Orangnya Lenyap | Mary Celeste #shorts",
+  "caption": "Kapalnya utuh. Makanannya cukup untuk 6 bulan. Tapi 10 orang di dalamnya lenyap tanpa jejak. 🌫️🚢\n\nTahun 1872, Mary Celeste ditemukan berlayar sendirian di Samudra Atlantik. Sampai hari ini, tak seorang pun tahu pasti apa yang terjadi.\n\nMenurutmu, apa yang sebenarnya terjadi? Tulis di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#JejakKisah #KisahNyata #MisteriSejarah #MaryCeleste #Sejarah #FaktaUnik #Misteri #KapalHantu",
+  "youtube_title": "Mary Celeste: Kapal Utuh, 10 Orang Lenyap Tanpa Jejak #shorts",
   "youtube_tags": [
-    "mary celeste",
-    "kapal hantu",
+    "Mary Celeste",
     "misteri sejarah",
     "kisah nyata",
-    "sejarah dunia",
-    "misteri laut",
-    "fakta unik",
-    "jejak kisah"
+    "kapal hantu",
+    "sejarah",
+    "Jejak Kisah"
   ]
 }

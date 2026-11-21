@@ -1,4 +1,4 @@
-"""Silhouette scene drawing for Bible-story reels (1080x1920 portrait)."""
+"""Silhouette scene drawing for story reels (1080x1920 portrait): Bible stories and Jejak Kisah history/mystery."""
 import math
 import random
 
@@ -16,6 +16,12 @@ PALETTES = {
     "sea":    dict(sky=["#0f2c44", "#2f6b84", "#a7d6dc"], sun="#f4fbff", terrain=["#2a5a70", "#1c465c", "#123447", "#0a2433"], fig="#04121b"),
     "storm":  dict(sky=["#14161c", "#30364a", "#5e6880"], sun="#c9d2e6", terrain=["#3a4152", "#2a3040", "#1c212d", "#11141c"], fig="#07080b"),
     "golden": dict(sky=["#8a4a3a", "#e9a865", "#fff1c9"], sun="#fffdf2", terrain=["#b07a5a", "#8a5a44", "#5e3a2e", "#3a2420"], fig="#1e120e"),
+    # darker moods for history and mystery
+    "fog":    dict(sky=["#1c2426", "#4a5a5c", "#9aa8a4"], sun="#dfe6e0", terrain=["#4c5a5a", "#364242", "#232c2d", "#151b1c"], fig="#0b0f10"),
+    "sepia":  dict(sky=["#3a2a1c", "#8a6a48", "#d9bf94"], sun="#fff2d4", terrain=["#8a6c4c", "#6a4f36", "#4a3524", "#2e2016"], fig="#1a120b"),
+    "ember":  dict(sky=["#1a0806", "#6e1c10", "#e0582a"], sun="#ffb060", terrain=["#5a1e14", "#40140e", "#2a0d09", "#180705"], fig="#0c0403"),
+    "arctic": dict(sky=["#0e1a2e", "#5a7a9e", "#d8e6f0"], sun="#ffffff", terrain=["#b8c8d8", "#8ea4ba", "#62788e", "#3a4a5c"], fig="#0c1622"),
+    "jungle": dict(sky=["#0c1e16", "#2e5a3e", "#a8c88a"], sun="#f4ffd8", terrain=["#2e5a3a", "#1e4229", "#13301c", "#0a1f11"], fig="#04100a"),
 }
 
 
@@ -360,36 +366,111 @@ def stone(d, x, y, s, col):
     d.ellipse([x - 24 * s, y - 18 * s, x + 24 * s, y + 18 * s], fill=(235, 228, 215, 255))
 
 
+# ---- history / mystery elements
 def ship(d, x, gy, s, col):
-    """Two-masted sailing ship (brigantine), hull sitting on the waterline."""
-    d.polygon([(x - 300 * s, gy - 95 * s), (x + 330 * s, gy - 95 * s), (x + 250 * s, gy), (x - 250 * s, gy)], fill=col)
-    d.polygon([(x + 330 * s, gy - 95 * s), (x + 470 * s, gy - 150 * s), (x + 330 * s, gy - 110 * s)], fill=col)  # bowsprit
-    for mx, mh in ((x - 110 * s, 520), (x + 140 * s, 560)):
-        d.line([(mx, gy - 95 * s), (mx, gy - mh * s)], fill=col, width=max(3, int(9 * s)))
-        for k, (top, bot, half) in enumerate(((0.9, 0.72, 105), (0.68, 0.48, 125), (0.45, 0.25, 140))):
-            yt, yb = gy - mh * s * top, gy - mh * s * bot
-            d.polygon([(mx - half * s * 0.9, yt), (mx + half * s * 0.9, yt), (mx + half * s, yb), (mx - half * s, yb)], fill=col)
-    d.polygon([(x - 120 * s, gy - 130 * s), (x - 290 * s, gy - 110 * s), (x - 120 * s, gy - 470 * s)], fill=col)  # gaff sail
+    """Three-masted sailing ship (Mary Celeste, Batavia, VOC)."""
+    d.polygon([(x - 260 * s, gy - 90 * s), (x + 300 * s, gy - 110 * s), (x + 200 * s, gy), (x - 210 * s, gy)], fill=col)
+    d.rectangle([x - 260 * s, gy - 130 * s, x - 170 * s, gy - 90 * s], fill=col)
+    for mx, mh in ((-120, 430), (40, 500), (190, 400)):
+        X = x + mx * s
+        d.line([(X, gy - 95 * s), (X, gy - mh * s)], fill=col, width=max(2, int(9 * s)))
+        for k, sw in enumerate((95, 80, 60)):
+            top = gy - mh * s + 40 * s + k * 110 * s
+            d.polygon([(X - sw * s, top), (X + sw * s, top), (X + (sw + 12) * s, top + 90 * s), (X - (sw + 12) * s, top + 90 * s)], fill=col)
+    d.line([(x + 300 * s, gy - 110 * s), (x + 440 * s, gy - 210 * s)], fill=col, width=max(2, int(7 * s)))
 
 
-def rowboat(d, x, gy, s, col):
-    d.polygon([(x - 120 * s, gy - 45 * s), (x + 120 * s, gy - 45 * s), (x + 85 * s, gy), (x - 85 * s, gy)], fill=col)
-    d.line([(x - 60 * s, gy - 40 * s), (x - 150 * s, gy + 10 * s)], fill=col, width=max(2, int(6 * s)))
-    d.line([(x + 60 * s, gy - 40 * s), (x + 150 * s, gy + 10 * s)], fill=col, width=max(2, int(6 * s)))
+def steamship(d, x, gy, s, col):
+    """Ocean liner with four funnels (Titanic era)."""
+    d.polygon([(x - 400 * s, gy - 120 * s), (x + 420 * s, gy - 120 * s), (x + 360 * s, gy), (x - 370 * s, gy)], fill=col)
+    d.rectangle([x - 300 * s, gy - 175 * s, x + 300 * s, gy - 118 * s], fill=col)
+    for k in range(4):
+        fx = x + (-210 + k * 140) * s
+        d.polygon([(fx - 26 * s, gy - 175 * s), (fx + 26 * s, gy - 175 * s), (fx + 32 * s, gy - 300 * s), (fx - 20 * s, gy - 300 * s)], fill=col)
+    for mx in (-360, 370):
+        d.line([(x + mx * s, gy - 120 * s), (x + mx * s, gy - 360 * s)], fill=col, width=max(2, int(5 * s)))
 
 
-def barrel(d, x, gy, s, col):
-    d.rounded_rectangle([x - 45 * s, gy - 120 * s, x + 45 * s, gy], radius=int(22 * s), fill=col)
-    band = lerp(col, (150, 110, 70, 255), 0.35)
-    for f in (0.2, 0.8):
-        y = gy - 120 * s * f
-        d.line([(x - 44 * s, y), (x + 44 * s, y)], fill=band, width=max(2, int(6 * s)))
+def pyramid(d, x, gy, s, col):
+    d.polygon([(x - 360 * s, gy), (x + 360 * s, gy), (x, gy - 400 * s)], fill=col)
+
+
+def lighthouse(d, x, gy, s, col):
+    d.polygon([(x - 60 * s, gy), (x + 60 * s, gy), (x + 36 * s, gy - 420 * s), (x - 36 * s, gy - 420 * s)], fill=col)
+    d.rectangle([x - 52 * s, gy - 440 * s, x + 52 * s, gy - 420 * s], fill=col)
+    d.rectangle([x - 30 * s, gy - 500 * s, x + 30 * s, gy - 440 * s], fill=(255, 236, 170, 255))
+    d.polygon([(x - 42 * s, gy - 500 * s), (x + 42 * s, gy - 500 * s), (x, gy - 550 * s)], fill=col)
+
+
+def ruins(d, x, gy, s, col):
+    """Broken temple columns."""
+    d.rectangle([x - 300 * s, gy - 30 * s, x + 300 * s, gy], fill=col)
+    for k, h in enumerate((330, 260, 330, 150, 300)):
+        cx = x + (-240 + k * 120) * s
+        d.rectangle([cx - 26 * s, gy - h * s, cx + 26 * s, gy - 30 * s], fill=col)
+        d.rectangle([cx - 38 * s, gy - h * s - 18 * s, cx + 38 * s, gy - h * s], fill=col)
+    d.rectangle([x - 280 * s, gy - 348 * s, x - 70 * s, gy - 318 * s], fill=col)
+
+
+def house(d, x, gy, s, col):
+    d.rectangle([x - 130 * s, gy - 170 * s, x + 130 * s, gy], fill=col)
+    d.polygon([(x - 160 * s, gy - 165 * s), (x + 160 * s, gy - 165 * s), (x, gy - 290 * s)], fill=col)
+    d.rectangle([x - 70 * s, gy - 120 * s, x - 30 * s, gy - 75 * s], fill=(255, 210, 130, 255))
+
+
+def castle(d, x, gy, s, col):
+    d.rectangle([x - 250 * s, gy - 220 * s, x + 250 * s, gy], fill=col)
+    for tx in (-250, 250, 0):
+        th = 420 if tx == 0 else 340
+        d.rectangle([x + (tx - 55) * s, gy - th * s, x + (tx + 55) * s, gy], fill=col)
+        for k in range(3):
+            bx = x + (tx - 55 + k * 42) * s
+            d.rectangle([bx, gy - th * s - 26 * s, bx + 26 * s, gy - th * s], fill=col)
+    d.pieslice([x - 55 * s, gy - 130 * s, x + 55 * s, gy + 30 * s], 180, 360, fill=(0, 0, 0, 255))
+
+
+def candi(d, x, gy, s, col):
+    """Stepped stone temple with a stupa on top (Borobudur, Prambanan)."""
+    for i in range(5):
+        w = (520 - i * 85) * s
+        d.rectangle([x - w / 2, gy - (i + 1) * 62 * s, x + w / 2, gy - i * 62 * s + 2], fill=col)
+    top = gy - 5 * 62 * s
+    d.pieslice([x - 70 * s, top - 80 * s, x + 70 * s, top + 60 * s], 180, 360, fill=col)
+    d.rectangle([x - 8 * s, top - 140 * s, x + 8 * s, top - 40 * s], fill=col)
+
+
+def volcano(d, x, gy, s, col):
+    d.polygon([(x - 480 * s, gy), (x + 480 * s, gy), (x + 90 * s, gy - 430 * s), (x - 90 * s, gy - 430 * s)], fill=col)
+    for k, c in enumerate([(255, 110, 40, 255), (255, 190, 80, 255)]):
+        f = 1 - k * 0.45
+        d.polygon([(x - 80 * s * f, gy - 430 * s), (x + 80 * s * f, gy - 430 * s), (x, gy - (430 + 90 * f) * s)], fill=c)
+
+
+def plane(d, x, y, s, col):
+    """Propeller aircraft seen from the side (Amelia Earhart era)."""
+    d.ellipse([x - 170 * s, y - 24 * s, x + 170 * s, y + 24 * s], fill=col)
+    d.polygon([(x - 30 * s, y), (x + 40 * s, y), (x - 10 * s, y + 70 * s), (x - 70 * s, y + 70 * s)], fill=col)
+    d.polygon([(x - 150 * s, y - 10 * s), (x - 180 * s, y - 80 * s), (x - 140 * s, y - 80 * s), (x - 110 * s, y - 10 * s)], fill=col)
+    d.line([(x + 172 * s, y - 50 * s), (x + 172 * s, y + 50 * s)], fill=col, width=max(2, int(6 * s)))
+
+
+def smoke(d, x, y, s, col):
+    for k in range(6):
+        r = (60 + k * 30) * s
+        cy = y - k * 90 * s
+        cx = x + (k % 2) * 40 * s
+        d.ellipse([cx - r, cy - r * 0.7, cx + r, cy + r * 0.7], fill=(60, 50, 50, 170))
+
+
+def moon(d, x, y, s, col):
+    d.ellipse([x - 70 * s, y - 70 * s, x + 70 * s, y + 70 * s], fill=(245, 240, 220, 255))
 
 
 ELEMENTS = dict(sheep=sheep, tent=tent, palm=palm, tree=tree, boat=boat, ark=ark, cross=cross, tomb=tomb,
                 city=city, tower=tower, fire=fire, bush=bush, well=well, manger=manger,
-                ship=ship, rowboat=rowboat, barrel=barrel)
-AIR = dict(fish=fish, dove=dove, star=star, stone=stone)
+                ship=ship, steamship=steamship, pyramid=pyramid, lighthouse=lighthouse, ruins=ruins, house=house,
+                castle=castle, candi=candi, volcano=volcano)
+AIR = dict(fish=fish, dove=dove, star=star, stone=stone, plane=plane, smoke=smoke, moon=moon)
 
 
 def render_background(scene, seed=0, scale=1.12):
@@ -400,7 +481,7 @@ def render_background(scene, seed=0, scale=1.12):
     img = gradient(w, h, pal["sky"] + [pal["terrain"][3]])
     ox, oy = (w - W) / 2, (h - H) / 2  # offset so element coords stay in 1080x1920 space
     sun = scene.get("sun", scene.get("bg") not in ("storm",))
-    if scene.get("stars") or scene.get("bg") == "night":
+    if scene.get("stars") or scene.get("bg") in ("night", "arctic"):
         draw_stars(img, rng)
     if scene.get("rays"):
         draw_rays(img, w / 2, oy + GROUND_Y - 330, pal["sun"])
@@ -419,8 +500,9 @@ def render_background(scene, seed=0, scale=1.12):
             r = R - k * 26
             rd.arc([cx - r, cy - r, cx + r, cy + r], 180, 360, fill=hexrgb(c, 150), width=26)
         img.alpha_composite(rb.filter(ImageFilter.GaussianBlur(4)))
-    if scene.get("clouds") or scene.get("bg") == "storm":
-        draw_clouds(img, rng, "#0d0f14" if scene.get("bg") == "storm" else "#ffffff", 6, dark=scene.get("bg") == "storm")
+    if scene.get("clouds") or scene.get("bg") in ("storm", "fog"):
+        dark = scene.get("bg") == "storm"
+        draw_clouds(img, rng, "#0d0f14" if dark else ("#c8d0cc" if scene.get("bg") == "fog" else "#ffffff"), 6, dark=dark)
 
     terrain = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     draw_terrain(terrain, scene.get("terrain", "mountains"), pal, rng)
@@ -456,4 +538,12 @@ def render_background(scene, seed=0, scale=1.12):
         elif t in AIR:
             AIR[t](d, x, oy + H * el.get("y", 0.4), s, col)
     img.alpha_composite(fig)
+    if scene.get("bg") == "fog" or scene.get("mist"):
+        mist = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        md = ImageDraw.Draw(mist)
+        for _ in range(9):
+            cx, cy = rng.uniform(0, w), oy + GROUND_Y + rng.uniform(-260, 120)
+            rx, ry = rng.uniform(260, 520), rng.uniform(40, 90)
+            md.ellipse([cx - rx, cy - ry, cx + rx, cy + ry], fill=(200, 210, 205, 70))
+        img.alpha_composite(mist.filter(ImageFilter.GaussianBlur(30)))
     return img

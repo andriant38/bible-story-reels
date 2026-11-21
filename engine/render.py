@@ -1,7 +1,11 @@
-"""Render a Bible-story reel: story JSON + one narration clip per scene → 1080x1920 MP4.
+"""Render a story reel: story JSON + one narration clip per scene → 1080x1920 MP4.
 
 Usage:
-  python engine/render.py stories/<slug>.json --audio-dir work/<slug> --out videos/<file>.mp4
+  python engine/render.py stories/<slug>.json --audio-dir work/<slug> --out videos/<file>.mp4 [--brand brands/<name>/brand.json]
+
+Without --brand the Bible-reel look is used. A brand JSON can set: accent [r,g,b], sub_box [r,g,b,a],
+watermark (text drawn small at the top), watermark_color [r,g,b], music (path relative to the repo), music_volume
+and voice_tempo (e.g. 1.08 plays the narration 8% faster without changing pitch; long pauses are also trimmed).
 
 The audio dir must contain 01.mp3, 02.mp3, ... — one narration clip per scene, in order.
 Each scene lasts exactly as long as its narration (plus small gaps), so voice and subtitles stay in sync.
@@ -21,7 +25,6 @@ from draw import H, W, render_background  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(ROOT, "assets", "fonts")
-MUSIC = os.path.join(ROOT, "assets", "music.m4a")
 FPS = 30
 LEAD = 0.5        # silence before first line
 PRE = 0.35        # scene shows this long before its narration starts
@@ -29,6 +32,8 @@ POST = 0.45       # and stays this long after it ends
 TAIL = 1.8        # extra hold on the final scene
 FADE = 0.4        # cross-fade between scenes
 CAMERAS = ["push", "pan_right", "pull", "pan_left"]
+BRAND = {"accent": [245, 163, 107], "sub_box": [22, 13, 18, 205], "watermark": "", "watermark_color": [255, 255, 255],
+         "music": "assets/music.m4a", "music_volume": 0.16, "voice_tempo": 1.0}
 
 
 def font(name, size):
@@ -73,19 +78,24 @@ def text_overlay(scene, path):
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(shadow).rounded_rectangle([box[0] + 4, box[1] + 10, box[2] + 4, box[3] + 10], 30, fill=(0, 0, 0, 110))
     img.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(14)))
-    d.rounded_rectangle(box, 30, fill=(22, 13, 18, 205))
+    d.rounded_rectangle(box, 30, fill=tuple(BRAND["sub_box"]))
     y = box[1] + pad_y - 4
     for l in lines:
         d.text((W / 2, y), l, font=fnt, fill=(255, 255, 255, 255), anchor="ma")
         y += lh
     # ---- headline block (title card / closing card)
+    if BRAND["watermark"]:
+        wf = font("Bold", 30)
+        wm = " ".join(BRAND["watermark"].upper())
+        d.text((W / 2, 92), wm, font=wf, fill=tuple(BRAND["watermark_color"]) + (190,), anchor="ma")
+    acc = tuple(BRAND["accent"])
     head = scene.get("headline")
     if head:
-        styles = {"big": ("ExtraBold", 132, (255, 255, 255)), "accent": ("ExtraBold", 132, (245, 163, 107)),
+        styles = {"big": ("ExtraBold", 132, (255, 255, 255)), "accent": ("ExtraBold", 132, acc),
                   "small": ("Medium", 46, (255, 255, 255)), "ref": ("SemiBold", 34, (255, 255, 255)),
                   "statement": ("ExtraBold", 76, (255, 255, 255)),
-                  "hook": ("ExtraBold", 92, (255, 255, 255)), "hook_accent": ("ExtraBold", 92, (245, 163, 107)),
-                  "label": ("Bold", 40, (245, 163, 107)), "point": ("Bold", 58, (255, 255, 255))}
+                  "hook": ("ExtraBold", 92, (255, 255, 255)), "hook_accent": ("ExtraBold", 92, acc),
+                  "label": ("Bold", 40, acc), "point": ("Bold", 58, (255, 255, 255))}
         y = scene.get("headline_y", 230)
         layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
@@ -136,8 +146,13 @@ def main():
     ap.add_argument("story")
     ap.add_argument("--audio-dir", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--music-volume", type=float, default=0.16)
+    ap.add_argument("--brand", help="brand JSON (colours, watermark, music)")
+    ap.add_argument("--music-volume", type=float)
     args = ap.parse_args()
+    if args.brand:
+        BRAND.update(json.load(open(args.brand, encoding="utf-8")))
+    music = os.path.join(ROOT, BRAND["music"])
+    music_volume = args.music_volume if args.music_volume is not None else BRAND["music_volume"]
 
     story = json.load(open(args.story, encoding="utf-8"))
     scenes = story["scenes"]
@@ -145,6 +160,18 @@ def main():
     for a in audio:
         if not os.path.exists(a):
             sys.exit(f"missing narration clip: {a}")
+    tempo = float(BRAND.get("voice_tempo", 1.0))
+    if tempo != 1.0:
+        tdir = tempfile.mkdtemp(prefix="voice-")
+        sped = []
+        for a in audio:
+            o = os.path.join(tdir, os.path.basename(a))
+            # speed up, and shorten any pause longer than 0.35 s inside a clip
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", a, "-af",
+                            f"silenceremove=stop_periods=-1:stop_duration=0.4:stop_silence=0.3:stop_threshold=-40dB,atempo={tempo}",
+                            "-c:a", "libmp3lame", "-q:a", "2", o], check=True)
+            sped.append(o)
+        audio = sped
     adur = [probe_duration(a) for a in audio]
 
     # timeline
@@ -174,15 +201,15 @@ def main():
             lab = f"[x{k}]"
             fc.append(f"{prev}[{k}:v]xfade=transition=fade:duration={FADE}:offset={starts[k]:.3f}{lab}")
             prev = lab
-        vlabel = prev
+        vlabel = prev if len(clips) > 1 else "0:v"
         n = len(clips)
         for i, a in enumerate(audio):
             inputs += ["-i", a]
             ms = int(voice_at[i] * 1000)
             fc.append(f"[{n + i}:a]aresample=44100,adelay={ms}:all=1[a{i}]")
-        inputs += ["-stream_loop", "-1", "-i", MUSIC]
+        inputs += ["-stream_loop", "-1", "-i", music]
         m = n + len(audio)
-        fc.append(f"[{m}:a]aresample=44100,atrim=0:{total:.3f},volume={args.music_volume},"
+        fc.append(f"[{m}:a]aresample=44100,atrim=0:{total:.3f},volume={music_volume},"
                   f"afade=t=in:d=1,afade=t=out:st={max(total - 2.5, 0):.3f}:d=2.5[mus]")
         fc.append("".join(f"[a{i}]" for i in range(len(audio))) + f"[mus]amix=inputs={len(audio) + 1}:normalize=0:duration=longest,"
                   f"atrim=0:{total:.3f},alimiter=limit=0.95[aout]")

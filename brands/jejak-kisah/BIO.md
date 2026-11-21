@@ -38,7 +38,7 @@ Selamat datang di Jejak Kisah 🕯️
 Di sini kami menceritakan kisah nyata yang jarang diceritakan: misteri sejarah yang belum terpecahkan, tragedi dan keajaiban yang benar-benar terjadi, tokoh yang terlupakan, sejarah Indonesia, dan asal-usul benda sehari-hari.
 
 📅 Jadwal:
-• Shorts baru setiap hari pukul 13.00 & 20.00 WIB
+• Shorts baru setiap hari pukul 12.00 & 19.00 WIB
 • Video kompilasi panjang setiap Rabu & Sabtu pukul 19.00 WIB
 
 Punya kisah yang ingin diceritakan? Tulis di kolom komentar, kisah pilihan akan kami buat videonya.
