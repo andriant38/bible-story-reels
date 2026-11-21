@@ -672,7 +672,7 @@ F.grader = (s) => {
   g.add(box(0.04, 1.0, 1.4, mat(C.glass, { rough: 0.1, metal: 0.3 }), -0.14, 2.8, 0));
   const blade = box(0.25, 0.6, 3.6, mat(0x555a60, { metal: 0.5 }), 1.2, 0.35, 0); blade.rotation.y = 0.45; g.add(blade);
   g.add(box(0.3, 0.9, 0.3, yel, 1.2, 0.95, 0));
-  return { group: g, update(p, t) { if (s.anim === 'shuttle') shuttle(s, g, t); else moveAlong(s, g, p); wheels.forEach((w) => (w.rotation.z = -g.position.x / 0.65)); } };
+  return { group: g, update(p, t) { if (s.anim === 'shuttle') shuttle(s, g, t); else moveAlong(s, g, p); wheels.forEach((w) => (w.rotation.y = -g.position.x / 0.65)); } };
 };
 
 F.paver = (s) => {
@@ -711,7 +711,7 @@ F.sprayer = (s) => {
   g.add(box(0.15, 0.15, 2.8, mat(C.steel, { metal: 0.6 }), -3.3, 0.6, 0));
   const spray = []; const sm = new THREE.MeshStandardMaterial({ color: s.spray_color ?? 0x3a2a1c, transparent: true, opacity: 0.55, depthWrite: false });
   for (let i = 0; i < 9; i++) { const c = new THREE.Mesh(new THREE.ConeGeometry(0.22, 0.6, 8, 1, true), sm); c.position.set(-3.3, 0.28, -1.3 + i * 0.325); g.add(c); spray.push(c); }
-  return { group: g, update(p, t) { moveAlong({ ...s, ease: s.ease ?? false }, g, p); wheels.forEach((w) => (w.rotation.z = -g.position.x / 0.5)); const on = s.anim !== 'idle' && p > 0.01 && p < 0.999; spray.forEach((c, i) => { c.visible = on; c.scale.y = 0.85 + 0.15 * Math.sin(t * 30 + i); }); } };
+  return { group: g, update(p, t) { moveAlong({ ...s, ease: s.ease ?? false }, g, p); wheels.forEach((w) => (w.rotation.y = -g.position.x / 0.5)); const on = s.anim !== 'idle' && p > 0.01 && p < 0.999; spray.forEach((c, i) => { c.visible = on; c.scale.y = 0.85 + 0.15 * Math.sin(t * 30 + i); }); } };
 };
 
 F.amp = (s, ctx) => {
