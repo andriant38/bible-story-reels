@@ -1,0 +1,81 @@
+{
+  "slug": "yusuf-dijual-saudaranya",
+  "title": "Yusuf Dijual Saudaranya",
+  "reference": "Kejadian 37–50",
+  "scenes": [
+    {
+      "text": "Pernah dikhianati oleh keluargamu sendiri? Yusuf pernah.",
+      "bg": "dusk", "terrain": "plain", "camera": "push", "headline_y": 420,
+      "headline": [{"text": "Dikhianati keluarga sendiri?", "style": "hook"}, {"text": "Yusuf pernah.", "style": "hook_accent"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.65}, {"type": "person", "x": 0.2, "size": 0.85, "facing": 1}, {"type": "person", "x": 0.8, "size": 0.85, "facing": -1}]
+    },
+    {
+      "text": "Yusuf adalah anak kesayangan Yakub. Ayahnya memberinya jubah yang maha indah.",
+      "bg": "golden", "terrain": "plain", "camera": "pan_right",
+      "headline": [{"text": "YUSUF", "style": "accent"}, {"text": "dijual saudaranya", "style": "small"}, {"text": "KEJADIAN 37–50", "style": "ref"}],
+      "elements": [{"type": "person", "x": 0.35, "size": 1.0, "props": ["staff", "beard"]}, {"type": "person", "x": 0.6, "size": 0.7, "pose": "praise", "facing": -1}, {"type": "tent", "x": 0.85, "size": 0.7}]
+    },
+    {
+      "text": "Saudara-saudaranya iri, dan sangat membencinya.",
+      "bg": "dusk", "terrain": "plain", "camera": "pull",
+      "elements": [{"type": "person", "x": 0.18, "size": 0.9, "pose": "point"}, {"type": "person", "x": 0.3, "size": 0.85}, {"type": "person", "x": 0.42, "size": 0.9}, {"type": "person", "x": 0.75, "size": 0.7, "facing": -1}]
+    },
+    {
+      "text": "Mereka melemparkannya ke dalam sumur kering, lalu menjualnya sebagai budak ke Mesir.",
+      "bg": "desert", "terrain": "desert", "camera": "push",
+      "elements": [{"type": "well", "x": 0.35, "size": 1.0}, {"type": "person", "x": 0.6, "size": 0.85, "pose": "point", "facing": -1}, {"type": "person", "x": 0.75, "size": 0.85, "props": ["basket"], "facing": -1}]
+    },
+    {
+      "text": "Di Mesir, ia difitnah dan dipenjara, padahal ia tidak bersalah.",
+      "bg": "night", "terrain": "plain", "sun": false, "camera": "pull",
+      "elements": [{"type": "tower", "x": 0.72, "size": 0.7}, {"type": "person", "x": 0.35, "size": 0.8, "pose": "kneel"}]
+    },
+    {
+      "text": "Tetapi TUHAN menyertai Yusuf.",
+      "bg": "night", "terrain": "plain", "sun": false, "rays": true, "camera": "push",
+      "elements": [{"type": "person", "x": 0.5, "size": 0.85, "pose": "pray"}]
+    },
+    {
+      "text": "Ia mengartikan mimpi Firaun, lalu diangkat menjadi penguasa atas seluruh tanah Mesir.",
+      "bg": "golden", "terrain": "desert", "camera": "pan_left",
+      "elements": [{"type": "tower", "x": 0.82, "size": 0.75}, {"type": "person", "x": 0.55, "size": 1.05, "props": ["crown"], "facing": -1}, {"type": "person", "x": 0.33, "size": 0.95, "pose": "point"}]
+    },
+    {
+      "text": "Ketika kelaparan melanda, saudara-saudaranya datang ke Mesir untuk membeli gandum.",
+      "bg": "desert", "terrain": "desert", "camera": "pan_right",
+      "elements": [{"type": "person", "x": 0.18, "size": 0.85, "props": ["basket"]}, {"type": "person", "x": 0.3, "size": 0.85, "props": ["staff"]}, {"type": "person", "x": 0.42, "size": 0.85}, {"type": "palm", "x": 0.8, "size": 0.8}]
+    },
+    {
+      "text": "Yusuf berkata: \"Kamu memang mereka-rekakan yang jahat terhadap aku, tetapi Allah telah mereka-rekakannya untuk kebaikan.\"",
+      "bg": "golden", "terrain": "plain", "rays": true, "camera": "push",
+      "elements": [{"type": "person", "x": 0.5, "size": 1.0, "pose": "arms_up"}, {"type": "person", "x": 0.25, "size": 0.75, "pose": "kneel", "facing": 1}, {"type": "person", "x": 0.75, "size": 0.75, "pose": "kneel", "facing": -1}]
+    },
+    {
+      "text": "Dari sumur sampai ke istana, Yusuf menunggu sekitar tiga belas tahun.",
+      "bg": "dawn", "terrain": "desert", "camera": "pull", "headline_y": 300,
+      "headline": [{"text": "KONTEKSNYA", "style": "label"}, {"text": "13 tahun dari sumur ke istana.", "style": "point"}],
+      "elements": [{"type": "well", "x": 0.25, "size": 0.7}, {"type": "tower", "x": 0.78, "size": 0.6}]
+    },
+    {
+      "text": "Allah sanggup memakai luka terdalammu, untuk menyelamatkan banyak orang.",
+      "bg": "golden", "terrain": "hill", "rays": true, "camera": "push", "headline_y": 300,
+      "headline": [{"text": "MAKNANYA", "style": "label"}, {"text": "Tidak ada luka yang sia-sia di tangan-Nya.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.75, "dy": -250, "pose": "arms_up"}]
+    },
+    {
+      "text": "Hari ini, doakan satu orang yang pernah menyakitimu. Pengampunan membebaskan hatimu.",
+      "bg": "dawn", "terrain": "hill", "camera": "pull", "headline_y": 300,
+      "headline": [{"text": "UNTUK HIDUPMU", "style": "label"}, {"text": "Doakan orang yang menyakitimu.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.75, "dy": -250, "pose": "kneel"}]
+    },
+    {
+      "text": "Siapa yang perlu kamu ampuni hari ini? Tulis di kolom komentar.",
+      "bg": "golden", "terrain": "hill", "rays": true, "camera": "push",
+      "headline": [{"text": "Allah mereka-rekakannya untuk kebaikan.", "style": "statement"}, {"text": "Kejadian 50:20", "style": "ref"}],
+      "elements": [{"type": "person", "x": 0.42, "size": 0.7, "dy": -250}, {"type": "person", "x": 0.56, "size": 0.7, "dy": -250, "facing": -1}]
+    }
+  ],
+  "caption": "Pernah dikhianati oleh keluargamu sendiri? Yusuf pernah. 💔➡️👑\n\nDijual, difitnah, dipenjara… tapi Allah memakai semua luka itu untuk menyelamatkan banyak orang.\n\n\"Kamu memang mereka-rekakan yang jahat terhadap aku, tetapi Allah telah mereka-rekakannya untuk kebaikan.\" (Kejadian 50:20)\n\nSiapa yang perlu kamu ampuni hari ini? Tulis di kolom komentar 👇\n\n#Yusuf #KisahAlkitab #RenunganHarian #Kejadian50 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Yusuf Dijual Saudaranya: Tidak Ada Luka yang Sia-sia #shorts",
+  "youtube_tags": ["Yusuf", "Kisah Alkitab", "Renungan", "Kejadian 50", "Kristen"]
+}
