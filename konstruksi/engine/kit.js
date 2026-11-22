@@ -737,6 +737,96 @@ F.cones = (s) => {
   return { group: g, update() {} };
 };
 
+// ---------------------------------------------------------------- concrete (pengecoran)
+F.mixer_truck = (s) => {
+  // truk molen: rotating drum, chute at the back (−x). `to` to drive, `anim: "pour"` tilts the chute + shows a concrete stream
+  const g = new THREE.Group(); const dk = mat(C.dark);
+  const wheels = []; for (const x of [2.9, -1.2, -2.6]) for (const z of [-1.0, 1.0]) { const w = new THREE.Group(); w.position.set(x, 0.55, z); const t = cyl(0.55, 0.55, 0.4, mat(C.tire, { rough: 0.95 }), 22); t.rotation.x = Math.PI / 2; w.add(t); const h = cyl(0.25, 0.25, 0.42, mat(0xd8d8d8), 12); h.rotation.x = Math.PI / 2; w.add(h); g.add(w); wheels.push(w); }
+  g.add(box(8, 0.4, 1.3, dk, 0, 1.0, 0));
+  g.add(box(1.9, 2.1, 2.45, mat(s.cab ?? 0xf2f2f0), 3.3, 2.1, 0)); g.add(box(0.05, 0.85, 2.15, mat(C.glass, { rough: 0.1 }), 4.26, 2.5, 0));
+  g.add(box(0.15, 0.4, 2.3, mat(0x333333), 4.3, 1.4, 0));
+  const drumG = new THREE.Group(); drumG.position.set(-0.6, 2.75, 0); drumG.rotation.z = 0.2; g.add(drumG);
+  const spin = new THREE.Group(); drumG.add(spin);
+  const prof = [[0.35, -3.0], [1.15, -2.1], [1.35, -0.6], [1.35, 0.6], [1.0, 1.9], [0.5, 2.6], [0.45, 2.9]].map(([r, y]) => new THREE.Vector2(r, y));
+  const dg = new THREE.LatheGeometry(prof, 28); dg.rotateZ(Math.PI / 2);
+  const drum = mesh(dg, mat(s.color ?? 0xe8edf2, { metal: 0.3, rough: 0.45 })); spin.add(drum);
+  for (let i = 0; i < 2; i++) for (let k = 0; k < 9; k++) { const x = -2.4 + k * 0.6; const a = k * 0.7 + i * Math.PI; const r = 1.36 - Math.abs(x) * 0.08; const st = box(0.5, 0.18, 0.18, mat(s.stripe ?? 0xd23a2a), x, Math.cos(a) * r, Math.sin(a) * r); st.rotation.x = a; spin.add(st); }
+  g.add(box(0.5, 1.6, 0.5, mat(C.steelDark), -3.0, 1.9, 0)); g.add(box(0.5, 1.2, 0.5, mat(C.steelDark), 1.8, 1.8, 0));
+  const chute = new THREE.Group(); chute.position.set(-3.6, 2.4, 0); g.add(chute);
+  const ch = box(1.8, 0.1, 0.5, mat(0x9aa1a8, { metal: 0.6 })); ch.geometry.translate(-0.9, 0, 0); chute.add(ch);
+  const stream = cyl(0.14, 0.2, 1, mat(0x8f8b84, { rough: 1 }), 10); stream.geometry.translate(0, -0.5, 0); stream.position.x = -1.75; chute.add(stream);
+  const from = new V3(...(s.pos || [0, 0, 0])); const to = s.to ? new V3(...s.to) : null;
+  if (to) g.rotation.y = Math.atan2(-(to.z - from.z), to.x - from.x);
+  return { group: g, update(p, t) {
+    if (to) { const q = s.ease === false ? p : easeIO(p); g.position.lerpVectors(from, to, q); wheels.forEach((w) => (w.rotation.z = -from.distanceTo(to) * q / 0.55)); }
+    spin.rotation.x = t * (s.anim === 'pour' ? -1.6 : 1.0);
+    const pour = s.anim === 'pour'; chute.rotation.z = pour ? 0.5 : -0.9; chute.rotation.y = pour ? 0 : 1.2;
+    stream.visible = pour; stream.scale.y = pour ? 1.6 + Math.sin(t * 7) * 0.05 : 0.01;
+  } };
+};
+
+F.slab = (s, ctx) => {
+  // elevated floor slab on columns: formwork + rebar mesh, beams under it, concrete pour front advancing along +x
+  const g = new THREE.Group(); const w = s.w ?? 20, d = s.d ?? 15, t = s.t ?? 0.12, H = s.h ?? 4, bs = s.beam_spacing ?? 5;
+  const bw = 0.3, bd = 0.4; const top = H + t;
+  const conc = mat(C.concrete, { rough: 0.95 }); const wet = mat(0x8f8b84, { rough: 0.55 }); const ply = mat(0xb07a45, { rough: 0.9 });
+  // columns under the beam grid
+  const colG = []; for (let x = -w / 2; x <= w / 2 + 0.01; x += bs) for (const z of [-d / 2, d / 2]) { const c = new THREE.BoxGeometry(0.4, H - bd, 0.4); c.translate(x, (H - bd) / 2, z); colG.push(c); }
+  g.add(mesh(mergeGeometries(colG), conc));
+  // scaffolding props
+  const sg = []; for (let x = -w / 2 + 1.5; x < w / 2; x += 2.5) for (let z = -d / 2 + 1.5; z < d / 2; z += 2.5) sg.push(beamGeo(new V3(x, 0, z), new V3(x, H - 0.05, z), 0.06));
+  const props = mesh(mergeGeometries(sg), mat(0x8a929b, { metal: 0.5 })); g.add(props);
+  // formwork deck
+  g.add(box(w + 0.6, 0.05, d + 0.6, ply, 0, H - 0.03, 0));
+  // beam lines: perimeter + interior lines along z
+  const beams = []; const addBeam = (x0, x1, z0, z1) => { const L = Math.max(Math.abs(x1 - x0), Math.abs(z1 - z0)); const alongX = Math.abs(x1 - x0) > Math.abs(z1 - z0);
+    const geo = new THREE.BoxGeometry(alongX ? L + bw : bw, bd, alongX ? bw : L + bw); const fm = mesh(geo, ply); fm.position.set((x0 + x1) / 2, H - bd / 2, (z0 + z1) / 2); fm.scale.set(1.15, 1.02, 1.15); fm.visible = !s.cured; g.add(fm);
+    const cm = mesh(geo.clone(), wet); cm.position.copy(fm.position); g.add(cm); beams.push({ m: cm, x0: Math.min(x0, x1) - bw / 2, x1: Math.max(x0, x1) + bw / 2, alongX }); };
+  addBeam(-w / 2, w / 2, -d / 2, -d / 2); addBeam(-w / 2, w / 2, d / 2, d / 2);
+  for (let x = -w / 2; x <= w / 2 + 0.01; x += bs) addBeam(x, x, -d / 2, d / 2);
+  // rebar mesh on top
+  const rg = []; for (let x = -w / 2 + 0.3; x < w / 2; x += 0.6) rg.push(beamGeo(new V3(x, H + t * 0.6, -d / 2 + 0.1), new V3(x, H + t * 0.6, d / 2 - 0.1), 0.03));
+  for (let z = -d / 2 + 0.3; z < d / 2; z += 0.6) rg.push(beamGeo(new V3(-w / 2 + 0.1, H + t * 0.6, z), new V3(w / 2 - 0.1, H + t * 0.6, z), 0.03));
+  const rebar = mesh(mergeGeometries(rg), mat(C.rebar, { metal: 0.5, rough: 0.5 })); rebar.castShadow = false; g.add(rebar);
+  // edge forms
+  for (const z of [-d / 2 - 0.3, d / 2 + 0.3]) g.add(box(w + 0.6, 0.35, 0.05, ply, 0, H + 0.15, z));
+  for (const x of [-w / 2 - 0.3, w / 2 + 0.3]) g.add(box(0.05, 0.35, d + 0.6, ply, x, H + 0.15, 0));
+  // concrete slab (pour front)
+  const slab = mesh(new THREE.BoxGeometry(1, t, d), wet); slab.geometry.translate(0.5, H + t / 2, 0); slab.position.x = -w / 2; g.add(slab);
+  const cured = s.cured ? conc : wet; if (s.cured) { slab.material = conc; beams.forEach((b) => (b.m.material = conc)); }
+  return { group: g, top, update(p) {
+    const q = s.anim === 'pour' ? clamp(p) : (s.filled ?? 0); const front = -w / 2 + w * q;
+    slab.scale.x = Math.max(w * q, 0.001); slab.visible = q > 0.001;
+    beams.forEach((b) => { if (b.alongX) { const L = clamp((front - b.x0) / (b.x1 - b.x0)); b.m.visible = L > 0; b.m.scale.x = Math.max(L, 0.001); b.m.position.x = b.x0 + (b.x1 - b.x0) * L / 2; } else b.m.visible = front > b.x0; });
+    rebar.visible = q < 0.999 || s.show_rebar === true;
+  } };
+};
+
+F.pump_truck = (s) => {
+  // concrete boom pump: 3-section boom from the truck to the point `reach` (world-relative to truck, [dx, dy, dz])
+  const g = new THREE.Group(); const yel = mat(s.color ?? 0xf2b705, { rough: 0.45 }); const dk = mat(C.dark);
+  for (const x of [3.2, 1.6, -1.6, -3.0]) for (const z of [-1.05, 1.05]) { const w = cyl(0.55, 0.55, 0.4, mat(C.tire), 20); w.rotation.x = Math.PI / 2; w.position.set(x, 0.55, z); g.add(w); }
+  g.add(box(9, 0.6, 2.3, dk, 0, 1.2, 0)); g.add(box(1.8, 2.0, 2.45, mat(0xf2f2f0), 4.2, 2.1, 0));
+  g.add(box(4.5, 0.9, 2.3, yel, -0.8, 1.9, 0));
+  for (const x of [2.5, -3.5]) for (const z of [-1, 1]) { g.add(box(0.25, 0.25, 2.2, yel, x, 1.0, z * 2.0)); g.add(box(0.5, 0.15, 0.5, dk, x, 0.08, z * 3.0)); g.add(box(0.2, 1.0, 0.2, yel, x, 0.5, z * 3.0)); }
+  const turret = new THREE.Group(); turret.position.set(1.5, 2.6, 0); g.add(turret); turret.add(cyl(0.7, 0.8, 0.8, yel, 16));
+  const [dx, dy, dz] = s.reach ?? [16, 4, 0]; const yaw = Math.atan2(-dz, dx); turret.rotation.y = yaw;
+  const hd = Math.hypot(dx, dz); const L = [8, 7.5, 6.5];
+  // simple pose: first section climbs, second goes out, third drops to the target
+  const segs = []; let base = new V3(0, 0.4, 0);
+  const tip = new V3(hd, dy - 2.6 + 1.8, 0); // hose hangs 1.8 m
+  const a1 = 0.95; const p1 = base.clone().add(new V3(Math.cos(a1) * L[0], Math.sin(a1) * L[0], 0));
+  const dir = tip.clone().sub(p1); const D = dir.length();
+  // solve 2-link from p1 to tip
+  const l2 = L[1], l3 = L[2]; const dd = Math.min(D, l2 + l3 - 0.01); const ang = Math.atan2(dir.y, dir.x);
+  const c2 = Math.acos(clamp((l2 * l2 + dd * dd - l3 * l3) / (2 * l2 * dd), -1, 1));
+  const p2 = p1.clone().add(new V3(Math.cos(ang + c2) * l2, Math.sin(ang + c2) * l2, 0));
+  const p3 = p1.clone().add(dir.clone().setLength(dd));
+  for (const [a, b, r] of [[base, p1, 0.45], [p1, p2, 0.38], [p2, p3, 0.3]]) turret.add(mesh(beamGeo(a, b, r), yel));
+  const hose = cyl(0.12, 0.12, 1.8, mat(0x222222), 8); hose.position.set(p3.x, p3.y - 0.9, 0); turret.add(hose);
+  return { group: g, update(p, t) { hose.rotation.z = Math.sin(t * 2) * 0.12; } };
+};
+
 // ---------------------------------------------------------------- worlds
 const SKY = {
   day: { top: '#5f97d6', bottom: '#dfe9f1', sun: 3.2, hemi: 1.3, sunColor: 0xfff4e0, dir: [60, 90, 40], fog: 0xd9e4ee },

@@ -1,0 +1,965 @@
+{
+  "slug": "berapa-truk-molen-cor-1-lantai",
+  "title": "Berapa Truk Molen untuk Ngecor 1 Lantai?",
+  "topic": "konstruksi",
+  "scenes": [
+    {
+      "text": "Ngecor satu lantai gedung, butuh berapa truk molen?",
+      "headline": [
+        {
+          "text": "NGECOR 1 LANTAI",
+          "style": "hook"
+        },
+        {
+          "text": "BUTUH BERAPA TRUK?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 250,
+      "world": "city",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          -4,
+          4,
+          6
+        ],
+        "dist": 30,
+        "height": 6,
+        "angle": -35,
+        "sweep": 12
+      },
+      "shadow_size": 35,
+      "objects": [
+        {
+          "type": "slab",
+          "anim": "pour",
+          "progress": [
+            0.2,
+            0.4
+          ]
+        },
+        {
+          "type": "pump_truck",
+          "pos": [
+            2,
+            0,
+            14
+          ],
+          "reach": [
+            -6,
+            4.3,
+            -14
+          ]
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -11,
+            0,
+            14
+          ],
+          "rot": 180,
+          "anim": "pour"
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -4,
+            4.12,
+            -2
+          ],
+          "rot": 90
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Jawabannya bisa kamu hitung sendiri. Kuncinya cuma satu: volume beton.",
+      "headline": [
+        {
+          "text": "HITUNG",
+          "style": "big"
+        },
+        {
+          "text": "VOLUME",
+          "style": "accent"
+        },
+        {
+          "text": "BETON",
+          "style": "big"
+        }
+      ],
+      "headline_y": 190,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 40,
+        "height": 22,
+        "angle": 30,
+        "sweep": 35
+      },
+      "shadow_size": 35,
+      "objects": [
+        {
+          "type": "slab",
+          "filled": 0
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Contohnya, pelat lantai ukuran dua puluh kali lima belas meter, tebal dua belas sentimeter.",
+      "subtitle": "Contohnya, pelat lantai 20 × 15 meter, tebal 12 cm.",
+      "headline": [
+        {
+          "text": "1. PELAT LANTAI",
+          "style": "label"
+        },
+        {
+          "text": "20 m × 15 m × 0,12 m",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 36,
+        "height": 26,
+        "angle": 20,
+        "sweep": 20
+      },
+      "shadow_size": 35,
+      "objects": [
+        {
+          "type": "slab",
+          "filled": 0
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            5.5,
+            8.5
+          ],
+          "text": "20 m",
+          "size": 1.6
+        },
+        {
+          "type": "label",
+          "pos": [
+            11.5,
+            5.5,
+            0
+          ],
+          "text": "15 m",
+          "size": 1.6
+        },
+        {
+          "type": "label",
+          "pos": [
+            -10.5,
+            6,
+            -8
+          ],
+          "text": "12 cm",
+          "size": 1.2,
+          "show_at": 0.4
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Luasnya tiga ratus meter persegi. Dikali tebalnya, jadi tiga puluh enam meter kubik.",
+      "subtitle": "Luasnya 300 m². Dikali tebal 0,12 m = 36 m³.",
+      "headline": [
+        {
+          "text": "300 × 0,12 =",
+          "style": "point"
+        },
+        {
+          "text": "36 m³",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          2,
+          3,
+          0
+        ],
+        "dist": 34,
+        "height": 18,
+        "angle": 35,
+        "sweep": 25
+      },
+      "shadow_size": 35,
+      "objects": [
+        {
+          "type": "slab",
+          "anim": "pour",
+          "progress": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pump_truck",
+          "pos": [
+            2,
+            0,
+            14
+          ],
+          "reach": [
+            -6,
+            4.3,
+            -14
+          ]
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -11,
+            0,
+            14
+          ],
+          "rot": 180,
+          "anim": "pour"
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Jangan lupa balok di bawah pelat. Misalnya ukuran tiga puluh kali empat puluh sentimeter, total panjangnya seratus dua puluh meter.",
+      "subtitle": "Jangan lupa balok di bawah pelat. Misalnya 30 × 40 cm, total panjang 120 m.",
+      "headline": [
+        {
+          "text": "2. BALOK",
+          "style": "label"
+        },
+        {
+          "text": "0,3 × 0,4 × 120 m = 14,4 m³",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          3.4,
+          0
+        ],
+        "dist": 22,
+        "height": -2.2,
+        "angle": 25,
+        "sweep": 15
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "slab",
+          "filled": 1,
+          "cured": true,
+          "show_rebar": false
+        },
+        {
+          "type": "worker",
+          "pos": [
+            3,
+            0,
+            4
+          ],
+          "rot": 200
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Totalnya sekitar lima puluh meter kubik. Tambah cadangan kira-kira tiga persen, untuk yang tumpah dan tertinggal di pipa pompa.",
+      "subtitle": "Total ±50 m³. Tambah cadangan ±3% untuk yang tumpah dan tertinggal di pipa pompa.",
+      "headline": [
+        {
+          "text": "36 + 14,4 + 3%",
+          "style": "point"
+        },
+        {
+          "text": "±52 m³",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -2,
+          3,
+          8
+        ],
+        "dist": 30,
+        "height": 12,
+        "angle": -20,
+        "sweep": 25
+      },
+      "shadow_size": 35,
+      "objects": [
+        {
+          "type": "slab",
+          "anim": "pour",
+          "progress": [
+            0.4,
+            0.7
+          ]
+        },
+        {
+          "type": "pump_truck",
+          "pos": [
+            2,
+            0,
+            14
+          ],
+          "reach": [
+            -6,
+            4.3,
+            -14
+          ]
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -11,
+            0,
+            14
+          ],
+          "rot": 180,
+          "anim": "pour"
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -1,
+            4.12,
+            3
+          ],
+          "rot": 90
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -3,
+            4.12,
+            -3
+          ],
+          "rot": 60,
+          "hat": 16777215
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Satu truk molen biasanya membawa sekitar tujuh meter kubik beton.",
+      "subtitle": "Satu truk molen biasanya membawa ±7 m³ beton.",
+      "headline": [
+        {
+          "text": "1 TRUK MOLEN",
+          "style": "label"
+        },
+        {
+          "text": "±7 m³",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          2.5,
+          0
+        ],
+        "dist": 16,
+        "height": 2,
+        "angle": 30,
+        "sweep": 40
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "mixer_truck",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "worker",
+          "pos": [
+            3,
+            0,
+            3
+          ],
+          "anim": "wave"
+        }
+      ]
+    },
+    {
+      "text": "Lima puluh dua dibagi tujuh, hasilnya tujuh koma empat. Dibulatkan ke atas, jadi delapan truk.",
+      "subtitle": "52 ÷ 7 = 7,4. Dibulatkan ke atas: 8 truk.",
+      "headline": [
+        {
+          "text": "52 ÷ 7 = 7,4",
+          "style": "point"
+        },
+        {
+          "text": "8 TRUK",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "pull",
+        "target": [
+          26,
+          2,
+          0
+        ],
+        "dist": 66,
+        "height": 26,
+        "angle": 74,
+        "sweep": 5
+      },
+      "shadow_size": 60,
+      "objects": [
+        {
+          "type": "road",
+          "pos": [
+            20,
+            0,
+            0
+          ],
+          "length": 200,
+          "w": 9
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -14,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -3,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            8,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            19,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            30,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            41,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            52,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            63,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "label",
+          "pos": [
+            -14,
+            5.4,
+            0
+          ],
+          "text": "1",
+          "size": 2.2,
+          "show_at": 0.05
+        },
+        {
+          "type": "label",
+          "pos": [
+            -3,
+            5.4,
+            0
+          ],
+          "text": "2",
+          "size": 2.2,
+          "show_at": 0.12000000000000001
+        },
+        {
+          "type": "label",
+          "pos": [
+            8,
+            5.4,
+            0
+          ],
+          "text": "3",
+          "size": 2.2,
+          "show_at": 0.19
+        },
+        {
+          "type": "label",
+          "pos": [
+            19,
+            5.4,
+            0
+          ],
+          "text": "4",
+          "size": 2.2,
+          "show_at": 0.26
+        },
+        {
+          "type": "label",
+          "pos": [
+            30,
+            5.4,
+            0
+          ],
+          "text": "5",
+          "size": 2.2,
+          "show_at": 0.33
+        },
+        {
+          "type": "label",
+          "pos": [
+            41,
+            5.4,
+            0
+          ],
+          "text": "6",
+          "size": 2.2,
+          "show_at": 0.4
+        },
+        {
+          "type": "label",
+          "pos": [
+            52,
+            5.4,
+            0
+          ],
+          "text": "7",
+          "size": 2.2,
+          "show_at": 0.47000000000000003
+        },
+        {
+          "type": "label",
+          "pos": [
+            63,
+            5.4,
+            0
+          ],
+          "text": "8",
+          "size": 2.2,
+          "show_at": 0.54
+        }
+      ]
+    },
+    {
+      "text": "Kenapa harus dibulatkan ke atas? Kurang sedikit saja, pengecoran berhenti di tengah jalan. Muncul sambungan dingin, yang jadi titik lemah beton.",
+      "headline": [
+        {
+          "text": "KENAPA DIBULATKAN KE ATAS?",
+          "style": "label"
+        },
+        {
+          "text": "supaya tidak ada sambungan dingin",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          1,
+          4,
+          0
+        ],
+        "dist": 24,
+        "height": 12,
+        "angle": 20,
+        "sweep": 10
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "slab",
+          "filled": 0.55
+        },
+        {
+          "type": "zone",
+          "pos": [
+            1,
+            4.14,
+            0
+          ],
+          "w": 1.2,
+          "d": 15.2,
+          "anim": "pulse"
+        },
+        {
+          "type": "label",
+          "pos": [
+            1,
+            6.2,
+            0
+          ],
+          "text": "SAMBUNGAN DINGIN",
+          "size": 1.3,
+          "color": "#ff5a4a"
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Truk juga harus datang bergantian. Beton sebaiknya dituang paling lama sekitar sembilan puluh menit sejak dicampur.",
+      "subtitle": "Truk harus datang bergantian. Beton sebaiknya dituang maksimal ±90 menit sejak dicampur.",
+      "headline": [
+        {
+          "text": "ATUR JADWAL TRUK",
+          "style": "label"
+        },
+        {
+          "text": "tuang ≤ ±90 menit sejak dicampur",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -10,
+          3,
+          10
+        ],
+        "dist": 40,
+        "height": 18,
+        "angle": -30,
+        "sweep": 25
+      },
+      "shadow_size": 45,
+      "objects": [
+        {
+          "type": "slab",
+          "anim": "pour",
+          "progress": [
+            0.7,
+            0.95
+          ]
+        },
+        {
+          "type": "pump_truck",
+          "pos": [
+            2,
+            0,
+            14
+          ],
+          "reach": [
+            -6,
+            4.3,
+            -14
+          ]
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -11,
+            0,
+            14
+          ],
+          "rot": 180,
+          "anim": "pour"
+        },
+        {
+          "type": "road",
+          "pos": [
+            -20,
+            0,
+            22
+          ],
+          "length": 120,
+          "w": 9
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -60,
+            0,
+            23.5
+          ],
+          "to": [
+            -24,
+            0,
+            23.5
+          ],
+          "ease": true
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -90,
+            0,
+            23.5
+          ],
+          "to": [
+            -50,
+            0,
+            23.5
+          ],
+          "ease": true,
+          "stripe": 3045803
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    },
+    {
+      "text": "Di proyekmu, ngecor terakhir pakai berapa truk molen? Tulis di kolom komentar.",
+      "headline": [
+        {
+          "text": "KEMARIN NGECOR PAKAI BERAPA TRUK?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 220,
+      "world": "city",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          4,
+          4
+        ],
+        "dist": 32,
+        "height": 10,
+        "angle": 40,
+        "sweep": 35
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "slab",
+          "filled": 1,
+          "show_rebar": false
+        },
+        {
+          "type": "pump_truck",
+          "pos": [
+            2,
+            0,
+            14
+          ],
+          "reach": [
+            -6,
+            4.3,
+            -14
+          ]
+        },
+        {
+          "type": "mixer_truck",
+          "pos": [
+            -11,
+            0,
+            14
+          ],
+          "rot": 180
+        },
+        {
+          "type": "worker",
+          "pos": [
+            2,
+            4.12,
+            2
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -3,
+            4.12,
+            -1
+          ],
+          "rot": 40
+        },
+        {
+          "type": "city",
+          "count": 30,
+          "area": [
+            260,
+            260
+          ],
+          "clear": 45,
+          "max_h": 40
+        }
+      ]
+    }
+  ],
+  "caption": "Ngecor 1 lantai, butuh berapa truk molen? 🚛\n\nCara hitungnya:\n1️⃣ Pelat: 20 × 15 × 0,12 m = 36 m³\n2️⃣ Balok 30×40 cm, total 120 m = 14,4 m³\n3️⃣ Total ±50 m³ + cadangan ±3% ≈ 52 m³\n4️⃣ 1 truk molen ±7 m³ → 52 ÷ 7 = 7,4 → bulatkan ke atas: 8 truk\n\nKenapa dibulatkan ke atas? Kurang sedikit, pengecoran berhenti → muncul sambungan dingin (cold joint) yang jadi titik lemah.\nAtur jadwal truk: beton sebaiknya dituang maks ±90 menit sejak dicampur.\n\nKemarin ngecor pakai berapa truk? Tulis di komentar 👇\n\n#pengecoran #trukmolen #readymix #beton #konstruksi #tekniksipil #proyek #civilengineering #sitemanager #animasi3D #faktaunik",
+  "youtube_title": "Ngecor 1 Lantai Butuh Berapa Truk Molen? Ini Cara Hitungnya #shorts",
+  "youtube_tags": [
+    "truk molen",
+    "ready mix",
+    "pengecoran",
+    "volume beton",
+    "cor pelat lantai",
+    "teknik sipil",
+    "konstruksi",
+    "animasi 3d"
+  ]
+}
