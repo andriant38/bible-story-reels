@@ -1,0 +1,77 @@
+{
+  "slug": "petrus-berjalan-di-atas-air",
+  "title": "Petrus Berjalan di Atas Air",
+  "reference": "Matius 14:22–33",
+  "scenes": [
+    {
+      "text": "Kalau Yesus memanggilmu berjalan di atas air… beranikah kamu melangkah?",
+      "bg": "night", "terrain": "sea", "sun": false, "camera": "push", "headline_y": 420,
+      "headline": [{"text": "Berani melangkah", "style": "hook"}, {"text": "di atas air?", "style": "hook_accent"}],
+      "elements": [{"type": "boat", "x": 0.72, "size": 0.6, "dy": -20}, {"type": "person", "x": 0.3, "size": 0.6, "dy": -60}]
+    },
+    {
+      "text": "Malam itu, murid-murid berlayar sendirian, dan perahu mereka diombang-ambingkan gelombang.",
+      "bg": "storm", "terrain": "sea", "clouds": true, "camera": "pan_right",
+      "headline": [{"text": "PETRUS", "style": "accent"}, {"text": "berjalan di atas air", "style": "small"}, {"text": "MATIUS 14:22–33", "style": "ref"}],
+      "elements": [{"type": "boat", "x": 0.5, "size": 0.85, "dy": 10}, {"type": "person", "x": 0.4, "size": 0.45, "dy": -55, "pose": "arms_up"}]
+    },
+    {
+      "text": "Menjelang pagi, Yesus datang kepada mereka, berjalan di atas air.",
+      "bg": "dawn", "terrain": "sea", "camera": "push",
+      "elements": [{"type": "person", "x": 0.3, "size": 0.85, "dy": -60}, {"type": "boat", "x": 0.75, "size": 0.6, "dy": -20}]
+    },
+    {
+      "text": "Mereka berteriak ketakutan. Tetapi Yesus berkata: \"Tenanglah! Aku ini, jangan takut!\"",
+      "bg": "storm", "terrain": "sea", "rays": true, "camera": "pull",
+      "elements": [{"type": "person", "x": 0.3, "size": 0.9, "dy": -60, "pose": "point", "facing": 1}, {"type": "boat", "x": 0.72, "size": 0.7, "dy": -20}, {"type": "person", "x": 0.64, "size": 0.45, "dy": -65, "pose": "arms_up"}]
+    },
+    {
+      "text": "Petrus menjawab: \"Tuhan, suruhlah aku datang kepada-Mu.\" Kata Yesus: \"Datanglah!\"",
+      "bg": "dawn", "terrain": "sea", "camera": "pan_left",
+      "elements": [{"type": "boat", "x": 0.68, "size": 0.85, "dy": -20}, {"type": "person", "x": 0.58, "size": 0.55, "dy": -80, "pose": "praise", "facing": -1}, {"type": "person", "x": 0.22, "size": 0.85, "dy": -60, "pose": "point"}]
+    },
+    {
+      "text": "Petrus turun dari perahu, dan berjalan di atas air.",
+      "bg": "golden", "terrain": "sea", "camera": "push",
+      "elements": [{"type": "boat", "x": 0.82, "size": 0.6, "dy": -20}, {"type": "person", "x": 0.55, "size": 0.75, "dy": -60}, {"type": "person", "x": 0.22, "size": 0.85, "dy": -60, "pose": "point"}]
+    },
+    {
+      "text": "Tetapi ketika melihat tiupan angin, ia takut, dan mulai tenggelam. \"Tuhan, tolonglah aku!\"",
+      "bg": "storm", "terrain": "sea", "clouds": true, "camera": "pull",
+      "elements": [{"type": "person", "x": 0.5, "size": 0.8, "dy": 40, "pose": "arms_up"}]
+    },
+    {
+      "text": "Segera Yesus mengulurkan tangan-Nya: \"Hai orang yang kurang percaya, mengapa engkau bimbang?\"",
+      "bg": "dawn", "terrain": "sea", "rays": true, "camera": "push",
+      "elements": [{"type": "person", "x": 0.4, "size": 0.9, "dy": -60, "pose": "point", "facing": 1}, {"type": "person", "x": 0.6, "size": 0.75, "dy": 10, "pose": "arms_up", "facing": -1}]
+    },
+    {
+      "text": "Dari semua murid di perahu itu, hanya Petrus yang berani keluar.",
+      "bg": "dusk", "terrain": "sea", "camera": "pan_right", "headline_y": 300,
+      "headline": [{"text": "KONTEKSNYA", "style": "label"}, {"text": "Hanya Petrus yang berani keluar dari perahu.", "style": "point"}],
+      "elements": [{"type": "boat", "x": 0.65, "size": 0.75, "dy": -20}, {"type": "person", "x": 0.3, "size": 0.7, "dy": -60}]
+    },
+    {
+      "text": "Petrus tenggelam ketika matanya beralih dari Yesus ke angin.",
+      "bg": "storm", "terrain": "sea", "rays": true, "camera": "push", "headline_y": 300,
+      "headline": [{"text": "MAKNANYA", "style": "label"}, {"text": "Lihat Yesus, bukan badainya.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.9, "dy": -60, "pose": "praise"}]
+    },
+    {
+      "text": "Hari ini, ambil satu langkah iman yang selama ini kamu tunda.",
+      "bg": "golden", "terrain": "plain", "camera": "pull", "headline_y": 300,
+      "headline": [{"text": "UNTUK HIDUPMU", "style": "label"}, {"text": "Ambil satu langkah iman hari ini.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.45, "size": 0.9, "pose": "point", "facing": 1}]
+    },
+    {
+      "text": "Apa langkah iman yang sedang kamu takutkan? Tulis di kolom komentar. Besok: kisah Musa dan semak yang menyala. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Apa langkah iman yang sedang kamu takutkan? Tulis di kolom komentar. Besok: Musa dan semak yang menyala.",
+      "bg": "golden", "terrain": "sea", "rays": true, "camera": "push",
+      "headline": [{"text": "\"Aku ini, jangan takut!\"", "style": "statement"}, {"text": "Matius 14:27", "style": "ref"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.7, "dy": -60, "pose": "arms_up"}]
+    }
+  ],
+  "caption": "Kalau Yesus memanggilmu berjalan di atas air… beranikah kamu melangkah? 🌊\n\nPetrus tenggelam ketika matanya beralih dari Yesus ke angin. Lihat Yesus, bukan badainya.\n\n\"Tenanglah! Aku ini, jangan takut!\" (Matius 14:27)\n\nApa langkah iman yang sedang kamu takutkan? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#PetrusBerjalanDiAtasAir #KisahAlkitab #RenunganHarian #Matius14 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Petrus Berjalan di Atas Air: Lihat Yesus, Bukan Badainya #shorts",
+  "youtube_tags": ["Petrus berjalan di atas air", "Kisah Alkitab", "Renungan", "Matius 14", "Kristen"]
+}
