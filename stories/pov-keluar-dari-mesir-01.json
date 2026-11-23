@@ -1,0 +1,474 @@
+{
+  "slug": "pov-keluar-dari-mesir-01",
+  "title": "POV: Keluar dari Mesir (Part 1)",
+  "reference": "Keluaran 1:11–14; 5:1–21; 6:6–9",
+  "series": {
+    "name": "POV: Keluar dari Mesir",
+    "part": 1,
+    "choice": {
+      "A": "Tetap percaya janji Tuhan lewat Musa",
+      "B": "Ikut marah, berhenti berharap"
+    }
+  },
+  "scenes": [
+    {
+      "text": "POV: kamu enam belas tahun, dan kamu lahir sebagai budak di Mesir. Hari ini, kamu yang menentukan jalan ceritanya.",
+      "subtitle": "POV: kamu 16 tahun, lahir sebagai budak di Mesir. Hari ini, kamu yang menentukan ceritanya.",
+      "bg": "night",
+      "terrain": "desert",
+      "camera": "push",
+      "stars": true,
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "POV: Kamu budak di Mesir.",
+          "style": "hook"
+        },
+        {
+          "text": "Kamu yang pilih jalannya.",
+          "style": "hook_accent"
+        }
+      ],
+      "elements": [
+        {
+          "type": "tower",
+          "x": 0.8,
+          "size": 0.7
+        },
+        {
+          "type": "person",
+          "x": 0.45,
+          "size": 0.6,
+          "pose": "kneel",
+          "props": [
+            "basket"
+          ]
+        }
+      ],
+      "sun_x": 0.85
+    },
+    {
+      "text": "Setiap hari kamu membuat batu bata untuk kota-kota Firaun, di bawah pengawasan para pengerah.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "sun_x": 0.7,
+      "headline": [
+        {
+          "text": "KELUAR DARI",
+          "style": "big"
+        },
+        {
+          "text": "MESIR",
+          "style": "accent"
+        },
+        {
+          "text": "Kamu yang pilih · Part 1",
+          "style": "small"
+        },
+        {
+          "text": "KISAH POV · KELUARAN 5",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "tower",
+          "x": 0.22,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.7,
+          "pose": "kneel",
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.56,
+          "size": 0.7,
+          "pose": "kneel",
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.8,
+          "size": 0.95,
+          "props": [
+            "spear"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Lalu Musa dan Harun menghadap Firaun. \"Beginilah firman TUHAN: Biarkanlah umat-Ku pergi.\"",
+      "bg": "dusk",
+      "terrain": "valley",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "city",
+          "x": 0.5,
+          "size": 0.7,
+          "dy": -230
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.95,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.37,
+          "size": 0.9,
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.75,
+          "size": 1.0,
+          "props": [
+            "crown"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Firaun menjawab: \"Siapakah TUHAN itu, sehingga aku harus mendengarkan Dia?\"",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 1.15,
+          "pose": "point",
+          "props": [
+            "crown"
+          ],
+          "facing": -1
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.75,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hari itu juga turun perintah baru. Jerami tidak akan diberikan lagi. Kamu harus mencarinya sendiri.",
+      "bg": "storm",
+      "terrain": "desert",
+      "camera": "pan_left",
+      "clouds": true,
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 1.0,
+          "pose": "point",
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.7,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.75,
+          "size": 0.7,
+          "pose": "kneel"
+        }
+      ]
+    },
+    {
+      "text": "Tetapi jumlah batu bata tidak boleh berkurang sedikit pun.",
+      "bg": "golden",
+      "terrain": "desert",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "tower",
+          "x": 0.72,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.22,
+          "size": 0.85,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.36,
+          "size": 0.7,
+          "pose": "kneel",
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.48,
+          "size": 0.7,
+          "pose": "kneel"
+        }
+      ]
+    },
+    {
+      "text": "Kamu dan bangsamu tersebar ke seluruh tanah Mesir, mengumpulkan tunggul jerami.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.15,
+          "size": 0.45,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.55,
+          "pose": "kneel",
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 0.5,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.85,
+          "size": 0.4,
+          "pose": "kneel"
+        }
+      ]
+    },
+    {
+      "text": "Target tidak tercapai. Para mandor dari bangsamu dipukuli.",
+      "bg": "storm",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 1.05,
+          "pose": "sling",
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.75,
+          "pose": "kneel",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Mereka keluar dan menyalahkan Musa: \"Kamu telah membuat kami dibenci Firaun!\"",
+      "bg": "dusk",
+      "terrain": "desert",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.2,
+          "size": 0.9,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.33,
+          "size": 0.85,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.45,
+          "size": 0.9,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.78,
+          "size": 0.95,
+          "props": [
+            "staff",
+            "beard"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Tuhan berjanji akan membebaskan mereka. Tetapi mereka tidak mendengarkan, karena putus asa dan perbudakan yang berat.",
+      "bg": "night",
+      "terrain": "valley",
+      "camera": "pull",
+      "stars": true,
+      "headline_y": 520,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Terlalu lelah untuk percaya. (Keluaran 6:9)",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.3,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.75,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.72,
+          "size": 0.8,
+          "pose": "pray"
+        }
+      ],
+      "sun_x": 0.85
+    },
+    {
+      "text": "Kalau kamu di sana, dengan tangan lecet dan punggung pegal, apa yang akan kamu lakukan?",
+      "bg": "night",
+      "terrain": "desert",
+      "camera": "push",
+      "stars": true,
+      "elements": [
+        {
+          "type": "fire",
+          "x": 0.42,
+          "size": 0.6
+        },
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.85,
+          "pose": "kneel",
+          "facing": -1
+        }
+      ],
+      "sun_x": 0.85
+    },
+    {
+      "text": "Pilihan A: tetap percaya janji Tuhan lewat Musa. Pilihan B: ikut marah, dan berhenti berharap.",
+      "subtitle": "A atau B?",
+      "bg": "dawn",
+      "terrain": "hill",
+      "camera": "static",
+      "rays": true,
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "PILIH SEKARANG",
+          "style": "label"
+        },
+        {
+          "text": "A — Tetap percaya janji Tuhan",
+          "style": "point"
+        },
+        {
+          "text": "B — Ikut marah, berhenti berharap",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250
+        }
+      ]
+    },
+    {
+      "text": "Ketik A atau B di kolom komentar. Pilihan terbanyak menentukan Part 2. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Ketik A atau B di kolom komentar. Pilihan terbanyak menentukan Part 2.",
+      "bg": "dusk",
+      "terrain": "mountains",
+      "camera": "push",
+      "headline": [
+        {
+          "text": "Ketik A atau B di komentar.",
+          "style": "statement"
+        },
+        {
+          "text": "Pilihan terbanyak = Part 2",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.7,
+          "pose": "arms_up"
+        }
+      ]
+    }
+  ],
+  "caption": "POV: kamu 16 tahun, lahir sebagai budak di Mesir. Dan kamu yang menentukan jalan ceritanya. 🧱\n\nFiraun menambah beban. Semua orang menyalahkan Musa. Kalau kamu di sana… kamu pilih apa?\n\n🅰️ Tetap percaya janji Tuhan lewat Musa\n🅱️ Ikut marah, berhenti berharap\n\nKetik A atau B di komentar 👇 Pilihan terbanyak menentukan Part 2.\n\n(Kisah POV: tokoh \"kamu\" adalah rekaan. Peristiwa dan kutipan ayat mengikuti Keluaran 1–6.)\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n#POV #KisahAlkitab #RenunganHarian #KristenIndonesia #KeluarDariMesir #Musa #KamuYangPilih #Keluaran",
+  "first_comment": "📌 VOTING PART 2 — balas komentar ini dengan A atau B!\nA = tetap percaya janji Tuhan\nB = ikut marah, berhenti berharap\nVoting ditutup 24 jam setelah video tayang. Follow supaya tidak ketinggalan Part 2 🙏",
+  "youtube_title": "POV: Kamu Budak di Mesir — Kamu yang Pilih (Part 1) #shorts",
+  "youtube_tags": [
+    "POV",
+    "Kisah Alkitab",
+    "Keluaran",
+    "Musa",
+    "Firaun",
+    "Kamu yang pilih",
+    "Kristen"
+  ]
+}

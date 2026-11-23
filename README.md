@@ -7,4 +7,5 @@ Video renungan kisah Alkitab harian (gaya siluet, voice over ElevenLabs) yang ot
 - `videos/` — video jadi (disimpan 7 hari, Metricool menyimpan salinannya sendiri)
 - `posted.json` — daftar kisah yang sudah diposting (agar tidak berulang)
 - `PIPELINE.md` — langkah lengkap satu kali jalan harian
+- `series/` — seri POV interaktif (penonton memilih A/B di komentar). Hitung vote: `engine/tally_votes.py`
 - Musik latar: `assets/music.m4a` (dari video Daud vs Goliat milik pemilik). Font: Inter (lisensi OFL, `assets/fonts/LICENSE-Inter.txt`).
