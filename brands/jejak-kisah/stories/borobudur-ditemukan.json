@@ -1,0 +1,349 @@
+{
+  "slug": "borobudur-ditemukan",
+  "title": "Borobudur Ditemukan Kembali",
+  "reference": "Magelang, 1814",
+  "sources": [
+    "UNESCO World Heritage Centre, Borobudur Temple Compounds (nominasi 1991)",
+    "Miksic, J. (1990). Borobudur: Golden Tales of the Buddhas. Periplus"
+  ],
+  "scenes": [
+    {
+      "text": "Candi Buddha *terbesar di dunia* pernah tersembunyi di balik abu dan hutan.",
+      "bg": "jungle",
+      "terrain": "valley",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.3,
+          "size": 0.8
+        },
+        {
+          "type": "tree",
+          "x": 0.5,
+          "size": 0.9
+        },
+        {
+          "type": "tree",
+          "x": 0.7,
+          "size": 0.8
+        }
+      ],
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Terbesar di dunia,",
+          "style": "hook"
+        },
+        {
+          "text": "tapi terkubur.",
+          "style": "hook_accent"
+        }
+      ]
+    },
+    {
+      "text": "Borobudur dibangun di Jawa Tengah sekitar abad kesembilan, pada masa *Dinasti Syailendra*.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "candi",
+          "x": 0.5,
+          "size": 1.0
+        },
+        {
+          "type": "palm",
+          "x": 0.12,
+          "size": 0.9
+        },
+        {
+          "type": "palm",
+          "x": 0.88,
+          "size": 0.9
+        }
+      ],
+      "headline": [
+        {
+          "text": "BOROBUDUR",
+          "style": "big"
+        },
+        {
+          "text": "yang pernah hilang",
+          "style": "small"
+        },
+        {
+          "text": "MAGELANG, 1814",
+          "style": "ref"
+        }
+      ]
+    },
+    {
+      "text": "Lebih dari dua ribu panel relief dan lima ratus arca Buddha *menghiasi dindingnya*.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "candi",
+          "x": 0.5,
+          "size": 1.3
+        }
+      ],
+      "rays": true
+    },
+    {
+      "text": "Tapi berabad-abad kemudian, candi ini *ditinggalkan*.",
+      "bg": "sepia",
+      "terrain": "valley",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "candi",
+          "x": 0.5,
+          "size": 0.9
+        },
+        {
+          "type": "tree",
+          "x": 0.2,
+          "size": 0.9
+        }
+      ]
+    },
+    {
+      "text": "Abu gunung berapi dan hutan lebat menutupinya, hingga dunia *nyaris melupakannya*.",
+      "bg": "fog",
+      "terrain": "mountains",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.2,
+          "size": 1.1
+        },
+        {
+          "type": "tree",
+          "x": 0.38,
+          "size": 1.0
+        },
+        {
+          "type": "tree",
+          "x": 0.6,
+          "size": 1.1
+        },
+        {
+          "type": "tree",
+          "x": 0.8,
+          "size": 1.0
+        },
+        {
+          "type": "volcano",
+          "x": 0.5,
+          "size": 0.5,
+          "dy": -150
+        }
+      ]
+    },
+    {
+      "text": "Tahun 1814, Thomas Stamford Raffles, penguasa Inggris di Jawa, mendengar kabar tentang *bukit penuh arca*.",
+      "bg": "dusk",
+      "terrain": "hill",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.5,
+          "size": 0.9,
+          "dy": -250
+        },
+        {
+          "type": "person",
+          "x": 0.2,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.8,
+          "size": 0.95,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Ia mengutus seorang insinyur Belanda, Cornelius. Bersama *dua ratus warga*, mereka menebang pohon dan menggali selama berminggu-minggu.",
+      "bg": "jungle",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.2,
+          "size": 0.9,
+          "props": [
+            "staff"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.9,
+          "props": [
+            "staff"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.65,
+          "size": 0.85
+        },
+        {
+          "type": "tree",
+          "x": 0.85,
+          "size": 1.0
+        }
+      ]
+    },
+    {
+      "text": "Perlahan, wujud raksasa itu *muncul kembali*.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "candi",
+          "x": 0.5,
+          "size": 1.2
+        }
+      ],
+      "rays": true
+    },
+    {
+      "text": "Warga sekitar sebenarnya tidak pernah benar-benar lupa. Mereka tahu *ada reruntuhan* di bukit itu.",
+      "bg": "golden",
+      "terrain": "valley",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 0.85,
+          "props": [
+            "child"
+          ]
+        },
+        {
+          "type": "house",
+          "x": 0.8,
+          "size": 0.8
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "FAKTANYA",
+          "style": "label"
+        },
+        {
+          "text": "Warga lokal tidak pernah lupa.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Pemugaran besar dilakukan bersama UNESCO pada 1973 sampai 1983. Tahun 1991, Borobudur menjadi *Warisan Dunia*.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "candi",
+          "x": 0.5,
+          "size": 1.0
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Warisan Dunia sejak 1991.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Sesuatu yang berharga bisa tertimbun lama. Tapi selama ada yang menjaganya, ia bisa *ditemukan kembali*.",
+      "bg": "dawn",
+      "terrain": "valley",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.0,
+          "pose": "praise"
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "PELAJARANNYA",
+          "style": "label"
+        },
+        {
+          "text": "Yang dijaga takkan benar-benar hilang.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Kamu sudah pernah ke Borobudur? Jawab sudah atau belum di komentar. Berikutnya: koloni yang lenyap di Roanoke. Follow, supaya tidak ketinggalan.",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "candi",
+          "x": 0.5,
+          "size": 0.7
+        }
+      ],
+      "sun_x": 0.85,
+      "subtitle": "Kamu sudah pernah ke Borobudur? Jawab sudah atau belum di komentar.",
+      "headline_y": 560,
+      "headline": [
+        {
+          "text": "Sudah pernah ke sini?",
+          "style": "statement"
+        },
+        {
+          "text": "BERIKUTNYA: KOLONI ROANOKE",
+          "style": "ref"
+        }
+      ]
+    }
+  ],
+  "caption": "Candi Buddha terbesar di dunia pernah tersembunyi di balik abu dan hutan. 🛕🌿\n\nTahun 1814, Borobudur mulai digali kembali setelah berabad-abad ditinggalkan. Kini ia jadi Warisan Dunia UNESCO.\n\nKamu sudah pernah ke Borobudur? Tulis di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#JejakKisah #KisahNyata #SejarahIndonesia #Borobudur #Candi #FaktaUnik #WarisanDunia #Magelang",
+  "youtube_title": "Candi Terbesar di Dunia Ini Pernah Terkubur Abu dan Hutan #shorts",
+  "youtube_tags": [
+    "Borobudur",
+    "sejarah Borobudur",
+    "candi Buddha terbesar",
+    "sejarah Indonesia",
+    "Raffles 1814",
+    "Jejak Kisah"
+  ]
+}

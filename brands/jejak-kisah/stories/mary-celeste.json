@@ -8,7 +8,7 @@
   ],
   "scenes": [
     {
-      "text": "Sebuah kapal ditemukan berlayar sendirian di tengah Atlantik. Sepuluh orang di dalamnya… lenyap.",
+      "text": "Sebuah kapal ditemukan berlayar sendirian di tengah Atlantik. Sepuluh orang di dalamnya… *lenyap*.",
       "bg": "fog",
       "terrain": "sea",
       "camera": "push",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "text": "Desember 1872. Awak kapal Dei Gratia melihat sebuah kapal bergerak aneh, tanpa siapa pun di kemudi.",
+      "text": "Desember 1872. Awak kapal Dei Gratia melihat sebuah kapal bergerak aneh, *tanpa siapa pun di kemudi*.",
       "bg": "dawn",
       "terrain": "sea",
       "camera": "pan_right",
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "text": "Muatan alkohol hampir utuh. Makanan dan air cukup untuk enam bulan.",
+      "text": "Muatan alkohol hampir utuh. Makanan dan air cukup untuk *enam bulan*.",
       "bg": "sepia",
       "terrain": "sea",
       "camera": "pan_right",
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "text": "Barang pribadi masih tertinggal. Tapi sekoci dan alat navigasinya hilang.",
+      "text": "Barang pribadi masih tertinggal. Tapi *sekoci dan alat navigasinya hilang*.",
       "bg": "storm",
       "terrain": "sea",
       "camera": "static",
@@ -175,7 +175,7 @@
       ]
     },
     {
-      "text": "Catatan terakhir di log ditulis sembilan hari sebelumnya, dekat Kepulauan Azores. Setelah itu… kosong.",
+      "text": "Catatan terakhir di log ditulis sembilan hari sebelumnya, dekat Kepulauan Azores. Setelah itu… *kosong*.",
       "bg": "night",
       "terrain": "sea",
       "camera": "push",
@@ -189,7 +189,7 @@
       ]
     },
     {
-      "text": "Kesepuluh orang itu tidak pernah ditemukan. Sampai hari ini.",
+      "text": "Kesepuluh orang itu tidak pernah ditemukan. *Sampai hari ini*.",
       "bg": "fog",
       "terrain": "sea",
       "camera": "pull",
@@ -204,7 +204,7 @@
     },
     {
       "text": "Ada yang bilang, sarapan masih hangat di meja. Itu tidak benar. Kisah itu dibesar-besarkan, antara lain lewat cerpen fiksi Arthur Conan Doyle.",
-      "subtitle": "Sarapan masih hangat di meja? Tidak benar. Kisah itu dibesar-besarkan, antara lain lewat cerpen fiksi Arthur Conan Doyle.",
+      "subtitle": "Sarapan masih hangat di meja? *Tidak benar.* Kisah itu dibesar-besarkan, antara lain lewat cerpen fiksi Arthur Conan Doyle.",
       "bg": "sepia",
       "terrain": "plain",
       "camera": "static",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "text": "Teori terkuat: kapten mengira kapalnya akan tenggelam. Semua orang pindah ke sekoci… dan tak pernah kembali.",
+      "text": "Teori terkuat: kapten mengira kapalnya akan tenggelam. Semua orang *pindah ke sekoci*… dan tak pernah kembali.",
       "bg": "storm",
       "terrain": "sea",
       "camera": "pan_left",
@@ -258,7 +258,7 @@
       ]
     },
     {
-      "text": "Ironisnya, kapal itu tetap mengapung. Kadang, keputusan saat panik lebih berbahaya daripada badainya.",
+      "text": "Ironisnya, kapal itu *tetap mengapung*. Kadang, keputusan saat panik lebih berbahaya daripada badainya.",
       "bg": "dawn",
       "terrain": "sea",
       "camera": "push",

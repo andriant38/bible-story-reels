@@ -28,6 +28,10 @@ because we are already far enough ahead.
 
 ## 1. Pick the topic and write the script
 
+**Read `VIRAL.md` first.** Every script must pass the checklist at its end: a hook of 6 words or fewer, a re-hook at
+scene 7–8, `*key words*` in the subtitles, and a closing either/or question.
+Scripts that are already written wait in `stories/`. If the next queue title already has a story file, use it as it is.
+
 - Take the **first title in `$JK/queue.json`** and remove it in the same commit. The new first title is the next video;
   tease it in the closing scene. When fewer than 10 titles are left, add new ones (not already in `posted.json`) and mix
   the five topic types listed above.
@@ -38,11 +42,12 @@ because we are already far enough ahead.
 - **Respect the victims.** For disasters and tragedies with victims who are still remembered, tell the story with respect:
   no graphic detail, and no jokes. Avoid recent tragedies whose families are still grieving.
 - Language: Indonesian, speaking to the viewer as "kamu". Every sentence should be short enough to say in one breath.
-- Length: **12–13 scenes and 150–180 words**. The narrator is slow and calm, so this gives 70–89 seconds.
+- Length: **12–13 scenes and 140–170 words**, which gives 61–80 seconds. A shorter video is more likely to be watched to the end.
 - **Structure:**
   1. **HOOK, scene 1 (no title yet).** 1–2 short sentences, with a `hook` + `hook_accent` headline at `headline_y` 420.
      Use these patterns, and vary them: a contrast ("Kapalnya utuh. Awaknya lenyap."), a question to the viewer, a
      shocking number, or "what would you do".
+  1b. Use the either/or question in the closing scene, not an open question: "setia atau keras kepala?"
   2. **TITLE, scene 2.** A title card with `big`, `accent`, `small` and `ref`; the `ref` is the place and year.
   3. **The story**, building tension, with **the climax** at the end.
   4. **UNDERSTANDING, 2–3 scenes**, each with a `label` + `point` headline (`headline_y` 300). Choose from:
@@ -60,13 +65,21 @@ because we are already far enough ahead.
     and `volcano`.
   - Floating elements (give them `y`): `plane`, `smoke` and `moon`.
   - `bg: night` already draws a moon at `sun_x`, so do not add a `moon` element on top of the headline.
+- **Key words:** wrap 1–2 important words per scene in asterisks, e.g. `"Suara ini terdengar sampai *4.800 kilometer* jauhnya."`.
+  They are drawn in gold in the subtitle, and `tts_text.py` removes the asterisks for the narration. Numbers can stay as
+  digits: `tts_text.py` writes them out in Indonesian words for the voice.
 - **Do not put emoji in `subtitle` or `headline`**, because the font cannot draw them. Emoji are fine in the caption.
 - **Originality:** use different backgrounds, terrain and cameras from the previous 3 videos, and do not use the same hook
   pattern twice in a row.
 
-## 2. Narration (ElevenLabs)
+## 2. Narration
 
-The rules are the same as step 2 of the root `PIPELINE.md`, except for these settings:
+**Voicebox (the owner records it, free).** Run `python3 $JK/tools/naskah.py <slug>`. This writes
+`$JK/narration/<slug>/NASKAH-VOICEBOX.txt`, with one line per scene. The owner records each line in Voicebox and commits
+`01.mp3`, `02.mp3`, … to that folder. When all the clips are there, copy them to `work/<slug>/` and go to step 3. If they
+are not there yet, stop and report which story is waiting for its recording.
+
+**ElevenLabs (paid, only when there are credits).** The rules are the same as step 2 of the root `PIPELINE.md`, except for these settings:
 
 - **voice_id** `uzkxbhFCx9Ni2LANf1zB` (Fikri, a calm documentary narrator). It is deliberately not the Bible channel's
   voice, so the two brands sound different.
@@ -124,6 +137,7 @@ The public URL is `https://raw.githubusercontent.com/andriant38/bible-story-reel
   - `media`: [the raw URL]
   - `providers`: facebook, instagram, tiktok and youtube
   - `text`: the caption
+  - `videoCoverMilliseconds`: 1200. This makes the hook frame the cover, which is also what shows on the profile grid.
   - `firstCommentText`: "🕯️ Kisah nyata baru setiap hari pukul 12.00 & 19.00 WIB. Follow supaya tidak ketinggalan! Berikutnya: <next title>"
   - `facebookData`: `{"type":"REEL","title":<title>}`
   - `instagramData`: `{"type":"REEL","showReelOnFeed":true,"isAiGenerated":true}`

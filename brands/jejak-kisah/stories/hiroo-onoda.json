@@ -1,0 +1,342 @@
+{
+  "slug": "hiroo-onoda",
+  "title": "Hiroo Onoda",
+  "reference": "Pulau Lubang, 1944–1974",
+  "sources": [
+    "Onoda, H. (1974). No Surrender: My Thirty-Year War. Kodansha International",
+    "Obituari Hiroo Onoda, The New York Times, 17 Januari 2014"
+  ],
+  "scenes": [
+    {
+      "text": "Perangnya sudah selesai. Tapi selama *29 tahun*, dia tidak percaya.",
+      "bg": "jungle",
+      "terrain": "valley",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.65,
+          "props": [
+            "spear"
+          ]
+        }
+      ],
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Perang sudah usai.",
+          "style": "hook"
+        },
+        {
+          "text": "Dia tak percaya.",
+          "style": "hook_accent"
+        }
+      ]
+    },
+    {
+      "text": "Hiroo Onoda, perwira intelijen Jepang, dikirim ke Pulau Lubang, Filipina, akhir 1944.",
+      "bg": "jungle",
+      "terrain": "sea",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "palm",
+          "x": 0.2,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.0,
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "palm",
+          "x": 0.82,
+          "size": 0.9
+        }
+      ],
+      "headline": [
+        {
+          "text": "HIROO",
+          "style": "big"
+        },
+        {
+          "text": "ONODA",
+          "style": "accent"
+        },
+        {
+          "text": "perang yang tak pernah usai",
+          "style": "small"
+        },
+        {
+          "text": "PULAU LUBANG, 1944",
+          "style": "ref"
+        }
+      ]
+    },
+    {
+      "text": "Perintahnya jelas: *jangan menyerah*, dan bertahan sampai pasukan kembali.",
+      "bg": "dusk",
+      "terrain": "valley",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 1.0,
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.65,
+          "size": 1.05,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Tahun 1945, Jepang menyerah. *Perang Dunia Kedua berakhir.*",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "city",
+          "x": 0.5,
+          "size": 0.8
+        }
+      ],
+      "rays": true
+    },
+    {
+      "text": "Selebaran dijatuhkan di hutan: perang sudah usai. Onoda menganggapnya *tipuan musuh*.",
+      "bg": "jungle",
+      "terrain": "valley",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.2,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 1.0
+        },
+        {
+          "type": "plane",
+          "x": 0.7,
+          "size": 0.6,
+          "y": 0.3
+        }
+      ]
+    },
+    {
+      "text": "Ia bertahan di hutan bersama beberapa rekannya. Satu per satu, mereka *menyerah atau tewas*.",
+      "bg": "storm",
+      "terrain": "valley",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "palm",
+          "x": 0.15,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.95,
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 0.9
+        },
+        {
+          "type": "palm",
+          "x": 0.85,
+          "size": 1.0
+        }
+      ]
+    },
+    {
+      "text": "Selama itu, mereka juga menyerang warga desa. Sekitar *30 warga* kehilangan nyawa.",
+      "bg": "fog",
+      "terrain": "plain",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "house",
+          "x": 0.3,
+          "size": 0.8
+        },
+        {
+          "type": "house",
+          "x": 0.65,
+          "size": 0.7
+        },
+        {
+          "type": "palm",
+          "x": 0.88,
+          "size": 0.9
+        }
+      ]
+    },
+    {
+      "text": "Tahun 1974, seorang pemuda Jepang bernama Norio Suzuki berangkat mencarinya… dan *berhasil menemukannya*.",
+      "bg": "jungle",
+      "terrain": "valley",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 1.0,
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.65,
+          "size": 0.95,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Onoda tetap menolak menyerah. Ia hanya mau tunduk pada *perintah komandannya sendiri*.",
+      "bg": "dusk",
+      "terrain": "valley",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.1,
+          "props": [
+            "spear"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Mantan komandannya pun diterbangkan ke Lubang dan membacakan perintah. Onoda menyerah, *29 tahun* setelah perang usai.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 1.0,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 1.05,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Norio Suzuki pernah bilang, ia berangkat mencari tiga hal: *Letnan Onoda, panda, dan Yeti*.",
+      "bg": "arctic",
+      "terrain": "mountains",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.9
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "FAKTANYA",
+          "style": "label"
+        },
+        {
+          "text": "Dicari bersama panda dan Yeti.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Kesetiaan tanpa mau memeriksa kebenaran bisa membuat orang berjuang untuk sesuatu yang *sudah tidak ada*.",
+      "bg": "sepia",
+      "terrain": "valley",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.0
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "PELAJARANNYA",
+          "style": "label"
+        },
+        {
+          "text": "Setia, tapi tetap periksa kebenaran.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Menurutmu, Onoda itu setia atau keras kepala? Jawab di komentar. Berikutnya: misteri sembilan pendaki di Celah Dyatlov. Follow, supaya tidak ketinggalan.",
+      "bg": "night",
+      "terrain": "valley",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.7,
+          "props": [
+            "spear"
+          ]
+        }
+      ],
+      "sun_x": 0.85,
+      "subtitle": "Onoda itu setia, atau keras kepala? Jawab di komentar.",
+      "headline_y": 560,
+      "headline": [
+        {
+          "text": "Setia, atau keras kepala?",
+          "style": "statement"
+        },
+        {
+          "text": "BERIKUTNYA: CELAH DYATLOV",
+          "style": "ref"
+        }
+      ]
+    }
+  ],
+  "caption": "Perangnya sudah selesai. Tapi selama 29 tahun, dia tidak percaya. 🪖🌴\n\nHiroo Onoda bertahan di hutan Pulau Lubang dari 1944 sampai 1974, karena menganggap kabar akhir perang hanya tipuan musuh.\n\nMenurutmu, dia setia atau keras kepala? Tulis di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#JejakKisah #KisahNyata #MisteriSejarah #HirooOnoda #PerangDuniaKedua #FaktaUnik #Sejarah #Jepang",
+  "youtube_title": "Perang Sudah Usai, Tapi Dia Terus Berperang 29 Tahun #shorts",
+  "youtube_tags": [
+    "Hiroo Onoda",
+    "Perang Dunia 2",
+    "Pulau Lubang",
+    "kisah nyata",
+    "sejarah Jepang",
+    "Jejak Kisah"
+  ]
+}

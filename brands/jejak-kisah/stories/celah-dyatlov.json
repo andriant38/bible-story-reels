@@ -1,0 +1,349 @@
+{
+  "slug": "celah-dyatlov",
+  "title": "Celah Dyatlov",
+  "reference": "Pegunungan Ural, 1959",
+  "sources": [
+    "Gaume, J. & Puzrin, A. M. (2021). Mechanisms of slab avalanche release and impact in the Dyatlov Pass incident in 1959. Communications Earth & Environment 2, 10",
+    "Kejaksaan Agung Federasi Rusia, kesimpulan peninjauan ulang kasus Dyatlov (Juli 2020)"
+  ],
+  "scenes": [
+    {
+      "text": "Sembilan pendaki merobek tenda mereka *dari dalam*, lalu lari ke tengah salju… kebanyakan tanpa sepatu.",
+      "bg": "arctic",
+      "terrain": "mountains",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.5,
+          "size": 0.55
+        }
+      ],
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Tenda dirobek",
+          "style": "hook"
+        },
+        {
+          "text": "dari dalam.",
+          "style": "hook_accent"
+        }
+      ]
+    },
+    {
+      "text": "Februari 1959, Pegunungan Ural, Uni Soviet. Sembilan pendaki berpengalaman, dipimpin *Igor Dyatlov*.",
+      "bg": "arctic",
+      "terrain": "mountains",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.37,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85,
+          "props": [
+            "staff"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.63,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.76,
+          "size": 0.85
+        }
+      ],
+      "headline": [
+        {
+          "text": "CELAH",
+          "style": "big"
+        },
+        {
+          "text": "DYATLOV",
+          "style": "accent"
+        },
+        {
+          "text": "sembilan pendaki yang tak kembali",
+          "style": "small"
+        },
+        {
+          "text": "URAL, 1959",
+          "style": "ref"
+        }
+      ]
+    },
+    {
+      "text": "Mereka mendirikan tenda di lereng gunung yang bersalju, untuk bermalam.",
+      "bg": "night",
+      "terrain": "mountains",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.5,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 0.8,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Malam itu, sesuatu membuat mereka keluar dari tenda dengan *panik*.",
+      "bg": "night",
+      "terrain": "mountains",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.3,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 0.85,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.84,
+          "size": 0.8
+        }
+      ]
+    },
+    {
+      "text": "Tim pencari menemukan tenda itu, dirobek dari dalam. Jejak kaki mengarah ke hutan, *lebih dari satu kilometer* jauhnya.",
+      "bg": "arctic",
+      "terrain": "valley",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.2,
+          "size": 0.8
+        },
+        {
+          "type": "tree",
+          "x": 0.7,
+          "size": 0.9
+        },
+        {
+          "type": "tree",
+          "x": 0.85,
+          "size": 1.0
+        }
+      ]
+    },
+    {
+      "text": "Semua tewas. Sebagian karena kedinginan. Beberapa lainnya dengan *luka parah* yang sulit dijelaskan.",
+      "bg": "fog",
+      "terrain": "valley",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.25,
+          "size": 1.0
+        },
+        {
+          "type": "tree",
+          "x": 0.5,
+          "size": 0.9
+        },
+        {
+          "type": "tree",
+          "x": 0.75,
+          "size": 1.0
+        }
+      ]
+    },
+    {
+      "text": "Selama puluhan tahun, teori bermunculan: Yeti, uji senjata rahasia, sampai *makhluk asing*.",
+      "bg": "night",
+      "terrain": "mountains",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "star",
+          "x": 0.7,
+          "size": 0.6,
+          "y": 0.25
+        },
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.9,
+          "pose": "point"
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "MITOSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Yeti? Senjata rahasia? Alien?",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Tahun 2019, Rusia membuka kembali kasus ini. Kesimpulannya: *longsoran salju*.",
+      "bg": "arctic",
+      "terrain": "mountains",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.5,
+          "size": 0.7
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "TEORI TERKUAT",
+          "style": "label"
+        },
+        {
+          "text": "Longsoran salju kecil.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Tahun 2021, dua ilmuwan di Swiss membuat model komputer. Longsoran kecil bisa *menimpa tenda* dan menyebabkan luka seperti itu.",
+      "bg": "dawn",
+      "terrain": "mountains",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.4,
+          "size": 0.8
+        },
+        {
+          "type": "smoke",
+          "x": 0.62,
+          "size": 0.8,
+          "y": 0.55
+        }
+      ]
+    },
+    {
+      "text": "Mereka mungkin lari untuk menyelamatkan diri, lalu *tidak bisa menemukan tenda lagi* dalam gelap.",
+      "bg": "night",
+      "terrain": "valley",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.2,
+          "size": 1.0
+        },
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.8
+        }
+      ]
+    },
+    {
+      "text": "Misteri yang paling menakutkan sering punya *penjelasan alami*. Tapi butuh puluhan tahun untuk membuktikannya.",
+      "bg": "dawn",
+      "terrain": "mountains",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.9,
+          "props": [
+            "staff"
+          ]
+        }
+      ],
+      "rays": true,
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "PELAJARANNYA",
+          "style": "label"
+        },
+        {
+          "text": "Seram belum tentu gaib.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Kamu percaya teori longsoran salju, atau masih ragu? Jawab di komentar. Berikutnya: candi Buddha terbesar di dunia yang pernah terkubur. Follow, supaya tidak ketinggalan.",
+      "bg": "night",
+      "terrain": "mountains",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.5,
+          "size": 0.5
+        }
+      ],
+      "sun_x": 0.85,
+      "subtitle": "Percaya teori longsoran salju, atau masih ragu? Jawab di komentar.",
+      "headline_y": 560,
+      "headline": [
+        {
+          "text": "Percaya, atau masih ragu?",
+          "style": "statement"
+        },
+        {
+          "text": "BERIKUTNYA: BOROBUDUR",
+          "style": "ref"
+        }
+      ]
+    }
+  ],
+  "caption": "Sembilan pendaki merobek tenda mereka dari dalam, lalu lari ke salju tanpa sepatu. ❄️⛺\n\nInsiden Celah Dyatlov (1959) jadi misteri selama 60 tahun. Penyelidikan dan riset terbaru akhirnya menunjuk satu penyebab.\n\nKamu percaya, atau masih ragu? Tulis di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#JejakKisah #KisahNyata #MisteriSejarah #Dyatlov #MisteriDunia #FaktaUnik #Misteri #Sejarah",
+  "youtube_title": "9 Pendaki Merobek Tenda dari Dalam: Misteri Celah Dyatlov #shorts",
+  "youtube_tags": [
+    "Dyatlov Pass",
+    "Celah Dyatlov",
+    "misteri dunia",
+    "misteri sejarah",
+    "kisah nyata",
+    "Jejak Kisah"
+  ]
+}

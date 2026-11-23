@@ -1,0 +1,313 @@
+{
+  "slug": "mona-lisa-dicuri",
+  "title": "Mona Lisa Dicuri",
+  "reference": "Paris, 1911",
+  "sources": [
+    "Scotti, R. A. (2009). Vanished Smile: The Mysterious Theft of the Mona Lisa. Knopf",
+    "Musée du Louvre, sejarah koleksi: pencurian La Joconde, 1911–1913"
+  ],
+  "scenes": [
+    {
+      "text": "Lukisan paling terkenal di dunia… dulu tidak seterkenal itu. Sampai seseorang *mencurinya*.",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.5,
+          "size": 0.55
+        }
+      ],
+      "sun_x": 0.2,
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Terkenal…",
+          "style": "hook"
+        },
+        {
+          "text": "karena dicuri.",
+          "style": "hook_accent"
+        }
+      ]
+    },
+    {
+      "text": "Senin, 21 Agustus 1911. Museum Louvre di Paris sedang tutup.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.5,
+          "size": 1.0
+        },
+        {
+          "type": "tree",
+          "x": 0.12,
+          "size": 0.8
+        },
+        {
+          "type": "tree",
+          "x": 0.88,
+          "size": 0.8
+        }
+      ],
+      "headline": [
+        {
+          "text": "MONA LISA",
+          "style": "big"
+        },
+        {
+          "text": "HILANG",
+          "style": "accent"
+        },
+        {
+          "text": "pencurian abad ini",
+          "style": "small"
+        },
+        {
+          "text": "PARIS, 1911",
+          "style": "ref"
+        }
+      ]
+    },
+    {
+      "text": "Seorang pria berbaju kerja putih berjalan keluar. Di balik bajunya, ia menyembunyikan *sebuah papan kayu*.",
+      "bg": "fog",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.75,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.32,
+          "size": 1.0,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Papan itu adalah Mona Lisa. Baru keesokan harinya orang sadar: *lukisannya hilang*.",
+      "bg": "sepia",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "ruins",
+          "x": 0.5,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.9,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.78,
+          "size": 0.9,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Polisi kebingungan. Bahkan *Pablo Picasso* sempat diperiksa.",
+      "bg": "storm",
+      "terrain": "plain",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 1.0,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.95,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Koran di seluruh dunia memuat wajahnya. Orang antre di Louvre… hanya untuk melihat *dinding kosong*.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.18,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.85
+        },
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.54,
+          "size": 0.85
+        },
+        {
+          "type": "house",
+          "x": 0.8,
+          "size": 0.9
+        }
+      ]
+    },
+    {
+      "text": "Dua tahun berlalu. Lalu pencurinya *muncul sendiri*.",
+      "bg": "night",
+      "terrain": "valley",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.1
+        }
+      ],
+      "sun_x": 0.3
+    },
+    {
+      "text": "Namanya Vincenzo Peruggia, pria Italia yang pernah bekerja di Louvre. Ia mencoba *menjual* lukisan itu di Florence.",
+      "bg": "dusk",
+      "terrain": "hill",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "city",
+          "x": 0.5,
+          "size": 0.8,
+          "dy": -120
+        },
+        {
+          "type": "person",
+          "x": 0.2,
+          "size": 0.95
+        },
+        {
+          "type": "person",
+          "x": 0.82,
+          "size": 0.95,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Ia ditangkap. Mona Lisa kembali ke Paris, kali ini sebagai *lukisan paling terkenal di dunia*.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.5,
+          "size": 1.0
+        }
+      ],
+      "rays": true
+    },
+    {
+      "text": "Sebelum dicuri, Mona Lisa dihargai para ahli, tapi belum jadi ikon dunia. *Pencurian itulah* yang membuatnya mendunia.",
+      "bg": "sepia",
+      "terrain": "plain",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.5,
+          "size": 0.8
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "FAKTANYA",
+          "style": "label"
+        },
+        {
+          "text": "Pencurian membuatnya mendunia.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Kadang kita baru sadar betapa berharganya sesuatu… *setelah kehilangannya*.",
+      "bg": "golden",
+      "terrain": "valley",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 1.0,
+          "pose": "pray"
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "PELAJARANNYA",
+          "style": "label"
+        },
+        {
+          "text": "Kehilangan membuka mata.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Kalau kamu hakimnya, Peruggia pantas dihukum berat atau ringan? Jawab di komentar. Berikutnya: letusan Krakatau, suara terkeras dalam sejarah. Follow, supaya tidak ketinggalan.",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.5,
+          "size": 0.5
+        }
+      ],
+      "sun_x": 0.85,
+      "subtitle": "Kalau kamu hakimnya: hukuman berat atau ringan? Jawab di komentar.",
+      "headline_y": 560,
+      "headline": [
+        {
+          "text": "Hukuman berat atau ringan?",
+          "style": "statement"
+        },
+        {
+          "text": "BERIKUTNYA: KRAKATAU 1883",
+          "style": "ref"
+        }
+      ]
+    }
+  ],
+  "caption": "Lukisan paling terkenal di dunia… dulu tidak seterkenal itu. Sampai seseorang mencurinya. 🖼️🕵️\n\n21 Agustus 1911, Mona Lisa hilang dari Louvre. Dua tahun dunia mencarinya, dan pencurian itulah yang membuatnya jadi ikon dunia.\n\nKalau kamu hakimnya, hukuman berat atau ringan? Tulis di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#JejakKisah #KisahNyata #MisteriSejarah #MonaLisa #Louvre #FaktaUnik #Sejarah #Pencurian",
+  "youtube_title": "Mona Lisa Jadi Terkenal Karena Dicuri #shorts",
+  "youtube_tags": [
+    "Mona Lisa",
+    "pencurian Mona Lisa 1911",
+    "Louvre",
+    "Vincenzo Peruggia",
+    "fakta sejarah",
+    "Jejak Kisah"
+  ]
+}

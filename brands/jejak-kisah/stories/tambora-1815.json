@@ -1,0 +1,341 @@
+{
+  "slug": "tambora-1815",
+  "title": "Tambora 1815",
+  "reference": "Sumbawa, 1815",
+  "sources": [
+    "Oppenheimer, C. (2003). Climatological, environmental and human consequences of the largest known historic eruption: Tambora volcano (Indonesia) 1815. Progress in Physical Geography 27(2)",
+    "Wood, G. D'Arcy (2014). Tambora: The Eruption That Changed the World. Princeton University Press"
+  ],
+  "scenes": [
+    {
+      "text": "Tahun 1816, salju turun di *bulan Juni*. Penyebabnya… satu gunung di Indonesia.",
+      "bg": "arctic",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "house",
+          "x": 0.3,
+          "size": 0.7
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.7
+        },
+        {
+          "type": "tree",
+          "x": 0.82,
+          "size": 0.6
+        }
+      ],
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Salju di bulan Juni.",
+          "style": "hook"
+        },
+        {
+          "text": "Gara-gara Indonesia.",
+          "style": "hook_accent"
+        }
+      ]
+    },
+    {
+      "text": "April 1815. Gunung *Tambora* di Pulau Sumbawa meletus.",
+      "bg": "ember",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "volcano",
+          "x": 0.5,
+          "size": 1.0
+        },
+        {
+          "type": "smoke",
+          "x": 0.5,
+          "size": 1.0,
+          "y": 0.5
+        }
+      ],
+      "headline": [
+        {
+          "text": "TAMBORA",
+          "style": "big"
+        },
+        {
+          "text": "letusan terdahsyat dalam sejarah",
+          "style": "small"
+        },
+        {
+          "text": "SUMBAWA, 1815",
+          "style": "ref"
+        }
+      ]
+    },
+    {
+      "text": "Dentumannya terdengar sampai Sumatra, lebih dari 2.000 kilometer jauhnya. Tentara Inggris di Jawa mengira itu *suara meriam*.",
+      "bg": "dusk",
+      "terrain": "valley",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.9,
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.45,
+          "size": 0.9,
+          "props": [
+            "spear"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 1.0,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Puncaknya hancur. Gunung itu kehilangan *lebih dari satu kilometer* tingginya.",
+      "bg": "ember",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "volcano",
+          "x": 0.5,
+          "size": 1.3
+        },
+        {
+          "type": "smoke",
+          "x": 0.35,
+          "size": 1.2,
+          "y": 0.42
+        },
+        {
+          "type": "smoke",
+          "x": 0.65,
+          "size": 1.0,
+          "y": 0.45
+        }
+      ]
+    },
+    {
+      "text": "Dua kerajaan kecil, Tambora dan Pekat, *lenyap* tertimbun.",
+      "bg": "storm",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "ruins",
+          "x": 0.5,
+          "size": 1.0
+        },
+        {
+          "type": "palm",
+          "x": 0.15,
+          "size": 0.9
+        },
+        {
+          "type": "smoke",
+          "x": 0.8,
+          "size": 0.8,
+          "y": 0.5
+        }
+      ]
+    },
+    {
+      "text": "Puluhan ribu orang meninggal. Karena letusan, lalu karena *kelaparan* dan penyakit.",
+      "bg": "sepia",
+      "terrain": "desert",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.9,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.58,
+          "size": 0.95,
+          "pose": "pray"
+        },
+        {
+          "type": "tent",
+          "x": 0.8,
+          "size": 0.8
+        }
+      ]
+    },
+    {
+      "text": "Tapi dampaknya belum selesai. Abunya naik tinggi ke langit dan *menyelimuti bumi*.",
+      "bg": "storm",
+      "terrain": "mountains",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "smoke",
+          "x": 0.3,
+          "size": 1.3,
+          "y": 0.45
+        },
+        {
+          "type": "smoke",
+          "x": 0.7,
+          "size": 1.4,
+          "y": 0.42
+        }
+      ],
+      "clouds": true
+    },
+    {
+      "text": "Setahun kemudian, musim panas di Eropa dan Amerika Utara berubah dingin. *Panen gagal*, harga pangan melonjak.",
+      "bg": "arctic",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "castle",
+          "x": 0.72,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.95,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.18,
+          "size": 0.7,
+          "props": [
+            "child"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Orang menyebut 1816 sebagai *tahun tanpa musim panas*.",
+      "bg": "fog",
+      "terrain": "valley",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "house",
+          "x": 0.5,
+          "size": 1.0
+        },
+        {
+          "type": "tree",
+          "x": 0.2,
+          "size": 0.9
+        }
+      ]
+    },
+    {
+      "text": "Di musim panas yang suram itu, Mary Shelley yang terkurung di rumah karena hujan… menulis *Frankenstein*.",
+      "bg": "night",
+      "terrain": "hill",
+      "camera": "static",
+      "elements": [
+        {
+          "type": "house",
+          "x": 0.5,
+          "size": 1.0,
+          "dy": -200
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "FAKTANYA",
+          "style": "label"
+        },
+        {
+          "text": "Frankenstein lahir dari musim yang hilang.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Letusan Tambora jauh lebih besar dari Krakatau. Tapi namanya justru *jauh kurang dikenal*.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "volcano",
+          "x": 0.3,
+          "size": 0.8
+        },
+        {
+          "type": "volcano",
+          "x": 0.78,
+          "size": 0.45
+        }
+      ],
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Lebih dahsyat dari Krakatau.",
+          "style": "point"
+        }
+      ]
+    },
+    {
+      "text": "Kamu baru tahu Tambora sedahsyat ini, atau sudah tahu? Jawab di komentar. Berikutnya: Mona Lisa yang jadi terkenal karena dicuri. Follow, supaya tidak ketinggalan.",
+      "bg": "night",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "volcano",
+          "x": 0.5,
+          "size": 0.6
+        }
+      ],
+      "sun_x": 0.85,
+      "subtitle": "Baru tahu, atau sudah tahu? Jawab di komentar.",
+      "headline_y": 560,
+      "headline": [
+        {
+          "text": "Baru tahu, atau sudah tahu?",
+          "style": "statement"
+        },
+        {
+          "text": "BERIKUTNYA: MONA LISA DICURI",
+          "style": "ref"
+        }
+      ]
+    }
+  ],
+  "caption": "Tahun 1816, salju turun di bulan Juni. Penyebabnya: satu gunung di Indonesia. 🌋❄️\n\nLetusan Tambora (1815) adalah yang terdahsyat dalam sejarah tercatat. Dua kerajaan lenyap, dan setahun kemudian dunia kehilangan musim panasnya.\n\nKamu baru tahu, atau sudah tahu? Tulis di kolom komentar 👇\n\n🕯️ Jejak Kisah: kisah nyata yang jarang diceritakan. Follow untuk kisah berikutnya.\n\n#JejakKisah #KisahNyata #MisteriSejarah #Tambora #SejarahIndonesia #FaktaUnik #Sumbawa #GunungMeletus",
+  "youtube_title": "Gunung di Indonesia Ini Bikin Salju Turun di Bulan Juni #shorts",
+  "youtube_tags": [
+    "Tambora",
+    "letusan Tambora 1815",
+    "tahun tanpa musim panas",
+    "sejarah Indonesia",
+    "Sumbawa",
+    "Jejak Kisah"
+  ]
+}

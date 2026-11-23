@@ -67,7 +67,17 @@ def text_overlay(scene, path):
     # ---- subtitle box
     sub = scene.get("subtitle", scene["text"])
     fnt = font("Bold", 46)
-    lines = wrap(sub, fnt, 880, d)
+    # *kata* in the text marks key words, drawn in the accent colour
+    marks, on = [], False
+    for wd in sub.split():
+        start = wd.startswith("*")
+        if start:
+            on = True
+        marks.append(on)
+        if wd.rstrip(".,!?…:;\"')").endswith("*"):
+            on = False
+    plain = sub.replace("*", "")
+    lines = wrap(plain, fnt, 880, d)
     lh = 62
     pad_x, pad_y = 38, 30
     tw = max(d.textlength(l, font=fnt) for l in lines)
@@ -80,8 +90,16 @@ def text_overlay(scene, path):
     img.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(14)))
     d.rounded_rectangle(box, 30, fill=tuple(BRAND["sub_box"]))
     y = box[1] + pad_y - 4
+    k = 0
+    space = d.textlength(" ", font=fnt)
     for l in lines:
-        d.text((W / 2, y), l, font=fnt, fill=(255, 255, 255, 255), anchor="ma")
+        words = l.split()
+        x = W / 2 - d.textlength(l, font=fnt) / 2
+        for wd in words:
+            hl = marks[k] if k < len(marks) else False
+            k += 1
+            d.text((x, y), wd, font=fnt, fill=(tuple(BRAND["accent"]) if hl else (255, 255, 255)) + (255,), anchor="la")
+            x += d.textlength(wd, font=fnt) + space
         y += lh
     # ---- headline block (title card / closing card)
     if BRAND["watermark"]:
