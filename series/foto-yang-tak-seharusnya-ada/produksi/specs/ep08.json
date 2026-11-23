@@ -1,0 +1,25 @@
+{
+ "ep": 8, "music": "music_daniel", "music_vol": 0.3, "tick": [0.0, 44.0],
+ "scenes": [
+  {"shots": [["e7_7", 1.15, 1.3, 0.5, 0.5, 0.5, 0.75]], "min": 4.2, "lead": 0.2,
+   "events": [{"vo": "e78_nar_2", "sub": "Foto ini… **belum terjadi.**"}],
+   "big": "FOTO TERAKHIR.", "big_dur": 1.8, "sfx": [["bulb", 0.0, 0.5]]},
+  {"shots": [["e8_2", 1.0, 1.1, 0.5, 0.5, 0.3, 0.28]], "min": 3.8,
+   "events": [{"vo": "e8_a58_1", "sub": "“Itulah alasan aku **kembali.**”"}]},
+  {"shots": [["e8_3", 1.0, 1.1, 0.5, 0.5, 0.3, 0.3]], "min": 7.5,
+   "events": [{"vo": "e8_a58_2", "sub": "“30 tahun lagi, kamu akan kembali… untuk **menyelamatkan dirimu sendiri.**”"}]},
+  {"shots": [["e8_4", 1.0, 1.15, 0.5, 0.5, 0.4, 0.5]], "min": 5.5,
+   "events": [{"vo": "e8_a58_3", "sub": "“Setiap kali aku mengubah masa lalu… **foto baru muncul.**”"}],
+   "sfx": [["paper", 0.2, 0.4]]},
+  {"shots": [["e8_5", 1.0, 1.1, 0.5, 0.5, 0.35, 0.3]], "min": 7.0,
+   "events": [{"vo": "e8_raka_1", "sub": "“Ayahmu mencoba menghentikannya… dan **gagal.**”"}]},
+  {"shots": [["e8_6", 1.0, 1.08, 0.5, 0.5, 0.3, 0.28], ["e5_1", 1.15, 1.25, 0.45, 0.45, 0.25, 0.25]], "min": 7.0,
+   "events": [{"vo": "e8_adr_1", "sub": "“Jadi semua ini… **sudah terjadi?**”", "gap": 0.7},
+              {"vo": "e8_a58_4", "sub": "“**Belum.** Kita masih punya satu kesempatan.”"}]},
+  {"shots": [["e8_7", 1.0, 1.12, 0.6, 0.5, 0.35, 0.35]], "min": 5.5,
+   "events": [{"vo": "e8_raka_2", "sub": "“Kesempatan terakhir… malam ayahmu **meninggal.**”"}], "tail": 0.8, "mvol": 0.6}
+ ],
+ "end": {"dur": 5.0, "mvol": 0.0,
+   "lines": [["MALAM ITU.", 0.2, "Big"], ["EPISODE 9 BESOK.", 2.4, "Ep"]],
+   "sfx": [["boom", 0.0, 0.9], ["heart", 2.4, 0.5]]}
+}

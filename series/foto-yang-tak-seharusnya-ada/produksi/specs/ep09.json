@@ -1,0 +1,27 @@
+{
+ "ep": 9, "music": "music_daniel", "music_vol": 0.35,
+ "beds": [["rain", 0.0, 43.0, 0.45]],
+ "scenes": [
+  {"shots": [["e9_1", 1.0, 1.12, 0.4, 0.4, 0.5, 0.45]], "min": 5.0, "lead": 0.2,
+   "events": [{"vo": "e9_nar_1", "sub": "Malam ayah Adrian **meninggal.**"}],
+   "big": "22 TAHUN LALU.", "big_dur": 2.2, "sfx": [["whoosh", 0.0, 0.3]], "mvol": 0.5},
+  {"shots": [["e9_2", 1.0, 1.1, 0.5, 0.5, 0.45, 0.45]], "min": 4.5,
+   "events": [{"vo": "e9_nar_2", "sub": "Daniel **menunggu** seseorang."}], "mvol": 0.5},
+  {"shots": [["e9_3", 1.0, 1.25, 0.5, 0.5, 0.45, 0.55], ["e9_4", 1.0, 1.1, 0.5, 0.5, 0.4, 0.4]], "min": 5.0,
+   "events": [], "sfx": [["heart", 0.3, 0.4]], "mvol": 0.5},
+  {"shots": [["e9_5", 1.0, 1.1, 0.5, 0.5, 0.3, 0.28]], "min": 5.0,
+   "events": [{"vo": "e9_a58_1", "sub": "“Jangan. Semuanya akan **lebih buruk.**”"}], "mvol": 0.5},
+  {"shots": [["e9_6", 1.0, 1.12, 0.5, 0.5, 0.4, 0.4]], "min": 7.0,
+   "events": [{"vo": "e9_nar_3", "sub": "Dia **menyelamatkan** Adrian kecil… lalu masuk sendirian."}]},
+  {"shots": [["e9_7", 1.0, 1.12, 0.5, 0.5, 0.3, 0.27], ["e9_8", 1.0, 1.1, 0.5, 0.5, 0.3, 0.3]], "min": 6.5,
+   "weights": [1.3, 1],
+   "events": [{"vo": "e9_dan_1", "sub": "“Aku tahu kamu akan **kembali.**”", "pre": 0.5}], "mvol": 1.3},
+  {"shots": [["e9_7", 1.15, 1.25, 0.5, 0.5, 0.27, 0.25], ["e9_9", 1.0, 1.1, 0.5, 0.5, 0.45, 0.4]], "min": 8.0,
+   "weights": [1, 1.4],
+   "events": [{"vo": "e9_dan_2", "sub": "“Jangan selamatkan aku. **Selamatkan dirimu.**”"}],
+   "sfx": [["car", 3.2, 0.7]], "mvol": 1.3, "tail": 1.5}
+ ],
+ "end": {"dur": 5.0, "mvol": 0.6,
+   "lines": [["“SELAMATKAN DIRIMU.”", 0.3, "Big"], ["EPISODE TERAKHIR BESOK.", 2.4, "Ep"]],
+   "sfx": [["heart", 2.4, 0.4]]}
+}

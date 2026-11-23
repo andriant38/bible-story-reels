@@ -1,0 +1,27 @@
+{
+ "ep": 5, "music": "music_tense", "music_vol": 0.45,
+ "scenes": [
+  {"shots": [["e5_1", 1.0, 1.15, 0.45, 0.4, 0.3, 0.25]], "min": 5.0, "lead": 0.2,
+   "events": [{"vo": "e5_nar_1", "sub": "Adrian… dari **30 tahun ke depan.**"}],
+   "big": "ADRIAN, 30 TAHUN LAGI.", "big_dur": 2.2, "sfx": [["whoosh", 0.0, 0.5]]},
+  {"shots": [["e5_2", 1.0, 1.15, 0.5, 0.5, 0.45, 0.5]], "min": 5.0,
+   "events": [{"vo": "e5_nar_2", "sub": "Luka yang **belum terjadi.**"}]},
+  {"shots": [["e5_3", 1.0, 1.08, 0.5, 0.5, 0.3, 0.3]], "min": 6.5,
+   "events": [{"vo": "e5_a58_1", "sub": "“Aku kembali… untuk mengubah **satu kejadian.**”", "gap": 0.6},
+              {"vo": "e5_adr_1", "sub": "“Kejadian apa?”"}]},
+  {"shots": [["e5_4", 1.0, 1.15, 0.5, 0.5, 0.35, 0.3]], "min": 5.0,
+   "events": [{"vo": "e5_a58_2", "sub": "“Ayah kita… tidak meninggal karena **kecelakaan.**”"}]},
+  {"shots": [["e3_5", 1.05, 1.18, 0.5, 0.5, 0.3, 0.28]], "min": 3.6,
+   "events": [{"vo": "e5_a58_3", "sub": "“Dia **dibunuh.**”", "pre": 0.3}], "mvol": 0.2,
+   "sfx": [["heart", 0.2, 0.5]], "tail": 0.9},
+  {"shots": [["e5_6", 1.0, 1.1, 0.5, 0.5, 0.3, 0.25]], "min": 6.5,
+   "events": [{"vo": "e5_raka1_1", "sub": "“Ayahmu **berkorban**… supaya kamu tetap hidup.”", "pre": 0.5}],
+   "sfx": [["door_up", 0.0, 0.4]], "label": "RAKA", "label_dur": 2.0},
+  {"shots": [["e5_3", 1.3, 1.4, 0.15, 0.15, 0.25, 0.25], ["e2_s7b", 1.0, 1.12, 0.5, 0.5, 0.3, 0.3]], "min": 8.0,
+   "events": [{"vo": "e5_adr_2", "sub": "“Siapa yang **membunuh** ayah saya?”", "gap": 1.0},
+              {"vo": "e5_raka2_1", "sub": "“Orang yang **paling dekat**… dengan keluargamu.”"}], "tail": 0.8, "mvol": 0.5}
+ ],
+ "end": {"dur": 5.0, "mvol": 0.0,
+   "lines": [["SIAPA DIA?", 0.2, "Big"], ["EPISODE 6 BESOK.", 2.4, "Ep"]],
+   "sfx": [["boom", 0.0, 1.0], ["heart", 2.4, 0.5]]}
+}

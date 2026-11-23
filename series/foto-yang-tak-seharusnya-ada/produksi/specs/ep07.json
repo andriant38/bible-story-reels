@@ -1,0 +1,25 @@
+{
+ "ep": 7, "music": "music_tense", "music_vol": 0.5, "tick": [0.0, 30.0],
+ "scenes": [
+  {"shots": [["e6_7", 1.1, 1.25, 0.5, 0.5, 0.25, 0.22]], "min": 5.0, "lead": 0.2,
+   "events": [{"vo": "e7_raka_1", "sub": "“Aku ada di sana… tapi aku **tidak membunuhnya.**”"}],
+   "big": "RAKA MENGAKU.", "big_dur": 1.8, "sfx": [["whoosh", 0.0, 0.4]]},
+  {"shots": [["e7_2", 1.0, 1.1, 0.35, 0.45, 0.4, 0.4]], "min": 4.5,
+   "events": [{"vo": "e7_raka_2", "sub": "“Daniel memintaku **menjaga kamu.**”"}], "sfx": [["paper", 0.3, 0.4]]},
+  {"shots": [["e7_3", 1.1, 1.2, 0.5, 0.5, 0.3, 0.65]], "min": 5.5, "events": [], "sfx": [["paper", 0.0, 0.6]]},
+  {"shots": [["e6_1", 1.05, 1.12, 0.5, 0.5, 0.3, 0.3]], "min": 4.2,
+   "events": [{"vo": "e7_adr_1", "sub": "“**Foto terakhir** apa?”"}], "tail": 1.6, "mvol": 0.6},
+  {"shots": [["e7_5", 1.0, 1.12, 0.5, 0.5, 0.35, 0.3]], "min": 8.0,
+   "events": [{"vo": "e7_a58_1", "sub": "“Kita harus **pergi sekarang.**”", "gap": 0.5},
+              {"vo": "e7_adr_2", "sub": "“Kenapa?”", "gap": 0.5},
+              {"vo": "e7_a58_2", "sub": "“Kalau foto terakhir muncul… semuanya akan **terulang.**”"}]},
+  {"shots": [["e7_6", 1.0, 1.15, 0.5, 0.5, 0.3, 0.45]], "min": 4.8, "events": [], "mvol": 0.03,
+   "sfx": [["poweroff", 0.0, 0.8]]},
+  {"shots": [["e7_7", 1.0, 1.2, 0.5, 0.5, 0.45, 0.62]], "min": 6.5,
+   "events": [{"vo": "e78_nar_1", "sub": "Foto itu bertanggal… **30 tahun lagi.**", "pre": 0.6}],
+   "sfx": [["heart", 0.0, 0.5]], "mvol": 0.6}
+ ],
+ "end": {"dur": 5.0, "mvol": 0.0,
+   "lines": [["2056.", 0.2, "Big"], ["EPISODE 8 BESOK.", 2.4, "Ep"]],
+   "sfx": [["boom", 0.0, 1.0], ["heart", 2.4, 0.5]]}
+}

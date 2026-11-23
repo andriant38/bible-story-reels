@@ -1,0 +1,26 @@
+{
+ "ep": 4, "music": "music_tense", "music_vol": 0.5,
+ "scenes": [
+  {"shots": [["e4_1", 1.0, 1.15, 0.45, 0.5, 0.45, 0.4]], "min": 4.6, "lead": 0.15,
+   "events": [{"vo": "e4_nar_1", "sub": "Dirinya sendiri… **lari.**"}],
+   "big": "DIA LARI.", "big_dur": 1.8, "sfx": [["run_slam", 0.0, 0.7]]},
+  {"shots": [["e4_2", 1.0, 1.12, 0.55, 0.6, 0.4, 0.35]], "min": 4.2,
+   "events": [{"vo": "e4_adr_1", "sub": "“**Tunggu!**”", "pre": 0.4}], "sfx": [["door", 1.6, 1.0]]},
+  {"shots": [["e4_3", 1.0, 1.1, 0.5, 0.45, 0.5, 0.45]], "min": 5.0,
+   "events": [{"vo": "e4_nar_2", "sub": "Kamar itu… **kosong.**", "pre": 1.0}], "sfx": [["door_up", 0.0, 0.6]], "mvol": 0.7},
+  {"shots": [["e4_4", 1.0, 1.25, 0.4, 0.55, 0.55, 0.6]], "min": 5.0, "events": [],
+   "sfx": [["paper", 0.6, 0.4], ["whoosh", 0.2, 0.2]]},
+  {"shots": [["e4_5", 1.0, 1.12, 0.5, 0.5, 0.25, 0.22]], "min": 5.0,
+   "events": [{"vo": "e4_a58_1", "sub": "“Kalau kamu **menangkapku…**”", "pre": 1.0}], "mvol": 0.5},
+  {"shots": [["e4_6", 1.0, 1.15, 0.5, 0.5, 0.3, 0.25]], "min": 4.5,
+   "events": [{"vo": "e4_a58_2", "sub": "“…kamu akan **mati.**”", "pre": 0.5}], "mvol": 0.35,
+   "sfx": [["heart", 0.2, 0.4]]},
+  {"shots": [["e4_5", 1.25, 1.35, 0.5, 0.5, 0.2, 0.2], ["e4_7", 1.0, 1.15, 0.5, 0.5, 0.3, 0.3]], "min": 7.0,
+   "weights": [1, 1.4],
+   "events": [{"vo": "e4_adr_2", "sub": "“Siapa kamu?”", "gap": 1.4},
+              {"vo": "e4_a58_3", "sub": "“Aku… **adalah kamu.**”"}], "tail": 0.9, "mvol": 0.15}
+ ],
+ "end": {"dur": 5.2, "mvol": 0.0,
+   "lines": [["“AKU ADALAH KAMU?”", 0.2, "Big"], ["EPISODE 5 BESOK.", 2.6, "Ep"]],
+   "sfx": [["boom", 0.0, 1.0], ["heart", 2.6, 0.5]]}
+}

@@ -1,0 +1,31 @@
+{
+ "ep": 3, "music": "music_tense", "music_vol": 0.5,
+ "tick": [4.0, 30.0],
+ "scenes": [
+  {"shots": [["e3_1", 1.0, 1.16, 0.5, 0.5, 0.45, 0.62]], "min": 4.3, "lead": 0.15,
+   "events": [{"vo": "e3_nar_1", "sub": "Foto ini… **belum terjadi.**"}],
+   "big": "FOTO INI BELUM TERJADI.", "big_dur": 2.0, "sfx": [["whoosh", 0.0, 0.5], ["heart", 0.4, 0.5]]},
+  {"shots": [["e3_2", 1.0, 1.08, 0.5, 0.55, 0.4, 0.4], ["e3_cal", 1.0, 1.25, 0.5, 0.55, 0.45, 0.55]], "min": 6.5,
+   "label": "RAKA  —  TEMAN LAMA AYAH ADRIAN", "label_dur": 3.0,
+   "events": [{"vo": "e3_nar_2", "sub": "Raka menunjukkan **foto kedua.**", "gap": 0.9},
+              {"vo": "e3_adr1_1", "sub": "“Ini… **hari ini.**”"}],
+   "sfx": [["paper", 0.3, 0.5]]},
+  {"shots": [["e2_s7a", 1.0, 1.08, 0.62, 0.66, 0.4, 0.4]], "min": 5.0,
+   "events": [{"vo": "e3_adr2_1", "sub": "“Siapa yang **mengambil** foto ini?”", "gap": 0.8},
+              {"vo": "e3_raka_1", "sub": "“**Ayahmu.**”"}], "tail": 0.9, "mvol": 0.6},
+  {"shots": [["e3_5", 1.0, 1.1, 0.5, 0.5, 0.3, 0.28]], "min": 4.5,
+   "events": [{"vo": "e3_nar_3", "sub": "Padahal ayahnya sudah lama **meninggal.**"}], "sfx": [["bulb", 2.5, 0.25]]},
+  {"shots": [["e3_6", 1.0, 1.14, 0.5, 0.5, 0.35, 0.4]], "min": 5.0, "events": [],
+   "sfx": [["paper", 0.1, 0.8], ["whoosh", 0.3, 0.25]]},
+  {"shots": [["e3_7", 1.0, 1.1, 0.55, 0.4, 0.4, 0.4]], "min": 5.0,
+   "events": [{"vo": "e3_nar_4", "sub": "Adrian mulai **curiga…** pada Raka."}]},
+  {"shots": [["e3_8a", 1.0, 1.1, 0.6, 0.7, 0.3, 0.2], ["e3_8b", 1.0, 1.1, 0.5, 0.5, 0.5, 0.3]], "min": 7.0,
+   "events": [{"vo": "e3_nar_5", "sub": "Ada yang **berjalan** di lantai dua.", "pre": 1.6}],
+   "sfx": [["door_up", 0.0, 0.7], ["steps_up", 1.0, 0.8], ["stairs", 4.0, 0.6]]},
+  {"shots": [["e3_9", 1.0, 1.75, 0.5, 0.5, 0.5, 0.48]], "min": 4.2, "events": [], "mvol": 0.12,
+   "sfx": [["heart", 1.0, 0.6]]}
+ ],
+ "end": {"dur": 5.2, "mvol": 0.0,
+   "lines": [["WAJAHNYA…\\NWAJAH ADRIAN.", 0.2, "Big"], ["EPISODE 4 BESOK.", 2.6, "Ep"]],
+   "sfx": [["boom", 0.0, 1.0], ["heart", 2.6, 0.5]]}
+}

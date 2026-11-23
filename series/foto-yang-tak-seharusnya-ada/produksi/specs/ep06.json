@@ -1,0 +1,26 @@
+{
+ "ep": 6, "music": "music_tense", "music_vol": 0.45, "tick": [0.0, 46.0],
+ "scenes": [
+  {"shots": [["e6_1", 1.0, 1.12, 0.5, 0.5, 0.35, 0.3]], "min": 5.0, "lead": 0.2,
+   "events": [{"vo": "e6_nar_1", "sub": "Orang **paling dekat**… hanya satu."}],
+   "big": "DIA PEMBUNUHNYA?", "big_dur": 2.2, "sfx": [["whoosh", 0.0, 0.4]]},
+  {"shots": [["e6_2", 1.0, 1.1, 0.4, 0.45, 0.3, 0.35]], "min": 4.5,
+   "events": [{"vo": "e6_a58_1", "sub": "“**Bukan Raka.**”", "pre": 0.3}], "sfx": [["handycam", 1.6, 0.5]]},
+  {"shots": [["e6_3", 1.0, 1.2, 0.5, 0.5, 0.35, 0.33]], "min": 7.0,
+   "label": "DANIEL  —  AYAH ADRIAN (REKAMAN LAMA)", "label_dur": 3.0,
+   "events": [{"vo": "e6_dan_1", "sub": "“…jangan biarkan dia **mencari pelakunya.**”", "pre": 0.6}],
+   "sfx": [["handycam", 0.0, 0.35]], "mvol": 0.5},
+  {"shots": [["e6_4", 1.0, 1.1, 0.5, 0.5, 0.3, 0.3]], "min": 4.8,
+   "events": [{"vo": "e6_nar_2", "sub": "**Kenapa** ayahnya melarang?"}]},
+  {"shots": [["e6_5", 1.0, 1.35, 0.45, 0.62, 0.45, 0.72]], "min": 5.0, "events": [],
+   "sfx": [["paper", 0.2, 0.5], ["whoosh", 1.5, 0.3]]},
+  {"shots": [["e6_6", 1.0, 1.25, 0.55, 0.45, 0.6, 0.62]], "min": 5.0,
+   "events": [{"vo": "e6_nar_3", "sub": "Adrian mengenali… **jam tangan itu.**", "pre": 0.4}], "sfx": [["heart", 0.0, 0.4]]},
+  {"shots": [["e6_7", 1.0, 1.15, 0.5, 0.5, 0.3, 0.25]], "min": 7.5,
+   "events": [{"vo": "e6_raka_1", "sub": "“**Ya.**”", "gap": 1.2},
+              {"vo": "e6_raka_2", "sub": "“Aku **berada di sana**… malam ayahmu meninggal.”"}], "tail": 0.7, "mvol": 0.3}
+ ],
+ "end": {"dur": 5.0, "mvol": 0.0,
+   "lines": [["RAKA ADA DI SANA.", 0.2, "Big"], ["EPISODE 7 BESOK.", 2.4, "Ep"]],
+   "sfx": [["boom", 0.0, 1.0], ["heart", 2.4, 0.5]]}
+}
