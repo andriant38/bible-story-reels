@@ -18,7 +18,7 @@
       "terrain": "desert",
       "camera": "push",
       "stars": true,
-      "headline_y": 420,
+      "headline_y": 560,
       "headline": [
         {
           "text": "POV: Kamu budak di Mesir.",
@@ -240,49 +240,6 @@
       ]
     },
     {
-      "text": "Kamu dan bangsamu tersebar ke seluruh tanah Mesir, mengumpulkan tunggul jerami.",
-      "bg": "dawn",
-      "terrain": "plain",
-      "camera": "pan_right",
-      "elements": [
-        {
-          "type": "person",
-          "x": 0.15,
-          "size": 0.45,
-          "pose": "kneel"
-        },
-        {
-          "type": "person",
-          "x": 0.3,
-          "size": 0.55,
-          "pose": "kneel",
-          "props": [
-            "basket"
-          ]
-        },
-        {
-          "type": "person",
-          "x": 0.5,
-          "size": 0.85,
-          "props": [
-            "basket"
-          ]
-        },
-        {
-          "type": "person",
-          "x": 0.7,
-          "size": 0.5,
-          "pose": "kneel"
-        },
-        {
-          "type": "person",
-          "x": 0.85,
-          "size": 0.4,
-          "pose": "kneel"
-        }
-      ]
-    },
-    {
       "text": "Target tidak tercapai. Para mandor dari bangsamu dipukuli.",
       "bg": "storm",
       "terrain": "plain",
@@ -376,28 +333,6 @@
           "x": 0.72,
           "size": 0.8,
           "pose": "pray"
-        }
-      ],
-      "sun_x": 0.85
-    },
-    {
-      "text": "Kalau kamu di sana, dengan tangan lecet dan punggung pegal, apa yang akan kamu lakukan?",
-      "bg": "night",
-      "terrain": "desert",
-      "camera": "push",
-      "stars": true,
-      "elements": [
-        {
-          "type": "fire",
-          "x": 0.42,
-          "size": 0.6
-        },
-        {
-          "type": "person",
-          "x": 0.6,
-          "size": 0.85,
-          "pose": "kneel",
-          "facing": -1
         }
       ],
       "sun_x": 0.85
