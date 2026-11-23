@@ -61,9 +61,19 @@ STYLES = {
 }
 
 
+SERIES = None  # e.g. "HITUNGAN PROYEK #3" (story["series"]), drawn as a badge on every scene
+
+
 def text_overlay(scene, path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
+    if SERIES:
+        f = font("ExtraBold", 34)
+        tw = d.textlength(SERIES, font=f)
+        x0, y0 = 48, 132
+        d.rounded_rectangle([x0, y0, x0 + tw + 44, y0 + 58], 12, fill=(18, 18, 20, 215))
+        d.rounded_rectangle([x0, y0, x0 + 12, y0 + 58], 6, fill=YELLOW + (255,))
+        d.text((x0 + 28, y0 + 11), SERIES, font=f, fill=YELLOW + (255,))
     # subtitle: dark box with a yellow hazard edge on the left
     sub = scene.get("subtitle", scene["text"])
     if sub:
@@ -147,6 +157,8 @@ def main():
     args = ap.parse_args()
     story = json.load(open(args.story, encoding="utf-8"))
     scenes = story["scenes"]
+    global SERIES
+    SERIES = story.get("series")
     if args.sheet:
         return sheet(args.story, story, args.sheet)
     if not (args.audio_dir and args.out):

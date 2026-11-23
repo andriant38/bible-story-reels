@@ -900,6 +900,58 @@ F.isolator = (s) => {
   } };
 };
 
+// ---------------------------------------------------------------- materials (semen, pasir, molen kecil)
+F.cube = (s) => {
+  // a transparent measuring cube (default 1 m³) with yellow edges; `filled` 0..1 fills it with concrete (anim: fill)
+  const g = new THREE.Group(); const a = s.size ?? 1;
+  const glass = box(a, a, a, mat(0xffffff, { opacity: 0.12, rough: 0.2 }), 0, a / 2, 0); glass.castShadow = false; g.add(glass);
+  const e = []; const pts = [[-1, -1], [1, -1], [1, 1], [-1, 1]].map(([x, z]) => [x * a / 2, z * a / 2]);
+  for (let i = 0; i < 4; i++) { const [x0, z0] = pts[i], [x1, z1] = pts[(i + 1) % 4]; for (const y of [0, a]) e.push(beamGeo(new V3(x0, y, z0), new V3(x1, y, z1), 0.025 * a)); e.push(beamGeo(new V3(x0, 0, z0), new V3(x0, a, z0), 0.025 * a)); }
+  g.add(mesh(mergeGeometries(e), mat(0xffc400, { emissive: 0x664400 })));
+  const fill = box(a * 0.98, 1, a * 0.98, mat(0x9a958c, { rough: 0.9 })); fill.geometry.translate(0, 0.5, 0); g.add(fill);
+  return { group: g, update(p) { const q = s.anim === 'fill' ? easeIO(p) : (s.filled ?? 0); fill.visible = q > 0.005; fill.scale.y = Math.max(q * a * 0.98, 0.001); } };
+};
+
+F.sacks = (s) => {
+  // stack of cement sacks (50 kg ≈ 0.75 × 0.45 × 0.15 m). `count` sacks; anim "stack": they appear one by one; `half_last` shows the last one as a partial sack
+  const g = new THREE.Group(); const n = s.count ?? 8; const per = s.per_layer ?? 4; const items = [];
+  const col = s.color ?? 0x7a8a9a;
+  for (let i = 0; i < n; i++) {
+    const layer = Math.floor(i / per), k = i % per; const rot = layer % 2; const sk = new THREE.Group();
+    const bodyG = new THREE.BoxGeometry(0.75, 0.15, 0.45, 2, 1, 2); const pos = bodyG.attributes.position;
+    for (let j = 0; j < pos.count; j++) { const y = pos.getY(j); if (Math.abs(y) > 0.07) { pos.setX(j, pos.getX(j) * 0.94); pos.setZ(j, pos.getZ(j) * 0.9); } }
+    bodyG.computeVertexNormals(); const b = mesh(bodyG, mat(col, { rough: 0.95 })); sk.add(b);
+    sk.add(box(0.5, 0.005, 0.3, mat(s.label_color ?? 0xd23a2a), 0, 0.077, 0));
+    const x = rot ? (k % 2 - 0.5) * 0.47 : (k % 2 - 0.5) * 0.77, z = rot ? (Math.floor(k / 2) - 0.5) * 0.77 : (Math.floor(k / 2) - 0.5) * 0.47;
+    sk.position.set(x, 0.075 + layer * 0.155, z); sk.rotation.y = rot ? Math.PI / 2 : 0;
+    if (s.half_last && i === n - 1) sk.scale.x = 0.45;
+    g.add(sk); items.push(sk);
+  }
+  return { group: g, update(p) { items.forEach((it, i) => { const q = s.anim === 'stack' ? clamp(p * (n + 1) - i) : 1; it.visible = q > 0; it.position.y = (0.075 + Math.floor(i / per) * 0.155) + (1 - easeIO(q)) * 1.2; }); } };
+};
+
+F.small_mixer = (s) => {
+  // molen kecil (site concrete mixer on two wheels): tilted rotating drum
+  const g = new THREE.Group(); const yel = mat(s.color ?? 0xe8a317, { rough: 0.5 });
+  for (const z of [-0.55, 0.55]) { const w = cyl(0.3, 0.3, 0.12, mat(C.tire), 16); w.rotation.x = Math.PI / 2; w.position.set(-0.2, 0.3, z); g.add(w); }
+  g.add(box(1.6, 0.1, 0.9, mat(C.dark), 0.1, 0.45, 0)); g.add(box(0.1, 0.8, 0.1, yel, 0.6, 0.85, 0.35)); g.add(box(0.1, 0.8, 0.1, yel, 0.6, 0.85, -0.35));
+  g.add(box(0.5, 0.4, 0.5, mat(0x3a7d3a), -0.4, 0.7, 0)); g.add(box(0.1, 0.5, 0.1, mat(C.dark), 1.05, 0.25, 0));
+  const tilt = new THREE.Group(); tilt.position.set(0.6, 1.3, 0); tilt.rotation.z = 0.55; g.add(tilt);
+  const spin = new THREE.Group(); tilt.add(spin);
+  const prof = [[0.2, -0.6], [0.55, -0.35], [0.6, 0], [0.5, 0.35], [0.3, 0.6]].map(([r, y]) => new THREE.Vector2(r, y));
+  spin.add(mesh(new THREE.LatheGeometry(prof, 24), mat(s.drum ?? 0xd8a21c, { metal: 0.3, rough: 0.45, side: THREE.DoubleSide })));
+  for (let i = 0; i < 6; i++) { const r = box(0.06, 0.5, 0.06, mat(0xb5841a), Math.cos(i) * 0.57, 0, Math.sin(i) * 0.57); spin.add(r); }
+  const mix = mesh(new THREE.CircleGeometry(0.28, 16), mat(0x8a857c, { rough: 1 })); mix.rotation.x = -Math.PI / 2; mix.position.y = 0.55; tilt.add(mix);
+  return { group: g, update(p, t) { spin.rotation.y = t * 3; } };
+};
+
+F.drum = (s) => {
+  // water drum (200 L) — blue plastic, optional water level
+  const g = new THREE.Group(); const d = cyl(0.29, 0.29, 0.88, mat(s.color ?? 0x2b6fc2, { rough: 0.5 }), 24); d.position.y = 0.44; g.add(d);
+  for (const y of [0.3, 0.6]) { const r = cyl(0.3, 0.3, 0.03, mat(0x1f5aa0), 24); r.position.y = y; g.add(r); }
+  return { group: g, update() {} };
+};
+
 // ---------------------------------------------------------------- worlds
 const SKY = {
   day: { top: '#5f97d6', bottom: '#dfe9f1', sun: 3.2, hemi: 1.3, sunColor: 0xfff4e0, dir: [60, 90, 40], fog: 0xd9e4ee },

@@ -50,6 +50,20 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
   5. **CLOSING.** `statement` + `ref` ("TULIS DI KOMENTAR"), with a specific question for the viewer.
 - Save it as `konstruksi/stories/<slug>.json`. **Copy `konstruksi/stories/truk-tambang-raksasa.json` as the model.**
 
+
+### Growth rules (the owner's goal is FOLLOWERS, not only views)
+
+Every video must give the viewer a reason to follow:
+- **Series.** Most videos belong to a numbered series, set as `"series": "HITUNGAN PROYEK #3"` in the story JSON (drawn as a badge on every scene). Series:
+  - `HITUNGAN PROYEK #n`: field calculations (rit, truk molen, semen, besi, solar).
+  - `PROSES PROYEK #n`: start-to-finish process (pengaspalan, gedung, jembatan, MRT).
+  - `FAKTA TAMBANG #n`: mining (truk raksasa, peledakan, nikel).
+  - About 1 in 4 videos can be a stand-alone general-interest topic (e.g. gempa) to reach new people.
+  Number each series in order. `posted.json` and earlier stories show the last number used.
+- **The closing scene promises the next episode and asks for a follow**, e.g. the narration ends with "Follow, besok kita hitung berapa besi untuk rumah dua lantai.". The `ref` line reads "TULIS DI KOMENTAR · FOLLOW UNTUK #4". Keep that promise: the next video in that series must be that topic.
+- **Hook in the first 2 seconds** on a question the viewer has asked themselves (cost, quantity, danger, "kenapa"). Prefer topics that home builders and site workers (tukang, mandor, operator, checker) search for, such as semen, besi, rit, solar, retak, and topics that make them argue in the comments.
+- **The caption** ends with "Follow untuk episode berikutnya" and the question for the comments.
+
 ### Scene format
 
 ```jsonc
