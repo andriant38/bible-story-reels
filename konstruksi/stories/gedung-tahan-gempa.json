@@ -83,12 +83,12 @@
         },
         {
           "type": "city",
-          "count": 40,
+          "count": 50,
           "area": [
-            320,
-            320
+            420,
+            420
           ],
-          "clear": 60,
+          "clear": 135,
           "max_h": 45
         }
       ]
@@ -291,12 +291,12 @@
         {
           "type": "label",
           "pos": [
-            -1,
-            3.2,
+            -3,
+            2.9,
             7.2
           ],
           "text": "ISOLATOR",
-          "size": 0.6
+          "size": 0.45
         },
         {
           "type": "city",
@@ -633,12 +633,12 @@
         },
         {
           "type": "city",
-          "count": 40,
+          "count": 50,
           "area": [
-            320,
-            320
+            420,
+            420
           ],
-          "clear": 60,
+          "clear": 135,
           "max_h": 45
         }
       ]
