@@ -1,0 +1,721 @@
+{
+  "slug": "gedung-tahan-gempa",
+  "title": "Rahasia Gedung Tahan Gempa",
+  "topic": "konstruksi",
+  "scenes": [
+    {
+      "text": "Gempanya sama. Gedung kiri berguncang hebat, gedung kanan hampir diam. Bedanya cuma satu.",
+      "headline": [
+        {
+          "text": "GEMPANYA SAMA,",
+          "style": "hook"
+        },
+        {
+          "text": "NASIBNYA BEDA",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 230,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          21,
+          0
+        ],
+        "dist": 112,
+        "height": 2,
+        "angle": 0,
+        "sweep": 5,
+        "shake": 0.3,
+        "shake_at": 0.5
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            -11,
+            0,
+            0
+          ],
+          "floors": 9,
+          "w": 12,
+          "d": 11,
+          "anim": "quake"
+        },
+        {
+          "type": "quake_building",
+          "pos": [
+            11,
+            0,
+            0
+          ],
+          "floors": 9,
+          "w": 12,
+          "d": 11,
+          "anim": "quake",
+          "isolated": true
+        },
+        {
+          "type": "label",
+          "pos": [
+            -11,
+            36,
+            0
+          ],
+          "text": "GEDUNG BIASA",
+          "size": 3,
+          "color": "#ff5a4a"
+        },
+        {
+          "type": "label",
+          "pos": [
+            11,
+            36,
+            0
+          ],
+          "text": "PAKAI ISOLATOR",
+          "size": 3,
+          "color": "#5fd16b"
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Begini cara gedung dibuat tahan gempa.",
+      "headline": [
+        {
+          "text": "GEDUNG",
+          "style": "big"
+        },
+        {
+          "text": "TAHAN",
+          "style": "accent"
+        },
+        {
+          "text": "GEMPA",
+          "style": "big"
+        }
+      ],
+      "headline_y": 190,
+      "world": "city",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          15,
+          0
+        ],
+        "dist": 80,
+        "height": 8,
+        "angle": 30,
+        "sweep": 40
+      },
+      "shadow_size": 45,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 10,
+          "w": 16,
+          "d": 14,
+          "isolated": true
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Indonesia berada di cincin api. Gempa bisa datang kapan saja, jadi gedung harus dirancang untuk menghadapinya.",
+      "headline": [
+        {
+          "text": "KENAPA PENTING?",
+          "style": "label"
+        },
+        {
+          "text": "Indonesia ada di cincin api",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "dusk",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          10,
+          0
+        ],
+        "dist": 150,
+        "height": 70,
+        "angle": 20,
+        "sweep": 30,
+        "shake": 0.6,
+        "shake_at": 0.6
+      },
+      "shadow_size": 150,
+      "objects": [
+        {
+          "type": "city",
+          "count": 80,
+          "area": [
+            300,
+            300
+          ],
+          "clear": 0,
+          "max_h": 60
+        }
+      ]
+    },
+    {
+      "text": "Gedung biasa menempel langsung ke tanah. Saat tanah berguncang, seluruh gedung ikut terguncang, dan lantai atas bergoyang paling jauh.",
+      "headline": [
+        {
+          "text": "GEDUNG BIASA",
+          "style": "label"
+        },
+        {
+          "text": "lantai atas bergoyang paling jauh",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          17,
+          0
+        ],
+        "dist": 78,
+        "height": 2,
+        "angle": 15,
+        "sweep": 6
+      },
+      "shadow_size": 45,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 10,
+          "w": 16,
+          "d": 14,
+          "anim": "quake",
+          "sway": 2.6
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Solusinya, base isolator. Bantalan karet tebal dipasang di antara pondasi dan gedung.",
+      "headline": [
+        {
+          "text": "SOLUSI 1: BASE ISOLATOR",
+          "style": "label"
+        },
+        {
+          "text": "bantalan antara pondasi & gedung",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          -3,
+          1.3,
+          6
+        ],
+        "dist": 13,
+        "height": 0.3,
+        "angle": 20,
+        "sweep": 10
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 10,
+          "w": 16,
+          "d": 14,
+          "isolated": true
+        },
+        {
+          "type": "label",
+          "pos": [
+            -1,
+            3.2,
+            7.2
+          ],
+          "text": "ISOLATOR",
+          "size": 0.6
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Isinya lapisan karet dan pelat baja yang disusun bergantian, dengan inti timah di tengah untuk meredam energi gempa.",
+      "headline": [
+        {
+          "text": "ISINYA",
+          "style": "label"
+        },
+        {
+          "text": "karet + pelat baja + inti timah",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "plain",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1.7,
+          0
+        ],
+        "dist": 10,
+        "height": 1.2,
+        "angle": 35,
+        "sweep": 30
+      },
+      "shadow_size": 10,
+      "objects": [
+        {
+          "type": "isolator"
+        },
+        {
+          "type": "label",
+          "pos": [
+            1.7,
+            2.25,
+            0.6
+          ],
+          "text": "KARET",
+          "size": 0.22,
+          "show_at": 0.15
+        },
+        {
+          "type": "label",
+          "pos": [
+            1.7,
+            1.55,
+            0.6
+          ],
+          "text": "PELAT BAJA",
+          "size": 0.22,
+          "show_at": 0.3
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            3.5,
+            0
+          ],
+          "text": "INTI TIMAH",
+          "size": 0.22,
+          "show_at": 0.5
+        }
+      ]
+    },
+    {
+      "text": "Saat gempa, tanah bergerak, tapi bantalan ini melentur. Gedung di atasnya bergerak jauh lebih pelan.",
+      "headline": [
+        {
+          "text": "SAAT GEMPA",
+          "style": "label"
+        },
+        {
+          "text": "tanah bergerak, gedung tetap tenang",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          6,
+          4
+        ],
+        "dist": 42,
+        "height": 1,
+        "angle": 20,
+        "sweep": 8
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 10,
+          "w": 16,
+          "d": 14,
+          "anim": "quake",
+          "isolated": true,
+          "amp": 0.6,
+          "quake_from": 0.02
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Gedung pencakar langit punya trik lain. Bandul raksasa di puncaknya, yang berayun melawan arah goyangan.",
+      "headline": [
+        {
+          "text": "SOLUSI 2: DAMPER",
+          "style": "label"
+        },
+        {
+          "text": "bandul raksasa di puncak gedung",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          100,
+          0
+        ],
+        "dist": 120,
+        "height": 10,
+        "angle": 20,
+        "sweep": 10
+      },
+      "shadow_size": 80,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 32,
+          "w": 18,
+          "d": 18,
+          "anim": "quake",
+          "damper": true,
+          "sway": 4,
+          "quake_from": 0.02
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Contohnya gedung Taipei seratus satu. Bandulnya seberat sekitar enam ratus enam puluh ton.",
+      "subtitle": "Contohnya gedung Taipei 101. Bandulnya seberat sekitar 660 ton.",
+      "headline": [
+        {
+          "text": "±660 TON",
+          "style": "stat"
+        },
+        {
+          "text": "bandul Taipei 101",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "world": "city",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          104,
+          0
+        ],
+        "dist": 34,
+        "height": 2,
+        "angle": 25,
+        "sweep": 10
+      },
+      "shadow_size": 40,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 32,
+          "w": 18,
+          "d": 18,
+          "anim": "quake",
+          "damper": true,
+          "sway": 4,
+          "quake_from": 0.02
+        },
+        {
+          "type": "worker",
+          "pos": [
+            6,
+            102.2,
+            6
+          ],
+          "rot": 200
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Intinya, gedung tahan gempa bukan berarti kaku. Justru gedung harus bisa melentur dan meredam energi, supaya tidak patah.",
+      "headline": [
+        {
+          "text": "INTINYA",
+          "style": "label"
+        },
+        {
+          "text": "bukan kaku, tapi lentur & meredam",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "city",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          17,
+          0
+        ],
+        "dist": 108,
+        "height": 8,
+        "angle": -8,
+        "sweep": 16
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            -11,
+            0,
+            0
+          ],
+          "floors": 9,
+          "w": 12,
+          "d": 11,
+          "anim": "quake"
+        },
+        {
+          "type": "quake_building",
+          "pos": [
+            11,
+            0,
+            0
+          ],
+          "floors": 9,
+          "w": 12,
+          "d": 11,
+          "anim": "quake",
+          "isolated": true
+        },
+        {
+          "type": "label",
+          "pos": [
+            -11,
+            38,
+            0
+          ],
+          "text": "GEDUNG BIASA",
+          "size": 3,
+          "color": "#ff5a4a"
+        },
+        {
+          "type": "label",
+          "pos": [
+            11,
+            38,
+            0
+          ],
+          "text": "PAKAI ISOLATOR",
+          "size": 3,
+          "color": "#5fd16b"
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    },
+    {
+      "text": "Kamu pernah merasakan gempa saat berada di gedung tinggi? Ceritakan di kolom komentar.",
+      "headline": [
+        {
+          "text": "PERNAH RASAKAN GEMPA DI GEDUNG TINGGI?",
+          "style": "statement"
+        },
+        {
+          "text": "CERITAKAN DI KOMENTAR",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 220,
+      "world": "city",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          17,
+          0
+        ],
+        "dist": 80,
+        "height": 6,
+        "angle": 40,
+        "sweep": 35
+      },
+      "shadow_size": 50,
+      "objects": [
+        {
+          "type": "quake_building",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "floors": 10,
+          "w": 16,
+          "d": 14,
+          "isolated": true
+        },
+        {
+          "type": "worker",
+          "pos": [
+            9,
+            0,
+            10
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "city",
+          "count": 40,
+          "area": [
+            320,
+            320
+          ],
+          "clear": 60,
+          "max_h": 45
+        }
+      ]
+    }
+  ],
+  "caption": "Gempanya sama, nasibnya beda 🏢🌏\n\nCara gedung dibuat tahan gempa:\n1️⃣ Base isolator: bantalan karet + pelat baja + inti timah di antara pondasi & gedung. Tanah bergoyang, gedung tetap tenang.\n2️⃣ Damper: bandul raksasa di puncak gedung yang berayun melawan goyangan. Taipei 101 pakai bandul ±660 ton!\n\nIntinya: gedung tahan gempa bukan kaku, tapi lentur & bisa meredam energi.\n\nKamu pernah merasakan gempa di gedung tinggi? Ceritakan di komentar 👇\n\n#gempa #gedungtahangempa #baseisolator #konstruksi #tekniksipil #strukturbangunan #civilengineering #cincinapi #edukasi #animasi3D #faktaunik",
+  "youtube_title": "Rahasia Gedung Tahan Gempa: Gempanya Sama, Nasibnya Beda #shorts",
+  "youtube_tags": [
+    "gedung tahan gempa",
+    "base isolator",
+    "damper",
+    "taipei 101",
+    "gempa",
+    "teknik sipil",
+    "struktur",
+    "animasi 3d"
+  ]
+}

@@ -827,6 +827,79 @@ F.pump_truck = (s) => {
   return { group: g, update(p, t) { hose.rotation.z = Math.sin(t * 2) * 0.12; } };
 };
 
+// ---------------------------------------------------------------- earthquake (gempa)
+function quakeEnv(s, t) { const T = ctx_dur(); const a = (s.quake_from ?? 0.08) * T, b = (s.quake_to ?? 0.92) * T; return smooth((t - a) / 0.8) * (1 - smooth((t - b) / 0.8)); }
+function groundShake(s, t) { const A = s.amp ?? 0.45; return A * quakeEnv(s, t) * (Math.sin(t * 13) * 0.7 + Math.sin(t * 8.1 + 1) * 0.45 + Math.sin(t * 21) * 0.2); }
+
+F.quake_building = (s, ctx) => {
+  // building on a shaking ground slab. isolated: sits on rubber bearings; damper: pendulum in the open top floors.
+  const g = new THREE.Group(); const N = s.floors ?? 10, fh = s.floor_h ?? 3.4, w = s.w ?? 16, d = s.d ?? 14;
+  const conc = mat(C.concrete, { rough: 0.9 }); const glassM = mat(s.glass ?? C.glass, { rough: 0.12, metal: 0.55, emissive: ctx.night ? 0xffcc77 : 0, ei: 0.3 });
+  const ground = new THREE.Group(); g.add(ground);
+  ground.add(box(w + 10, 1.2, d + 10, mat(C.concreteDark, { rough: 1 }), 0, -0.6, 0));
+  const isoH = s.isolated ? 1.3 : 0; const isos = [];
+  if (s.isolated) for (let x = -w / 2 + 1; x <= w / 2 - 1 + 0.01; x += (w - 2) / 3) for (let z = -d / 2 + 1; z <= d / 2 - 1 + 0.01; z += (d - 2) / 2) {
+    const iso = new THREE.Group(); iso.position.set(x, 0, z); iso.matrixAutoUpdate = false; g.add(iso);
+    for (let k = 0; k < 6; k++) iso.add(cyl(0.65, 0.65, isoH / 6, mat(k % 2 ? 0x8b939c : 0x1c1c1e, { rough: k % 2 ? 0.4 : 0.9, metal: k % 2 ? 0.6 : 0 }), 18).translateY((k + 0.5) * isoH / 6));
+    isos.push(iso);
+  }
+  const span = 4; const nx = Math.round(w / span), nz = Math.round(d / span);
+  const colGeo = []; for (let i = 0; i <= nx; i++) for (let j = 0; j <= nz; j++) { const c = new THREE.BoxGeometry(0.55, fh, 0.55); c.translate(-w / 2 + (i * w) / nx, fh / 2, -d / 2 + (j * d) / nz); colGeo.push(c); }
+  const colsG = mergeGeometries(colGeo);
+  const openTop = s.damper ? 3 : 0;
+  const floors = [];
+  for (let k = 0; k < N; k++) {
+    const fl = new THREE.Group(); fl.matrixAutoUpdate = false; g.add(fl);
+    fl.add(mesh(colsG, conc)); fl.add(box(w + 0.5, 0.35, d + 0.5, conc, 0, fh, 0));
+    if (k === 0) fl.add(box(w + 0.5, 0.35, d + 0.5, conc, 0, 0, 0));
+    if (k < N - openTop) { fl.add(box(w + 0.3, fh - 0.4, 0.12, glassM, 0, fh / 2, d / 2 + 0.2)); fl.add(box(w + 0.3, fh - 0.4, 0.12, glassM, 0, fh / 2, -d / 2 - 0.2)); fl.add(box(0.12, fh - 0.4, d + 0.3, glassM, w / 2 + 0.2, fh / 2, 0)); fl.add(box(0.12, fh - 0.4, d + 0.3, glassM, -w / 2 - 0.2, fh / 2, 0)); }
+    floors.push(fl);
+  }
+  let pend = null, cables = [];
+  if (s.damper) {
+    pend = new THREE.Group(); g.add(pend);
+    const ball = mesh(new THREE.SphereGeometry(Math.min(w, d) * 0.22, 24, 16), mat(0xd9a521, { metal: 0.7, rough: 0.3 })); pend.add(ball); pend.userData.ball = ball;
+    for (let i = 0; i < 4; i++) { const c = cyl(0.08, 0.08, 1, mat(0x222222), 6); c.geometry.translate(0, 0.5, 0); g.add(c); cables.push(c); }
+  }
+  const m = new THREE.Matrix4(), sh = new THREE.Matrix4();
+  const fixedOff = (t, r, gx) => { const S = (s.sway ?? 2.2) * quakeEnv(s, t - 0.3) * Math.sin(t * 4.6); return gx + S * Math.pow(r, 1.3) * (s.damper ? 0.45 : 1); };
+  return { group: g, update(p, t) {
+    const gx = s.anim === 'quake' ? groundShake(s, t) : 0; ground.position.x = gx;
+    const off = (r) => {
+      if (s.anim !== 'quake') return 0;
+      if (s.isolated) return 0.12 * quakeEnv(s, t - 0.4) * Math.sin(t * 2.2) + gx * 0.08;
+      return fixedOff(t, r, gx); // base follows the ground, top sways most
+    };
+    const baseY = isoH;
+    isos.forEach((iso) => { const top = off(0); const sx = (top - gx) / isoH; sh.makeShear(0, 0, sx, 0, 0, 0); m.makeTranslation(iso.position.x + gx, 0, iso.position.z).multiply(sh); iso.matrix.copy(m); });
+    floors.forEach((fl, k) => {
+      const o0 = s.isolated ? off(k / N) : (k === 0 ? gx : off(k / N)), o1 = s.isolated ? off((k + 1) / N) : off((k + 1) / N);
+      sh.makeShear(0, 0, (o1 - o0) / fh, 0, 0, 0); m.makeTranslation(o0, baseY + k * fh, 0).multiply(sh); fl.matrix.copy(m);
+    });
+    if (pend) {
+      const topY = baseY + N * fh; const topX = s.isolated ? off(1) : off(1); const L = fh * 2.2;
+      const sw = -(s.anim === 'quake' ? (s.sway ?? 2.2) * 0.55 * quakeEnv(s, t - 0.6) * Math.sin(t * 4.6) : 0);
+      pend.position.set(topX + sw, topY - L, 0);
+      const r = Math.min(w, d) * 0.22;
+      cables.forEach((c, i) => { const ax = topX + (i % 2 ? 1 : -1) * r * 0.6, az = (i < 2 ? 1 : -1) * r * 0.6; const a = new V3(ax, topY, az), b = new V3(pend.position.x, pend.position.y + r * 0.6, 0); const dir = b.clone().sub(a); c.position.copy(a); c.scale.set(1, dir.length(), 1); c.quaternion.setFromUnitVectors(new V3(0, 1, 0), dir.normalize()); });
+    }
+  } };
+};
+
+F.isolator = (s) => {
+  // close-up cutaway of a lead-rubber bearing: rubber/steel layers, lead core, steel flanges. anim: shear
+  const g = new THREE.Group(); const R = s.radius ?? 1.4, n = s.layers ?? 12, h = s.h ?? 2.4, lh = h / n;
+  const bot = box(R * 2.6, 0.3, R * 2.6, mat(0x5d646c, { metal: 0.7, rough: 0.35 }), 0, 0.15, 0); g.add(bot);
+  const stack = []; const cut = Math.PI * 0.5;
+  for (let k = 0; k < n; k++) { const rubber = k % 2 === 0; const geo = new THREE.CylinderGeometry(R, R, lh, 40, 1, false, cut, Math.PI * 2 - cut); const c = mesh(geo, mat(rubber ? 0x1e1e20 : 0xa7aeb6, { rough: rubber ? 0.85 : 0.3, metal: rubber ? 0 : 0.7, side: THREE.DoubleSide })); c.position.y = 0.3 + (k + 0.5) * lh; g.add(c); stack.push(c); }
+  const core = cyl(R * 0.28, R * 0.28, h, mat(0x7d8288, { metal: 0.5, rough: 0.5 }), 20); core.position.y = 0.3 + h / 2; g.add(core);
+  const top = box(R * 2.6, 0.3, R * 2.6, mat(0x5d646c, { metal: 0.7, rough: 0.35 }), 0, 0.3 + h + 0.15, 0); g.add(top);
+  return { group: g, update(p, t) {
+    const sx = s.anim === 'shear' ? 0.45 * R * Math.sin(t * 2.4) * smooth(p / 0.15) : 0;
+    stack.forEach((c, k) => (c.position.x = sx * (k + 0.5) / n)); top.position.x = sx; core.position.x = sx / 2; core.rotation.z = -Math.atan2(sx, h);
+  } };
+};
+
 // ---------------------------------------------------------------- worlds
 const SKY = {
   day: { top: '#5f97d6', bottom: '#dfe9f1', sun: 3.2, hemi: 1.3, sunColor: 0xfff4e0, dir: [60, 90, 40], fog: 0xd9e4ee },
