@@ -491,7 +491,9 @@ def render_background(scene, seed=0, scale=1.12):
         glow(img, sx, sy, 900 if scene.get("rays") else 650, pal["sun"], 1.3 if scene.get("rays") else 1.0)
         if scene.get("bg") == "night":
             d = ImageDraw.Draw(img)
-            d.ellipse([sx - 50, oy + 380 - 50, sx + 50, oy + 380 + 50], fill=hexrgb(pal["sun"]))
+            # keep the moon clear of a headline at the top
+            my = oy + (820 if scene.get("headline") and scene.get("headline_y", 230) < 640 else 380)
+            d.ellipse([sx - 50, my - 50, sx + 50, my + 50], fill=hexrgb(pal["sun"]))
     if scene.get("rainbow"):
         rb = Image.new("RGBA", (w, h), (0, 0, 0, 0))
         rd = ImageDraw.Draw(rb)

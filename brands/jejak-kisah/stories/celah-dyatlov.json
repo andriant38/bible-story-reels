@@ -241,22 +241,17 @@
     },
     {
       "text": "Tahun 2021, dua ilmuwan di Swiss membuat model komputer. Longsoran kecil bisa *menimpa tenda* dan menyebabkan luka seperti itu.",
-      "bg": "dawn",
+      "bg": "arctic",
       "terrain": "mountains",
       "camera": "pan_right",
       "elements": [
         {
           "type": "tent",
-          "x": 0.4,
-          "size": 0.8
-        },
-        {
-          "type": "smoke",
-          "x": 0.62,
-          "size": 0.8,
-          "y": 0.55
+          "x": 0.5,
+          "size": 0.9
         }
-      ]
+      ],
+      "mist": true
     },
     {
       "text": "Mereka mungkin lari untuk menyelamatkan diri, lalu *tidak bisa menemukan tenda lagi* dalam gelap.",
