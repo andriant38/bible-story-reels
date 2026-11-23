@@ -1,0 +1,347 @@
+{
+  "slug": "musa-dan-semak-menyala",
+  "title": "Musa dan Semak yang Menyala",
+  "reference": "Keluaran 3",
+  "scenes": [
+    {
+      "text": "Seorang buronan berusia delapan puluh tahun… dipilih Allah untuk membebaskan satu bangsa.",
+      "bg": "dusk",
+      "terrain": "desert",
+      "camera": "push",
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Buronan 80 tahun…",
+          "style": "hook"
+        },
+        {
+          "text": "dipilih Allah.",
+          "style": "hook_accent"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Musa melarikan diri dari Mesir, dan menjadi gembala di padang gurun selama empat puluh tahun.",
+      "bg": "golden",
+      "terrain": "desert",
+      "camera": "pan_right",
+      "headline": [
+        {
+          "text": "MUSA",
+          "style": "accent"
+        },
+        {
+          "text": "dan semak yang menyala",
+          "style": "small"
+        },
+        {
+          "text": "KELUARAN 3",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.85,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        },
+        {
+          "type": "sheep",
+          "x": 0.55,
+          "size": 0.9
+        },
+        {
+          "type": "sheep",
+          "x": 0.66,
+          "size": 0.8
+        },
+        {
+          "type": "sheep",
+          "x": 0.78,
+          "size": 0.85
+        }
+      ]
+    },
+    {
+      "text": "Suatu hari di gunung Horeb, ia melihat semak duri yang menyala, tetapi tidak dimakan api.",
+      "bg": "dusk",
+      "terrain": "mountains",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "bush",
+          "x": 0.6,
+          "size": 1.0
+        },
+        {
+          "type": "fire",
+          "x": 0.6,
+          "size": 1.1,
+          "dy": -70
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.85,
+          "props": [
+            "staff",
+            "beard"
+          ],
+          "pose": "point"
+        }
+      ]
+    },
+    {
+      "text": "Dari tengah semak itu Allah memanggil: \"Musa, Musa! Tanggalkanlah kasutmu, sebab tempat ini adalah tanah yang kudus.\"",
+      "bg": "night",
+      "terrain": "mountains",
+      "sun": false,
+      "rays": true,
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "bush",
+          "x": 0.62,
+          "size": 1.0
+        },
+        {
+          "type": "fire",
+          "x": 0.62,
+          "size": 1.2,
+          "dy": -70
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.8,
+          "pose": "kneel",
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Allah berfirman: \"Aku telah melihat kesengsaraan umat-Ku. Pergilah, Aku mengutus engkau kepada Firaun.\"",
+      "bg": "dusk",
+      "terrain": "desert",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "tower",
+          "x": 0.75,
+          "size": 0.75
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.75,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 0.75,
+          "pose": "kneel"
+        },
+        {
+          "type": "person",
+          "x": 0.52,
+          "size": 0.75,
+          "pose": "kneel"
+        }
+      ]
+    },
+    {
+      "text": "Tetapi Musa ragu: \"Siapakah aku ini, maka aku yang akan menghadap Firaun?\"",
+      "bg": "night",
+      "terrain": "plain",
+      "sun": false,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.9,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Jawab Allah: \"Bukankah Aku akan menyertai engkau?\"",
+      "bg": "golden",
+      "terrain": "mountains",
+      "rays": true,
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "bush",
+          "x": 0.68,
+          "size": 0.9
+        },
+        {
+          "type": "fire",
+          "x": 0.68,
+          "size": 1.0,
+          "dy": -65
+        },
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.9,
+          "pose": "arms_up",
+          "props": [
+            "beard"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Semak duri adalah tanaman biasa di padang gurun. Allah memakai yang biasa.",
+      "bg": "dawn",
+      "terrain": "desert",
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Allah memakai semak yang biasa.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "bush",
+          "x": 0.3,
+          "size": 0.7
+        },
+        {
+          "type": "bush",
+          "x": 0.55,
+          "size": 0.6
+        },
+        {
+          "type": "bush",
+          "x": 0.78,
+          "size": 0.7
+        }
+      ]
+    },
+    {
+      "text": "Panggilan Allah tidak bergantung pada kemampuanmu, tetapi pada penyertaan-Nya.",
+      "bg": "dawn",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "pull",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "MAKNANYA",
+          "style": "label"
+        },
+        {
+          "text": "Bukan siapa kamu, tapi siapa yang menyertaimu.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "props": [
+            "staff"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hari ini, katakan \"ya\" pada satu hal yang Tuhan taruh di hatimu, walau kamu merasa belum siap.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "UNTUK HIDUPMU",
+          "style": "label"
+        },
+        {
+          "text": "Katakan ya, walau belum merasa siap.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.45,
+          "size": 0.95,
+          "pose": "praise"
+        }
+      ]
+    },
+    {
+      "text": "Apa yang membuatmu merasa tidak layak dipakai Tuhan? Tulis di kolom komentar. Besok: kisah anak yang hilang. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Apa yang membuatmu merasa tidak layak dipakai Tuhan? Tulis di kolom komentar. Besok: kisah anak yang hilang.",
+      "bg": "dusk",
+      "terrain": "mountains",
+      "rays": true,
+      "camera": "push",
+      "headline": [
+        {
+          "text": "\"Bukankah Aku akan menyertai engkau?\"",
+          "style": "statement"
+        },
+        {
+          "text": "Keluaran 3:12",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "bush",
+          "x": 0.5,
+          "size": 0.9
+        },
+        {
+          "type": "fire",
+          "x": 0.5,
+          "size": 1.0,
+          "dy": -65
+        }
+      ]
+    }
+  ],
+  "caption": "Seorang buronan berusia 80 tahun… dipilih Allah untuk membebaskan satu bangsa. 🔥🌿\n\nPanggilan Allah tidak bergantung pada kemampuanmu, tetapi pada penyertaan-Nya.\n\n\"Bukankah Aku akan menyertai engkau?\" (Keluaran 3:12)\n\nApa yang membuatmu merasa tidak layak dipakai Tuhan? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#MusaDanSemakMenyala #KisahAlkitab #RenunganHarian #Keluaran3 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Musa dan Semak yang Menyala: Bukan Siapa Kamu, tapi Siapa yang Menyertaimu #shorts",
+  "youtube_tags": [
+    "Musa",
+    "Semak menyala",
+    "Kisah Alkitab",
+    "Renungan",
+    "Keluaran 3",
+    "Kristen"
+  ]
+}
