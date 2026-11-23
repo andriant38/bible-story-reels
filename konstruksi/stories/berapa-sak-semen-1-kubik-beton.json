@@ -22,11 +22,11 @@
       "camera": {
         "move": "push",
         "target": [
-          0.6,
+          0.2,
           0.7,
           0
         ],
-        "dist": 5.2,
+        "dist": 5.8,
         "height": 1.1,
         "angle": 25,
         "sweep": 10
@@ -193,15 +193,6 @@
             0
           ],
           "anim": "fill"
-        },
-        {
-          "type": "worker",
-          "pos": [
-            1.1,
-            0,
-            0.5
-          ],
-          "rot": 200
         },
         {
           "type": "label",
@@ -386,14 +377,14 @@
       "camera": {
         "move": "orbit",
         "target": [
-          -0.5,
+          0,
           0.5,
-          -1
+          -0.4
         ],
-        "dist": 7,
-        "height": 2.6,
+        "dist": 8,
+        "height": 2.8,
         "angle": 20,
-        "sweep": 25
+        "sweep": 20
       },
       "shadow_size": 8,
       "objects": [
@@ -599,13 +590,13 @@
         "move": "orbit",
         "target": [
           0,
-          0.5,
+          0.9,
           0
         ],
-        "dist": 5,
-        "height": 1.6,
+        "dist": 7.5,
+        "height": 1.8,
         "angle": 10,
-        "sweep": 25
+        "sweep": 20
       },
       "shadow_size": 6,
       "objects": [
