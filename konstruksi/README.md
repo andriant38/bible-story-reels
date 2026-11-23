@@ -10,4 +10,5 @@
 - `PIPELINE.md` — the full steps for one daily run
 
 Metricool: **blogId not set yet** (fill this in once this channel's brand/account exists in Metricool).
+Account watermark: `@ant_proyek`, drawn top-right on every video by `engine/render.py` (story field `handle` overrides; `--stamp <video> --out <video>` adds it to an already finished video).
 Voice: WING (`LMO8Em46czmXgX8nuxIU`), model `eleven_v4`.

@@ -62,6 +62,21 @@ STYLES = {
 
 
 SERIES = None  # e.g. "HITUNGAN PROYEK #3" (story["series"]), drawn as a badge on every scene
+HANDLE = "@ant_proyek"  # the owner's account name, drawn top-right on every scene (story["handle"] overrides)
+
+
+def draw_handle(img, handle):
+    """Account watermark: dark pill, yellow @, top-right (clear of the platforms' right-side buttons)."""
+    d = ImageDraw.Draw(img)
+    f = font("ExtraBold", 36)
+    at, name = handle[:1], handle[1:]
+    w_at, w_name = d.textlength(at, font=f), d.textlength(name, font=f)
+    tw = w_at + w_name
+    x1, y0 = W - 48, 132
+    x0 = x1 - tw - 48
+    d.rounded_rectangle([x0, y0, x1, y0 + 58], 29, fill=(18, 18, 20, 190))
+    d.text((x0 + 24, y0 + 9), at, font=f, fill=YELLOW + (255,))
+    d.text((x0 + 24 + w_at, y0 + 9), name, font=f, fill=(255, 255, 255, 240))
 
 
 def text_overlay(scene, path):
@@ -74,6 +89,8 @@ def text_overlay(scene, path):
         d.rounded_rectangle([x0, y0, x0 + tw + 44, y0 + 58], 12, fill=(18, 18, 20, 215))
         d.rounded_rectangle([x0, y0, x0 + 12, y0 + 58], 6, fill=YELLOW + (255,))
         d.text((x0 + 28, y0 + 11), SERIES, font=f, fill=YELLOW + (255,))
+    if HANDLE:
+        draw_handle(img, HANDLE)
     # subtitle: dark box with a yellow hazard edge on the left
     sub = scene.get("subtitle", scene["text"])
     if sub:
@@ -152,15 +169,28 @@ def main():
     ap.add_argument("--audio-dir")
     ap.add_argument("--out")
     ap.add_argument("--sheet")
+    ap.add_argument("--stamp", help="only add the account watermark to an existing finished video (--out is the result)")
     ap.add_argument("--music", default=MUSIC)
     ap.add_argument("--music-volume", type=float, default=0.14)
     args = ap.parse_args()
     story = json.load(open(args.story, encoding="utf-8"))
     scenes = story["scenes"]
-    global SERIES
+    global SERIES, HANDLE
     SERIES = story.get("series")
+    HANDLE = story.get("handle", HANDLE)
     if args.sheet:
         return sheet(args.story, story, args.sheet)
+    if args.stamp:
+        with tempfile.TemporaryDirectory() as tmp:
+            png = os.path.join(tmp, "handle.png")
+            img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            draw_handle(img, HANDLE)
+            img.save(png)
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", args.stamp, "-i", png, "-filter_complex",
+                            "[0:v][1:v]overlay=0:0:format=auto,format=yuv420p[v]", "-map", "[v]", "-map", "0:a",
+                            "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-c:a", "copy",
+                            "-movflags", "+faststart", args.out], check=True)
+        return print(f"stamped: {args.out}")
     if not (args.audio_dir and args.out):
         sys.exit("need --audio-dir and --out (or --sheet)")
 
