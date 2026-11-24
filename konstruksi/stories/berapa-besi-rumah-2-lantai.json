@@ -588,13 +588,13 @@
         "move": "push",
         "target": [
           0.3,
-          0.1,
+          0.05,
           0
         ],
-        "dist": 0.5,
-        "height": 2.0,
+        "dist": 0.35,
+        "height": 1.25,
         "angle": 0,
-        "sweep": 4,
+        "sweep": 3,
         "fov": 40
       },
       "shadow_size": 4,
@@ -604,7 +604,7 @@
           "pos": [
             0,
             0,
-            -0.35
+            -0.14
           ],
           "count": 1,
           "length": 3,
@@ -616,7 +616,7 @@
           "pos": [
             0,
             0,
-            0.35
+            0.14
           ],
           "count": 1,
           "length": 3,
@@ -628,22 +628,22 @@
           "type": "label",
           "pos": [
             0.3,
-            0.12,
-            -0.62
+            0.1,
+            -0.26
           ],
           "text": "ASLI 13 mm",
-          "size": 0.12,
+          "size": 0.06,
           "color": "#5fd16b"
         },
         {
           "type": "label",
           "pos": [
             0.3,
-            0.12,
-            0.12
+            0.1,
+            0.02
           ],
           "text": "BANCI ±11 mm",
-          "size": 0.12,
+          "size": 0.06,
           "color": "#ff5a4a"
         }
       ]
