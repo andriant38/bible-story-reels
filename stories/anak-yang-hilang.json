@@ -1,0 +1,353 @@
+{
+  "slug": "anak-yang-hilang",
+  "title": "Anak yang Hilang",
+  "reference": "Lukas 15:11–32",
+  "scenes": [
+    {
+      "text": "Ia menghabiskan seluruh warisan ayahnya… tetapi ayahnya justru berlari memeluknya.",
+      "bg": "dusk",
+      "terrain": "valley",
+      "camera": "push",
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Menghabiskan warisan…",
+          "style": "hook"
+        },
+        {
+          "text": "tetap dipeluk ayahnya.",
+          "style": "hook_accent"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 1.0,
+          "props": [
+            "beard"
+          ],
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.75,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Seorang anak bungsu meminta bagian warisannya, lalu pergi ke negeri yang jauh.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "headline": [
+        {
+          "text": "ANAK YANG HILANG",
+          "style": "accent"
+        },
+        {
+          "text": "perumpamaan Yesus",
+          "style": "small"
+        },
+        {
+          "text": "LUKAS 15:11–32",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.18,
+          "size": 0.7
+        },
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.9,
+          "props": [
+            "staff",
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.72,
+          "size": 0.75,
+          "props": [
+            "basket"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Di sana ia memboroskan hartanya dengan hidup berfoya-foya.",
+      "bg": "night",
+      "terrain": "plain",
+      "sun": false,
+      "stars": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.75,
+          "pose": "praise"
+        },
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.7,
+          "size": 0.75,
+          "pose": "praise"
+        }
+      ]
+    },
+    {
+      "text": "Lalu datang bala kelaparan. Ia menjadi penjaga babi, dan ingin makan ampas makanan babi.",
+      "bg": "storm",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.75,
+          "pose": "kneel"
+        },
+        {
+          "type": "tree",
+          "x": 0.78,
+          "size": 0.7
+        }
+      ]
+    },
+    {
+      "text": "Ia menyadari keadaannya, lalu berkata: \"Aku akan bangkit dan pergi kepada bapaku.\"",
+      "bg": "dawn",
+      "terrain": "desert",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.85,
+          "props": [
+            "staff"
+          ]
+        },
+        {
+          "type": "palm",
+          "x": 0.82,
+          "size": 0.75
+        }
+      ]
+    },
+    {
+      "text": "Ketika ia masih jauh, ayahnya telah melihatnya. Ia berlari, merangkul, dan menciumnya.",
+      "bg": "golden",
+      "terrain": "valley",
+      "rays": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 1.0,
+          "props": [
+            "beard"
+          ],
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.58,
+          "size": 0.8,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Kata ayahnya: \"Anakku ini telah mati dan menjadi hidup kembali, ia telah hilang dan didapat kembali.\"",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.82,
+          "size": 0.9
+        },
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 1.0,
+          "props": [
+            "beard"
+          ],
+          "pose": "praise"
+        },
+        {
+          "type": "person",
+          "x": 0.52,
+          "size": 0.85,
+          "props": [
+            "crown"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Di budaya Timur Tengah kuno, seorang ayah terhormat biasanya tidak berlari di depan umum. Ia rela malu demi anaknya.",
+      "bg": "dusk",
+      "terrain": "desert",
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Sang ayah rela malu demi anaknya.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ],
+          "pose": "arms_up"
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.65,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.75,
+          "size": 0.65,
+          "pose": "point",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Kasih Bapa tidak menunggu kita layak. Ia berlari menyambut kita pulang.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "pull",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "MAKNANYA",
+          "style": "label"
+        },
+        {
+          "text": "Bapa berlari menyambutmu pulang.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.44,
+          "size": 0.75,
+          "dy": -250,
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.56,
+          "size": 0.65,
+          "dy": -250,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Hari ini, kembalilah kepada Tuhan lewat doa sederhana. Ia sedang menunggumu.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "UNTUK HIDUPMU",
+          "style": "label"
+        },
+        {
+          "text": "Pulanglah. Ia sedang menunggu.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85,
+          "pose": "pray"
+        }
+      ]
+    },
+    {
+      "text": "Pernahkah kamu merasa terlalu jauh dari Tuhan? Tulis di kolom komentar. Besok: kisah Laut Teberau terbelah. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Pernahkah kamu merasa terlalu jauh dari Tuhan? Tulis di kolom komentar. Besok: Laut Teberau terbelah.",
+      "bg": "golden",
+      "terrain": "valley",
+      "rays": true,
+      "camera": "pull",
+      "headline": [
+        {
+          "text": "\"Ia telah hilang dan didapat kembali.\"",
+          "style": "statement"
+        },
+        {
+          "text": "Lukas 15:24",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.45,
+          "size": 0.8,
+          "props": [
+            "beard"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.57,
+          "size": 0.7,
+          "facing": -1
+        }
+      ]
+    }
+  ],
+  "caption": "Ia menghabiskan seluruh warisan ayahnya… tetapi ayahnya justru berlari memeluknya. 🏃‍♂️❤️\n\nKasih Bapa tidak menunggu kita layak. Ia berlari menyambut kita pulang.\n\n\"Anakku ini telah mati dan menjadi hidup kembali, ia telah hilang dan didapat kembali.\" (Lukas 15:24)\n\nPernahkah kamu merasa terlalu jauh dari Tuhan? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#AnakYangHilang #KisahAlkitab #RenunganHarian #Lukas15 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Anak yang Hilang: Bapa Berlari Menyambutmu Pulang #shorts",
+  "youtube_tags": [
+    "Anak yang hilang",
+    "Kisah Alkitab",
+    "Renungan",
+    "Lukas 15",
+    "Kristen"
+  ]
+}
