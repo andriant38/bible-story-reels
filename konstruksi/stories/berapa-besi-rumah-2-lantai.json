@@ -1,0 +1,746 @@
+{
+  "slug": "berapa-besi-rumah-2-lantai",
+  "title": "Rumah 2 Lantai Butuh Berapa Besi?",
+  "topic": "konstruksi",
+  "series": "HITUNGAN PROYEK #4",
+  "scenes": [
+    {
+      "text": "Bangun rumah dua lantai, butuh berapa ton besi? Jangan sampai kurang, apalagi kelebihan.",
+      "headline": [
+        {
+          "text": "RUMAH 2 LANTAI",
+          "style": "hook"
+        },
+        {
+          "text": "BUTUH BERAPA BESI?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 280,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          4,
+          0
+        ],
+        "dist": 26,
+        "height": 5,
+        "angle": 30,
+        "sweep": 10
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "building",
+          "floors": 2,
+          "floor_h": 3.5,
+          "w": 10,
+          "d": 6,
+          "span": 3.4,
+          "facade": false,
+          "anim": "build",
+          "progress": [
+            0.45,
+            0.6
+          ]
+        },
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            6
+          ],
+          "count": 16,
+          "length": 6
+        },
+        {
+          "type": "worker",
+          "pos": [
+            3,
+            0,
+            5
+          ],
+          "rot": 200
+        },
+        {
+          "type": "house",
+          "pos": [
+            -16,
+            0,
+            -4
+          ],
+          "w": 7,
+          "d": 7,
+          "h": 6
+        },
+        {
+          "type": "house",
+          "pos": [
+            16,
+            0,
+            -3
+          ],
+          "w": 8,
+          "d": 7,
+          "h": 6,
+          "color": 15002077
+        }
+      ]
+    },
+    {
+      "text": "Kita hitung pakai cara para estimator: volume beton dikali rasio besi.",
+      "headline": [
+        {
+          "text": "HITUNGAN",
+          "style": "big"
+        },
+        {
+          "text": "PROYEK #4",
+          "style": "accent"
+        },
+        {
+          "text": "volume beton × rasio besi",
+          "style": "small"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1.8,
+          0
+        ],
+        "dist": 7,
+        "height": 1.4,
+        "angle": 30,
+        "sweep": 40
+      },
+      "shadow_size": 8,
+      "objects": [
+        {
+          "type": "column",
+          "pos": [
+            -1.2,
+            0,
+            0
+          ],
+          "h": 3.2,
+          "w": 0.3
+        },
+        {
+          "type": "column",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "h": 3.2,
+          "w": 0.3
+        },
+        {
+          "type": "column",
+          "pos": [
+            1.2,
+            0,
+            0
+          ],
+          "h": 3.2,
+          "w": 0.3
+        },
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            2.2
+          ],
+          "count": 12,
+          "length": 5
+        }
+      ]
+    },
+    {
+      "text": "Pertama, kenali berat besi. Rumusnya, nol koma nol nol enam satu tujuh dikali diameter kuadrat. Hasilnya kilogram per meter.",
+      "subtitle": "Pertama, kenali berat besi. Rumusnya: 0,00617 × diameter² = kg per meter.",
+      "headline": [
+        {
+          "text": "RUMUS BERAT BESI",
+          "style": "label"
+        },
+        {
+          "text": "0,00617 × d² = kg/m",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          0.35,
+          0
+        ],
+        "dist": 3.4,
+        "height": 0.7,
+        "angle": 15,
+        "sweep": 10
+      },
+      "shadow_size": 6,
+      "objects": [
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "count": 1,
+          "length": 3,
+          "d": 0.013,
+          "thick": 14
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            0.75,
+            0
+          ],
+          "text": "d = 13 mm",
+          "size": 0.22
+        }
+      ]
+    },
+    {
+      "text": "Besi D tiga belas, satu meternya sekitar satu kilo. Satu batang dua belas meter, beratnya sekitar dua belas setengah kilo.",
+      "subtitle": "Besi D13: ±1,04 kg per meter. Satu batang 12 m ≈ 12,5 kg.",
+      "headline": [
+        {
+          "text": "D13 · 1 BATANG 12 m",
+          "style": "label"
+        },
+        {
+          "text": "±12,5 kg",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          0.6,
+          0
+        ],
+        "dist": 13,
+        "height": 2.2,
+        "angle": 8,
+        "sweep": 8
+      },
+      "shadow_size": 12,
+      "objects": [
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "count": 1,
+          "length": 12,
+          "thick": 10,
+          "anim": "grow",
+          "end": 0.6
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            0.9,
+            0
+          ],
+          "text": "12 m",
+          "size": 0.5,
+          "show_at": 0.55
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -6.8,
+            0,
+            0.8
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Lalu rasio besi. Kira-kira, pelat butuh delapan puluh sampai seratus kilo per kubik beton. Balok seratus lima puluh sampai dua ratus. Kolom bisa sampai dua ratus lima puluh.",
+      "subtitle": "Rasio besi (kira-kira): pelat 80–100 kg/m³, balok 150–200 kg/m³, kolom 150–250 kg/m³.",
+      "headline": [
+        {
+          "text": "RASIO BESI (kg/m³)",
+          "style": "label"
+        },
+        {
+          "text": "pelat 80–100 · balok 150–200 · kolom 150–250",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 18,
+        "height": 9,
+        "angle": 25,
+        "sweep": 25
+      },
+      "shadow_size": 15,
+      "objects": [
+        {
+          "type": "slab",
+          "w": 10,
+          "d": 6,
+          "h": 3.5,
+          "beam_spacing": 3.4,
+          "filled": 0
+        }
+      ]
+    },
+    {
+      "text": "Contoh rumah enam kali sepuluh meter. Pelat lantai dua, tujuh koma dua kubik, dikali seratus, jadi tujuh ratus dua puluh kilo.",
+      "subtitle": "Contoh rumah 6 × 10 m. Pelat lantai 2: 7,2 m³ × 100 = 720 kg.",
+      "headline": [
+        {
+          "text": "PELAT LANTAI 2",
+          "style": "label"
+        },
+        {
+          "text": "7,2 m³ × 100 = 720 kg",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 17,
+        "height": 11,
+        "angle": 40,
+        "sweep": 25
+      },
+      "shadow_size": 15,
+      "objects": [
+        {
+          "type": "slab",
+          "w": 10,
+          "d": 6,
+          "h": 3.5,
+          "beam_spacing": 3.4,
+          "anim": "pour",
+          "progress": [
+            0,
+            0.6
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -3,
+            3.62,
+            1
+          ],
+          "rot": 60
+        }
+      ]
+    },
+    {
+      "text": "Balok, sloof, dan ring balok sekitar delapan kubik, dikali seratus lima puluh, jadi seribu dua ratus kilo.",
+      "subtitle": "Balok + sloof + ring balok ±8 m³ × 150 = 1.200 kg.",
+      "headline": [
+        {
+          "text": "BALOK + SLOOF + RING",
+          "style": "label"
+        },
+        {
+          "text": "8 m³ × 150 = 1.200 kg",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          3.1,
+          0
+        ],
+        "dist": 12,
+        "height": -1.8,
+        "angle": 30,
+        "sweep": 12
+      },
+      "shadow_size": 15,
+      "objects": [
+        {
+          "type": "slab",
+          "w": 10,
+          "d": 6,
+          "h": 3.5,
+          "beam_spacing": 3.4,
+          "filled": 1,
+          "cured": true
+        }
+      ]
+    },
+    {
+      "text": "Kolom sekitar dua setengah kubik, dikali dua ratus, jadi lima ratus kilo.",
+      "subtitle": "Kolom ±2,5 m³ × 200 = 500 kg.",
+      "headline": [
+        {
+          "text": "KOLOM",
+          "style": "label"
+        },
+        {
+          "text": "2,5 m³ × 200 = 500 kg",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1.8,
+          0
+        ],
+        "dist": 7,
+        "height": 1.3,
+        "angle": 20,
+        "sweep": 30
+      },
+      "shadow_size": 8,
+      "objects": [
+        {
+          "type": "column",
+          "pos": [
+            -1.2,
+            0,
+            0
+          ],
+          "h": 3.2,
+          "w": 0.3,
+          "anim": "pour",
+          "progress": [
+            0,
+            1
+          ],
+          "start": 0.0
+        },
+        {
+          "type": "column",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "h": 3.2,
+          "w": 0.3,
+          "anim": "pour",
+          "progress": [
+            0,
+            1
+          ],
+          "start": 0.15
+        },
+        {
+          "type": "column",
+          "pos": [
+            1.2,
+            0,
+            0
+          ],
+          "h": 3.2,
+          "w": 0.3,
+          "anim": "pour",
+          "progress": [
+            0,
+            1
+          ],
+          "start": 0.3
+        }
+      ]
+    },
+    {
+      "text": "Totalnya sekitar dua koma empat ton. Tambah kira-kira lima persen untuk potongan yang terbuang. Jadi siapkan sekitar dua setengah ton besi.",
+      "subtitle": "Total ±2,4 ton + ±5% potongan terbuang ≈ 2,5 ton besi.",
+      "headline": [
+        {
+          "text": "720 + 1.200 + 500 + 5%",
+          "style": "point"
+        },
+        {
+          "text": "±2,5 TON",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          0.6,
+          0
+        ],
+        "dist": 12,
+        "height": 4.5,
+        "angle": 20,
+        "sweep": 30
+      },
+      "shadow_size": 10,
+      "objects": [
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            -1.5
+          ],
+          "count": 20,
+          "length": 8
+        },
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "count": 20,
+          "length": 8
+        },
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            1.5
+          ],
+          "count": 20,
+          "length": 8
+        },
+        {
+          "type": "worker",
+          "pos": [
+            4.8,
+            0,
+            2.2
+          ],
+          "rot": 200
+        }
+      ]
+    },
+    {
+      "text": "Tapi hati-hati dengan besi banci. Diameternya lebih kecil dari yang tertulis, jadi kekuatannya berkurang. Ukur pakai jangka sorong, dan cek tanda SNI di batangnya.",
+      "headline": [
+        {
+          "text": "AWAS BESI BANCI!",
+          "style": "label"
+        },
+        {
+          "text": "ukur diameter · cek tanda SNI",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0.3,
+          0.1,
+          0
+        ],
+        "dist": 0.5,
+        "height": 2.0,
+        "angle": 0,
+        "sweep": 4,
+        "fov": 40
+      },
+      "shadow_size": 4,
+      "objects": [
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            -0.35
+          ],
+          "count": 1,
+          "length": 3,
+          "d": 0.013,
+          "thick": 6
+        },
+        {
+          "type": "rebar",
+          "pos": [
+            0,
+            0,
+            0.35
+          ],
+          "count": 1,
+          "length": 3,
+          "d": 0.011,
+          "thick": 6,
+          "color": 9134915
+        },
+        {
+          "type": "label",
+          "pos": [
+            0.3,
+            0.12,
+            -0.62
+          ],
+          "text": "ASLI 13 mm",
+          "size": 0.12,
+          "color": "#5fd16b"
+        },
+        {
+          "type": "label",
+          "pos": [
+            0.3,
+            0.12,
+            0.12
+          ],
+          "text": "BANCI ±11 mm",
+          "size": 0.12,
+          "color": "#ff5a4a"
+        }
+      ]
+    },
+    {
+      "text": "Rumahmu kemarin habis berapa ton besi? Tulis di komentar. Dan follow, besok kita hitung berapa tiang pancang untuk bangun pabrik.",
+      "headline": [
+        {
+          "text": "RUMAHMU HABIS BERAPA TON BESI?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR · FOLLOW UNTUK #5",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 230,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3.5,
+          0
+        ],
+        "dist": 24,
+        "height": 4,
+        "angle": 40,
+        "sweep": 35
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "building",
+          "floors": 2,
+          "floor_h": 3.5,
+          "w": 10,
+          "d": 6,
+          "span": 3.4,
+          "facade": false
+        },
+        {
+          "type": "worker",
+          "pos": [
+            2,
+            0,
+            5
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "rebar",
+          "pos": [
+            -2,
+            0,
+            6
+          ],
+          "count": 16,
+          "length": 6
+        },
+        {
+          "type": "house",
+          "pos": [
+            -16,
+            0,
+            -4
+          ],
+          "w": 7,
+          "d": 7,
+          "h": 6
+        },
+        {
+          "type": "house",
+          "pos": [
+            16,
+            0,
+            -3
+          ],
+          "w": 8,
+          "d": 7,
+          "h": 6,
+          "color": 15002077
+        }
+      ]
+    }
+  ],
+  "caption": "Rumah 2 lantai butuh berapa ton besi? 🏠🔩\n\nCara estimator: volume beton × rasio besi.\n\n📐 Rumus berat besi: 0,00617 × d² = kg/m\n→ D13 ≈ 1,04 kg/m, 1 batang 12 m ≈ 12,5 kg\n\n📊 Rasio besi (kira-kira):\n• Pelat 80–100 kg/m³\n• Balok 150–200 kg/m³\n• Kolom 150–250 kg/m³\n\nContoh rumah 6×10 m:\n• Pelat lantai 2: 7,2 m³ × 100 = 720 kg\n• Balok + sloof + ring: 8 m³ × 150 = 1.200 kg\n• Kolom: 2,5 m³ × 200 = 500 kg\n= ±2,4 ton + 5% potongan ≈ 2,5 TON\n\n⚠️ Awas besi banci! Ukur diameter pakai jangka sorong & cek tanda SNI.\n\nRumahmu kemarin habis berapa ton besi? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk Hitungan Proyek #5: berapa tiang pancang untuk bangun pabrik!\n\n#besibeton #hitunganproyek #bangunrumah #rumah2lantai #konstruksi #tekniksipil #tukang #mandor #estimator #civilengineering #animasi3D",
+  "youtube_title": "Rumah 2 Lantai Butuh Berapa Ton Besi? | Hitungan Proyek #4 #shorts",
+  "youtube_tags": [
+    "besi beton",
+    "rumah 2 lantai",
+    "hitung besi",
+    "rasio besi",
+    "besi banci",
+    "hitungan proyek",
+    "bangun rumah",
+    "teknik sipil"
+  ]
+}

@@ -1,0 +1,658 @@
+{
+  "slug": "berapa-tiang-pancang-pabrik",
+  "title": "Bangun Pabrik Butuh Berapa Tiang Pancang?",
+  "topic": "konstruksi",
+  "series": "HITUNGAN PROYEK #5",
+  "scenes": [
+    {
+      "text": "Bangun pabrik dua ribu empat ratus meter persegi, butuh berapa tiang pancang? Bisa lima puluh, bisa juga tiga ratus.",
+      "headline": [
+        {
+          "text": "PABRIK 2.400 m²",
+          "style": "hook"
+        },
+        {
+          "text": "BUTUH BERAPA TIANG PANCANG?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 270,
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          -8,
+          -8
+        ],
+        "dist": 105,
+        "height": 30,
+        "angle": 28,
+        "sweep": 10
+      },
+      "shadow_size": 80,
+      "objects": [
+        {
+          "type": "steel_frame",
+          "w": 60,
+          "d": 40,
+          "roof": true,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        },
+        {
+          "type": "pile_grid",
+          "w": 60,
+          "d": 40,
+          "per_col": 2,
+          "length": 18,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    },
+    {
+      "text": "Rumusnya sederhana. Beban kolom dibagi daya dukung satu tiang.",
+      "headline": [
+        {
+          "text": "HITUNGAN",
+          "style": "big"
+        },
+        {
+          "text": "PROYEK #5",
+          "style": "accent"
+        },
+        {
+          "text": "beban kolom ÷ daya dukung tiang",
+          "style": "small"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          8,
+          0
+        ],
+        "dist": 34,
+        "height": 4,
+        "angle": 30,
+        "sweep": 35
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "pile",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "count": 4,
+          "spacing": 5,
+          "length": 14,
+          "anim": "drive",
+          "progress": [
+            0.3,
+            0.6
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            6,
+            0,
+            5
+          ],
+          "rot": 220
+        }
+      ]
+    },
+    {
+      "text": "Semuanya dimulai dari tes tanah, sondir atau SPT, untuk tahu di kedalaman berapa tanah kerasnya.",
+      "headline": [
+        {
+          "text": "1. TES TANAH",
+          "style": "label"
+        },
+        {
+          "text": "sondir / SPT → cari tanah keras",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          40,
+          -7,
+          0
+        ],
+        "dist": 58,
+        "height": 3,
+        "angle": 8,
+        "sweep": 8
+      },
+      "shadow_size": 60,
+      "objects": [
+        {
+          "type": "dimension",
+          "pos": [
+            40,
+            -18,
+            1
+          ],
+          "h": 18,
+          "label": "18 m",
+          "label_size": 1.6,
+          "anim": "grow",
+          "thick": 3
+        },
+        {
+          "type": "label",
+          "pos": [
+            40,
+            -21,
+            1.5
+          ],
+          "text": "TANAH KERAS ±18 m",
+          "size": 1.8
+        },
+        {
+          "type": "zone",
+          "pos": [
+            40,
+            -17.9,
+            -5
+          ],
+          "w": 60,
+          "d": 10,
+          "color": 16762880
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    },
+    {
+      "text": "Contohnya pabrik baja enam puluh kali empat puluh meter. Jarak kolomnya tujuh setengah meter dan dua puluh meter. Totalnya dua puluh tujuh kolom.",
+      "subtitle": "Contoh pabrik baja 60 × 40 m. Jarak kolom 7,5 m dan 20 m → 9 × 3 = 27 kolom.",
+      "headline": [
+        {
+          "text": "2. HITUNG KOLOM",
+          "style": "label"
+        },
+        {
+          "text": "9 × 3 = 27 kolom",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          2,
+          -20
+        ],
+        "dist": 80,
+        "height": 50,
+        "angle": 25,
+        "sweep": 30
+      },
+      "shadow_size": 70,
+      "objects": [
+        {
+          "type": "steel_frame",
+          "w": 60,
+          "d": 40,
+          "anim": "build",
+          "progress": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Misalnya beban satu kolom empat puluh sampai enam puluh ton.",
+      "headline": [
+        {
+          "text": "3. BEBAN 1 KOLOM",
+          "style": "label"
+        },
+        {
+          "text": "40–60 TON",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          -26,
+          -5,
+          1
+        ],
+        "dist": 42,
+        "height": 3,
+        "angle": 25,
+        "sweep": 10
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "steel_frame",
+          "w": 60,
+          "d": 40,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        },
+        {
+          "type": "pile_grid",
+          "w": 60,
+          "d": 40,
+          "per_col": 2,
+          "length": 18,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    },
+    {
+      "text": "Pakai tiang beton bulat diameter empat puluh senti. Daya dukungnya, misalnya, enam puluh sampai delapan puluh ton per tiang.",
+      "subtitle": "Pakai spun pile Ø40 cm. Daya dukungnya, misalnya, 60–80 ton per tiang.",
+      "headline": [
+        {
+          "text": "4. DAYA DUKUNG 1 TIANG",
+          "style": "label"
+        },
+        {
+          "text": "spun pile Ø40 cm ≈ 60–80 ton",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          7,
+          0
+        ],
+        "dist": 30,
+        "height": 3,
+        "angle": 40,
+        "sweep": 30
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "pile",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "count": 3,
+          "spacing": 5,
+          "length": 14,
+          "anim": "drive",
+          "progress": [
+            0.4,
+            0.9
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Biasanya minimal dua tiang per kolom, supaya stabil. Jadi dua puluh tujuh dikali dua, sekitar lima puluh empat tiang.",
+      "subtitle": "Biasanya minimal 2 tiang per kolom supaya stabil. 27 × 2 = ±54 tiang.",
+      "headline": [
+        {
+          "text": "27 × 2 =",
+          "style": "point"
+        },
+        {
+          "text": "±54 TIANG",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          -6,
+          -14
+        ],
+        "dist": 85,
+        "height": 26,
+        "angle": 25,
+        "sweep": 25
+      },
+      "shadow_size": 80,
+      "objects": [
+        {
+          "type": "pile_grid",
+          "w": 60,
+          "d": 40,
+          "per_col": 2,
+          "length": 18,
+          "anim": "drive",
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    },
+    {
+      "text": "Tapi kalau tanahnya lunak, lantai pabrik juga harus ditopang tiang. Misalnya tiap tiga meter, tambah dua ratus enam puluhan tiang.",
+      "subtitle": "Kalau tanahnya lunak, lantai pabrik juga ditopang tiang. Misalnya tiap 3 m → tambah ±260 tiang.",
+      "headline": [
+        {
+          "text": "TANAH LUNAK?",
+          "style": "label"
+        },
+        {
+          "text": "lantai ikut ditopang: +±260 tiang",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "time": "dusk",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          -6,
+          -14
+        ],
+        "dist": 85,
+        "height": 30,
+        "angle": 30,
+        "sweep": 20
+      },
+      "shadow_size": 80,
+      "objects": [
+        {
+          "type": "pile_grid",
+          "w": 60,
+          "d": 40,
+          "per_col": 2,
+          "length": 18,
+          "anim": "drive",
+          "floor_grid": 3,
+          "floor_from": 0.15,
+          "progress": [
+            0.15,
+            1
+          ],
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    },
+    {
+      "text": "Totalnya bisa lebih dari tiga ratus tiang. Panjangnya juga beda-beda, bisa dua belas meter, bisa lebih dari tiga puluh meter.",
+      "subtitle": "Total bisa 300+ tiang. Panjangnya bisa 12 m, bisa lebih dari 30 m.",
+      "headline": [
+        {
+          "text": "300+",
+          "style": "stat"
+        },
+        {
+          "text": "TIANG · PANJANG 12–30+ m",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          10,
+          -10,
+          0
+        ],
+        "dist": 62,
+        "height": 4,
+        "angle": 12,
+        "sweep": 10
+      },
+      "shadow_size": 70,
+      "objects": [
+        {
+          "type": "pile_grid",
+          "w": 60,
+          "d": 40,
+          "per_col": 2,
+          "length": 18,
+          "floor_grid": 3,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        },
+        {
+          "type": "steel_frame",
+          "w": 60,
+          "d": 40,
+          "roof": true,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    },
+    {
+      "text": "Karena itu, jumlah tiang tidak bisa ditebak. Wajib dihitung insinyur struktur dari hasil tes tanah.",
+      "headline": [
+        {
+          "text": "PENTING",
+          "style": "label"
+        },
+        {
+          "text": "wajib dihitung insinyur struktur",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          6,
+          0
+        ],
+        "dist": 30,
+        "height": 4,
+        "angle": -30,
+        "sweep": 30
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "pile",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "count": 4,
+          "spacing": 5,
+          "length": 14,
+          "anim": "drive",
+          "progress": [
+            0.6,
+            0.85
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            5,
+            0,
+            6
+          ],
+          "rot": 200,
+          "hat": 16777215
+        },
+        {
+          "type": "worker",
+          "pos": [
+            7,
+            0,
+            5
+          ],
+          "rot": 230
+        }
+      ]
+    },
+    {
+      "text": "Proyek pabrik terakhirmu pakai berapa tiang? Tulis di komentar. Dan follow, besok kita hitung berapa liter solar excavator per hari.",
+      "headline": [
+        {
+          "text": "PABRIKMU PAKAI BERAPA TIANG?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR · FOLLOW UNTUK #6",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 230,
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          0,
+          -14
+        ],
+        "dist": 92,
+        "height": 22,
+        "angle": 40,
+        "sweep": 35
+      },
+      "shadow_size": 80,
+      "objects": [
+        {
+          "type": "steel_frame",
+          "w": 60,
+          "d": 40,
+          "roof": true,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        },
+        {
+          "type": "pile_grid",
+          "w": 60,
+          "d": 40,
+          "per_col": 2,
+          "length": 18,
+          "pos": [
+            0,
+            0,
+            1.5
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            34,
+            0,
+            -6
+          ],
+          "anim": "wave"
+        }
+      ],
+      "world": "cutaway",
+      "depth": 34,
+      "length": 110,
+      "width": 70,
+      "surface": 10119002,
+      "strata": "soil"
+    }
+  ],
+  "caption": "Bangun pabrik 2.400 m², butuh berapa tiang pancang? 🏭 Bisa 50, bisa 300+!\n\nRumus dasar: beban kolom ÷ daya dukung 1 tiang\n\nContoh pabrik baja 60 × 40 m:\n1️⃣ Tes tanah (sondir/SPT): cari kedalaman tanah keras\n2️⃣ Kolom: 9 × 3 = 27 kolom\n3️⃣ Beban per kolom misalnya 40–60 ton\n4️⃣ Spun pile Ø40 cm misalnya 60–80 ton per tiang\n5️⃣ Minimal 2 tiang/kolom → 27 × 2 = ±54 tiang\n\n⚠️ Tanah lunak? Lantai ikut ditopang tiang tiap ±3 m → +±260 tiang. Total bisa 300+, panjang 12–30+ m per titik!\n\nAngka di atas cuma ilustrasi. Jumlah & panjang tiang WAJIB dihitung insinyur struktur dari hasil tes tanah.\n\nProyek pabrik terakhirmu pakai berapa tiang? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk Hitungan Proyek #6: berapa liter solar excavator per hari!\n\n#tiangpancang #spunpile #pondasi #pabrik #hitunganproyek #konstruksi #tekniksipil #civilengineering #sondir #proyek #animasi3D",
+  "youtube_title": "Bangun Pabrik Butuh Berapa Tiang Pancang? Bisa 50, Bisa 300! | Hitungan Proyek #5 #shorts",
+  "youtube_tags": [
+    "tiang pancang",
+    "spun pile",
+    "pondasi pabrik",
+    "daya dukung tiang",
+    "sondir",
+    "hitungan proyek",
+    "teknik sipil",
+    "konstruksi"
+  ]
+}

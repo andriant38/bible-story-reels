@@ -952,6 +952,67 @@ F.drum = (s) => {
   return { group: g, update() {} };
 };
 
+// ---------------------------------------------------------------- rebar & piles (besi, tiang pancang)
+F.rebar = (s) => {
+  // `count` deformed bars of length `length` along x (a bundle when count > 1). `d` diameter in m (visual), ribs shown as rings.
+  const g = new THREE.Group(); const L = s.length ?? 12, n = s.count ?? 1, r = (s.d ?? 0.013) / 2 * (s.thick ?? 6);
+  const m = mat(s.color ?? C.rebar, { metal: 0.6, rough: 0.45 });
+  const bars = [];
+  const cols = Math.ceil(Math.sqrt(n));
+  for (let i = 0; i < n; i++) {
+    const b = cyl(r, r, L, m, 10); b.rotation.z = Math.PI / 2; const row = Math.floor(i / cols), c = i % cols;
+    b.position.set(0, r + row * r * 1.9, (c - (cols - 1) / 2) * r * 2.05); g.add(b); bars.push(b);
+    if (n <= 3) { const rg = []; for (let x = -L / 2 + 0.15; x < L / 2; x += Math.max(0.12, r * 3)) { const t = new THREE.TorusGeometry(r * 1.02, r * 0.12, 4, 10); t.rotateY(Math.PI / 2); t.translate(x, b.position.y, b.position.z); rg.push(t); } g.add(mesh(mergeGeometries(rg), m)); }
+  }
+  if (n > 3) for (const x of [-L / 3, 0, L / 3]) { const tie = new THREE.Mesh(new THREE.TorusGeometry(cols * r * 1.2, 0.02, 6, 16), mat(0x333333)); tie.rotation.y = Math.PI / 2; tie.position.set(x, cols * r, 0); g.add(tie); }
+  return { group: g, update(p) { if (s.anim === 'grow') { const k = Math.max(easeIO(p), 0.01); g.scale.x = k; } } };
+};
+
+F.steel_frame = (s) => {
+  // single-storey steel portal-frame factory: columns on a grid, gable rafters, purlins, optional roof sheet. anim build: frames rise along x
+  const g = new THREE.Group(); const w = s.w ?? 60, d = s.d ?? 40, gx = s.gx ?? 7.5, gz = s.gz ?? 20, H = s.h ?? 8, rise = s.rise ?? 3;
+  const steel = mat(s.color ?? 0x2f6db5, { metal: 0.5, rough: 0.45 }); const frames = [];
+  const nz = Math.round(d / gz);
+  for (let x = -w / 2; x <= w / 2 + 0.01; x += gx) {
+    const fr = new THREE.Group(); fr.position.x = x; g.add(fr); const gs = [];
+    for (let j = 0; j <= nz; j++) { const z = -d + j * gz; gs.push(beamGeo(new V3(0, 0, z), new V3(0, H, z), 0.45)); }
+    gs.push(beamGeo(new V3(0, H, -d), new V3(0, H + rise, -d / 2), 0.4)); gs.push(beamGeo(new V3(0, H + rise, -d / 2), new V3(0, H, 0), 0.4));
+    fr.add(mesh(mergeGeometries(gs), steel)); frames.push(fr);
+  }
+  const purl = []; for (let k = 0; k <= 8; k++) { const t = k / 8; const z = -d + t * d; const y = H + rise * (1 - Math.abs(2 * t - 1)); purl.push(beamGeo(new V3(-w / 2, y + 0.3, z), new V3(w / 2, y + 0.3, z), 0.15)); }
+  const purlins = mesh(mergeGeometries(purl), mat(0x9aa1a8, { metal: 0.5 })); g.add(purlins);
+  let roof = null;
+  if (s.roof) { roof = new THREE.Group(); g.add(roof); const sl = Math.hypot(d / 2, rise); for (const side of [-1, 1]) { const r = box(w + 1, 0.08, sl + 0.6, mat(0xd8dde2, { metal: 0.4, rough: 0.4 })); r.position.set(0, H + rise / 2 + 0.45, -d / 2 + side * d / 4); r.rotation.x = side * Math.atan2(rise, d / 2); roof.add(r); } }
+  return { group: g, update(p) {
+    if (s.anim === 'build') { frames.forEach((f, i) => { const q = clamp(p * 1.4 * frames.length - i); f.visible = q > 0; f.scale.y = Math.max(easeIO(q), 0.01); }); purlins.visible = p > 0.75; if (roof) roof.visible = p > 0.9; }
+  } };
+};
+
+F.pile_grid = (s) => {
+  // pile caps on a column grid (gx × gz) over a w × d footprint at z ∈ [-d, 0], `per_col` piles under each cap, piles `length` deep.
+  // floor_grid: extra floor-slab piles every N m. anim drive: piles appear row by row (progress), floor piles in the second half if `floor_from`.
+  const g = new THREE.Group(); const w = s.w ?? 60, d = s.d ?? 40, gx = s.gx ?? 7.5, gz = s.gz ?? 20, n = s.per_col ?? 2, L = s.length ?? 18, r = s.radius ?? 0.2 * (s.thick ?? 1.5);
+  const pm = mat(C.concrete, { rough: 0.8 }); const cm = mat(0xa9a49b, { rough: 0.9 }); const items = [];
+  const offs = n === 1 ? [[0, 0]] : n === 2 ? [[-0.6, 0], [0.6, 0]] : n === 3 ? [[-0.6, -0.35], [0.6, -0.35], [0, 0.6]] : [[-0.6, -0.6], [0.6, -0.6], [-0.6, 0.6], [0.6, 0.6]];
+  const nz = Math.round(d / gz);
+  for (let x = -w / 2; x <= w / 2 + 0.01; x += gx) for (let j = 0; j <= nz; j++) {
+    const z = Math.min(-0.9, -d + j * gz) ; const grp = new THREE.Group(); grp.position.set(x, 0, z); g.add(grp);
+    for (const [ox, oz] of offs) { const p = cyl(r, r, L, pm, 12); p.position.set(ox * 1.2, -L / 2 - 0.6, oz * 1.2); grp.add(p); }
+    grp.add(box(n === 1 ? 1.2 : 2.6, 0.9, n <= 2 ? 1.2 : 2.6, cm, 0, -0.45, 0));
+    items.push({ grp, order: (x + w / 2) / w, floor: false });
+  }
+  if (s.floor_grid) { const fg = s.floor_grid; const geo = []; const fl = s.floor_length ?? L * 0.8;
+    for (let x = -w / 2 + fg / 2; x < w / 2; x += fg) for (let z = -d + fg / 2; z < -0.5; z += fg) { const grp = new THREE.Group(); grp.position.set(x, 0, z); const p = cyl(r * 0.8, r * 0.8, fl, mat(0xc9b9a0, { rough: 0.8 }), 8); p.position.y = -fl / 2 - 0.3; grp.add(p); g.add(grp); items.push({ grp, order: (x + w / 2) / w, floor: true }); } }
+  return { group: g, count: items.length, update(p) {
+    items.forEach((it) => {
+      let q = 1;
+      if (s.anim === 'drive') { const ff = s.floor_from ?? 0; q = it.floor ? clamp((p - ff) / Math.max(1 - ff, 0.01) * 1.3 - it.order * 0.3) : clamp((ff > 0 ? p / ff : p) * 1.3 - it.order * 0.3); }
+      if (it.floor && s.floor_show === false) q = 0;
+      it.grp.visible = q > 0; it.grp.position.y = (1 - easeIO(q)) * 6;
+    });
+  } };
+};
+
 // ---------------------------------------------------------------- worlds
 const SKY = {
   day: { top: '#5f97d6', bottom: '#dfe9f1', sun: 3.2, hemi: 1.3, sunColor: 0xfff4e0, dir: [60, 90, 40], fog: 0xd9e4ee },
