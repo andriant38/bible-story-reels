@@ -54,7 +54,7 @@ TODAY=$(TZ=Asia/Jakarta date +%F)
       "bg": "dusk|night|dawn|desert|sea|storm|golden",
       "terrain": "mountains|valley|plain|desert|sea|hill",
       "camera": "push|pull|pan_left|pan_right|static",   // optional
-      "sun_x": 0.5, "stars": false, "rays": false, "clouds": false, "rainbow": false,  // optional
+      "sun_x": 0.5, "stars": false, "rays": false, "clouds": false, "rainbow": false, "parted": false,  // optional (parted = Red Sea walls of water)
       "headline": [ {"text": "NUH", "style": "big"}, {"text": "dan", "style": "small"},
                     {"text": "BAHTERA", "style": "accent"}, {"text": "KEJADIAN 6–9", "style": "ref"} ],
       "elements": [ {"type": "person", "x": 0.3, "size": 1.0, "pose": "stand", "props": ["staff"], "facing": 1} ]

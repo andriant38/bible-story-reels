@@ -399,6 +399,22 @@ def render_background(scene, seed=0, scale=1.12):
     draw_terrain(terrain, scene.get("terrain", "mountains"), pal, rng)
     img.alpha_composite(terrain)
 
+    if scene.get("parted"):  # two walls of water with a dry path between (Red Sea)
+        wl = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        wd = ImageDraw.Draw(wl)
+        top = oy + GROUND_Y - 620
+        wc = hexrgb("#1f4f6e"); crest = hexrgb("#a9d4e0", 200)
+        for side in (-1, 1):
+            x0 = ox + W / 2 + side * 120
+            x1 = ox + W / 2 + side * (W * 0.75)
+            xs = sorted([x0, x1])
+            wd.rectangle([xs[0], top, xs[1], oy + GROUND_Y + 40], fill=wc)
+            for k in range(int(xs[0]), int(xs[1]), 60):
+                wd.arc([k, top - 20, k + 60, top + 20], 180, 360, fill=crest, width=6)
+            for j in range(10):
+                y = top + 60 + j * 55
+                wd.line([(xs[0] + 20, y), (xs[1] - 20, y)], fill=hexrgb("#3f7c9a", 120), width=3)
+        img.alpha_composite(wl)
     fig = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(fig)
     col = hexrgb(pal["fig"])

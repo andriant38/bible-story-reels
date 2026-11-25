@@ -1,0 +1,72 @@
+{
+  "slug": "laut-teberau-terbelah",
+  "title": "Laut Teberau Terbelah",
+  "reference": "Keluaran 14",
+  "scenes": [
+    {
+      "text": "Di depan, laut. Di belakang, pasukan Firaun. Tidak ada jalan keluar… atau ada?",
+      "bg": "storm", "terrain": "sea", "camera": "push", "headline_y": 420,
+      "headline": [{"text": "Tidak ada jalan keluar…", "style": "hook"}, {"text": "atau ada?", "style": "hook_accent"}],
+      "elements": [{"type": "person", "x": 0.35, "size": 0.75, "dy": 120, "pose": "arms_up"}, {"type": "person", "x": 0.5, "size": 0.7, "dy": 120}, {"type": "person", "x": 0.65, "size": 0.75, "dy": 120, "pose": "arms_up"}]
+    },
+    {
+      "text": "Setelah keluar dari Mesir, bangsa Israel berkemah di tepi Laut Teberau.",
+      "bg": "dawn", "terrain": "sea", "camera": "pan_right",
+      "headline": [{"text": "LAUT TEBERAU", "style": "accent"}, {"text": "terbelah", "style": "small"}, {"text": "KELUARAN 14", "style": "ref"}],
+      "elements": [{"type": "tent", "x": 0.2, "size": 0.55, "dy": 120}, {"type": "tent", "x": 0.42, "size": 0.45, "dy": 120}, {"type": "tent", "x": 0.65, "size": 0.55, "dy": 120}, {"type": "person", "x": 0.82, "size": 0.7, "dy": 120, "props": ["staff", "beard"]}]
+    },
+    {
+      "text": "Tetapi Firaun berubah pikiran, dan mengejar mereka dengan enam ratus kereta pilihan.",
+      "bg": "dusk", "terrain": "desert", "clouds": true, "camera": "pan_left",
+      "elements": [{"type": "person", "x": 0.5, "size": 1.05, "props": ["crown", "sword"], "pose": "point", "facing": -1}, {"type": "person", "x": 0.68, "size": 0.85, "props": ["spear", "shield"]}, {"type": "person", "x": 0.8, "size": 0.85, "props": ["spear", "shield"]}, {"type": "person", "x": 0.3, "size": 0.85, "props": ["spear", "shield"], "facing": -1}]
+    },
+    {
+      "text": "Bangsa itu sangat ketakutan, dan berseru-seru kepada TUHAN.",
+      "bg": "night", "terrain": "sea", "sun": false, "camera": "push",
+      "elements": [{"type": "person", "x": 0.3, "size": 0.75, "dy": 120, "pose": "arms_up"}, {"type": "person", "x": 0.45, "size": 0.7, "dy": 120, "pose": "pray"}, {"type": "person", "x": 0.6, "size": 0.75, "dy": 120, "pose": "arms_up"}, {"type": "person", "x": 0.74, "size": 0.65, "dy": 120, "pose": "kneel"}]
+    },
+    {
+      "text": "Kata Musa: \"Janganlah takut! TUHAN akan berperang untuk kamu, dan kamu akan diam saja.\"",
+      "bg": "storm", "terrain": "sea", "rays": true, "camera": "pull",
+      "elements": [{"type": "person", "x": 0.5, "size": 1.0, "dy": 120, "pose": "arms_up", "props": ["staff", "beard"]}]
+    },
+    {
+      "text": "Musa mengulurkan tangannya ke atas laut, dan TUHAN menguakkan air laut dengan angin timur yang keras, semalam-malaman.",
+      "bg": "night", "terrain": "sea", "sun": false, "clouds": true, "camera": "push",
+      "elements": [{"type": "person", "x": 0.32, "size": 0.95, "dy": 120, "pose": "point", "props": ["beard"]}]
+    },
+    {
+      "text": "Bangsa Israel berjalan di tengah laut, di tanah yang kering. Air menjadi tembok di kiri dan kanan mereka.",
+      "bg": "dawn", "terrain": "plain", "parted": true, "rays": true, "camera": "push",
+      "elements": [{"type": "person", "x": 0.46, "size": 0.55}, {"type": "person", "x": 0.54, "size": 0.5, "props": ["staff"]}, {"type": "person", "x": 0.5, "size": 0.4, "dy": -40}]
+    },
+    {
+      "text": "Angin itu bertiup semalam-malaman. Mujizat tidak datang dalam sekejap. Israel harus bertahan dalam gelap.",
+      "bg": "night", "terrain": "sea", "sun": false, "stars": true, "camera": "pull", "headline_y": 300,
+      "headline": [{"text": "KONTEKSNYA", "style": "label"}, {"text": "Mujizat datang setelah malam yang panjang.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.75, "dy": 120, "pose": "pray"}]
+    },
+    {
+      "text": "Ketika tidak ada jalan, Tuhan membuat jalan.",
+      "bg": "golden", "terrain": "plain", "parted": true, "camera": "push", "headline_y": 300,
+      "headline": [{"text": "MAKNANYA", "style": "label"}, {"text": "Tidak ada jalan? Tuhan membuat jalan.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.55, "pose": "arms_up"}]
+    },
+    {
+      "text": "Hari ini, serahkan satu masalah yang membuatmu buntu kepada Tuhan, lalu tetap melangkah.",
+      "bg": "dawn", "terrain": "desert", "camera": "pan_right", "headline_y": 300,
+      "headline": [{"text": "UNTUK HIDUPMU", "style": "label"}, {"text": "Serahkan, lalu tetap melangkah.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.4, "size": 0.9, "props": ["staff"], "pose": "point"}]
+    },
+    {
+      "text": "Apa laut yang sedang menghadangmu sekarang? Tulis di kolom komentar. Besok: kisah Yesus memberi makan lima ribu orang. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Apa \"laut\" yang sedang menghadangmu sekarang? Tulis di kolom komentar. Besok: Yesus memberi makan 5000 orang.",
+      "bg": "golden", "terrain": "sea", "rays": true, "camera": "pull",
+      "headline": [{"text": "\"TUHAN akan berperang untuk kamu.\"", "style": "statement"}, {"text": "Keluaran 14:14", "style": "ref"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.8, "dy": 120, "pose": "arms_up", "props": ["staff"]}]
+    }
+  ],
+  "caption": "Di depan, laut. Di belakang, pasukan Firaun. Tidak ada jalan keluar… atau ada? 🌊\n\nKetika tidak ada jalan, Tuhan membuat jalan. Mujizat sering datang setelah malam yang panjang.\n\n\"TUHAN akan berperang untuk kamu, dan kamu akan diam saja.\" (Keluaran 14:14)\n\nApa \"laut\" yang sedang menghadangmu sekarang? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#LautTeberau #KisahAlkitab #RenunganHarian #Keluaran14 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Laut Teberau Terbelah: Tuhan Membuat Jalan #shorts",
+  "youtube_tags": ["Laut Teberau", "Musa", "Kisah Alkitab", "Renungan", "Keluaran 14", "Kristen"]
+}
