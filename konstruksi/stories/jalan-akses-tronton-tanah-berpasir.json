@@ -1,0 +1,1090 @@
+{
+  "slug": "jalan-akses-tronton-tanah-berpasir",
+  "title": "Jalan Akses Tronton Anti Ambles di Tanah Berpasir",
+  "topic": "konstruksi",
+  "series": "SOLUSI LAPANGAN #1",
+  "scenes": [
+    {
+      "text": "Tronton bermuatan, musim hujan, jalan tanah berpasir. Hasilnya, ambles.",
+      "headline": [
+        {
+          "text": "TRONTON AMBLES",
+          "style": "hook"
+        },
+        {
+          "text": "DI MUSIM HUJAN?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 270,
+      "world": "sand",
+      "time": "rain",
+      "rain": true,
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          1.2,
+          0
+        ],
+        "dist": 20,
+        "height": 3,
+        "angle": 30,
+        "sweep": 10,
+        "shake": 0.15,
+        "shake_at": 0.3
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "dump_truck",
+          "pos": [
+            0,
+            -0.55,
+            0
+          ],
+          "rot": 15,
+          "loaded": true,
+          "load_color": 9406837,
+          "tilt": [
+            -5,
+            3
+          ]
+        },
+        {
+          "type": "rain_puddles",
+          "count": 14,
+          "area": [
+            26,
+            12
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            6,
+            0,
+            -3
+          ],
+          "rot": 220
+        },
+        {
+          "type": "worker",
+          "pos": [
+            7,
+            0,
+            -1.5
+          ],
+          "rot": 250,
+          "hat": 16777215
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Begini cara membangun jalan akses yang tidak ambles, walaupun tanahnya berpasir.",
+      "headline": [
+        {
+          "text": "JALAN AKSES",
+          "style": "big"
+        },
+        {
+          "text": "ANTI AMBLES",
+          "style": "accent"
+        },
+        {
+          "text": "di tanah berpasir",
+          "style": "small"
+        }
+      ],
+      "headline_y": 190,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 30,
+        "height": 10,
+        "angle": 50,
+        "sweep": 35
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "agg1",
+            "agg2"
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -25,
+            1.27,
+            -1.5
+          ],
+          "to": [
+            25,
+            1.27,
+            -1.5
+          ],
+          "loaded": true,
+          "load_color": 9406837,
+          "ease": false
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Masalahnya, pasir yang jenuh air kehilangan daya dukung. Tronton bermuatan bisa lebih dari dua puluh lima ton, jadi rodanya langsung membuat alur, lalu ambles.",
+      "subtitle": "Masalahnya, pasir jenuh air kehilangan daya dukung. Tronton bermuatan bisa >25 ton → roda bikin alur, lalu ambles.",
+      "headline": [
+        {
+          "text": "KENAPA AMBLES?",
+          "style": "label"
+        },
+        {
+          "text": "pasir jenuh air + beban >25 ton",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "rain",
+      "rain": true,
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 16,
+        "height": 2,
+        "angle": 20,
+        "sweep": 8
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "dump_truck",
+          "pos": [
+            0,
+            -0.55,
+            0
+          ],
+          "rot": 15,
+          "loaded": true,
+          "load_color": 9406837,
+          "tilt": [
+            -5,
+            3
+          ]
+        },
+        {
+          "type": "rain_puddles",
+          "count": 10,
+          "area": [
+            22,
+            10
+          ]
+        },
+        {
+          "type": "zone",
+          "pos": [
+            -1.5,
+            0,
+            0
+          ],
+          "w": 9,
+          "d": 4,
+          "anim": "pulse",
+          "color": 9132587
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            4.3,
+            0
+          ],
+          "text": ">25 TON",
+          "size": 0.7
+        }
+      ]
+    },
+    {
+      "text": "Langkah pertama, urus airnya dulu. Tinggikan badan jalan, buat miring ke samping sekitar tiga persen, dan gali parit di kiri kanan.",
+      "subtitle": "1. Urus airnya dulu: tinggikan badan jalan, miring ke samping ±3%, dan gali parit di kiri-kanan.",
+      "headline": [
+        {
+          "text": "1. ATUR AIR",
+          "style": "label"
+        },
+        {
+          "text": "ditinggikan · miring ±3% · parit samping",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          30,
+          1.6,
+          0
+        ],
+        "dist": 27,
+        "height": 1.6,
+        "angle": 90,
+        "sweep": 6
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb"
+          ],
+          "build": "ditch",
+          "progress": [
+            0.4,
+            1
+          ],
+          "tags": true,
+          "ey": 3,
+          "tag_size": 0.55
+        },
+        {
+          "type": "excavator",
+          "pos": [
+            18,
+            0,
+            9
+          ],
+          "rot": 180,
+          "anim": "dig",
+          "swing": 60
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Kedua, gelar geotekstil di atas tanah dasar. Fungsinya memisahkan pasir dan batu, supaya batunya tidak tenggelam.",
+      "headline": [
+        {
+          "text": "2. GEOTEKSTIL",
+          "style": "label"
+        },
+        {
+          "text": "pemisah pasir & batu",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 16,
+        "height": 6,
+        "angle": 50,
+        "sweep": 25
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch"
+          ],
+          "build": "geo",
+          "progress": [
+            0.2,
+            0.75
+          ]
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -6,
+            0.65,
+            2
+          ],
+          "rot": 0,
+          "anim": "walk"
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -6.5,
+            0.65,
+            -2
+          ],
+          "rot": 0
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Ketiga, hampar batu pecah atau sirtu, tebal totalnya sekitar tiga puluh sampai lima puluh senti. Hampar per lapis, sekitar dua puluh senti.",
+      "subtitle": "3. Hampar batu pecah atau sirtu, tebal total ±30–50 cm. Per lapis ±20 cm.",
+      "headline": [
+        {
+          "text": "3. LAPIS BATU",
+          "style": "label"
+        },
+        {
+          "text": "total ±30–50 cm · per lapis ±20 cm",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "dist": 22,
+        "height": 8,
+        "angle": 40,
+        "sweep": 25
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo"
+          ],
+          "build": "agg1",
+          "progress": [
+            0.25,
+            0.75
+          ]
+        },
+        {
+          "type": "grader",
+          "pos": [
+            -16,
+            0.63,
+            0
+          ],
+          "to": [
+            14,
+            0.63,
+            0
+          ],
+          "progress": [
+            0.25,
+            0.75
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            22,
+            0.63,
+            0
+          ],
+          "rot": 0,
+          "loaded": true,
+          "load_color": 9406837,
+          "anim": "dump",
+          "start": 0.2,
+          "end": 0.9
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Setiap lapis disiram air secukupnya, lalu dipadatkan pakai vibro roller, sampai tidak ada lagi bekas roda yang dalam.",
+      "subtitle": "4. Tiap lapis disiram secukupnya, lalu dipadatkan vibro roller sampai tidak ada bekas roda yang dalam.",
+      "headline": [
+        {
+          "text": "4. PADATKAN",
+          "style": "label"
+        },
+        {
+          "text": "per lapis · vibro roller",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1.2,
+          0
+        ],
+        "dist": 17,
+        "height": 6,
+        "angle": 60,
+        "sweep": 25
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "agg1"
+          ],
+          "build": "agg2",
+          "progress": [
+            0.3,
+            0.7
+          ]
+        },
+        {
+          "type": "roller",
+          "kind": "vibro",
+          "pos": [
+            -20,
+            0.83,
+            -1.5
+          ],
+          "to": [
+            -6,
+            0.83,
+            -1.5
+          ],
+          "anim": "shuttle",
+          "period": 6
+        },
+        {
+          "type": "sprayer",
+          "pos": [
+            -25,
+            0.83,
+            1.8
+          ],
+          "to": [
+            -2,
+            0.83,
+            1.8
+          ],
+          "color": 3045803,
+          "spray_color": 10475775,
+          "cab": 15790320
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Kalau tanahnya sangat lembek, tambahkan matras kayu atau geocell di bawah lapisan batu, supaya beban makin menyebar.",
+      "headline": [
+        {
+          "text": "TANAH SANGAT LEMBEK?",
+          "style": "label"
+        },
+        {
+          "text": "tambah matras kayu / geocell",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          30,
+          1.6,
+          0
+        ],
+        "dist": 27,
+        "height": 1.6,
+        "angle": 90,
+        "sweep": 6
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "mat",
+            "agg1",
+            "agg2"
+          ],
+          "tags": true,
+          "ey": 3,
+          "tag_size": 0.55
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Hasilnya, tronton bermuatan bisa lewat dengan aman, walaupun hujan turun.",
+      "headline": [
+        {
+          "text": "HASILNYA",
+          "style": "label"
+        },
+        {
+          "text": "aman dilewati walau hujan",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "rain",
+      "rain": true,
+      "camera": {
+        "move": "flyby",
+        "target": [
+          0,
+          2.5,
+          0
+        ],
+        "dist": 16,
+        "height": 3,
+        "angle": 35,
+        "sweep": 20,
+        "follow": "t"
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "agg1",
+            "agg2"
+          ]
+        },
+        {
+          "id": "t",
+          "type": "dump_truck",
+          "pos": [
+            -25,
+            1.27,
+            -1.5
+          ],
+          "to": [
+            25,
+            1.27,
+            -1.5
+          ],
+          "loaded": true,
+          "load_color": 9406837,
+          "ease": false
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Terakhir, rawat jalannya. Tutup lubang sebelum hujan, ratakan lagi pakai grader, dan jangan biarkan air menggenang.",
+      "subtitle": "5. Rawat rutin: tutup lubang sebelum hujan, ratakan pakai grader, jangan biarkan air menggenang.",
+      "headline": [
+        {
+          "text": "5. RAWAT RUTIN",
+          "style": "label"
+        },
+        {
+          "text": "tutup lubang · grader · tanpa genangan",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          1.5,
+          0
+        ],
+        "dist": 20,
+        "height": 6,
+        "angle": 30,
+        "sweep": 25
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "agg1",
+            "agg2"
+          ]
+        },
+        {
+          "type": "grader",
+          "pos": [
+            -18,
+            1.27,
+            0
+          ],
+          "to": [
+            14,
+            1.27,
+            0
+          ]
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Intinya, jalan ambles hampir selalu gara-gara air. Kendalikan airnya, sebarkan bebannya, jalanmu akan awet.",
+      "headline": [
+        {
+          "text": "INTINYA",
+          "style": "label"
+        },
+        {
+          "text": "kendalikan air + sebarkan beban",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "sand",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          30,
+          1.6,
+          0
+        ],
+        "dist": 27,
+        "height": 1.6,
+        "angle": 90,
+        "sweep": 6
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "agg1",
+            "agg2"
+          ],
+          "tags": true,
+          "ey": 3,
+          "tag_size": 0.55
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Di proyekmu, cara apa yang paling ampuh biar tronton nggak ambles? Tulis di komentar, dan follow untuk solusi lapangan berikutnya.",
+      "headline": [
+        {
+          "text": "CARAMU BIAR TRONTON NGGAK AMBLES?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR · FOLLOW @ant_proyek",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 230,
+      "world": "sand",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          2,
+          0
+        ],
+        "dist": 22,
+        "height": 4,
+        "angle": 40,
+        "sweep": 35
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "haul_road",
+          "length": 60,
+          "w": 8,
+          "layers": [
+            "emb",
+            "ditch",
+            "geo",
+            "agg1",
+            "agg2"
+          ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            2,
+            1.27,
+            -1.5
+          ],
+          "rot": 180,
+          "loaded": true,
+          "load_color": 9406837
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -2,
+            1.17,
+            2
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            32
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    }
+  ],
+  "caption": "Tronton ambles di musim hujan? 🚛🌧️ Ini solusinya untuk tanah berpasir!\n\nKenapa ambles? Pasir jenuh air kehilangan daya dukung, sementara tronton bermuatan bisa >25 ton.\n\nCara bangun jalan akses anti ambles:\n1️⃣ Atur air dulu: tinggikan badan jalan, miring ±3%, parit kiri-kanan\n2️⃣ Gelar geotekstil: pemisah pasir & batu\n3️⃣ Hampar batu pecah/sirtu ±30–50 cm, per lapis ±20 cm\n4️⃣ Siram secukupnya & padatkan vibro roller tiap lapis\n➕ Tanah sangat lembek? Tambah matras kayu / geocell\n5️⃣ Rawat rutin: tutup lubang, ratakan grader, jangan ada genangan\n\n💡 Intinya: kendalikan air + sebarkan beban = jalan awet.\n\nDi proyekmu, cara apa yang paling ampuh biar tronton nggak ambles? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk Solusi Lapangan berikutnya!\n\n#jalanakses #haulroad #tronton #dumptruck #geotekstil #proyek #konstruksi #tekniksipil #musimhujan #solusilapangan #animasi3D",
+  "youtube_title": "Tronton Ambles di Musim Hujan? Ini Cara Bangun Jalan Akses di Tanah Berpasir #shorts",
+  "youtube_tags": [
+    "jalan akses proyek",
+    "haul road",
+    "tronton ambles",
+    "geotekstil",
+    "tanah berpasir",
+    "jalan proyek musim hujan",
+    "solusi lapangan",
+    "teknik sipil"
+  ]
+}

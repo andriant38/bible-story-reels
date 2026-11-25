@@ -1013,11 +1013,57 @@ F.pile_grid = (s) => {
   } };
 };
 
+// ---------------------------------------------------------------- access road on sand (jalan akses anti ambles)
+// Cross-section along x, visible at the +x end. Layers: emb (sand embankment), geo (geotextile), agg1, agg2 (crowned top), ditches.
+F.haul_road = (s) => {
+  const g = new THREE.Group(); const L = s.length ?? 60, w = s.w ?? 8, ey = s.ey ?? 1, crown = (s.crown ?? 0.035) * (s.crown_ex ?? 2.5);
+  const done = new Set(s.layers ?? []); const parts = [];
+  const prof = (pts) => { const sh = new THREE.Shape(); pts.forEach(([z, y], i) => (i ? sh.lineTo(z, y * ey) : sh.moveTo(z, y * ey))); return sh; };
+  const mk = (name, pts, color, o = {}) => {
+    if (!done.has(name) && s.build !== name) return;
+    const geo = new THREE.ExtrudeGeometry(prof(pts), { depth: 1, bevelEnabled: false });
+    geo.applyMatrix4(new THREE.Matrix4().set(0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 1)); geo.computeVertexNormals();
+    const m = mesh(geo, mat(color, o)); m.position.x = -L / 2; m.scale.x = L; g.add(m); parts.push({ name, m });
+  };
+  const e = 0.6, hw = w / 2;
+  mk('emb', [[-hw - 2.2, 0], [hw + 2.2, 0], [hw + 0.6, e], [-hw - 0.6, e]], s.sand ?? 0xcdb27a, { rough: 1 });
+  mk('geo', [[-hw - 0.5, e], [hw + 0.5, e], [hw + 0.5, e + 0.03], [-hw - 0.5, e + 0.03]], 0xeef0f2, { rough: 0.7 });
+  mk('mat', [[-hw - 0.3, e + 0.03], [hw + 0.3, e + 0.03], [hw + 0.3, e + 0.18], [-hw - 0.3, e + 0.18]], 0x8a5a2b, { rough: 0.9 });
+  const b = done.has('mat') ? 0.18 : 0.03;
+  mk('agg1', [[-hw - 0.3, e + b], [hw + 0.3, e + b], [hw, e + b + 0.2], [-hw, e + b + 0.2]], 0x8f8475, { rough: 1, flat: true });
+  mk('agg2', [[-hw, e + b + 0.2], [hw, e + b + 0.2], [hw - 0.2, e + b + 0.4], [0, e + b + 0.4 + hw * crown], [-hw + 0.2, e + b + 0.4]], 0xa39a8c, { rough: 1, flat: true });
+  const ditches = [];
+  if (done.has('ditch') || s.build === 'ditch') for (const sgn of [-1, 1]) {
+    const d = box(1, 0.02, 1.4, mat(0x6b5a3e, { rough: 1 }), 0, 0.012, sgn * (hw + 3.4)); d.geometry.translate(0.5, 0, 0); d.position.x = -L / 2; d.scale.x = L; g.add(d);
+    const wtr = box(1, 0.02, 0.7, mat(0x4f7f99, { rough: 0.1, metal: 0.3 }), 0, 0.025, sgn * (hw + 3.4)); wtr.geometry.translate(0.5, 0, 0); wtr.position.x = -L / 2; wtr.scale.x = L; g.add(wtr);
+    ditches.push(d, wtr);
+  }
+  if (s.tags) {
+    const T = [['emb', e / 2, 'TIMBUNAN PASIR'], ['geo', e + 0.015, 'GEOTEKSTIL'], ['mat', e + 0.1, 'MATRAS KAYU'], ['agg1', e + b + 0.1, 'BATU LAPIS 1'], ['agg2', e + b + 0.3, 'BATU LAPIS 2']];
+    T.forEach(([n, y, t], i) => { if (!done.has(n) && s.build !== n) return; const tg = textSprite(t, { size: s.tag_size ?? 0.32 }); tg.position.set(L / 2 + 0.5, y * ey, (i % 2 ? 1 : -1) * (hw + 0.8)); tg.center.set(i % 2 ? 0 : 1, 0.5); g.add(tg); });
+    if (done.has('ditch') || s.build === 'ditch') { const tg = textSprite('PARIT', { size: s.tag_size ?? 0.32 }); tg.position.set(L / 2 + 0.5, 0.3, hw + 3.4); g.add(tg); }
+  }
+  return { group: g, top: (e + b + 0.4) * ey, update(p) {
+    const front = -L / 2 + L * clamp(p);
+    for (const { name, m } of parts) if (name === s.build) { m.scale.x = Math.max(front + L / 2, 0.01); m.visible = p > 0.001; }
+    if (s.build === 'ditch') ditches.forEach((d) => (d.scale.x = Math.max(front + L / 2, 0.01)));
+  } };
+};
+
+F.rain_puddles = (s) => {
+  // muddy puddles + ruts on the ground (for the "ambles" shots)
+  const g = new THREE.Group(); const r = rng(s.seed ?? 21); const n = s.count ?? 10; const [ax, az] = s.area ?? [20, 8];
+  for (let i = 0; i < n; i++) { const p = mesh(new THREE.CircleGeometry(0.6 + r() * 1.6, 14), mat(i % 3 ? 0x5b4a33 : 0x56708a, { rough: i % 3 ? 1 : 0.08, metal: i % 3 ? 0 : 0.3 })); p.rotation.x = -Math.PI / 2; p.scale.y = 0.5 + r(); p.position.set((r() - 0.5) * ax, 0.015 + i * 0.001, (r() - 0.5) * az); g.add(p); }
+  for (const z of [-1.0, 1.0]) { const rut = box(s.rut_len ?? 18, 0.02, 0.7, mat(0x4a3b28, { rough: 1 }), 0, 0.02, z + (s.rut_z ?? 0)); g.add(rut); }
+  return { group: g, update() {} };
+};
+
 // ---------------------------------------------------------------- worlds
 const SKY = {
   day: { top: '#5f97d6', bottom: '#dfe9f1', sun: 3.2, hemi: 1.3, sunColor: 0xfff4e0, dir: [60, 90, 40], fog: 0xd9e4ee },
   golden: { top: '#3f5f9a', bottom: '#f6b46b', sun: 3.0, hemi: 0.9, sunColor: 0xffbb77, dir: [-90, 35, 50], fog: 0xe8b07a },
   dusk: { top: '#1d2552', bottom: '#d9776a', sun: 1.4, hemi: 0.6, sunColor: 0xff8a66, dir: [-100, 20, -40], fog: 0x8c6070 },
+  rain: { top: '#5d6670', bottom: '#a9b0b6', sun: 1.1, hemi: 1.0, sunColor: 0xdde4ea, dir: [40, 90, 30], fog: 0x9aa2a9 },
   night: { top: '#050914', bottom: '#1c2a44', sun: 0.6, hemi: 0.35, sunColor: 0x9fb8ff, dir: [40, 80, 60], fog: 0x1a2236 },
 };
 function skyTexture(sk) {
@@ -1028,7 +1074,7 @@ function skyTexture(sk) {
 
 function buildWorld(scene, sc, ctx) {
   const kind = sc.world || 'site';
-  const groundColor = { site: C.soil, pit: 0x9c6b47, sea: C.soil, city: 0x8d8a83, cutaway: C.grass, plain: 0x8f8a80 }[kind] ?? C.soil;
+  const groundColor = { sand: 0xcdb27a, site: C.soil, pit: 0x9c6b47, sea: C.soil, city: 0x8d8a83, cutaway: C.grass, plain: 0x8f8a80 }[kind] ?? C.soil;
   ctx.strata = strataTexture(sc.strata || (kind === 'pit' ? 'laterite' : 'soil'));
   if (kind === 'pit') {
     const P = sc.pit || {}; const N = P.benches ?? 6, bh = P.bench_h ?? 10, berm = P.berm ?? 8, face = P.face ?? 5, fr = P.floor_r ?? 40;
@@ -1064,6 +1110,7 @@ function buildWorld(scene, sc, ctx) {
     ctx.sea = sea;
   } else {
     const gr = mesh(new THREE.PlaneGeometry(2000, 2000), mat(groundColor, { rough: 1 })); gr.rotation.x = -Math.PI / 2; scene.add(gr);
+    if (sc.rain) gr.material = mat(new THREE.Color(groundColor).multiplyScalar(0.75).getHex(), { rough: 0.6 });
     if (kind === 'site') { const r = rng(4); for (let i = 0; i < 40; i++) { const p = mesh(new THREE.CircleGeometry(3 + r() * 8, 10), mat(r() > 0.5 ? C.gravel : 0x8a5d3b, { rough: 1 })); p.rotation.x = -Math.PI / 2; p.position.set((r() - 0.5) * 160, 0.01 + i * 0.001, (r() - 0.5) * 160); p.receiveShadow = true; scene.add(p); } }
   }
 }
@@ -1108,10 +1155,13 @@ window.setupScene = (sc, duration) => {
     const o = f(spec, ctx); o.spec = spec;
     o.group.position.set(...spec.pos); if (spec.rot !== undefined && !spec.to) o.group.rotation.y = spec.rot * DEG;
     if (spec.scale) o.group.scale.setScalar(spec.scale);
+    if (spec.tilt) { o.group.rotation.x = (spec.tilt[0] ?? 0) * DEG; o.group.rotation.z = (spec.tilt[1] ?? 0) * DEG; }
     scene.add(o.group); objs.push(o); if (spec.id) byId[spec.id] = o;
   }
   if (ctx.night) { const l = new THREE.PointLight(0xffe2b0, 3000, 200, 1.6); l.position.set(20, 30, 30); scene.add(l); }
-  current = { scene, sc, objs, byId, sun, ss, sky: sk };
+  let rain = null;
+  if (sc.rain) { const n = sc.rain_count ?? 2500; const geo = new THREE.BoxGeometry(0.02, 0.9, 0.02); rain = new THREE.InstancedMesh(geo, new THREE.MeshBasicMaterial({ color: 0xdfe8f0, transparent: true, opacity: 0.55 }), n); rain.userData.seeds = Array.from({ length: n }, (_, i) => { const r = rng(i + 3); return [r() - 0.5, r(), r() - 0.5, 0.8 + r() * 0.4]; }); scene.add(rain); }
+  current = { scene, sc, objs, byId, sun, ss, sky: sk, rain };
   window.frame(0);
   return true;
 };
@@ -1148,6 +1198,7 @@ window.frame = (t) => {
     o.update(lerp(a, b, local), t + (s.t_offset ?? 0));
   }
   const T = cameraAt(camera, p);
+  if (current.rain) { const R = current.rain, box3 = current.sc.rain_box ?? 40, m4 = new THREE.Matrix4(); R.userData.seeds.forEach(([x, y, z, sp], i) => { const yy = ((y * 30 - t * 22 * sp) % 30 + 30) % 30; m4.makeTranslation(T.x + x * box3, T.y - 8 + yy, T.z + z * box3); R.setMatrixAt(i, m4); }); R.instanceMatrix.needsUpdate = true; }
   // keep the shadow camera centred on what we look at
   const sk = current.sky; const dir = new V3(...sk.dir).normalize();
   current.sun.position.copy(T).addScaledVector(dir, 300); current.sun.target.position.copy(T);
