@@ -1,0 +1,370 @@
+{
+  "slug": "yesus-memberi-makan-5000",
+  "title": "Yesus Memberi Makan 5000 Orang",
+  "reference": "Yohanes 6:1–14",
+  "scenes": [
+    {
+      "text": "Lima roti dan dua ikan… cukup untuk lebih dari lima ribu orang.",
+      "bg": "dusk",
+      "terrain": "hill",
+      "camera": "push",
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "5 roti, 2 ikan…",
+          "style": "hook"
+        },
+        {
+          "text": "5.000 orang kenyang.",
+          "style": "hook_accent"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.65,
+          "dy": -250,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "fish",
+          "x": 0.38,
+          "y": 0.45,
+          "size": 0.9
+        },
+        {
+          "type": "fish",
+          "x": 0.62,
+          "y": 0.42,
+          "size": 0.9
+        }
+      ]
+    },
+    {
+      "text": "Orang banyak mengikuti Yesus ke seberang danau Galilea.",
+      "bg": "dawn",
+      "terrain": "sea",
+      "camera": "pan_right",
+      "headline": [
+        {
+          "text": "YESUS",
+          "style": "big"
+        },
+        {
+          "text": "memberi makan",
+          "style": "small"
+        },
+        {
+          "text": "5.000 ORANG",
+          "style": "accent"
+        },
+        {
+          "text": "YOHANES 6:1–14",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "boat",
+          "x": 0.75,
+          "size": 0.5,
+          "dy": -20
+        },
+        {
+          "type": "person",
+          "x": 0.15,
+          "size": 0.6,
+          "dy": 120
+        },
+        {
+          "type": "person",
+          "x": 0.25,
+          "size": 0.65,
+          "dy": 120
+        },
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.6,
+          "dy": 120
+        },
+        {
+          "type": "person",
+          "x": 0.45,
+          "size": 0.65,
+          "dy": 120
+        }
+      ]
+    },
+    {
+      "text": "Yesus bertanya kepada Filipus: \"Di manakah kita akan membeli roti, supaya mereka ini dapat makan?\"",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.38,
+          "size": 1.0,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.85,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Jawab Filipus: \"Roti seharga dua ratus dinar tidak akan cukup.\"",
+      "bg": "dusk",
+      "terrain": "plain",
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.85,
+          "pose": "arms_up",
+          "facing": -1
+        },
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 1.0
+        }
+      ]
+    },
+    {
+      "text": "Andreas berkata: \"Di sini ada seorang anak yang mempunyai lima roti jelai dan dua ikan. Tetapi apa artinya untuk orang sebanyak ini?\"",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.3,
+          "size": 0.9,
+          "pose": "point"
+        },
+        {
+          "type": "person",
+          "x": 0.55,
+          "size": 0.5,
+          "props": [
+            "basket"
+          ],
+          "facing": -1
+        },
+        {
+          "type": "fish",
+          "x": 0.55,
+          "y": 0.6,
+          "size": 0.6
+        }
+      ]
+    },
+    {
+      "text": "Yesus mengambil roti itu, mengucap syukur, lalu membagi-bagikannya kepada mereka.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "pose": "arms_up",
+          "props": [
+            "basket"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Semua orang makan sampai kenyang. Sisanya dikumpulkan: dua belas bakul penuh!",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.15,
+          "size": 0.7,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.28,
+          "size": 0.7,
+          "pose": "praise"
+        },
+        {
+          "type": "person",
+          "x": 0.41,
+          "size": 0.7,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.54,
+          "size": 0.7,
+          "pose": "praise"
+        },
+        {
+          "type": "person",
+          "x": 0.67,
+          "size": 0.7,
+          "props": [
+            "basket"
+          ]
+        },
+        {
+          "type": "person",
+          "x": 0.8,
+          "size": 0.7,
+          "pose": "praise"
+        }
+      ]
+    },
+    {
+      "text": "Roti jelai adalah roti orang miskin. Bekal sederhana seorang anak menjadi berkat bagi ribuan orang.",
+      "bg": "dusk",
+      "terrain": "desert",
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Roti jelai: makanan orang miskin.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.55,
+          "props": [
+            "basket"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Tuhan tidak meminta yang besar darimu. Ia meminta apa yang ada di tanganmu.",
+      "bg": "golden",
+      "terrain": "sea",
+      "rays": true,
+      "camera": "pull",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "MAKNANYA",
+          "style": "label"
+        },
+        {
+          "text": "Serahkan yang ada di tanganmu.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.7,
+          "dy": 120,
+          "pose": "praise",
+          "props": [
+            "basket"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Hari ini, bagikan satu hal kecil yang kamu punya untuk orang lain.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "UNTUK HIDUPMU",
+          "style": "label"
+        },
+        {
+          "text": "Bagikan satu hal kecil hari ini.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.9,
+          "props": [
+            "basket"
+          ],
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.75,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Apa yang ada di tanganmu yang bisa Tuhan pakai? Tulis di kolom komentar. Besok: kisah Gideon dan tiga ratus orang. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Apa yang ada di tanganmu yang bisa Tuhan pakai? Tulis di kolom komentar. Besok: Gideon dan 300 orang.",
+      "bg": "golden",
+      "terrain": "hill",
+      "rays": true,
+      "camera": "pull",
+      "headline": [
+        {
+          "text": "Di tangan Yesus, sedikit menjadi cukup.",
+          "style": "statement"
+        },
+        {
+          "text": "Yohanes 6:11–13",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.75,
+          "dy": -250,
+          "pose": "arms_up"
+        }
+      ]
+    }
+  ],
+  "caption": "Lima roti dan dua ikan… cukup untuk lebih dari lima ribu orang. 🍞🐟\n\nTuhan tidak meminta yang besar darimu. Ia meminta apa yang ada di tanganmu.\n\n\"Lalu Yesus mengambil roti itu, mengucap syukur dan membagi-bagikannya kepada mereka.\" (Yohanes 6:11)\n\nApa yang ada di tanganmu yang bisa Tuhan pakai? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#YesusMemberiMakan5000 #KisahAlkitab #RenunganHarian #Yohanes6 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "5 Roti 2 Ikan untuk 5000 Orang: Serahkan yang Ada di Tanganmu #shorts",
+  "youtube_tags": [
+    "Yesus memberi makan 5000 orang",
+    "5 roti 2 ikan",
+    "Kisah Alkitab",
+    "Renungan",
+    "Yohanes 6",
+    "Kristen"
+  ]
+}
