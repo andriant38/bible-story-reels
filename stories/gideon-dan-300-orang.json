@@ -1,0 +1,72 @@
+{
+  "slug": "gideon-dan-300-orang",
+  "title": "Gideon dan 300 Orang",
+  "reference": "Hakim-hakim 6–7",
+  "scenes": [
+    {
+      "text": "Kalau Tuhan menyuruhmu melawan ribuan musuh… hanya dengan tiga ratus orang, beranikah kamu?",
+      "bg": "night", "terrain": "valley", "sun": false, "camera": "push", "headline_y": 420,
+      "headline": [{"text": "Hanya 300 orang…", "style": "hook"}, {"text": "melawan ribuan musuh?", "style": "hook_accent"}],
+      "elements": [{"type": "tent", "x": 0.2, "size": 0.45, "dy": -60}, {"type": "tent", "x": 0.35, "size": 0.4, "dy": -70}, {"type": "tent", "x": 0.65, "size": 0.45, "dy": -60}, {"type": "tent", "x": 0.8, "size": 0.4, "dy": -70}, {"type": "person", "x": 0.5, "size": 0.75, "props": ["sword"]}]
+    },
+    {
+      "text": "Bangsa Israel ditindas orang Midian. Gideon bersembunyi, mengirik gandum di tempat pemerasan anggur.",
+      "bg": "dusk", "terrain": "plain", "camera": "pan_right",
+      "headline": [{"text": "GIDEON", "style": "accent"}, {"text": "dan 300 orang", "style": "small"}, {"text": "HAKIM-HAKIM 6–7", "style": "ref"}],
+      "elements": [{"type": "well", "x": 0.62, "size": 0.85}, {"type": "person", "x": 0.4, "size": 0.75, "pose": "kneel", "props": ["basket"]}]
+    },
+    {
+      "text": "Malaikat TUHAN berkata kepadanya: \"TUHAN menyertai engkau, ya pahlawan yang gagah berani.\"",
+      "bg": "golden", "terrain": "plain", "rays": true, "camera": "push",
+      "elements": [{"type": "tree", "x": 0.75, "size": 0.9}, {"type": "person", "x": 0.35, "size": 0.75, "pose": "kneel"}, {"type": "person", "x": 0.58, "size": 1.0, "pose": "point", "facing": -1}]
+    },
+    {
+      "text": "Gideon mengumpulkan tiga puluh dua ribu orang. Tetapi TUHAN berkata: \"Terlalu banyak.\"",
+      "bg": "dawn", "terrain": "mountains", "camera": "pan_left",
+      "elements": [{"type": "person", "x": 0.12, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.22, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.32, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.42, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.52, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.62, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.72, "size": 0.6, "props": ["spear"]}, {"type": "person", "x": 0.82, "size": 0.6, "props": ["spear"]}]
+    },
+    {
+      "text": "Akhirnya, hanya tiga ratus orang yang tersisa.",
+      "bg": "dusk", "terrain": "mountains", "camera": "pull",
+      "elements": [{"type": "person", "x": 0.42, "size": 0.7, "props": ["spear"]}, {"type": "person", "x": 0.5, "size": 0.75, "props": ["sword"]}, {"type": "person", "x": 0.58, "size": 0.7, "props": ["spear"]}]
+    },
+    {
+      "text": "Pada malam hari, mereka meniup sangkakala, memecahkan buyung, dan mengangkat obor tinggi-tinggi.",
+      "bg": "night", "terrain": "valley", "sun": false, "stars": true, "camera": "push",
+      "elements": [{"type": "fire", "x": 0.25, "size": 0.3, "dy": -330}, {"type": "person", "x": 0.25, "size": 0.75, "pose": "arms_up"}, {"type": "fire", "x": 0.5, "size": 0.3, "dy": -330}, {"type": "person", "x": 0.5, "size": 0.75, "pose": "arms_up"}, {"type": "fire", "x": 0.75, "size": 0.3, "dy": -330}, {"type": "person", "x": 0.75, "size": 0.75, "pose": "arms_up"}]
+    },
+    {
+      "text": "Mereka berseru: \"Pedang demi TUHAN dan demi Gideon!\" Seluruh perkemahan Midian lari kacau-balau.",
+      "bg": "storm", "terrain": "valley", "rays": true, "camera": "pan_right",
+      "elements": [{"type": "tent", "x": 0.3, "size": 0.6}, {"type": "tent", "x": 0.7, "size": 0.6}, {"type": "person", "x": 0.15, "size": 0.7, "pose": "arms_up", "facing": -1}, {"type": "person", "x": 0.5, "size": 0.7, "pose": "arms_up"}, {"type": "person", "x": 0.85, "size": 0.7, "pose": "arms_up"}]
+    },
+    {
+      "text": "Tuhan mengurangi pasukan itu, supaya Israel tidak memegahkan diri dan berkata: \"Tanganku sendirilah yang menyelamatkan aku.\"",
+      "bg": "dawn", "terrain": "desert", "camera": "pull", "headline_y": 300,
+      "headline": [{"text": "KONTEKSNYA", "style": "label"}, {"text": "Supaya kemenangan jadi milik Tuhan.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.85, "pose": "praise", "props": ["sword"]}]
+    },
+    {
+      "text": "Tuhan tidak butuh jumlah yang besar. Ia butuh hati yang taat.",
+      "bg": "golden", "terrain": "hill", "rays": true, "camera": "push", "headline_y": 300,
+      "headline": [{"text": "MAKNANYA", "style": "label"}, {"text": "Bukan jumlah, tetapi ketaatan.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.75, "dy": -250, "pose": "arms_up"}]
+    },
+    {
+      "text": "Hari ini, berhenti membandingkan kekuatanmu dengan masalahmu. Bandingkan masalahmu dengan Tuhanmu.",
+      "bg": "dusk", "terrain": "mountains", "camera": "pan_left", "headline_y": 300,
+      "headline": [{"text": "UNTUK HIDUPMU", "style": "label"}, {"text": "Bandingkan masalahmu dengan Tuhanmu.", "style": "point"}],
+      "elements": [{"type": "person", "x": 0.4, "size": 0.9, "pose": "pray"}]
+    },
+    {
+      "text": "Di bagian mana kamu merasa terlalu kecil? Tulis di kolom komentar. Besok: kisah orang Samaria yang baik hati. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Di bagian mana kamu merasa terlalu kecil? Tulis di kolom komentar. Besok: orang Samaria yang baik hati.",
+      "bg": "golden", "terrain": "valley", "rays": true, "camera": "pull",
+      "headline": [{"text": "\"TUHAN menyertai engkau, ya pahlawan yang gagah berani.\"", "style": "statement"}, {"text": "Hakim-hakim 6:12", "style": "ref"}],
+      "elements": [{"type": "person", "x": 0.5, "size": 0.85, "pose": "arms_up", "props": ["sword"]}]
+    }
+  ],
+  "caption": "Kalau Tuhan menyuruhmu melawan ribuan musuh… hanya dengan 300 orang, beranikah kamu? ⚔️🔥\n\nTuhan tidak butuh jumlah yang besar. Ia butuh hati yang taat.\n\n\"TUHAN menyertai engkau, ya pahlawan yang gagah berani.\" (Hakim-hakim 6:12)\n\nDi bagian mana kamu merasa terlalu kecil? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#Gideon #KisahAlkitab #RenunganHarian #HakimHakim7 #AyatAlkitab #KristenIndonesia #ImanKristen #BibleStory",
+  "youtube_title": "Gideon dan 300 Orang: Bukan Jumlah, tetapi Ketaatan #shorts",
+  "youtube_tags": ["Gideon", "300 orang", "Kisah Alkitab", "Renungan", "Hakim-hakim 7", "Kristen"]
+}
