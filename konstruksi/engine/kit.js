@@ -1019,17 +1019,20 @@ F.haul_road = (s) => {
   const g = new THREE.Group(); const L = s.length ?? 60, w = s.w ?? 8, ey = s.ey ?? 1, crown = (s.crown ?? 0.035) * (s.crown_ex ?? 2.5);
   const done = new Set(s.layers ?? []); const parts = [];
   const prof = (pts) => { const sh = new THREE.Shape(); pts.forEach(([z, y], i) => (i ? sh.lineTo(z, y * ey) : sh.moveTo(z, y * ey))); return sh; };
+  const COL = s.colors ?? {};
   const mk = (name, pts, color, o = {}) => {
     if (!done.has(name) && s.build !== name) return;
+    color = COL[name] ?? color;
     const geo = new THREE.ExtrudeGeometry(prof(pts), { depth: 1, bevelEnabled: false });
     geo.applyMatrix4(new THREE.Matrix4().set(0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 1)); geo.computeVertexNormals();
     const m = mesh(geo, mat(color, o)); m.position.x = -L / 2; m.scale.x = L; g.add(m); parts.push({ name, m });
   };
-  const e = 0.6, hw = w / 2;
+  const e = 0.6, hw = w / 2; const geoOn = done.has('geo') || s.build === 'geo';
   mk('emb', [[-hw - 2.2, 0], [hw + 2.2, 0], [hw + 0.6, e], [-hw - 0.6, e]], s.sand ?? 0xcdb27a, { rough: 1 });
   mk('geo', [[-hw - 0.5, e], [hw + 0.5, e], [hw + 0.5, e + 0.03], [-hw - 0.5, e + 0.03]], 0xeef0f2, { rough: 0.7 });
-  mk('mat', [[-hw - 0.3, e + 0.03], [hw + 0.3, e + 0.03], [hw + 0.3, e + 0.18], [-hw - 0.3, e + 0.18]], 0x8a5a2b, { rough: 0.9 });
-  const b = done.has('mat') ? 0.18 : 0.03;
+  const g0 = geoOn ? 0.03 : 0;
+  mk('mat', [[-hw - 0.3, e + g0], [hw + 0.3, e + g0], [hw + 0.3, e + g0 + 0.15], [-hw - 0.3, e + g0 + 0.15]], 0x8a5a2b, { rough: 0.9 });
+  const b = (done.has('mat') ? 0.15 : 0) + (geoOn ? 0.03 : 0);
   mk('agg1', [[-hw - 0.3, e + b], [hw + 0.3, e + b], [hw, e + b + 0.2], [-hw, e + b + 0.2]], 0x8f8475, { rough: 1, flat: true });
   mk('agg2', [[-hw, e + b + 0.2], [hw, e + b + 0.2], [hw - 0.2, e + b + 0.4], [0, e + b + 0.4 + hw * crown], [-hw + 0.2, e + b + 0.4]], 0xa39a8c, { rough: 1, flat: true });
   const ditches = [];
@@ -1039,8 +1042,9 @@ F.haul_road = (s) => {
     ditches.push(d, wtr);
   }
   if (s.tags) {
-    const T = [['emb', e / 2, 'TIMBUNAN PASIR'], ['geo', e + 0.015, 'GEOTEKSTIL'], ['mat', e + 0.1, 'MATRAS KAYU'], ['agg1', e + b + 0.1, 'BATU LAPIS 1'], ['agg2', e + b + 0.3, 'BATU LAPIS 2']];
-    T.forEach(([n, y, t], i) => { if (!done.has(n) && s.build !== n) return; const tg = textSprite(t, { size: s.tag_size ?? 0.32 }); tg.position.set(L / 2 + 0.5, y * ey, (i % 2 ? 1 : -1) * (hw + 0.8)); tg.center.set(i % 2 ? 0 : 1, 0.5); g.add(tg); });
+    const T = [['emb', e / 2, 'TIMBUNAN PASIR'], ['geo', e + 0.015, 'GEOTEKSTIL'], ['mat', e + 0.08, 'MATRAS KAYU'], ['agg1', e + b + 0.1, 'BATU LAPIS 1'], ['agg2', e + b + 0.3, 'BATU LAPIS 2']];
+    const TN = s.tag_names ?? {};
+    T.forEach(([n, y, t], i) => { if (!done.has(n) && s.build !== n) return; t = TN[n] ?? t; const tg = textSprite(t, { size: s.tag_size ?? 0.32 }); tg.position.set(L / 2 + 0.5, y * ey, (i % 2 ? 1 : -1) * (hw + 0.8)); tg.center.set(i % 2 ? 0 : 1, 0.5); g.add(tg); });
     if (done.has('ditch') || s.build === 'ditch') { const tg = textSprite('PARIT', { size: s.tag_size ?? 0.32 }); tg.position.set(L / 2 + 0.5, 0.3, hw + 3.4); g.add(tg); }
   }
   return { group: g, top: (e + b + 0.4) * ey, update(p) {

@@ -45,7 +45,7 @@
           ],
           "rot": 15,
           "loaded": true,
-          "load_color": 9406837,
+          "load_color": 10902066,
           "tilt": [
             -5,
             3
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "text": "Begini cara membangun jalan akses yang tidak ambles, walaupun tanahnya berpasir.",
+      "text": "Begini cara membangun jalan akses yang tidak ambles, cukup pakai material yang ada di lapangan.",
       "headline": [
         {
           "text": "JALAN AKSES",
@@ -119,7 +119,7 @@
           "style": "accent"
         },
         {
-          "text": "di tanah berpasir",
+          "text": "pakai material lokal · tanpa geotekstil",
           "style": "small"
         }
       ],
@@ -147,25 +147,34 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "agg1",
             "agg2"
-          ]
+          ],
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "type": "dump_truck",
           "pos": [
             -25,
-            1.27,
+            1.24,
             -1.5
           ],
           "to": [
             25,
-            1.27,
+            1.24,
             -1.5
           ],
           "loaded": true,
-          "load_color": 9406837,
+          "load_color": 10902066,
           "ease": false
         },
         {
@@ -237,7 +246,7 @@
           ],
           "rot": 15,
           "loaded": true,
-          "load_color": 9406837,
+          "load_color": 10902066,
           "tilt": [
             -5,
             3
@@ -276,15 +285,15 @@
       ]
     },
     {
-      "text": "Langkah pertama, urus airnya dulu. Tinggikan badan jalan, buat miring ke samping sekitar tiga persen, dan gali parit di kiri kanan.",
-      "subtitle": "1. Urus airnya dulu: tinggikan badan jalan, miring ke samping ±3%, dan gali parit di kiri-kanan.",
+      "text": "Langkah pertama, urus airnya dulu. Timbun badan jalan lebih tinggi dari sekitarnya, buat miring ke samping sekitar tiga persen, dan gali parit di kiri kanan.",
+      "subtitle": "1. Urus airnya dulu: timbun badan jalan lebih tinggi, miring ke samping ±3%, dan gali parit di kiri-kanan.",
       "headline": [
         {
           "text": "1. ATUR AIR",
           "style": "label"
         },
         {
-          "text": "ditinggikan · miring ±3% · parit samping",
+          "text": "timbun lebih tinggi · miring ±3% · parit",
           "style": "point"
         }
       ],
@@ -319,7 +328,17 @@
           ],
           "tags": true,
           "ey": 3,
-          "tag_size": 0.55
+          "tag_size": 0.55,
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "type": "excavator",
@@ -362,14 +381,14 @@
       ]
     },
     {
-      "text": "Kedua, gelar geotekstil di atas tanah dasar. Fungsinya memisahkan pasir dan batu, supaya batunya tidak tenggelam.",
+      "text": "Kedua, pilih material terbaik di lokasi. Pasir dicampur tanah lempung atau laterit hasil galian, supaya butirannya saling mengikat.",
       "headline": [
         {
-          "text": "2. GEOTEKSTIL",
+          "text": "2. CAMPUR MATERIAL LOKAL",
           "style": "label"
         },
         {
-          "text": "pemisah pasir & batu",
+          "text": "pasir + lempung/laterit hasil galian",
           "style": "point"
         }
       ],
@@ -379,13 +398,13 @@
       "camera": {
         "move": "orbit",
         "target": [
-          0,
-          1,
-          0
+          -4,
+          1.5,
+          -5
         ],
-        "dist": 16,
-        "height": 6,
-        "angle": 50,
+        "dist": 24,
+        "height": 8,
+        "angle": 20,
         "sweep": 25
       },
       "shadow_size": 20,
@@ -398,30 +417,75 @@
             "emb",
             "ditch"
           ],
-          "build": "geo",
+          "build": "agg1",
           "progress": [
-            0.2,
-            0.75
-          ]
+            0.15,
+            0.6
+          ],
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
-          "type": "worker",
+          "type": "ore_pile",
+          "pos": [
+            -8,
+            0,
+            -9
+          ],
+          "radius": 3,
+          "h": 2.2,
+          "color": 13480570
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            -3,
+            0,
+            -10
+          ],
+          "radius": 3,
+          "h": 2.2,
+          "color": 10902066,
+          "seed": 5
+        },
+        {
+          "type": "excavator",
           "pos": [
             -6,
-            0.65,
-            2
+            0,
+            -13
           ],
-          "rot": 0,
-          "anim": "walk"
+          "rot": -90,
+          "anim": "dig",
+          "swing": 70
         },
         {
-          "type": "worker",
+          "type": "label",
           "pos": [
-            -6.5,
-            0.65,
-            -2
+            -8,
+            3.2,
+            -9
           ],
-          "rot": 0
+          "text": "PASIR",
+          "size": 0.6
+        },
+        {
+          "type": "label",
+          "pos": [
+            -3,
+            3.2,
+            -10
+          ],
+          "text": "LEMPUNG/LATERIT",
+          "size": 0.6
         },
         {
           "type": "trees",
@@ -453,15 +517,15 @@
       ]
     },
     {
-      "text": "Ketiga, hampar batu pecah atau sirtu, tebal totalnya sekitar tiga puluh sampai lima puluh senti. Hampar per lapis, sekitar dua puluh senti.",
-      "subtitle": "3. Hampar batu pecah atau sirtu, tebal total ±30–50 cm. Per lapis ±20 cm.",
+      "text": "Ketiga, timbun dan padatkan per lapis, sekitar tiga puluh senti. Pakai vibro roller, atau lintasan tronton bermuatan yang diatur bergantian.",
+      "subtitle": "3. Timbun & padatkan per lapis ±30 cm. Pakai vibro roller, atau lintasan tronton bermuatan yang diatur bergantian.",
       "headline": [
         {
-          "text": "3. LAPIS BATU",
+          "text": "3. PADATKAN PER LAPIS",
           "style": "label"
         },
         {
-          "text": "total ±30–50 cm · per lapis ±20 cm",
+          "text": "±30 cm · roller / lintasan tronton",
           "style": "point"
         }
       ],
@@ -489,44 +553,50 @@
           "layers": [
             "emb",
             "ditch",
-            "geo"
+            "agg1"
           ],
-          "build": "agg1",
-          "progress": [
-            0.25,
-            0.75
-          ]
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
-          "type": "grader",
+          "type": "roller",
+          "kind": "vibro",
           "pos": [
-            -16,
-            0.63,
-            0
+            -14,
+            0.83,
+            1.6
           ],
           "to": [
-            14,
-            0.63,
-            0
+            2,
+            0.83,
+            1.6
           ],
-          "progress": [
-            0.25,
-            0.75
-          ]
+          "anim": "shuttle",
+          "period": 6
         },
         {
           "type": "dump_truck",
           "pos": [
-            22,
-            0.63,
-            0
+            -22,
+            0.83,
+            -1.7
           ],
-          "rot": 0,
+          "to": [
+            22,
+            0.83,
+            -1.7
+          ],
           "loaded": true,
-          "load_color": 9406837,
-          "anim": "dump",
-          "start": 0.2,
-          "end": 0.9
+          "load_color": 10902066,
+          "ease": false
         },
         {
           "type": "trees",
@@ -558,15 +628,15 @@
       ]
     },
     {
-      "text": "Setiap lapis disiram air secukupnya, lalu dipadatkan pakai vibro roller, sampai tidak ada lagi bekas roda yang dalam.",
-      "subtitle": "4. Tiap lapis disiram secukupnya, lalu dipadatkan vibro roller sampai tidak ada bekas roda yang dalam.",
+      "text": "Keempat, lapis paling atas pakai material paling keras yang ada, misalnya laterit atau batuan hasil galian. Lapisan inilah yang menahan roda.",
+      "subtitle": "4. Lapis paling atas: material paling keras yang ada di lokasi, misalnya laterit atau batuan hasil galian.",
       "headline": [
         {
-          "text": "4. PADATKAN",
+          "text": "4. LAPIS PENUTUP",
           "style": "label"
         },
         {
-          "text": "per lapis · vibro roller",
+          "text": "laterit / batuan hasil galian",
           "style": "point"
         }
       ],
@@ -594,46 +664,68 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "agg1"
           ],
           "build": "agg2",
           "progress": [
             0.3,
             0.7
+          ],
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
+        },
+        {
+          "type": "grader",
+          "pos": [
+            -18,
+            0.83,
+            0
+          ],
+          "to": [
+            10,
+            0.83,
+            0
+          ],
+          "progress": [
+            0.3,
+            0.7
           ]
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            16,
+            0.83,
+            0
+          ],
+          "rot": 0,
+          "loaded": true,
+          "load_color": 10902066,
+          "anim": "dump"
         },
         {
           "type": "roller",
           "kind": "vibro",
           "pos": [
-            -20,
-            0.83,
-            -1.5
+            -26,
+            1.1,
+            -1.6
           ],
           "to": [
-            -6,
-            0.83,
-            -1.5
+            -14,
+            1.1,
+            -1.6
           ],
           "anim": "shuttle",
           "period": 6
-        },
-        {
-          "type": "sprayer",
-          "pos": [
-            -25,
-            0.83,
-            1.8
-          ],
-          "to": [
-            -2,
-            0.83,
-            1.8
-          ],
-          "color": 3045803,
-          "spray_color": 10475775,
-          "cab": 15790320
         },
         {
           "type": "trees",
@@ -665,14 +757,14 @@
       ]
     },
     {
-      "text": "Kalau tanahnya sangat lembek, tambahkan matras kayu atau geocell di bawah lapisan batu, supaya beban makin menyebar.",
+      "text": "Kalau ada titik yang sangat lembek, isi dengan batu boulder hasil galian, atau susun kayu bekas land clearing sebagai matras.",
       "headline": [
         {
           "text": "TANAH SANGAT LEMBEK?",
           "style": "label"
         },
         {
-          "text": "tambah matras kayu / geocell",
+          "text": "batu boulder / kayu land clearing",
           "style": "point"
         }
       ],
@@ -700,14 +792,23 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "mat",
             "agg1",
             "agg2"
           ],
           "tags": true,
           "ey": 3,
-          "tag_size": 0.55
+          "tag_size": 0.55,
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "type": "trees",
@@ -776,26 +877,35 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "agg1",
             "agg2"
-          ]
+          ],
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "id": "t",
           "type": "dump_truck",
           "pos": [
             -25,
-            1.27,
+            1.24,
             -1.5
           ],
           "to": [
             25,
-            1.27,
+            1.24,
             -1.5
           ],
           "loaded": true,
-          "load_color": 9406837,
+          "load_color": 10902066,
           "ease": false
         },
         {
@@ -828,8 +938,8 @@
       ]
     },
     {
-      "text": "Terakhir, rawat jalannya. Tutup lubang sebelum hujan, ratakan lagi pakai grader, dan jangan biarkan air menggenang.",
-      "subtitle": "5. Rawat rutin: tutup lubang sebelum hujan, ratakan pakai grader, jangan biarkan air menggenang.",
+      "text": "Terakhir, rawat jalannya. Tutup lubang dengan material yang sama, ratakan lagi pakai grader, dan jangan biarkan air menggenang.",
+      "subtitle": "5. Rawat rutin: tutup lubang dengan material yang sama, ratakan pakai grader, jangan biarkan air menggenang.",
       "headline": [
         {
           "text": "5. RAWAT RUTIN",
@@ -864,21 +974,30 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "agg1",
             "agg2"
-          ]
+          ],
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "type": "grader",
           "pos": [
             -18,
-            1.27,
+            1.24,
             0
           ],
           "to": [
             14,
-            1.27,
+            1.24,
             0
           ]
         },
@@ -912,14 +1031,14 @@
       ]
     },
     {
-      "text": "Intinya, jalan ambles hampir selalu gara-gara air. Kendalikan airnya, sebarkan bebannya, jalanmu akan awet.",
+      "text": "Intinya, jalan ambles hampir selalu gara-gara air. Kendalikan airnya, padatkan materialnya, jalan proyek tetap awet tanpa biaya mahal.",
       "headline": [
         {
           "text": "INTINYA",
           "style": "label"
         },
         {
-          "text": "kendalikan air + sebarkan beban",
+          "text": "kendalikan air + padatkan material",
           "style": "point"
         }
       ],
@@ -947,13 +1066,22 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "agg1",
             "agg2"
           ],
           "tags": true,
           "ey": 3,
-          "tag_size": 0.55
+          "tag_size": 0.55,
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "type": "trees",
@@ -1020,27 +1148,36 @@
           "layers": [
             "emb",
             "ditch",
-            "geo",
             "agg1",
             "agg2"
-          ]
+          ],
+          "colors": {
+            "agg1": 11109722,
+            "agg2": 10902066
+          },
+          "tag_names": {
+            "emb": "TIMBUNAN LOKAL",
+            "agg1": "PASIR + LEMPUNG",
+            "agg2": "PENUTUP LATERIT/BATU",
+            "mat": "KAYU LAND CLEARING"
+          }
         },
         {
           "type": "dump_truck",
           "pos": [
             2,
-            1.27,
+            1.24,
             -1.5
           ],
           "rot": 180,
           "loaded": true,
-          "load_color": 9406837
+          "load_color": 10902066
         },
         {
           "type": "worker",
           "pos": [
             -2,
-            1.17,
+            1.14,
             2
           ],
           "anim": "wave"
@@ -1075,8 +1212,8 @@
       ]
     }
   ],
-  "caption": "Tronton ambles di musim hujan? 🚛🌧️ Ini solusinya untuk tanah berpasir!\n\nKenapa ambles? Pasir jenuh air kehilangan daya dukung, sementara tronton bermuatan bisa >25 ton.\n\nCara bangun jalan akses anti ambles:\n1️⃣ Atur air dulu: tinggikan badan jalan, miring ±3%, parit kiri-kanan\n2️⃣ Gelar geotekstil: pemisah pasir & batu\n3️⃣ Hampar batu pecah/sirtu ±30–50 cm, per lapis ±20 cm\n4️⃣ Siram secukupnya & padatkan vibro roller tiap lapis\n➕ Tanah sangat lembek? Tambah matras kayu / geocell\n5️⃣ Rawat rutin: tutup lubang, ratakan grader, jangan ada genangan\n\n💡 Intinya: kendalikan air + sebarkan beban = jalan awet.\n\nDi proyekmu, cara apa yang paling ampuh biar tronton nggak ambles? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk Solusi Lapangan berikutnya!\n\n#jalanakses #haulroad #tronton #dumptruck #geotekstil #proyek #konstruksi #tekniksipil #musimhujan #solusilapangan #animasi3D",
-  "youtube_title": "Tronton Ambles di Musim Hujan? Ini Cara Bangun Jalan Akses di Tanah Berpasir #shorts",
+  "caption": "Tronton ambles di musim hujan? 🚛🌧️ Ini solusinya, cukup pakai material yang ada di lapangan!\n\nKenapa ambles? Pasir jenuh air kehilangan daya dukung, sementara tronton bermuatan bisa >25 ton.\n\nCara bangun jalan akses anti ambles (budget minim):\n1️⃣ Atur air dulu: timbun badan jalan lebih tinggi, miring ±3%, gali parit kiri-kanan\n2️⃣ Campur material lokal: pasir + tanah lempung/laterit hasil galian biar saling mengikat\n3️⃣ Timbun & padatkan per lapis ±30 cm: vibro roller atau lintasan tronton bermuatan bergantian\n4️⃣ Lapis penutup: material paling keras di lokasi (laterit/batuan hasil galian)\n➕ Titik sangat lembek? Isi batu boulder hasil galian atau susun kayu bekas land clearing\n5️⃣ Rawat rutin: tutup lubang dengan material yang sama, ratakan grader, jangan ada genangan\n\n💡 Intinya: kendalikan air + padatkan material = jalan proyek awet tanpa biaya mahal.\n\nDi proyekmu, cara apa yang paling ampuh biar tronton nggak ambles? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk Solusi Lapangan berikutnya!\n\n#jalanakses #haulroad #tronton #dumptruck #tambang #urugan #proyek #konstruksi #musimhujan #solusilapangan #operatorAlatBerat #animasi3D",
+  "youtube_title": "Tronton Ambles di Musim Hujan? Bangun Jalan Akses Pakai Material Lokal #shorts",
   "youtube_tags": [
     "jalan akses proyek",
     "haul road",
