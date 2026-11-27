@@ -1,0 +1,1064 @@
+{
+  "slug": "berapa-solar-excavator-per-hari",
+  "title": "Excavator Seharian Habis Berapa Liter Solar?",
+  "topic": "konstruksi",
+  "series": "HITUNGAN PROYEK #6",
+  "scenes": [
+    {
+      "text": "Excavator kerja seharian, habis berapa liter solar? Ada yang bilang seratus, ada yang bilang dua ratus.",
+      "headline": [
+        {
+          "text": "EXCAVATOR SEHARIAN",
+          "style": "hook"
+        },
+        {
+          "text": "HABIS BERAPA SOLAR?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 270,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          1,
+          3.5,
+          -1
+        ],
+        "dist": 20,
+        "height": 3,
+        "angle": 40,
+        "sweep": 12
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "sprayer",
+          "pos": [
+            -9,
+            0,
+            6
+          ],
+          "rot": 0,
+          "anim": "idle",
+          "color": 12597547,
+          "cab": 15790320
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Kita hitung pakai rumus resmi yang dipakai estimator.",
+      "headline": [
+        {
+          "text": "HITUNGAN",
+          "style": "big"
+        },
+        {
+          "text": "PROYEK #6",
+          "style": "accent"
+        },
+        {
+          "text": "pakai rumus AHSP PUPR",
+          "style": "small"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 18,
+        "height": 4,
+        "angle": 30,
+        "sweep": 40
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "dig"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Rumusnya, solar per jam sama dengan dua belas sampai lima belas persen, dikali tenaga mesin dalam HP.",
+      "subtitle": "Rumusnya: solar per jam = (12–15%) × tenaga mesin (HP).",
+      "headline": [
+        {
+          "text": "RUMUS AHSP",
+          "style": "label"
+        },
+        {
+          "text": "solar/jam = (12–15%) × HP",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          2.5,
+          0
+        ],
+        "dist": 15,
+        "height": 3,
+        "angle": 60,
+        "sweep": 10
+      },
+      "shadow_size": 18,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "dig"
+        },
+        {
+          "type": "label",
+          "pos": [
+            -1.4,
+            4.6,
+            0
+          ],
+          "text": "HP",
+          "size": 0.9,
+          "show_at": 0.3
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Contohnya excavator dua puluh ton. Tenaga mesinnya sekitar seratus empat puluh HP.",
+      "subtitle": "Contoh excavator 20 ton. Tenaga mesinnya sekitar 140 HP.",
+      "headline": [
+        {
+          "text": "EXCAVATOR 20 TON",
+          "style": "label"
+        },
+        {
+          "text": "±140 HP",
+          "style": "stat"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          2.5,
+          0
+        ],
+        "dist": 16,
+        "height": 2.5,
+        "angle": 20,
+        "sweep": 30
+      },
+      "shadow_size": 18,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "worker",
+          "pos": [
+            4,
+            0,
+            3
+          ],
+          "rot": 220
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Dua belas persen dikali seratus empat puluh, sekitar tujuh belas liter per jam. Kalau kerjanya berat, bisa dua puluh satu liter.",
+      "subtitle": "12% × 140 ≈ 17 liter/jam. Kalau kerja berat (15%) bisa ±21 liter/jam.",
+      "headline": [
+        {
+          "text": "(12–15%) × 140 =",
+          "style": "point"
+        },
+        {
+          "text": "17–21 L",
+          "style": "stat"
+        },
+        {
+          "text": "PER JAM",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -1
+        ],
+        "dist": 19,
+        "height": 5,
+        "angle": -30,
+        "sweep": 30
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Kerja delapan jam sehari, berarti sekitar seratus tiga puluh lima sampai seratus tujuh puluh liter.",
+      "subtitle": "Kerja 8 jam sehari → sekitar 135–170 liter.",
+      "headline": [
+        {
+          "text": "× 8 JAM =",
+          "style": "point"
+        },
+        {
+          "text": "135–170 L",
+          "style": "stat"
+        },
+        {
+          "text": "PER HARI",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -3,
+          2,
+          2
+        ],
+        "dist": 22,
+        "height": 4,
+        "angle": 20,
+        "sweep": 25
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "sprayer",
+          "pos": [
+            -9,
+            0,
+            6
+          ],
+          "rot": 0,
+          "anim": "idle",
+          "color": 12597547,
+          "cab": 15790320
+        },
+        {
+          "type": "drum",
+          "pos": [
+            -12,
+            0,
+            9
+          ]
+        },
+        {
+          "type": "drum",
+          "pos": [
+            -11.3,
+            0,
+            9.4
+          ]
+        },
+        {
+          "type": "drum",
+          "pos": [
+            -12.6,
+            0,
+            9.5
+          ]
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Ukurannya beda, solarnya juga beda. Excavator mini cuma sekitar tiga puluh liter sehari. Excavator empat puluh ton bisa lebih dari tiga ratus liter.",
+      "subtitle": "Ukuran beda, solar beda: mini ±30 L/hari · 20 ton ±150 L · 40 ton bisa 300+ L.",
+      "headline": [
+        {
+          "text": "BEDA UKURAN, BEDA SOLAR",
+          "style": "label"
+        },
+        {
+          "text": "mini ±30 L · 20 t ±150 L · 40 t 300+ L",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          2,
+          4,
+          -2
+        ],
+        "dist": 60,
+        "height": 7,
+        "angle": 10,
+        "sweep": 6
+      },
+      "shadow_size": 30,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            -7,
+            0,
+            0
+          ],
+          "rot": 120,
+          "scale": 0.45
+        },
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 120
+        },
+        {
+          "type": "excavator",
+          "pos": [
+            9,
+            0,
+            0
+          ],
+          "rot": 120,
+          "scale": 1.6
+        },
+        {
+          "type": "label",
+          "pos": [
+            -7,
+            3.5,
+            0
+          ],
+          "text": "MINI",
+          "size": 1.3
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            6.5,
+            0
+          ],
+          "text": "20 TON",
+          "size": 1.3
+        },
+        {
+          "type": "label",
+          "pos": [
+            9,
+            10,
+            0
+          ],
+          "text": "40 TON",
+          "size": 1.3
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        }
+      ]
+    },
+    {
+      "text": "Angka nyatanya tergantung beban kerja. Gali batu lebih boros dari tanah lunak. Dan mesin yang menyala tapi nganggur, tetap minum solar.",
+      "headline": [
+        {
+          "text": "YANG BIKIN BOROS",
+          "style": "label"
+        },
+        {
+          "text": "material keras · mesin nyala tapi nganggur",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          2.5,
+          0
+        ],
+        "dist": 16,
+        "height": 4,
+        "angle": 40,
+        "sweep": 10
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "zone",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "w": 7,
+          "d": 5,
+          "anim": "pulse"
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            4.6,
+            0
+          ],
+          "text": "NYALA TAPI NGANGGUR",
+          "size": 0.8,
+          "color": "#ff5a4a",
+          "show_at": 0.45
+        },
+        {
+          "type": "worker",
+          "pos": [
+            4,
+            0,
+            3
+          ],
+          "rot": 220
+        },
+        {
+          "type": "worker",
+          "pos": [
+            5,
+            0,
+            2
+          ],
+          "rot": 250,
+          "hat": 16777215
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Supaya hemat, matikan mesin kalau menunggu lama, pakai mode ekonomi, dan rawat filter udaranya.",
+      "headline": [
+        {
+          "text": "TIPS HEMAT",
+          "style": "label"
+        },
+        {
+          "text": "matikan saat nunggu · mode eco · rawat filter",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -1
+        ],
+        "dist": 18,
+        "height": 4,
+        "angle": 60,
+        "sweep": 30
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Catat isi solar dan jam mesin setiap hari. Kalau hasilnya jauh di atas rumus, cek mesinnya, atau cek ke mana solarnya pergi.",
+      "headline": [
+        {
+          "text": "CEK HARIAN",
+          "style": "label"
+        },
+        {
+          "text": "liter ÷ jam mesin = pemakaian nyata",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "dusk",
+      "camera": {
+        "move": "push",
+        "target": [
+          -5,
+          2.2,
+          3
+        ],
+        "dist": 24,
+        "height": 3,
+        "angle": 15,
+        "sweep": 8
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "sprayer",
+          "pos": [
+            -9,
+            0,
+            6
+          ],
+          "rot": 0,
+          "anim": "idle",
+          "color": 12597547,
+          "cab": 15790320
+        },
+        {
+          "type": "worker",
+          "pos": [
+            -5,
+            0,
+            8.5
+          ],
+          "rot": 90
+        },
+        {
+          "type": "label",
+          "pos": [
+            -5,
+            4.4,
+            4
+          ],
+          "text": "SOLARNYA KE MANA?",
+          "size": 0.6,
+          "color": "#ff5a4a",
+          "show_at": 0.55
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Excavator di proyekmu habis berapa liter sehari? Tulis di komentar. Dan follow, besok kita hitung excavator bisa gali berapa kubik per jam.",
+      "headline": [
+        {
+          "text": "EXCAVATORMU HABIS BERAPA LITER?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR · FOLLOW UNTUK #7",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 230,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -1
+        ],
+        "dist": 20,
+        "height": 3,
+        "angle": 100,
+        "sweep": 35
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "worker",
+          "pos": [
+            5,
+            0,
+            5
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    }
+  ],
+  "caption": "Excavator kerja seharian habis berapa liter solar? ⛽🚜\n\nRumus AHSP PUPR:\nSolar per jam = (12–15%) × tenaga mesin (HP)\n\nContoh excavator 20 ton (±140 HP):\n• 12% × 140 ≈ 17 L/jam (kerja berat 15% ≈ 21 L/jam)\n• × 8 jam = ±135–170 liter/hari\n\nBeda ukuran, beda solar:\n• Mini ±30 L/hari\n• 20 ton ±150 L/hari\n• 40 ton bisa 300+ L/hari\n\nYang bikin boros: material keras & mesin nyala tapi nganggur.\nTips hemat: matikan mesin saat nunggu lama, pakai mode eco, rawat filter udara.\n\n📋 Cek harian: liter ÷ jam mesin. Kalau jauh di atas rumus, cek mesinnya… atau cek ke mana solarnya pergi 👀\n\nExcavator di proyekmu habis berapa liter sehari? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk Hitungan Proyek #7: excavator bisa gali berapa m³ per jam!\n\n#excavator #solar #alatberat #operatorexcavator #hitunganproyek #konstruksi #tambang #AHSP #proyek #tekniksipil #animasi3D",
+  "youtube_title": "Excavator Seharian Habis Berapa Liter Solar? Rumus AHSP | Hitungan Proyek #6 #shorts",
+  "youtube_tags": [
+    "solar excavator",
+    "konsumsi bbm alat berat",
+    "rumus AHSP",
+    "excavator 20 ton",
+    "operator excavator",
+    "hitungan proyek",
+    "alat berat",
+    "konstruksi"
+  ]
+}
