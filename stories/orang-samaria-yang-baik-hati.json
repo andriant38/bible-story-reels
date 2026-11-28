@@ -1,0 +1,425 @@
+{
+  "slug": "orang-samaria-yang-baik-hati",
+  "title": "Orang Samaria yang Baik Hati",
+  "reference": "Lukas 10:25–37",
+  "scenes": [
+    {
+      "text": "Dua pemuka agama lewat begitu saja. Yang berhenti menolong… justru orang yang dibenci.",
+      "bg": "dusk",
+      "terrain": "desert",
+      "camera": "push",
+      "headline_y": 420,
+      "headline": [
+        {
+          "text": "Dua pemuka agama lewat…",
+          "style": "hook"
+        },
+        {
+          "text": "yang menolong: \"musuh\".",
+          "style": "hook_accent"
+        }
+      ],
+      "elements": [
+        {
+          "type": "lying",
+          "x": 0.42,
+          "size": 0.7
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.7,
+          "pose": "kneel",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Seorang ahli Taurat bertanya kepada Yesus: \"Siapakah sesamaku manusia?\"",
+      "bg": "dawn",
+      "terrain": "plain",
+      "camera": "pan_right",
+      "headline": [
+        {
+          "text": "ORANG SAMARIA",
+          "style": "accent"
+        },
+        {
+          "text": "yang baik hati",
+          "style": "small"
+        },
+        {
+          "text": "LUKAS 10:25–37",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.85,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.9,
+          "props": [
+            "beard"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Yesus menjawab dengan sebuah perumpamaan. Seorang laki-laki turun dari Yerusalem ke Yerikho.",
+      "bg": "dawn",
+      "terrain": "hill",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "city",
+          "x": 0.22,
+          "size": 0.6
+        },
+        {
+          "type": "person",
+          "x": 0.68,
+          "size": 0.75,
+          "props": [
+            "staff"
+          ],
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "text": "Ia jatuh ke tangan penyamun. Mereka merampoknya, memukulnya, lalu meninggalkannya setengah mati.",
+      "bg": "storm",
+      "terrain": "desert",
+      "clouds": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "lying",
+          "x": 0.5,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.22,
+          "size": 0.85,
+          "props": [
+            "sword"
+          ],
+          "facing": -1
+        },
+        {
+          "type": "person",
+          "x": 0.8,
+          "size": 0.85,
+          "props": [
+            "spear"
+          ],
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "text": "Seorang imam lewat jalan itu. Ia melihatnya… lalu melewatinya dari seberang jalan.",
+      "bg": "desert",
+      "terrain": "desert",
+      "camera": "pan_right",
+      "elements": [
+        {
+          "type": "lying",
+          "x": 0.3,
+          "size": 0.7
+        },
+        {
+          "type": "person",
+          "x": 0.72,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ],
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "text": "Seorang Lewi juga datang. Ia pun melewatinya dari seberang jalan.",
+      "bg": "golden",
+      "terrain": "plain",
+      "camera": "pan_left",
+      "elements": [
+        {
+          "type": "lying",
+          "x": 0.3,
+          "size": 0.7
+        },
+        {
+          "type": "palm",
+          "x": 0.85,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.66,
+          "size": 0.85,
+          "props": [
+            "staff"
+          ],
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "text": "Lalu datang seorang Samaria. Ketika melihat orang itu, tergeraklah hatinya oleh belas kasihan.",
+      "bg": "dawn",
+      "terrain": "plain",
+      "rays": true,
+      "camera": "push",
+      "elements": [
+        {
+          "type": "lying",
+          "x": 0.4,
+          "size": 0.75
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.8,
+          "pose": "kneel",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Ia membalut lukanya, membawanya ke penginapan, dan membayar perawatannya.",
+      "bg": "night",
+      "terrain": "valley",
+      "sun": false,
+      "stars": true,
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "tent",
+          "x": 0.7,
+          "size": 0.7
+        },
+        {
+          "type": "fire",
+          "x": 0.5,
+          "size": 0.35
+        },
+        {
+          "type": "lying",
+          "x": 0.28,
+          "size": 0.6
+        },
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.75,
+          "pose": "kneel",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Yesus bertanya: \"Siapakah sesama manusia dari orang itu?\"",
+      "bg": "golden",
+      "terrain": "hill",
+      "camera": "push",
+      "elements": [
+        {
+          "type": "tree",
+          "x": 0.82,
+          "size": 0.8
+        },
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.75,
+          "dy": -200,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.75,
+          "dy": -200,
+          "props": [
+            "beard"
+          ],
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Jawabnya: \"Orang yang telah menunjukkan belas kasihan.\" Kata Yesus: \"Pergilah, dan perbuatlah demikian!\"",
+      "bg": "dusk",
+      "terrain": "mountains",
+      "rays": true,
+      "camera": "pull",
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.95,
+          "pose": "arms_up",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.62,
+          "size": 0.85,
+          "props": [
+            "beard"
+          ],
+          "pose": "pray",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Yahudi dan Samaria saling bermusuhan. Justru sang \"musuh\" yang menjadi sesama.",
+      "bg": "night",
+      "terrain": "desert",
+      "sun": false,
+      "stars": true,
+      "camera": "pan_right",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "KONTEKSNYA",
+          "style": "label"
+        },
+        {
+          "text": "Yahudi dan Samaria saling bermusuhan.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.35,
+          "size": 0.8,
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.65,
+          "size": 0.8,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Sesamamu adalah siapa pun yang membutuhkan pertolonganmu.",
+      "bg": "dawn",
+      "terrain": "sea",
+      "rays": true,
+      "camera": "push",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "MAKNANYA",
+          "style": "label"
+        },
+        {
+          "text": "Sesama = siapa pun yang butuh pertolongan.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.42,
+          "size": 0.75,
+          "dy": 120,
+          "pose": "praise"
+        },
+        {
+          "type": "person",
+          "x": 0.58,
+          "size": 0.65,
+          "dy": 120,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Hari ini, berhentilah untuk satu orang yang biasa kamu lewati.",
+      "bg": "dusk",
+      "terrain": "valley",
+      "camera": "pan_left",
+      "headline_y": 300,
+      "headline": [
+        {
+          "text": "UNTUK HIDUPMU",
+          "style": "label"
+        },
+        {
+          "text": "Berhenti untuk satu orang hari ini.",
+          "style": "point"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.4,
+          "size": 0.9,
+          "pose": "point",
+          "facing": 1
+        },
+        {
+          "type": "person",
+          "x": 0.6,
+          "size": 0.7,
+          "pose": "kneel",
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "text": "Siapa yang selama ini kamu lewati? Tulis di kolom komentar. Besok: Sadrakh, Mesakh, dan Abednego. Follow, supaya tidak ketinggalan.",
+      "subtitle": "Siapa yang selama ini kamu lewati? Tulis di kolom komentar. Besok: Sadrakh, Mesakh, dan Abednego.",
+      "bg": "golden",
+      "terrain": "plain",
+      "rays": true,
+      "camera": "pull",
+      "headline": [
+        {
+          "text": "\"Pergilah, dan perbuatlah demikian!\"",
+          "style": "statement"
+        },
+        {
+          "text": "Lukas 10:37",
+          "style": "ref"
+        }
+      ],
+      "elements": [
+        {
+          "type": "person",
+          "x": 0.5,
+          "size": 0.85,
+          "pose": "arms_up"
+        }
+      ]
+    }
+  ],
+  "caption": "Dua pemuka agama lewat begitu saja. Yang berhenti menolong… justru orang yang dibenci. 🩹\n\nSesamamu bukan hanya orang yang kamu sukai, tetapi siapa pun yang membutuhkan pertolonganmu.\n\n\"Pergilah, dan perbuatlah demikian!\" (Lukas 10:37)\n\nSiapa yang selama ini kamu lewati begitu saja? Tulis di kolom komentar 👇\n\n📖 Kisah Alkitab harian. Follow untuk kisah berikutnya.\n\n#OrangSamaria #KisahAlkitab #RenunganHarian #Lukas10 #PerumpamaanYesus #AyatAlkitab #KristenIndonesia #BibleStory",
+  "youtube_title": "Orang Samaria yang Baik Hati: Siapa Sesamamu? #shorts",
+  "youtube_tags": [
+    "Orang Samaria yang baik hati",
+    "Perumpamaan Yesus",
+    "Kisah Alkitab",
+    "Renungan",
+    "Lukas 10",
+    "Kristen"
+  ]
+}
