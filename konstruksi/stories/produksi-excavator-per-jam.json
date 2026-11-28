@@ -1,0 +1,1070 @@
+{
+  "slug": "produksi-excavator-per-jam",
+  "title": "Excavator 1 Jam Bisa Gali Berapa Kubik?",
+  "topic": "konstruksi",
+  "series": "HITUNGAN PROYEK #7",
+  "scenes": [
+    {
+      "text": "Excavator kerja satu jam, bisa gali berapa kubik? Jawabannya ditentukan oleh hitungan beberapa detik saja.",
+      "headline": [
+        {
+          "text": "1 JAM GALI",
+          "style": "hook"
+        },
+        {
+          "text": "BERAPA KUBIK?",
+          "style": "hook_accent"
+        }
+      ],
+      "headline_y": 280,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "push",
+        "target": [
+          1,
+          3.5,
+          -1
+        ],
+        "dist": 20,
+        "height": 3,
+        "angle": 40,
+        "sweep": 12
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Kita hitung pakai rumus produksi alat berat yang dipakai di lapangan.",
+      "headline": [
+        {
+          "text": "HITUNGAN",
+          "style": "big"
+        },
+        {
+          "text": "PROYEK #7",
+          "style": "accent"
+        },
+        {
+          "text": "rumus produksi excavator",
+          "style": "small"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 18,
+        "height": 4,
+        "angle": 30,
+        "sweep": 40
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "dig"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Rumusnya, kapasitas bucket, dikali faktor bucket, dikali jumlah siklus per jam, dikali efisiensi kerja.",
+      "subtitle": "Rumusnya: kapasitas bucket × faktor bucket × jumlah siklus per jam × efisiensi kerja.",
+      "headline": [
+        {
+          "text": "RUMUS PRODUKSI",
+          "style": "label"
+        },
+        {
+          "text": "Q = V × Fb × (3600 ÷ Ts) × E",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -1
+        ],
+        "dist": 19,
+        "height": 5,
+        "angle": -30,
+        "sweep": 25
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Contoh excavator dua puluh ton. Bucketnya sekitar nol koma sembilan kubik. Untuk tanah biasa, terisi sekitar delapan puluh persen.",
+      "subtitle": "Contoh excavator 20 ton: bucket ±0,9 m³. Untuk tanah biasa, terisi ±80% (faktor bucket 0,8).",
+      "headline": [
+        {
+          "text": "1. BUCKET",
+          "style": "label"
+        },
+        {
+          "text": "V ±0,9 m³ · Fb ±0,8",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          4,
+          2.6,
+          0
+        ],
+        "dist": 13,
+        "height": 1.5,
+        "angle": 65,
+        "sweep": 10
+      },
+      "shadow_size": 12,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "type": "label",
+          "pos": [
+            6.9,
+            4.1,
+            0
+          ],
+          "text": "±0,9 m³",
+          "size": 0.55
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Satu siklus, gali, putar, buang, lalu kembali, sekitar dua puluh detik. Jadi dalam satu jam ada seratus delapan puluh siklus.",
+      "subtitle": "1 siklus (gali → putar → buang → kembali) ±20 detik. 3600 ÷ 20 = 180 siklus per jam.",
+      "headline": [
+        {
+          "text": "2. WAKTU SIKLUS",
+          "style": "label"
+        },
+        {
+          "text": "±20 detik → 180 siklus/jam",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -2
+        ],
+        "dist": 17,
+        "height": 9,
+        "angle": 40,
+        "sweep": 25
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            7,
+            -2
+          ],
+          "text": "±20 DETIK",
+          "size": 0.9
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Efisiensi kerja sekitar tujuh puluh lima persen, karena ada jeda, ganti truk, dan pindah posisi.",
+      "subtitle": "Efisiensi kerja ±75%, karena ada jeda, ganti truk, dan pindah posisi (±45 menit efektif per jam).",
+      "headline": [
+        {
+          "text": "3. EFISIENSI",
+          "style": "label"
+        },
+        {
+          "text": "E ±0,75 · ±45 menit efektif/jam",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          -2,
+          2,
+          -3
+        ],
+        "dist": 24,
+        "height": 6,
+        "angle": 20,
+        "sweep": 25
+      },
+      "shadow_size": 25,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -14,
+            0,
+            -5.4
+          ],
+          "to": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "start": 0.2,
+          "end": 0.8
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "to": [
+            30,
+            0,
+            -5.4
+          ],
+          "loaded": true,
+          "end": 0.25,
+          "color": 15291946
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Hasilnya, nol koma sembilan, kali nol koma delapan, kali seratus delapan puluh, kali nol koma tujuh lima. Sekitar sembilan puluh tujuh kubik per jam.",
+      "subtitle": "0,9 × 0,8 × 180 × 0,75 ≈ 97 m³ per jam.",
+      "headline": [
+        {
+          "text": "0,9 × 0,8 × 180 × 0,75 =",
+          "style": "point"
+        },
+        {
+          "text": "±97 m³",
+          "style": "stat"
+        },
+        {
+          "text": "PER JAM (LEPAS)",
+          "style": "unit"
+        }
+      ],
+      "headline_y": 190,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -1
+        ],
+        "dist": 21,
+        "height": 4,
+        "angle": 100,
+        "sweep": 30
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Ingat, itu kubik lepas. Tanah yang sudah digali mengembang sekitar dua puluh lima persen. Jadi kalau diukur di galian, sekitar tujuh puluh delapan kubik.",
+      "subtitle": "Ingat, itu kubik lepas. Tanah galian mengembang ±25%. Diukur di galian: 97 ÷ 1,25 ≈ 78 m³.",
+      "headline": [
+        {
+          "text": "KUBIK LEPAS ≠ KUBIK GALIAN",
+          "style": "label"
+        },
+        {
+          "text": "97 ÷ 1,25 ≈ 78 m³ asli",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          0,
+          0.8,
+          0
+        ],
+        "dist": 6.8,
+        "height": 1.5,
+        "angle": 15,
+        "sweep": 20
+      },
+      "shadow_size": 6,
+      "objects": [
+        {
+          "type": "cube",
+          "pos": [
+            -0.85,
+            0,
+            0
+          ],
+          "filled": 1
+        },
+        {
+          "type": "cube",
+          "pos": [
+            0.9,
+            0,
+            0
+          ],
+          "size": 1.077,
+          "filled": 1
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            0.9,
+            1.077,
+            0
+          ],
+          "radius": 0.45,
+          "h": 0.25,
+          "color": 9134915
+        },
+        {
+          "type": "label",
+          "pos": [
+            -0.85,
+            1.35,
+            0
+          ],
+          "text": "1 m³ GALIAN",
+          "size": 0.17
+        },
+        {
+          "type": "label",
+          "pos": [
+            0.9,
+            1.55,
+            0
+          ],
+          "text": "±1,25 m³ LEPAS",
+          "size": 0.17
+        }
+      ]
+    },
+    {
+      "text": "Yang paling menentukan adalah waktu siklus. Kalau putarannya makin jauh, atau truk parkir terlalu jauh, produksinya langsung turun.",
+      "headline": [
+        {
+          "text": "KUNCI PRODUKSI",
+          "style": "label"
+        },
+        {
+          "text": "waktu siklus: putar jauh = produksi turun",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "push",
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "dist": 20,
+        "height": 12,
+        "angle": 30,
+        "sweep": 10
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 180,
+          "period": 10
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            -6,
+            0,
+            -1.5
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "zone",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "w": 12,
+          "d": 12,
+          "anim": "pulse"
+        },
+        {
+          "type": "label",
+          "pos": [
+            0,
+            7,
+            0
+          ],
+          "text": "PUTAR 180° = BOROS WAKTU",
+          "size": 0.8,
+          "color": "#ff5a4a",
+          "show_at": 0.3
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Tips operator. Posisikan truk di samping, sudut putar sekitar sembilan puluh derajat atau kurang, dan gali dari posisi yang lebih tinggi dari truk.",
+      "subtitle": "Tips operator: truk di samping, sudut putar ±90° atau kurang, dan gali dari posisi lebih tinggi dari truk.",
+      "headline": [
+        {
+          "text": "TIPS OPERATOR",
+          "style": "label"
+        },
+        {
+          "text": "putar ≤ 90° · truk dekat · posisi lebih tinggi",
+          "style": "point"
+        }
+      ],
+      "headline_y": 210,
+      "world": "site",
+      "time": "day",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -2
+        ],
+        "dist": 18,
+        "height": 9,
+        "angle": 50,
+        "sweep": 25
+      },
+      "shadow_size": 20,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "zone",
+          "pos": [
+            1,
+            0,
+            -2.7
+          ],
+          "w": 5,
+          "d": 7,
+          "color": 6277483
+        },
+        {
+          "type": "label",
+          "pos": [
+            1.5,
+            6.5,
+            -3
+          ],
+          "text": "≤ 90°",
+          "size": 0.9,
+          "color": "#5fd16b"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    },
+    {
+      "text": "Excavatormu sehari bisa gali berapa kubik? Tulis di komentar. Dan follow, besok kita bahas kenapa beton retak padahal baru dicor.",
+      "headline": [
+        {
+          "text": "EXCAVATORMU SEHARI BERAPA KUBIK?",
+          "style": "statement"
+        },
+        {
+          "text": "TULIS DI KOMENTAR · FOLLOW @ant_proyek",
+          "style": "ref"
+        }
+      ],
+      "headline_y": 230,
+      "world": "site",
+      "time": "golden",
+      "camera": {
+        "move": "orbit",
+        "target": [
+          1,
+          3,
+          -1
+        ],
+        "dist": 20,
+        "height": 3,
+        "angle": 120,
+        "sweep": 35
+      },
+      "shadow_size": 22,
+      "objects": [
+        {
+          "type": "excavator",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "rot": 0,
+          "anim": "load",
+          "swing": 90,
+          "period": 7
+        },
+        {
+          "type": "dump_truck",
+          "pos": [
+            1.1,
+            0,
+            -5.4
+          ],
+          "rot": 0,
+          "loaded": true,
+          "anim": "fill"
+        },
+        {
+          "type": "ore_pile",
+          "pos": [
+            7,
+            0,
+            2
+          ],
+          "radius": 5,
+          "h": 3.5,
+          "color": 9134915
+        },
+        {
+          "type": "worker",
+          "pos": [
+            5,
+            0,
+            5
+          ],
+          "anim": "wave"
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            -35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 30
+        },
+        {
+          "type": "trees",
+          "pos": [
+            0,
+            0,
+            35
+          ],
+          "area": [
+            160,
+            30
+          ],
+          "count": 20,
+          "seed": 9
+        }
+      ]
+    }
+  ],
+  "caption": "Excavator kerja 1 jam bisa gali berapa kubik? 🚜\n\n📐 Rumus produksi:\nQ = V × Fb × (3600 ÷ Ts) × E\n\nContoh excavator 20 ton:\n• Bucket (V) ±0,9 m³\n• Faktor bucket (Fb) ±0,8 untuk tanah biasa\n• Waktu siklus (Ts) ±20 detik → 180 siklus/jam\n• Efisiensi (E) ±0,75\n= 0,9 × 0,8 × 180 × 0,75 ≈ 97 m³/jam (lepas)\n\n⚠️ Itu kubik lepas! Tanah galian mengembang ±25% → ±78 m³ kalau diukur di galian.\n\n🔑 Kunci produksi = waktu siklus. Tips operator: truk di samping, putar ≤ 90°, gali dari posisi lebih tinggi dari truk.\n\nExcavatormu sehari bisa gali berapa kubik? Tulis di komentar 👇\n🔔 Follow @ant_proyek untuk episode berikutnya!\n\n#excavator #alatberat #hitunganproyek #operatorexcavator #tambang",
+  "youtube_title": "Excavator 1 Jam Bisa Gali Berapa Kubik? Rumus Produksi | Hitungan Proyek #7 #shorts",
+  "youtube_tags": [
+    "produksi excavator",
+    "rumus produksi alat berat",
+    "excavator 20 ton",
+    "waktu siklus",
+    "faktor bucket",
+    "hitungan proyek",
+    "alat berat",
+    "tambang"
+  ]
+}

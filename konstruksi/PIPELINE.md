@@ -63,6 +63,7 @@ Every video must give the viewer a reason to follow:
 - **The closing scene promises the next episode and asks for a follow**, e.g. the narration ends with "Follow, besok kita hitung berapa besi untuk rumah dua lantai.". The `ref` line reads "TULIS DI KOMENTAR · FOLLOW UNTUK #4". Keep that promise: the next video in that series must be that topic.
 - **Hook in the first 2 seconds** on a question the viewer has asked themselves (cost, quantity, danger, "kenapa"). Prefer topics that home builders and site workers (tukang, mandor, operator, checker) search for, such as semen, besi, rit, solar, retak, and topics that make them argue in the comments.
 - **The caption** ends with "Follow untuk episode berikutnya" and the question for the comments.
+- **Hashtags: at most 5** in the caption (Instagram allows only 5). Pick the 5 most relevant: usually the topic, the machine/material, the series (#hitunganproyek / #solusilapangan), #konstruksi or #tambang, and one audience tag.
 
 ### Scene format
 
